@@ -35,6 +35,5 @@ final class NormalizeTests: XCTestCase {
     func testNormalizeAbove() {
         let resultValue = normalize(201.0, domain: 100.0 ... 200.0)
         XCTAssertTrue(resultValue.isNaN)
-//        XCTAssertEqual(resultValue, 1.0, accuracy: 0.01)
     }
 }

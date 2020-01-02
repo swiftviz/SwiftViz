@@ -10,39 +10,39 @@ import Foundation
 /// - https://github.com/d3/d3-scale
 /// - https://github.com/pshrmn/notes/blob/master/d3/scales.md
 
-// defining the protocol for this, using Protocols and Associated Types
-// This can be confusing - there's a pretty good article on it at
+// NOTE(heckj): I'm trying to define a protocol for this, using Protocols and Associated Types
+// I find it a bit confusing, although there's a pretty good article on it at
 // https://www.hackingwithswift.com/articles/74/understanding-protocol-associated-types-and-their-constraints
 
 public protocol Scale {
-    associatedtype ComparableType: Comparable // input domain
-    associatedtype AnotherComparableType: Comparable // output range
+    associatedtype InputDomain: Comparable // input domain
+    associatedtype OutputRange: Comparable // output range
 
     var isClamped: Bool { get }
 
     // input values
-    var domain: ClosedRange<ComparableType> { get }
+    var domain: ClosedRange<InputDomain> { get }
 
     // output values
-    var range: ClosedRange<AnotherComparableType> { get }
+    var range: ClosedRange<OutputRange> { get }
 
     /// converts a value between the input "domain" and output "range"
     ///
     /// - Parameter inputValue: a value within the bounds of the ClosedRange for domain
     /// - Returns: a value within the bounds of the ClosedRange for range, or NaN if it maps outside the bounds
-    func scale(_ inputValue: ComparableType) -> AnotherComparableType
+    func scale(_ inputValue: InputDomain) -> OutputRange
 
     /// converts back from the output "range" to a value within the input "domain". The inverse of scale()
     ///
     /// - Parameter outputValue: a value within the bounds of the ClosedRange for range
     /// - Returns: a value within the bounds of the ClosedRange for domain, or NaN if it maps outside the bounds
-    func invert(_ outputValue: AnotherComparableType) -> ComparableType
+    func invert(_ outputValue: OutputRange) -> InputDomain
 
     /// returns an array of the locations within the ClosedRange of range to locate ticks for the scale
     ///
     /// - Parameter count: a number of ticks to display, defaulting to 10
     /// - Returns: an Array of the values within the ClosedRange of range
-    func ticks(count: Int) -> [AnotherComparableType]
+    func ticks(count: Int) -> [OutputRange]
 }
 
 // NOTE(heckj): OTHER SCALES: make a PowScale (& maybe Sqrt, Log, Ln)

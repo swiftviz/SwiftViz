@@ -21,11 +21,14 @@ import Foundation
 // https://github.com/d3/d3-3.x-api-reference/blob/master/Time-Scales.md
 
 public struct TimeScale: Scale {
+    public typealias InputDomain = Date
+    public typealias OutputRange = Double
+    
     public let isClamped: Bool
-    public let domain: ClosedRange<Date>
-    public let range: ClosedRange<CGFloat>
+    public let domain: ClosedRange<InputDomain>
+    public let range: ClosedRange<OutputRange>
 
-    init(domain: ClosedRange<Date>, range: ClosedRange<CGFloat>, isClamped: Bool = false) {
+    init(domain: ClosedRange<InputDomain>, range: ClosedRange<OutputRange>, isClamped: Bool = false) {
         self.isClamped = isClamped
         self.domain = domain
         self.range = range
@@ -35,11 +38,11 @@ public struct TimeScale: Scale {
     ///
     /// - Parameter x: value within the domain
     /// - Returns: scaled value
-    public func scale(_ inputValue: Date) -> CGFloat {
-        CGFloat(inputValue.timeIntervalSince1970) // - domain.lowerBound.timeIntervalSince1970)
+    public func scale(_ inputValue: InputDomain) -> OutputRange {
+        inputValue.timeIntervalSince1970 // - domain.lowerBound.timeIntervalSince1970)
     }
 
-    public func invert(_ outputValue: CGFloat) -> Date {
+    public func invert(_ outputValue: OutputRange) -> InputDomain {
         let attemptedDate = Date(timeIntervalSince1970: Double(outputValue))
 //        if domain.contains(attemptedDate) {
 //            return attemptedDate
@@ -51,8 +54,8 @@ public struct TimeScale: Scale {
     ///
     /// - Parameter count: number of steps to take in the ticks, default of 10
     /// - Returns: array of the locations of the ticks within self.range
-    public func ticks(count: Int = 10) -> [CGFloat] {
-        var result: [CGFloat] = Array()
+    public func ticks(count: Int = 10) -> [OutputRange] {
+        var result: [OutputRange] = Array()
         for _ in stride(from: 0, through: count, by: 1) {
             result.append(0.0) // interpolate(Double(i) / Double(count), range: domain))
         }
