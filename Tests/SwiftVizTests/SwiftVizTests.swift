@@ -1,5 +1,5 @@
-import XCTest
 @testable import SwiftViz
+import XCTest
 
 final class SwiftVizTests: XCTestCase {
     func testExample() {
