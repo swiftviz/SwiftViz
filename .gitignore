@@ -5,6 +5,7 @@
 .DS_Store
 /Packages
 /*.xcodeproj
+.swiftpm
 
 ## User settings
 xcuserdata/
