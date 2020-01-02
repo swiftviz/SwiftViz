@@ -7,7 +7,7 @@
 @testable import SwiftViz
 import XCTest
 
-class NormalizeTests: XCTestCase {
+final class NormalizeTests: XCTestCase {
     func testNormalizeMid() {
         let resultValue = normalize(150.0, domain: 100.0 ... 200.0)
         XCTAssertFalse(resultValue.isNaN)

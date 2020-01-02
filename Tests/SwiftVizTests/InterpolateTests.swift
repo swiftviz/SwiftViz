@@ -7,7 +7,7 @@
 @testable import SwiftViz
 import XCTest
 
-class InterpolateTests: XCTestCase {
+final class InterpolateTests: XCTestCase {
     func testInterpolateMid() {
         let resultValue = interpolate(0.5, range: 100.0 ... 200.0)
         XCTAssertEqual(resultValue, 150.0, accuracy: 0.1)
