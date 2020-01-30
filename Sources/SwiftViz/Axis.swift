@@ -1,10 +1,19 @@
-//
-//  Axis.swift
-//
-//  Created by Joseph Heck on 1/2/20.
-//
-
 import Foundation
+
+// =============================================================
+//  Axis.swift
+
+// inspiration: https://github.com/d3/d3-axis
+// notes: https://github.com/pshrmn/notes/blob/master/d3/axes.md
+
+// .tickSizeInner()  & .tickSizeOuter() or .tickSize() for both
+// .tickFormat()
+// .tickPadding()
+
+// .tickValues([...]) - set the specific tick values in by array
+// .ticks(5) - set the axis to use 5 ticks (or use an interval of 5 if it's a time scale)
+//   optional second argument with the tick formatting
+// there should be a scale.ticks() that can be used as a default/proxy for ticks
 
 /*
  Axis - a visual representation
@@ -33,5 +42,10 @@ public protocol Axis {
     var direction: AxisDirection { get }
     // use internalScale.ticks() to determine location for ticks
     // represent them with capsules, or maybe thin "boxes" aligned to the axis?
-
 }
+
+// bottom axis:
+// vStack ( line & pips with ticks
+//          hstack ( Text(number), Text(number2), Text(number3) )
+//         )
+

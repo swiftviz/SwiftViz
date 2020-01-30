@@ -1,15 +1,12 @@
-//
-//  TimeScale.swift
-//
-//  Created by Joseph Heck on 4/22/19.
-//
-
 import Foundation
+
+// =============================================================
+//  TimeScale.swift
 
 // https://github.com/d3/d3-scale/blob/master/src/time.js
 
-/// Time scales are similar to linear scales, but use Dates instead of numbers and range is
-/// implied/identify from the domain provided
+/// Time scales are similar to linear scales, but use Dates instead
+/// of numbers and range is implied/identify from the domain provided
 
 // import { scaleTime } from 'd3-scale';
 // const time = scaleTime()
@@ -21,14 +18,14 @@ import Foundation
 // https://github.com/d3/d3-3.x-api-reference/blob/master/Time-Scales.md
 
 public struct TimeScale: Scale {
-    public typealias InputDomain = Date
-    public typealias OutputRange = Double
-    
-    public let isClamped: Bool
-    public let domain: ClosedRange<InputDomain>
-    public let range: ClosedRange<OutputRange>
 
-    init(domain: ClosedRange<InputDomain>, range: ClosedRange<OutputRange>, isClamped: Bool = false) {
+    public typealias InputType = Date
+
+    public let isClamped: Bool
+    public let domain: ClosedRange<InputType>
+    public let range: ClosedRange<Double>
+
+    public init(domain: ClosedRange<Date>, range: ClosedRange<Double>, isClamped: Bool = false) {
         self.isClamped = isClamped
         self.domain = domain
         self.range = range
@@ -38,15 +35,15 @@ public struct TimeScale: Scale {
     ///
     /// - Parameter x: value within the domain
     /// - Returns: scaled value
-    public func scale(_ inputValue: InputDomain) -> OutputRange {
+    public func scale(_ inputValue: TimeScale.InputType) -> Double {
         inputValue.timeIntervalSince1970 // - domain.lowerBound.timeIntervalSince1970)
     }
 
-    public func invert(_ outputValue: OutputRange) -> InputDomain {
+    public func invert(_ outputValue: Double) -> Date {
         let attemptedDate = Date(timeIntervalSince1970: Double(outputValue))
-//        if domain.contains(attemptedDate) {
-//            return attemptedDate
-//        }
+        //        if domain.contains(attemptedDate) {
+        //            return attemptedDate
+        //        }
         return attemptedDate
     }
 
@@ -54,8 +51,9 @@ public struct TimeScale: Scale {
     ///
     /// - Parameter count: number of steps to take in the ticks, default of 10
     /// - Returns: array of the locations of the ticks within self.range
-    public func ticks(count: Int = 10) -> [OutputRange] {
-        var result: [OutputRange] = Array()
+    public func ticks(_ count: Int?) -> [Double] {
+        let count = count ?? 10 // default of 10 if no value provided
+        var result: [Double] = Array()
         for _ in stride(from: 0, through: count, by: 1) {
             result.append(0.0) // interpolate(Double(i) / Double(count), range: domain))
         }
