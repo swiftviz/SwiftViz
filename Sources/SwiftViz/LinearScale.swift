@@ -26,6 +26,7 @@ public struct LinearScale: Scale {
         interpolate(normalize(inputValue, domain: domain), range: range)
     }
 
+    /// inverts the scale, taking a value in the output range and returning the relevant value from the input domain
     public func invert(_ outputValue: Double) -> Double {
         interpolate(normalize(outputValue, domain: range), range: domain)
     }
@@ -38,7 +39,8 @@ public struct LinearScale: Scale {
         let count = count ?? 10 // default of 10 if no value provided
         var result: [Double] = Array()
         for i in stride(from: 0, through: count, by: 1) {
-            result.append(interpolate(Double(i) / Double(count), range: domain))
+            let tickDomainValue = interpolate(Double(i) / Double(count), range: domain)
+            result.append(scale(tickDomainValue))
         }
         return result
     }
