@@ -23,23 +23,21 @@ public struct TimeScale: Scale {
 
     public let isClamped: Bool
     public let domain: ClosedRange<InputType>
-    public let range: ClosedRange<Double>
 
-    public init(domain: ClosedRange<Date>, range: ClosedRange<Double>, isClamped: Bool = false) {
+    public init(domain: ClosedRange<Date>, isClamped: Bool = false) {
         self.isClamped = isClamped
         self.domain = domain
-        self.range = range
     }
 
     /// scales the input value (within domain) per the scale to the relevant output (using range)
     ///
     /// - Parameter x: value within the domain
     /// - Returns: scaled value
-    public func scale(_ inputValue: TimeScale.InputType) -> Double {
+    public func scale(_ inputValue: TimeScale.InputType, range: ClosedRange<Double>) -> Double {
         inputValue.timeIntervalSince1970 // - domain.lowerBound.timeIntervalSince1970)
     }
 
-    public func invert(_ outputValue: Double) -> Date {
+    public func invert(_ outputValue: Double, range: ClosedRange<Double>) -> Date {
         let attemptedDate = Date(timeIntervalSince1970: Double(outputValue))
         //        if domain.contains(attemptedDate) {
         //            return attemptedDate
@@ -51,7 +49,7 @@ public struct TimeScale: Scale {
     ///
     /// - Parameter count: number of steps to take in the ticks, default of 10
     /// - Returns: array of the locations of the ticks within self.range
-    public func ticks(_ count: Int?) -> [Double] {
+    public func ticks(_ count: Int?, range: ClosedRange<Double>) -> [Double] {
         let count = count ?? 10 // default of 10 if no value provided
         var result: [Double] = Array()
         for _ in stride(from: 0, through: count, by: 1) {

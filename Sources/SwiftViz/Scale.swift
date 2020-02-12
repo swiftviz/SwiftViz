@@ -33,7 +33,7 @@ public protocol Scale {
     // a variant of this might want to use ClosedRange<Int> - or maybe something that isn't even a range...
 
     // output values
-    var range: ClosedRange<Double> { get }
+    // var range: ClosedRange<Double> { get }
 
     /// converts a value between the input "domain" and output "range"
     ///
@@ -41,7 +41,7 @@ public protocol Scale {
     ///   ClosedRange for domain
     /// - Returns: a value within the bounds of the ClosedRange
     ///   for range, or NaN if it maps outside the bounds
-    func scale(_ inputValue: InputType) -> Double
+    func scale(_ inputValue: InputType, range: ClosedRange<Double>) -> Double
 
     /// converts back from the output "range" to a value within
     /// the input "domain". The inverse of scale()
@@ -50,14 +50,14 @@ public protocol Scale {
     ///   ClosedRange for range
     /// - Returns: a value within the bounds of the ClosedRange
     ///   for domain, or NaN if it maps outside the bounds
-    func invert(_ outputValue: Double) -> InputType
+    func invert(_ outputValue: Double, range: ClosedRange<Double>) -> InputType
 
     /// returns an array of the locations within the ClosedRange of
     /// range to locate ticks for the scale
     ///
     /// - Parameter count: a number of ticks to display, defaulting to 10
     /// - Returns: an Array of the values within the ClosedRange of range
-    func ticks(_ count: Int?) -> [Double]
+    func ticks(_ count: Int?, range: ClosedRange<Double>) -> [Double]
 }
 
 // NOTE(heckj): OTHER SCALES: make a PowScale (& maybe Sqrt, Log, Ln)
