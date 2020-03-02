@@ -41,7 +41,7 @@ public protocol Scale {
     ///   ClosedRange for domain
     /// - Returns: a value within the bounds of the ClosedRange
     ///   for range, or NaN if it maps outside the bounds
-    func scale(_ inputValue: InputType, range: ClosedRange<Double>) -> Double
+    func scale(_ inputValue: InputType, range: ClosedRange<CGFloat>) -> CGFloat
 
     /// converts back from the output "range" to a value within
     /// the input "domain". The inverse of scale()
@@ -50,14 +50,14 @@ public protocol Scale {
     ///   ClosedRange for range
     /// - Returns: a value within the bounds of the ClosedRange
     ///   for domain, or NaN if it maps outside the bounds
-    func invert(_ outputValue: Double, range: ClosedRange<Double>) -> InputType
+    func invert(_ outputValue: CGFloat, range: ClosedRange<CGFloat>) -> CGFloat
 
     /// returns an array of the locations within the ClosedRange of
     /// range to locate ticks for the scale
     ///
     /// - Parameter count: a number of ticks to display, defaulting to 10
     /// - Returns: an Array of the values within the ClosedRange of range
-    func ticks(_ count: Int?, range: ClosedRange<Double>) -> [Double]
+    func ticks(_ count: Int?, range: ClosedRange<CGFloat>) -> [CGFloat]
 }
 
 // NOTE(heckj): OTHER SCALES: make a PowScale (& maybe Sqrt, Log, Ln)
@@ -88,18 +88,18 @@ public protocol Scale {
 
 /// normalize(a, b)(x) takes a domain value x in [a,b]
 /// and returns the corresponding parameter t in [0,1].
-func normalize(_ x: Double, domain: ClosedRange<Double>) -> Double {
+func normalize(_ x: CGFloat, domain: ClosedRange<CGFloat>) -> CGFloat {
     if domain.contains(x) {
         let overallDistance = domain.upperBound - domain.lowerBound
         let foo = (x - domain.lowerBound) / overallDistance
         return foo
     }
-    return Double.nan
+    return CGFloat.nan
 }
 
 // inspiration - https://github.com/d3/d3-interpolate#interpolateNumber
 /// interpolate(a, b)(t) takes a parameter t in [0,1] and
 /// returns the corresponding range value x in [a,b].
-func interpolate(_ x: Double, range: ClosedRange<Double>) -> Double {
+func interpolate(_ x: CGFloat, range: ClosedRange<CGFloat>) -> CGFloat {
     range.lowerBound * (1 - x) + range.upperBound * x
 }

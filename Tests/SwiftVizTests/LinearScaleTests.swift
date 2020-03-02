@@ -17,7 +17,7 @@ final class LinearScaleTests: XCTestCase {
         let myScale = LinearScale(domain: 0 ... 1.0, isClamped: false)
         XCTAssertFalse(myScale.isClamped)
 
-        let testRange = 0 ... 100.0
+        let testRange = CGFloat(0) ... CGFloat(100.0)
 
         let defaultTicks = myScale.ticks(nil, range: testRange)
         XCTAssertEqual(defaultTicks.count, 11)
@@ -32,7 +32,7 @@ final class LinearScaleTests: XCTestCase {
         let end = Date()
         let myTimeScale = TimeScale(domain: start ... end, isClamped: false)
 
-        let testRange = 0 ... 100.0
+        let testRange = CGFloat(0) ... CGFloat(100.0)
 
         let defaultTicks = myTimeScale.ticks(nil, range: testRange)
         XCTAssertEqual(defaultTicks.count, 11)
