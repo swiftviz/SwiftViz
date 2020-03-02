@@ -23,7 +23,7 @@ final class LinearScaleTests: XCTestCase {
         XCTAssertEqual(defaultTicks.count, 11)
         for tick in defaultTicks {
             // every tick should be from within the scale's domain (input) range
-            XCTAssertTrue(testRange.contains(tick))
+            XCTAssertTrue(testRange.contains(tick.1))
         }
     }
 
@@ -38,7 +38,7 @@ final class LinearScaleTests: XCTestCase {
         XCTAssertEqual(defaultTicks.count, 11)
         for tick in defaultTicks {
             // every tick should be from within the scale's domain (input) range
-            XCTAssertTrue(testRange.contains(tick))
+            XCTAssertTrue(testRange.contains(tick.1))
         }
     }
 

@@ -36,16 +36,16 @@ public struct LinearScale: Scale {
         interpolate(normalize(outputValue, domain: range), range: domain)
     }
 
-    /// returns an array of the locations of ticks
+    /// returns an array of the locations of ticks - (value, location)
     ///
     /// - Parameter count: number of steps to take in the ticks, default of 10
     /// - Returns: array of the locations of the ticks within self.range
-    public func ticks(_ count: Int?, range: ClosedRange<CGFloat>) -> [CGFloat] {
+    public func ticks(_ count: Int?, range: ClosedRange<CGFloat>) -> [(CGFloat, CGFloat)] {
         let count = count ?? 10 // default of 10 if no value provided
-        var result: [CGFloat] = Array()
+        var result: [(CGFloat, CGFloat)] = Array()
         for i in stride(from: 0, through: count, by: 1) {
             let tickDomainValue = interpolate(CGFloat(i) / CGFloat(count), range: domain)
-            result.append(scale(tickDomainValue, range: range))
+            result.append( (tickDomainValue, scale(tickDomainValue, range: range)) )
         }
         return result
     }

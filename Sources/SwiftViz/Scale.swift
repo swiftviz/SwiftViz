@@ -57,7 +57,7 @@ public protocol Scale {
     ///
     /// - Parameter count: a number of ticks to display, defaulting to 10
     /// - Returns: an Array of the values within the ClosedRange of range
-    func ticks(_ count: Int?, range: ClosedRange<CGFloat>) -> [CGFloat]
+    func ticks(_ count: Int?, range: ClosedRange<CGFloat>) -> [(CGFloat, CGFloat)]
 }
 
 // NOTE(heckj): OTHER SCALES: make a PowScale (& maybe Sqrt, Log, Ln)

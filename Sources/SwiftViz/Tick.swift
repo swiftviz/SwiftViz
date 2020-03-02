@@ -16,7 +16,7 @@ public struct Tick: Identifiable {
     public let location: CGFloat // location may be different from value - possibly a computed offset
 
     public var stringValue: String {
-        String(format: "%.0f", value)
+        String(format: "%.1f", value)
     }
 
     // public initializer needed in a library, the auto-generated one isn't auto-public
