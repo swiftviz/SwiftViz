@@ -22,7 +22,6 @@ public struct TimeScale: Scale {
         return 0.0
     }
 
-
     public typealias InputType = Date
 
     public let isClamped: Bool
@@ -38,25 +37,46 @@ public struct TimeScale: Scale {
     /// - Parameter x: value within the domain
     /// - Returns: scaled value
     public func scale(_ inputValue: TimeScale.InputType, range: ClosedRange<CGFloat>) -> CGFloat {
-        CGFloat(inputValue.timeIntervalSince1970) // - domain.lowerBound.timeIntervalSince1970)
+        let inputAsFloat = CGFloat(inputValue.timeIntervalSince1970)
+        let dateDomainAsFloat = CGFloat(domain.lowerBound.timeIntervalSince1970) ... CGFloat(domain.upperBound.timeIntervalSince1970)
+        let valueMappedToRange = interpolate(normalize(inputAsFloat, domain: dateDomainAsFloat), range: range)
+        return valueMappedToRange
     }
 
+    /// converts back from the output "range" to a value within
+    /// the input "domain". The inverse of scale()
+    ///
+    /// - Parameter outputValue: a value within the bounds of the
+    ///   ClosedRange for range
+    /// - Returns: a value within the bounds of the ClosedRange
+    ///   for domain, or NaN if it maps outside the bounds
     public func invert(_ outputValue: CGFloat, range: ClosedRange<CGFloat>) -> Date {
-        let attemptedDate = Date(timeIntervalSince1970: Double(outputValue))
+        let normalizedFloatFromRange = normalize(outputValue, domain: range)
+        let interpolatedInterval = CGFloat(domain.lowerBound.timeIntervalSince1970) * (1 - normalizedFloatFromRange) + CGFloat(domain.upperBound.timeIntervalSince1970) * normalizedFloatFromRange
+        let attemptedDate = Date(timeIntervalSince1970: TimeInterval(interpolatedInterval))
         //        if domain.contains(attemptedDate) {
         //            return attemptedDate
         //        }
         return attemptedDate
     }
 
+    func interpolateDate(_ x: CGFloat, range: ClosedRange<Date>) -> Date {
+        // let timeInterval = someDate.timeIntervalSince1970 // timeInterval is an alias for a Double
+        let interpolatedInterval = CGFloat(range.lowerBound.timeIntervalSince1970) * (1 - x) + CGFloat(range.upperBound.timeIntervalSince1970) * x
+        return Date(timeIntervalSince1970: Double(interpolatedInterval))
+    }
+
     /// returns an array of the locations of ticks
     ///
     /// - Parameter count: number of steps to take in the ticks, default of 10
     /// - Returns: array of the locations of the ticks within self.range
-    public func ticks(_ count: Int = 10, range: ClosedRange<CGFloat>) -> [(CGFloat, CGFloat)] {
-        var result: [(CGFloat, CGFloat)] = Array()
-        for _ in stride(from: 0, through: count, by: 1) {
-            result.append( (0.0, 0.0) ) // interpolate(Double(i) / Double(count), range: domain))
+    public func ticks(count: Int = 10, range: ClosedRange<CGFloat>) -> [Tick] {
+        var result: [Tick] = Array()
+        for i in stride(from: 0, through: count, by: 1) {
+
+            let tickDomainValue = interpolateDate(CGFloat(i) / CGFloat(count), range: domain)
+            result.append(Tick(value: CGFloat(tickDomainValue.timeIntervalSince1970),
+                               location: scale(tickDomainValue, range: range)))
         }
         return result
     }

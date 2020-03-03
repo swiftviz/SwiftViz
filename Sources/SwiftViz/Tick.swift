@@ -19,7 +19,7 @@ public struct Tick: Identifiable {
     // a sequence of these more cleanly.
 
     public let value: CGFloat // value from the domain of an associated Scale
-    public let location: CGFloat // location may be different from value - possibly a computed offset
+    public let rangeLocation: CGFloat // location maps to the output range of the Scale
 
     public var stringValue: String {
         String(format: "%.1f", value)
@@ -28,6 +28,6 @@ public struct Tick: Identifiable {
     // public initializer needed in a library, the auto-generated one isn't auto-public
     public init(value: CGFloat, location: CGFloat) {
         self.value = value
-        self.location = location
+        self.rangeLocation = location
     }
 }
