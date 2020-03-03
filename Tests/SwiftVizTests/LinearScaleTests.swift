@@ -19,7 +19,7 @@ final class LinearScaleTests: XCTestCase {
 
         let testRange = CGFloat(0) ... CGFloat(100.0)
 
-        let defaultTicks = myScale.ticks(nil, range: testRange)
+        let defaultTicks = myScale.ticks(range: testRange)
         XCTAssertEqual(defaultTicks.count, 11)
         for tick in defaultTicks {
             // every tick should be from within the scale's domain (input) range
@@ -34,7 +34,7 @@ final class LinearScaleTests: XCTestCase {
 
         let testRange = CGFloat(0) ... CGFloat(100.0)
 
-        let defaultTicks = myTimeScale.ticks(nil, range: testRange)
+        let defaultTicks = myTimeScale.ticks(range: testRange)
         XCTAssertEqual(defaultTicks.count, 11)
         for tick in defaultTicks {
             // every tick should be from within the scale's domain (input) range

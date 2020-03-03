@@ -3,24 +3,17 @@ import Foundation
 // =============================================================
 //  LinearScale.swift
 
-/// A linear scale takes input from a continuous domain
-/// and maps it to a continuous range.
+/// A linear scale is created using a continuous input domain and provides methods to
+/// convert values within that domain to an output range.
 public struct LinearScale: Scale {
 
     public let isClamped: Bool
     public let domain: ClosedRange<CGFloat>
-    // public var range: ClosedRange<Double>
 
     public init(domain: ClosedRange<CGFloat>, isClamped: Bool = false) {
         self.isClamped = isClamped
         self.domain = domain
     }
-
-//    public init(domain: ClosedRange<Double>, range: ClosedRange<Double>, isClamped: Bool = false) {
-//        self.isClamped = isClamped
-//        self.domain = domain
-//        self.range = range
-//    }
 
     /// scales the input value (within domain) per the scale
     /// to the relevant output (using range)
@@ -40,8 +33,7 @@ public struct LinearScale: Scale {
     ///
     /// - Parameter count: number of steps to take in the ticks, default of 10
     /// - Returns: array of the locations of the ticks within self.range
-    public func ticks(_ count: Int?, range: ClosedRange<CGFloat>) -> [(CGFloat, CGFloat)] {
-        let count = count ?? 10 // default of 10 if no value provided
+    public func ticks(_ count: Int = 10, range: ClosedRange<CGFloat>) -> [(CGFloat, CGFloat)] {
         var result: [(CGFloat, CGFloat)] = Array()
         for i in stride(from: 0, through: count, by: 1) {
             let tickDomainValue = interpolate(CGFloat(i) / CGFloat(count), range: domain)

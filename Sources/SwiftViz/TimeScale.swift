@@ -53,8 +53,7 @@ public struct TimeScale: Scale {
     ///
     /// - Parameter count: number of steps to take in the ticks, default of 10
     /// - Returns: array of the locations of the ticks within self.range
-    public func ticks(_ count: Int?, range: ClosedRange<CGFloat>) -> [(CGFloat, CGFloat)] {
-        let count = count ?? 10 // default of 10 if no value provided
+    public func ticks(_ count: Int = 10, range: ClosedRange<CGFloat>) -> [(CGFloat, CGFloat)] {
         var result: [(CGFloat, CGFloat)] = Array()
         for _ in stride(from: 0, through: count, by: 1) {
             result.append( (0.0, 0.0) ) // interpolate(Double(i) / Double(count), range: domain))
