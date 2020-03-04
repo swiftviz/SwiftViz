@@ -11,23 +11,13 @@ import Foundation
 /// When created based on a range, it includes a location along a single direction
 /// and a textual representation. It is meant to be created using a Scale, with some input domain
 /// being mapped to visualization using the Scale's output range.
-public struct Tick: Identifiable {
+public protocol Tick: Identifiable {
+    associatedtype InputType: Comparable // sequency, comparable thing
+    // this becomes a generic focused protocol - types implementing it will need to define the
+    // protocol conformance in coordination with a generic type
 
-    public let id = UUID()
-    // making this identifiable as a convenience
-    // for use within SwiftUI. You can then use ForEach over
-    // a sequence of these more cleanly.
+    var id: UUID { get }
 
-    public let value: CGFloat // value from the domain of an associated Scale
-    public let rangeLocation: CGFloat // location maps to the output range of the Scale
-
-    public var stringValue: String {
-        String(format: "%.1f", value)
-    }
-
-    // public initializer needed in a library, the auto-generated one isn't auto-public
-    public init(value: CGFloat, location: CGFloat) {
-        self.value = value
-        self.rangeLocation = location
-    }
+    var value: InputType { get }
+    var rangeLocation: CGFloat { get }
 }

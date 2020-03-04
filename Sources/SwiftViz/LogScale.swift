@@ -8,11 +8,15 @@ import Foundation
 /// A linear scale is created using a continuous input domain and provides methods to
 /// convert values within that domain to an output range.
 public struct LogScale: Scale {
+    public typealias InputType = CGFloat
+    public typealias TickType = CGFloatTick
 
     public let isClamped: Bool
     public let domain: ClosedRange<CGFloat>
 
     public init(domain: ClosedRange<CGFloat>, isClamped: Bool = false) {
+        // for a log scale, the lower value of the input domain *must not* be zero or below
+        precondition(domain.lowerBound > 0.0)
         self.isClamped = isClamped
         self.domain = domain
     }
@@ -23,18 +27,18 @@ public struct LogScale: Scale {
     /// - Parameter x: value within the domain
     /// - Returns: scaled value
     public func scale(_ inputValue: CGFloat, range: ClosedRange<CGFloat>) -> CGFloat {
-        var logResult = log10(inputValue)
-        if (logResult < 0) {
-            logResult = 0.0
-        }
+        let logResult = log10(inputValue)
         let logDomain = log10(domain.lowerBound)...log10(domain.upperBound)
-        let valueMappedToRange = interpolate(normalize(logResult, domain: logDomain), range: range)
+        let normalizedValueOnLogDomain = normalize(logResult, domain: logDomain)
+        let valueMappedToRange = interpolate(normalizedValueOnLogDomain, range: range)
         return valueMappedToRange
     }
 
     /// inverts the scale, taking a value in the output range and returning the relevant value from the input domain
-    public func invert(_ outputValue: CGFloat, range: ClosedRange<CGFloat>) -> CGFloat {
-        let linear = interpolate(normalize(outputValue, domain: range), range: domain)
+    public func invert(_ rangeValue: CGFloat, range: ClosedRange<CGFloat>) -> CGFloat {
+        let normalizedRangeValue = normalize(rangeValue, domain: range)
+        let logDomain = log10(domain.lowerBound)...log10(domain.upperBound)
+        let linear = interpolate(normalizedRangeValue, range: logDomain)
         return pow(10, linear)
     }
 
@@ -42,13 +46,18 @@ public struct LogScale: Scale {
     ///
     /// - Parameter count: number of steps to take in the ticks, default of 10
     /// - Returns: array of the locations of the ticks within self.range
-    public func ticks(count: Int = 10, range: ClosedRange<CGFloat>) -> [Tick] {
-        var result: [Tick] = Array()
-        for i in stride(from: 0, through: count, by: 1) {
-            // let tickRangeValue = interpolate(CGFloat(i) / CGFloat(count), range: range)
-            let tickDomainValue = interpolate(CGFloat(i) / CGFloat(count), range: domain)
-            result.append(Tick(value: tickDomainValue,
-                               location: scale(tickDomainValue, range: range)))
+    public func ticks(count: Int = 10, range: ClosedRange<CGFloat>) -> [CGFloatTick] {
+        // print("mapping ticks onto range: \(range)")
+        var result: [CGFloatTick] = Array()
+        for powerOfTen in stride(from: log10(domain.lowerBound), through: log10(domain.upperBound), by: 1) {
+            // print("power of ten: ", powerOfTen)
+            let regularValue = pow(10, powerOfTen)
+            for interpolatedValue in stride(from: regularValue, through: regularValue * 9.0, by: regularValue) {
+                if (domain.contains(interpolatedValue)) {
+                    // print("adding tick for value \(interpolatedValue) logvalue: \(log10(interpolatedValue)) at location \(scale(interpolatedValue, range: range))")
+                    result.append(CGFloatTick(value: interpolatedValue, location: scale(interpolatedValue, range: range)))
+                }
+            }
         }
         return result
     }

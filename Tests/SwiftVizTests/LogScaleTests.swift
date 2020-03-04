@@ -30,25 +30,40 @@ class LogScaleTests: XCTestCase {
     }
 
     func testLogScale_invert() {
-        let myScale = LogScale(domain: 0 ... 100.0, isClamped: false)
+        let myScale = LogScale(domain: 1 ... 100.0, isClamped: false)
         XCTAssertFalse(myScale.isClamped)
-
         let testRange = CGFloat(0) ... CGFloat(100.0)
-
-        XCTAssertEqual(10.0, myScale.invert(1.0, range: testRange), accuracy: 0.01)
+        let result = myScale.invert(50.0, range: testRange)
+        XCTAssertEqual(10, result, accuracy: 0.01)
     }
 
     func testLogScaleTicks() {
-        let myScale = LogScale(domain: 1 ... 100.0, isClamped: false)
+        let myScale = LogScale(domain: 0.01 ... 100.0, isClamped: false)
         XCTAssertFalse(myScale.isClamped)
 
         let testRange = CGFloat(0.0) ... CGFloat(100.0)
 
         let defaultTicks = myScale.ticks(range: testRange)
-        XCTAssertEqual(defaultTicks.count, 11)
+        XCTAssertEqual(defaultTicks.count, 37)
         for tick in defaultTicks {
             // every tick should be from within the scale's range (output area)
             XCTAssertTrue(testRange.contains(tick.rangeLocation))
+            XCTAssert(myScale.domain.contains(tick.value))
+        }
+    }
+
+    func testLogScaleTicksWeirdDomain() {
+        let myScale = LogScale(domain: 0.8 ... 999.0, isClamped: false)
+        XCTAssertFalse(myScale.isClamped)
+
+        let testRange = CGFloat(0.0) ... CGFloat(100.0)
+
+        let defaultTicks = myScale.ticks(range: testRange)
+        XCTAssertEqual(defaultTicks.count, 28)
+        for tick in defaultTicks {
+            // every tick should be from within the scale's range (output area)
+            XCTAssertTrue(testRange.contains(tick.rangeLocation))
+            XCTAssert(myScale.domain.contains(tick.value))
         }
     }
 

@@ -2,6 +2,8 @@ import Foundation
 
 // =============================================================
 //  Axis.swift
+// NOTE: migrate to where we do the UI specific pieces, as this matches
+// more with the UI display, not the underlying concepts
 
 // inspiration: https://github.com/d3/d3-axis
 // notes: https://github.com/pshrmn/notes/blob/master/d3/axes.md
@@ -30,19 +32,19 @@ import Foundation
  often has a margin (spacing) and translation from the side it's attached
  */
 
-public enum AxisDirection {
-    case x
-    case y
-    case z
-}
-
-public protocol Axis {
-    associatedtype Scale
-
-    var direction: AxisDirection { get }
-    // use internalScale.ticks() to determine location for ticks
-    // represent them with capsules, or maybe thin "boxes" aligned to the axis?
-}
+//public enum AxisDirection {
+//    case x
+//    case y
+//    case z
+//}
+//
+//public protocol Axis {
+//    associatedtype Scale
+//
+//    var direction: AxisDirection { get }
+//    // use internalScale.ticks() to determine location for ticks
+//    // represent them with capsules, or maybe thin "boxes" aligned to the axis?
+//}
 
 // bottom axis:
 // vStack ( line & pips with ticks

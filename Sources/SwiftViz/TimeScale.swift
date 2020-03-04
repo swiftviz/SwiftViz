@@ -16,13 +16,15 @@ import Foundation
 // const utc = d3.scaleUtc();
 // https://github.com/d3/d3-scale#scaleUtc
 // https://github.com/d3/d3-3.x-api-reference/blob/master/Time-Scales.md
+// Time Scale
+// - https://github.com/d3/d3-scale/blob/master/src/time.js
+// - D3 has a time format (https://github.com/d3/d3-time-format), but we can probably use
+//   IOS/MacOS NSTime, NSDate formatters and calendrical mechanisms
 
+@available(OSX 10.12, *)
 public struct TimeScale: Scale {
-    public func invert(_ outputValue: CGFloat, range: ClosedRange<CGFloat>) -> CGFloat {
-        return 0.0
-    }
-
     public typealias InputType = Date
+    public typealias TickType = DateTick
 
     public let isClamped: Bool
     public let domain: ClosedRange<InputType>
@@ -70,13 +72,12 @@ public struct TimeScale: Scale {
     ///
     /// - Parameter count: number of steps to take in the ticks, default of 10
     /// - Returns: array of the locations of the ticks within self.range
-    public func ticks(count: Int = 10, range: ClosedRange<CGFloat>) -> [Tick] {
-        var result: [Tick] = Array()
+    public func ticks(count: Int = 10, range: ClosedRange<CGFloat>) -> [DateTick] {
+        var result: [DateTick] = Array()
         for i in stride(from: 0, through: count, by: 1) {
-
             let tickDomainValue = interpolateDate(CGFloat(i) / CGFloat(count), range: domain)
-            result.append(Tick(value: CGFloat(tickDomainValue.timeIntervalSince1970),
-                               location: scale(tickDomainValue, range: range)))
+            result.append(DateTick(value: tickDomainValue,
+                           location: scale(tickDomainValue, range: range)))
         }
         return result
     }

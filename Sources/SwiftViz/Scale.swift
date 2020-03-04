@@ -21,6 +21,7 @@ import Foundation
 
 public protocol Scale {
     associatedtype InputType: Comparable // sequency, comparable thing
+    associatedtype TickType: Tick
     // this becomes a generic focused protocol - types implementing it will need to define the
     // protocol conformance in coordination with a generic type
 
@@ -50,14 +51,14 @@ public protocol Scale {
     ///   ClosedRange for range
     /// - Returns: a value within the bounds of the ClosedRange
     ///   for domain, or NaN if it maps outside the bounds
-    func invert(_ outputValue: CGFloat, range: ClosedRange<CGFloat>) -> CGFloat
+    func invert(_ outputValue: CGFloat, range: ClosedRange<CGFloat>) -> InputType
 
     /// returns an array of the locations within the ClosedRange of
     /// range to locate ticks for the scale
     ///
     /// - Parameter count: a number of ticks to display, defaulting to 10
     /// - Returns: an Array of the values within the ClosedRange of range
-    func ticks(count: Int, range: ClosedRange<CGFloat>) -> [Tick]
+    func ticks(count: Int, range: ClosedRange<CGFloat>) -> [TickType]
 }
 
 // NOTE(heckj): OTHER SCALES: make a PowScale (& maybe Sqrt, Log, Ln)
@@ -73,11 +74,6 @@ public protocol Scale {
 // values in the range. Quantile scales take an array of values for a
 // domain (not just a lower and upper limit) and maps range to be an
 // even distribution over the input domain
-
-// Time Scale
-// - https://github.com/d3/d3-scale/blob/master/src/time.js
-// - D3 has a time format (https://github.com/d3/d3-time-format), but we can probably use
-//   IOS/MacOS NSTime, NSDate formatters and calendrical mechanisms
 
 // Threshold Scale
 // Ordinal Scale

@@ -24,9 +24,11 @@ final class LinearScaleTests: XCTestCase {
         for tick in defaultTicks {
             // every tick should be from within the scale's domain (input) range
             XCTAssertTrue(testRange.contains(tick.rangeLocation))
+            XCTAssert(myScale.domain.contains(tick.value))
         }
     }
 
+    @available(OSX 10.12, *)
     func testTimeScale() {
         let start = Date() - TimeInterval(300)
         let end = Date()
@@ -34,11 +36,14 @@ final class LinearScaleTests: XCTestCase {
 
         let testRange = CGFloat(0) ... CGFloat(100.0)
 
+        //print("range is \(myTimeScale.domain)")
         let defaultTicks = myTimeScale.ticks(range: testRange)
         XCTAssertEqual(defaultTicks.count, 11)
         for tick in defaultTicks {
             // every tick should be from within the scale's domain (input) range
             XCTAssertTrue(testRange.contains(tick.rangeLocation))
+            //XCTAssert(myTimeScale.domain.contains(tick.value))
+            //print("tick \(tick.value) at location \(tick.rangeLocation)")
         }
     }
 
