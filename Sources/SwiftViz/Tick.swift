@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import CoreGraphics
 
 /// A Tick is a visual representation of a point along an axis.
 /// When created based on a range, it includes a location along a single direction

@@ -4,6 +4,7 @@
 //  Created by Joseph Heck on 3/3/20.
 
 import Foundation
+import CoreGraphics
 
 /// A linear scale is created using a continuous input domain and provides methods to
 /// convert values within that domain to an output range.

@@ -6,8 +6,9 @@
 //
 
 import Foundation
+import CoreGraphics
 
-@available(OSX 10.12, *)
+@available(OSX 10.12, iOS 10.0, watchOS 3.0, *)
 public struct DateTick: Tick {
 
     public let id = UUID()

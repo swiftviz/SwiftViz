@@ -1,12 +1,5 @@
 //
-//  File.swift
-//  
-//
-//  Created by Joseph Heck on 1/30/20.
-//
-
-import Foundation
-
+//  LinearScaleTests.swift
 
 @testable import SwiftViz
 import XCTest
@@ -48,7 +41,3 @@ final class LinearScaleTests: XCTestCase {
     }
 
 }
-
-
-
-
