@@ -32,7 +32,15 @@ jobs:
         brew install swiftformat
 
     - name: build and test
-      run: swift test -v
+      run: swift test --enable-code-coverage -v
+
+    - name: Prepare Code Coverage
+      run: llvm-cov export -format="lcov" .build/x86_64-unknown-linux/debug/${{ env.PACKAGE_NAME }}PackageTests.xctest -instr-profile .build/debug/codecov/default.profdata > info.lcov
+
+    - name: Upload to CodeCov.io
+      run: bash <(curl https://codecov.io/bash)
+      env:
+          CODECOV_TOKEN: ${{ secrets.CODECOV_TOKEN }}
 
     - name: swiftlint
       run: swiftlint
