@@ -3,8 +3,8 @@
 //
 //  Created by Joseph Heck on 3/3/20.
 
-import Foundation
 import CoreGraphics
+import Foundation
 
 /// A linear scale is created using a continuous input domain and provides methods to
 /// convert values within that domain to an output range.
@@ -29,7 +29,7 @@ public struct LogScale: Scale {
     /// - Returns: scaled value
     public func scale(_ inputValue: CGFloat, range: ClosedRange<CGFloat>) -> CGFloat {
         let logResult = log10(inputValue)
-        let logDomain = log10(domain.lowerBound)...log10(domain.upperBound)
+        let logDomain = log10(domain.lowerBound) ... log10(domain.upperBound)
         let normalizedValueOnLogDomain = normalize(logResult, domain: logDomain)
         let valueMappedToRange = interpolate(normalizedValueOnLogDomain, range: range)
         return valueMappedToRange
@@ -38,7 +38,7 @@ public struct LogScale: Scale {
     /// inverts the scale, taking a value in the output range and returning the relevant value from the input domain
     public func invert(_ rangeValue: CGFloat, range: ClosedRange<CGFloat>) -> CGFloat {
         let normalizedRangeValue = normalize(rangeValue, domain: range)
-        let logDomain = log10(domain.lowerBound)...log10(domain.upperBound)
+        let logDomain = log10(domain.lowerBound) ... log10(domain.upperBound)
         let linear = interpolate(normalizedRangeValue, range: logDomain)
         return pow(10, linear)
     }
@@ -47,7 +47,7 @@ public struct LogScale: Scale {
     ///
     /// - Parameter count: number of steps to take in the ticks, default of 10
     /// - Returns: array of the locations of the ticks within self.range
-    public func ticks(count: Int = 10, range: ClosedRange<CGFloat>) -> [CGFloatTick] {
+    public func ticks(count _: Int = 10, range: ClosedRange<CGFloat>) -> [CGFloatTick] {
         // print("mapping ticks onto range: \(range)")
         var result: [CGFloatTick] = Array()
         for powerOfTen in stride(from: log10(domain.lowerBound), through: log10(domain.upperBound), by: 1) {

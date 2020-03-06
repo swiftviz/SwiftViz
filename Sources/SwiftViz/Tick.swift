@@ -5,8 +5,8 @@
 //  Created by Joseph Heck on 3/2/20.
 //
 
-import Foundation
 import CoreGraphics
+import Foundation
 
 /// A Tick is a visual representation of a point along an axis.
 /// When created based on a range, it includes a location along a single direction

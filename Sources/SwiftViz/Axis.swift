@@ -32,19 +32,19 @@ import Foundation
  often has a margin (spacing) and translation from the side it's attached
  */
 
-//public enum AxisDirection {
+// public enum AxisDirection {
 //    case x
 //    case y
 //    case z
-//}
+// }
 //
-//public protocol Axis {
+// public protocol Axis {
 //    associatedtype Scale
 //
 //    var direction: AxisDirection { get }
 //    // use internalScale.ticks() to determine location for ticks
 //    // represent them with capsules, or maybe thin "boxes" aligned to the axis?
-//}
+// }
 
 // bottom axis:
 // vStack ( line & pips with ticks

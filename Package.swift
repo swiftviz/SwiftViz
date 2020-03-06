@@ -8,14 +8,15 @@ let package = Package(
     platforms: [
         .iOS(.v10),
         .macOS(.v10_10),
-        .tvOS(.v13)
+        .tvOS(.v13),
 //        .watchOS(.v3)
     ],
     products: [
         // Products define the executables and libraries produced by a package, and make them visible to other packages.
         .library(
             name: "SwiftViz",
-            targets: ["SwiftViz"])
+            targets: ["SwiftViz"]
+        ),
     ],
     dependencies: [
         // Dependencies declare other packages that this package depends on.
@@ -26,9 +27,11 @@ let package = Package(
         // Targets can depend on other targets in this package, and on products in packages which this package depends on.
         .target(
             name: "SwiftViz",
-            dependencies: []),
+            dependencies: []
+        ),
         .testTarget(
             name: "SwiftVizTests",
-            dependencies: ["SwiftViz"])
+            dependencies: ["SwiftViz"]
+        ),
     ]
 )

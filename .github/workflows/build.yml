@@ -44,6 +44,6 @@ jobs:
       env:
           CODECOV_TOKEN: ${{ secrets.CODECOV_TOKEN }}
 
-    - name: swiftlint
-      run: swiftlint
+    - name: format and lint validation
+      run: swiftformat --lint . && swiftlint
 
