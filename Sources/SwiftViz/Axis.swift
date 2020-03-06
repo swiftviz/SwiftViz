@@ -50,4 +50,3 @@ import Foundation
 // vStack ( line & pips with ticks
 //          hstack ( Text(number), Text(number2), Text(number3) )
 //         )
-

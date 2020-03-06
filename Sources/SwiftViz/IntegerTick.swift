@@ -28,4 +28,3 @@ public struct IntegerTick: Tick {
         self.rangeLocation = location
     }
 }
-

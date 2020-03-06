@@ -54,7 +54,7 @@ public struct LogScale: Scale {
             // print("power of ten: ", powerOfTen)
             let regularValue = pow(10, powerOfTen)
             for interpolatedValue in stride(from: regularValue, through: regularValue * 9.0, by: regularValue) {
-                if (domain.contains(interpolatedValue)) {
+                if domain.contains(interpolatedValue) {
                     // print("adding tick for value \(interpolatedValue) logvalue: \(log10(interpolatedValue)) at location \(scale(interpolatedValue, range: range))")
                     result.append(CGFloatTick(value: interpolatedValue, location: scale(interpolatedValue, range: range)))
                 }
