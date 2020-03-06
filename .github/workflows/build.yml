@@ -28,8 +28,7 @@ jobs:
 
     - name: Homebrew build helpers install
       run: |
-        brew install swiftlint
-        brew install swiftformat
+        brew bundle
 
     - name: build and test
       run: swift test --enable-code-coverage -v
