@@ -11,5 +11,6 @@ Loosely based on the APIs and mechanisms created by Mike Bostock and contributor
 
     git clone https://github.com/swiftviz/swiftviz
     cd swiftviz
-    swift test
+    swift test -v
+    swiftlnt
 
