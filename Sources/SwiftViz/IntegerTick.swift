@@ -5,11 +5,10 @@
 //  Created by Joseph Heck on 3/4/20.
 //
 
-import Foundation
 import CoreGraphics
+import Foundation
 
 public struct IntegerTick: Tick {
-
     public let id = UUID()
     // making this identifiable as a convenience
     // for use within SwiftUI. You can then use ForEach over
@@ -25,6 +24,6 @@ public struct IntegerTick: Tick {
     // public initializer needed in a library, the auto-generated one isn't auto-public
     public init(value: Int, location: CGFloat) {
         self.value = value
-        self.rangeLocation = location
+        rangeLocation = location
     }
 }

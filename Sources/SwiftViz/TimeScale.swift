@@ -1,5 +1,5 @@
-import Foundation
 import CoreGraphics
+import Foundation
 
 // =============================================================
 //  TimeScale.swift
@@ -78,7 +78,7 @@ public struct TimeScale: Scale {
         for i in stride(from: 0, through: count, by: 1) {
             let tickDomainValue = interpolateDate(CGFloat(i) / CGFloat(count), range: domain)
             result.append(DateTick(value: tickDomainValue,
-                           location: scale(tickDomainValue, range: range)))
+                                   location: scale(tickDomainValue, range: range)))
         }
         return result
     }

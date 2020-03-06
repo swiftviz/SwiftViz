@@ -1,7 +1,8 @@
 type_name:
   allowed_symbols: "_"
 disabled_rules:
-  type_body_length
+  - type_body_length
+  - trailing_comma
 identifier_name:
   min_length: 2
   excluded:

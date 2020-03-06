@@ -5,11 +5,10 @@
 //  Created by Joseph Heck on 3/3/20.
 //
 
-import XCTest
 @testable import SwiftViz
+import XCTest
 
 class LogScaleTests: XCTestCase {
-
     override func setUp() {
         // Put setup code here. This method is called before the
         // invocation of each test method in the class.
@@ -66,5 +65,4 @@ class LogScaleTests: XCTestCase {
             XCTAssert(myScale.domain.contains(tick.value))
         }
     }
-
 }

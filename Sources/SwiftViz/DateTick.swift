@@ -5,12 +5,11 @@
 //  Created by Joseph Heck on 3/4/20.
 //
 
-import Foundation
 import CoreGraphics
+import Foundation
 
 @available(OSX 10.12, iOS 10.0, watchOS 3.0, *)
 public struct DateTick: Tick {
-
     public let id = UUID()
     // making this identifiable as a convenience
     // for use within SwiftUI. You can then use ForEach over
@@ -27,6 +26,6 @@ public struct DateTick: Tick {
     // public initializer needed in a library, the auto-generated one isn't auto-public
     public init(value: Date, location: CGFloat) {
         self.value = value
-        self.rangeLocation = location
+        rangeLocation = location
     }
 }

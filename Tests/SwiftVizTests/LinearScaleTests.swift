@@ -5,7 +5,6 @@
 import XCTest
 
 final class LinearScaleTests: XCTestCase {
-
     func testLinearScaleTicks() {
         let myScale = LinearScale(domain: 0 ... 1.0, isClamped: false)
         XCTAssertFalse(myScale.isClamped)
@@ -29,15 +28,14 @@ final class LinearScaleTests: XCTestCase {
 
         let testRange = CGFloat(0) ... CGFloat(100.0)
 
-        //print("range is \(myTimeScale.domain)")
+        // print("range is \(myTimeScale.domain)")
         let defaultTicks = myTimeScale.ticks(range: testRange)
         XCTAssertEqual(defaultTicks.count, 11)
         for tick in defaultTicks {
             // every tick should be from within the scale's domain (input) range
             XCTAssertTrue(testRange.contains(tick.rangeLocation))
-            //XCTAssert(myTimeScale.domain.contains(tick.value))
-            //print("tick \(tick.value) at location \(tick.rangeLocation)")
+            // XCTAssert(myTimeScale.domain.contains(tick.value))
+            // print("tick \(tick.value) at location \(tick.rangeLocation)")
         }
     }
-
 }
