@@ -73,7 +73,7 @@ extension Scale where InputType == TickType.InputType {
     /// - Parameter inputValues: an array of values of the Scale's InputType
     /// - Parameter range: a ClosedRange representing the representing
     ///   the range we are mapping the values into with the scale
-    func ticks(_ inputValues: [InputType], range: ClosedRange<CGFloat>) -> [TickType] {
+    func manualTicks(_ inputValues: [InputType], range: ClosedRange<CGFloat>) -> [TickType] {
         inputValues.map { inputValue in
             TickType(value: inputValue,
                      location: scale(inputValue, range: range))

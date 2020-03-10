@@ -25,7 +25,7 @@ final class LinearScaleTests: XCTestCase {
         XCTAssertFalse(myScale.isClamped)
 
         let testRange = CGFloat(0) ... CGFloat(100.0)
-        let manualTicks = myScale.ticks([0.1, 0.5], range: testRange)
+        let manualTicks = myScale.manualTicks([0.1, 0.5], range: testRange)
 
         XCTAssertEqual(manualTicks.count, 2)
         for tick in manualTicks {
