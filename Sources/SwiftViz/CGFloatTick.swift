@@ -9,8 +9,6 @@ import CoreGraphics
 import Foundation
 
 public struct CGFloatTick: Tick {
-    public typealias InputType = CGFloat
-
     public let id = UUID()
     // making this identifiable as a convenience
     // for use within SwiftUI. You can then use ForEach over

@@ -12,9 +12,10 @@ import Foundation
 /// When created based on a range, it includes a location along a single direction
 /// and a textual representation. It is meant to be created using a Scale, with some input domain
 /// being mapped to visualization using the Scale's output range.
-public protocol Tick: ScaleInputType, Identifiable {
+public protocol Tick: Identifiable {
     // this becomes a generic focused protocol - types implementing it will need to define the
     // protocol conformance in coordination with a generic type
+    associatedtype InputType: Comparable
 
     var id: UUID { get }
 
