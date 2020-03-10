@@ -57,7 +57,7 @@ class LogScaleTests: XCTestCase {
 
         let testRange = CGFloat(0) ... CGFloat(100.0)
 
-        let manualTicks = myScale.manualTicks([0.1, 1, 10], range: testRange)
+        let manualTicks = myScale.ticks([0.1, 1, 10], range: testRange)
 
         XCTAssertEqual(manualTicks.count, 3)
         for tick in manualTicks {
