@@ -9,6 +9,8 @@ import CoreGraphics
 import Foundation
 
 public struct IntegerTick: Tick {
+    public typealias InputType = Int
+
     public let id = UUID()
     // making this identifiable as a convenience
     // for use within SwiftUI. You can then use ForEach over

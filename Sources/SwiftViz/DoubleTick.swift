@@ -9,6 +9,8 @@ import CoreGraphics
 import Foundation
 
 public struct DoubleTick: Tick {
+    public typealias InputType = Double
+
     public let id = UUID()
     // making this identifiable as a convenience
     // for use within SwiftUI. You can then use ForEach over

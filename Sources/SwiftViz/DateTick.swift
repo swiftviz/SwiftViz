@@ -10,6 +10,8 @@ import Foundation
 
 @available(OSX 10.12, iOS 10.0, watchOS 3.0, *)
 public struct DateTick: Tick {
+    public typealias InputType = Date
+
     public let id = UUID()
     // making this identifiable as a convenience
     // for use within SwiftUI. You can then use ForEach over

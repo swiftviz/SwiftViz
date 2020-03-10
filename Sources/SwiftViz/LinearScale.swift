@@ -45,4 +45,11 @@ public struct LinearScale: Scale {
         }
         return result
     }
+
+    public func ticks(_ inputValues: [CGFloat], range: ClosedRange<CGFloat>) -> [CGFloatTick] {
+        inputValues.map { inputValue in
+            CGFloatTick(value: inputValue,
+                        location: scale(inputValue, range: range))
+        }
+    }
 }

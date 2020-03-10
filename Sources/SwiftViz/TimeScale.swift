@@ -82,4 +82,11 @@ public struct TimeScale: Scale {
         }
         return result
     }
+
+    public func ticks(_ inputValues: [Date], range: ClosedRange<CGFloat>) -> [DateTick] {
+        inputValues.map { inputValue in
+            DateTick(value: inputValue,
+                     location: scale(inputValue, range: range))
+        }
+    }
 }

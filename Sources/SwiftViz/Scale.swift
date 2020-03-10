@@ -19,9 +19,12 @@ import Foundation
 
 // D3's scale also has a .nice() function that does some pleasant rounding of the domain,
 // extending it slightly so that it's nicer to view
+public protocol ScaleInputType {
+    associatedtype InputType: Comparable
+    // sequency, comparable thing
+}
 
-public protocol Scale {
-    associatedtype InputType: Comparable // sequency, comparable thing
+public protocol Scale: ScaleInputType {
     associatedtype TickType: Tick
     // this becomes a generic focused protocol - types implementing it will need to define the
     // protocol conformance in coordination with a generic type
@@ -41,6 +44,8 @@ public protocol Scale {
     ///
     /// - Parameter inputValue: a value within the bounds of the
     ///   ClosedRange for domain
+    /// - Parameter range: a ClosedRange representing the representing
+    ///   the range we are mapping the values into with the scale
     /// - Returns: a value within the bounds of the ClosedRange
     ///   for range, or NaN if it maps outside the bounds
     func scale(_ inputValue: InputType, range: ClosedRange<CGFloat>) -> CGFloat
@@ -50,6 +55,8 @@ public protocol Scale {
     ///
     /// - Parameter outputValue: a value within the bounds of the
     ///   ClosedRange for range
+    /// - Parameter range: a ClosedRange representing the representing
+    ///   the range we are mapping the values into with the scale
     /// - Returns: a value within the bounds of the ClosedRange
     ///   for domain, or NaN if it maps outside the bounds
     func invert(_ outputValue: CGFloat, range: ClosedRange<CGFloat>) -> InputType
@@ -58,9 +65,56 @@ public protocol Scale {
     /// range to locate ticks for the scale
     ///
     /// - Parameter count: a number of ticks to display, defaulting to 10
+    /// - Parameter range: a ClosedRange representing the representing
+    ///   the range we are mapping the values into with the scale
     /// - Returns: an Array of the values within the ClosedRange of range
     func ticks(count: Int, range: ClosedRange<CGFloat>) -> [TickType]
+
+    /// Converts an array of values of the Scale's InputType into a set of Ticks.
+    /// Used for manually specifying a series of ticks that you want to have displayed.
+    /// - Parameter inputValues: an array of values of the Scale's InputType
+    /// - Parameter range: a ClosedRange representing the representing
+    ///   the range we are mapping the values into with the scale
+    func ticks(_ inputValues: [InputType], range: ClosedRange<CGFloat>) -> [TickType]
 }
+
+// NOTE(heckj): commented out while I work on figuring out the correct way to use generics
+// and protocols here. The code for `ticks` works above, but the implementation is fundamentally
+// the same in all instances... so it feels like it should be perfect for a generic implementation.
+// However, I keep running afoul of the compiler not being able to determine that the relevant
+// underlying type used by the protocols is the *same* type.
+//
+// extension Scale {
+//
+//    /// Converts an array of values of the Scale's InputType into a set of Ticks.
+//    /// Used for manually specifying a series of ticks that you want to have displayed.
+//    /// - Parameter inputValues: an array of values of the Scale's InputType
+//    /// - Parameter range: a ClosedRange representing the representing
+//    ///   the range we are mapping the values into with the scale
+//    func genericTicks(_ inputValues:[InputType], range: ClosedRange<CGFloat>) -> [TickType] {
+//        inputValues.map { inputValue in
+//            /* getting the error here:
+//
+//             Cannot convert value of type 'Self.InputType'
+//             (associated type of protocol 'ScaleInputType') to expected argument type
+//             'Self.TickType.InputType' (associated type of protocol 'ScaleInputType')
+//
+//             Fundamentally, the InputTypes aren't known to the be the same to the compiler, so I get
+//             why it's telling me this isn't cool. But what I'm not sure of is how to get appropriately
+//             tell the compiler they're related.
+//
+//             I've externalized the typealias for the two protocols so they both "inherit" from
+//             the same base protocol, but this doesn't seem to be sufficient to link them for the
+//             compiler.
+//
+//             Can I layer/nest the protocols together so that they use the same associated types?
+//             */
+//            TickType.init(value: inputValue,
+//                          location: scale(inputValue, range: range))
+//        }
+//
+//    }
+// }
 
 // NOTE(heckj): OTHER SCALES: make a PowScale (& maybe Sqrt, Log, Ln)
 

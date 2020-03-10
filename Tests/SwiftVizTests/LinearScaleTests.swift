@@ -20,6 +20,21 @@ final class LinearScaleTests: XCTestCase {
         }
     }
 
+    func testLinearScaleManualTicks() {
+        let myScale = LinearScale(domain: 0 ... 1.0, isClamped: false)
+        XCTAssertFalse(myScale.isClamped)
+
+        let testRange = CGFloat(0) ... CGFloat(100.0)
+        let manualTicks = myScale.ticks([0.1, 0.5], range: testRange)
+
+        XCTAssertEqual(manualTicks.count, 2)
+        for tick in manualTicks {
+            // every tick should be from within the scale's domain (input) range
+            XCTAssertTrue(testRange.contains(tick.rangeLocation))
+            XCTAssert(myScale.domain.contains(tick.value))
+        }
+    }
+
     @available(OSX 10.12, *)
     func testTimeScale() {
         let start = Date() - TimeInterval(300)
