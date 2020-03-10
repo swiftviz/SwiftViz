@@ -51,6 +51,22 @@ class LogScaleTests: XCTestCase {
         }
     }
 
+    func testLogScaleManualTicks() {
+        let myScale = LogScale(domain: 0.01 ... 100.0, isClamped: false)
+        XCTAssertFalse(myScale.isClamped)
+
+        let testRange = CGFloat(0) ... CGFloat(100.0)
+
+        let manualTicks = myScale.ticks([0.1, 1, 10], range: testRange)
+
+        XCTAssertEqual(manualTicks.count, 3)
+        for tick in manualTicks {
+            // every tick should be from within the scale's domain (input) range
+            XCTAssertTrue(testRange.contains(tick.rangeLocation))
+            XCTAssert(myScale.domain.contains(tick.value))
+        }
+    }
+
     func testLogScaleTicksWeirdDomain() {
         let myScale = LogScale(domain: 0.8 ... 999.0, isClamped: false)
         XCTAssertFalse(myScale.isClamped)

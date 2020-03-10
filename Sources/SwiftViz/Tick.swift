@@ -13,12 +13,14 @@ import Foundation
 /// and a textual representation. It is meant to be created using a Scale, with some input domain
 /// being mapped to visualization using the Scale's output range.
 public protocol Tick: Identifiable {
-    associatedtype InputType: Comparable // sequency, comparable thing
     // this becomes a generic focused protocol - types implementing it will need to define the
     // protocol conformance in coordination with a generic type
+    associatedtype InputType: Comparable
 
     var id: UUID { get }
 
     var value: InputType { get }
     var rangeLocation: CGFloat { get }
+
+    init(value: InputType, location: CGFloat)
 }
