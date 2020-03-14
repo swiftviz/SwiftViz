@@ -36,5 +36,4 @@ final class PackagingTests: XCTestCase {
         let validatedSet = scale.validatedTickLabels(manualLabels, range: 0 ... 10.0)
         XCTAssertEqual(validatedSet.count, 2)
     }
-
 }

@@ -33,5 +33,4 @@ final class TickLabelTests: XCTestCase {
         XCTAssertEqual("1.0", result.value)
         XCTAssertEqual(1.0, result.rangeLocation)
     }
-
 }

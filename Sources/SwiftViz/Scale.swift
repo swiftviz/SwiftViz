@@ -92,14 +92,13 @@ extension Scale where InputType == TickType.InputType {
     /// - Parameter range: a ClosedRange representing the representing
     ///   the range we are mapping the values into with the scale.
     public func validatedTickLabels(_ inputTickLabels: [TickLabel], range: ClosedRange<CGFloat>) -> [TickLabel] {
-        return inputTickLabels.compactMap { tick in
+        inputTickLabels.compactMap { tick in
             let inputValue = invert(tick.rangeLocation, range: range)
             if domain.contains(inputValue) {
                 return tick
             }
             return nil
         }
-
     }
 }
 
