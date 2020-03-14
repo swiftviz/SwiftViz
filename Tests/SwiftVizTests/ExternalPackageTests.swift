@@ -19,14 +19,12 @@ final class PackagingTests: XCTestCase {
 
     func testManualTicksOutsideRange() {
         let scale = LinearScale(domain: 0 ... 10.0, isClamped: false)
-        // verifies the method is visible externally - else this won't compile
         let ticks = scale.ticks([2.0, 4.0, 8.0, 16.0], range: 0 ... 10.0)
         XCTAssertEqual(ticks.count, 3)
     }
 
     func testManualTickLabelValidation() {
         let scale = LinearScale(domain: 0 ... 10.0, isClamped: false)
-        // verifies the method is visible externally - else this won't compile
         let manualLabels = [
             TickLabel(rangeLocation: -1.0, value: "-1.0"),
             TickLabel(rangeLocation: 1.0, value: "1.0"),
@@ -35,5 +33,19 @@ final class PackagingTests: XCTestCase {
         ]
         let validatedSet = scale.validatedTickLabels(manualLabels, range: 0 ... 10.0)
         XCTAssertEqual(validatedSet.count, 2)
+    }
+
+    func testManualTickLabelsThroughScale() {
+        let scale = LinearScale(domain: 0 ... 10.0, isClamped: false)
+        let labeledValues = [
+            (CGFloat(-1.0), "-1"),
+            (CGFloat(1.0), "1"),
+            (CGFloat(10.0), "10"),
+            (CGFloat(100.0), "100"),
+        ]
+        let validatedSet = scale.labeledTickValues(labeledValues, range: 0 ... 10.0)
+        XCTAssertEqual(validatedSet.count, 2)
+        XCTAssertEqual(validatedSet[0].value, "1")
+        XCTAssertEqual(validatedSet[1].value, "10")
     }
 }

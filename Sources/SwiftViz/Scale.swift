@@ -86,6 +86,25 @@ extension Scale where InputType == TickType.InputType {
         }
     }
 
+    /// Takes an set of labelled input values and returns the relevant set of TickLabels converted
+    /// to the correct location values associated with the provided range.
+    /// - Parameters:
+    ///   - inputValues: A tuple of (InputValue, String) that is the labelled value
+    ///   - range: a ClosedRange representing the representing
+    ///   the range we are mapping the values into with the scale
+    public func labeledTickValues(_ inputValues: [(InputType, String)], range: ClosedRange<CGFloat>) -> [TickLabel] {
+        inputValues.compactMap { inputTuple in
+            let (inputValue, stringValue) = inputTuple
+            if domain.contains(inputValue) {
+                let location = scale(inputValue, range: range)
+                if !location.isNaN {
+                    return TickLabel(rangeLocation: location, value: stringValue)
+                }
+            }
+            return nil
+        }
+    }
+
     /// Validates a set of TickLabels against a given scale, removing any that don't match the scale's domain.
     ///
     /// - Parameter inputTickLabels: an array of TickLabels to validate against the scale
