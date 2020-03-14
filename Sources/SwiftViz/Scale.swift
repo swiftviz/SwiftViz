@@ -85,6 +85,22 @@ extension Scale where InputType == TickType.InputType {
             return nil
         }
     }
+
+    /// Validates a set of TickLabels against a given scale, removing any that don't match the scale's domain.
+    ///
+    /// - Parameter inputTickLabels: an array of TickLabels to validate against the scale
+    /// - Parameter range: a ClosedRange representing the representing
+    ///   the range we are mapping the values into with the scale.
+    public func validatedTickLabels(_ inputTickLabels: [TickLabel], range: ClosedRange<CGFloat>) -> [TickLabel] {
+        return inputTickLabels.compactMap { tick in
+            let inputValue = invert(tick.rangeLocation, range: range)
+            if domain.contains(inputValue) {
+                return tick
+            }
+            return nil
+        }
+
+    }
 }
 
 // NOTE(heckj): OTHER SCALES: make a PowScale (& maybe Sqrt, Log, Ln)
