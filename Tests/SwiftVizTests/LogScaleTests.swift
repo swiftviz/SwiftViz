@@ -81,4 +81,20 @@ class LogScaleTests: XCTestCase {
             XCTAssert(myScale.domain.contains(tick.value))
         }
     }
+
+    func testLogScaleTicksOutsideDomain() {
+        let myScale = LogScale(domain: 10 ... 1000.0, isClamped: false)
+        XCTAssertFalse(myScale.isClamped)
+
+        let testRange = CGFloat(0.0) ... CGFloat(100.0)
+
+        let manualTicks = myScale.ticks([0.1, 1, 10, 100, 1000], range: testRange)
+
+        XCTAssertEqual(manualTicks.count, 3)
+        for tick in manualTicks {
+            // every tick should be from within the scale's range (output area)
+            XCTAssertTrue(testRange.contains(tick.rangeLocation))
+            XCTAssert(myScale.domain.contains(tick.value))
+        }
+    }
 }

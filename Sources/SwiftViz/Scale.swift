@@ -70,13 +70,19 @@ public protocol Scale {
 extension Scale where InputType == TickType.InputType {
     /// Converts an array of values of the Scale's InputType into a set of Ticks.
     /// Used for manually specifying a series of ticks that you want to have displayed.
+    ///
+    /// Any values presented for display that are *not* within the domain of the scale
+    /// are ignored and dropped.
     /// - Parameter inputValues: an array of values of the Scale's InputType
     /// - Parameter range: a ClosedRange representing the representing
     ///   the range we are mapping the values into with the scale
     public func ticks(_ inputValues: [InputType], range: ClosedRange<CGFloat>) -> [TickType] {
-        inputValues.map { inputValue in
-            TickType(value: inputValue,
-                     location: scale(inputValue, range: range))
+        inputValues.compactMap { inputValue in
+            if domain.contains(inputValue) {
+                return TickType(value: inputValue,
+                                location: scale(inputValue, range: range))
+            }
+            return nil
         }
     }
 }
