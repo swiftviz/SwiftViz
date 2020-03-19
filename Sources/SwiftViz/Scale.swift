@@ -25,8 +25,23 @@ public protocol Scale {
     // this becomes a generic focused protocol - types implementing it will need to define the
     // protocol conformance in coordination with a generic type
 
-    // clamped constrains the output mapping through the input domain to the output range so that it's always
-    // inside the outputRange
+    /*
+     tape("linear.clamp(true) restricts output values to the range", function(test) {
+       test.equal(d3.scale.linear().clamp(true).range([10, 20])(2), 20);
+       test.equal(d3.scale.linear().clamp(true).range([10, 20])(-1), 10);
+       test.end();
+     });
+
+     tape("linear.clamp(true) restricts input values to the domain", function(test) {
+       test.equal(d3.scale.linear().clamp(true).range([10, 20]).invert(30), 1);
+       test.equal(d3.scale.linear().clamp(true).range([10, 20]).invert(0), 0);
+       test.end();
+     });
+     */
+
+    // clamped forces constraints on both the domain and the range. Any scaled values
+    // will be constrained the output range, and any inverted values will be constrained
+    // to the input domain.
     var isClamped: Bool { get }
 
     // input values
@@ -65,6 +80,21 @@ public protocol Scale {
     ///   the range we are mapping the values into with the scale
     /// - Returns: an Array of the values within the ClosedRange of range
     func ticks(count: Int, range: ClosedRange<CGFloat>) -> [TickType]
+}
+
+extension Scale {
+    // returns the a constrained value to the provided IF isClamped is true
+    public func clamp(_ value: InputType, withinRange: ClosedRange<InputType>) -> InputType {
+        if (self.isClamped) {
+            if (value > withinRange.upperBound) {
+                return withinRange.upperBound
+            }
+            if (value < withinRange.lowerBound) {
+                return withinRange.lowerBound
+            }
+        }
+        return value
+    }
 }
 
 extension Scale where InputType == TickType.InputType {

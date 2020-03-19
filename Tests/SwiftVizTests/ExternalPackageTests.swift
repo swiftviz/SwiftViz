@@ -48,4 +48,17 @@ final class PackagingTests: XCTestCase {
         XCTAssertEqual(validatedSet[0].value, "1")
         XCTAssertEqual(validatedSet[1].value, "10")
     }
+
+    func testScaleClamp() {
+        let scale = LinearScale(domain: 5 ... 10.0)
+        // default isClamped is false - no clamping
+        XCTAssertEqual(scale.clamp(11.0, withinRange: 5 ... 10.0), 11.0)
+        XCTAssertEqual(scale.clamp(1.0, withinRange: 5 ... 10.0), 1.0)
+        XCTAssertEqual(scale.clamp(7.0, withinRange: 5 ... 10.0), 7.0)
+
+        let cScale = LinearScale(domain: 5 ... 10.0, isClamped: true)
+        XCTAssertEqual(cScale.clamp(11.0, withinRange: 5 ... 10.0), 10.0)
+        XCTAssertEqual(cScale.clamp(1.0, withinRange: 5 ... 10.0), 5.0)
+        XCTAssertEqual(scale.clamp(7.0, withinRange: 5 ... 10.0), 7.0)
+    }
 }

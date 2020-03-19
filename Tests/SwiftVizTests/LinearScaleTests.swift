@@ -6,7 +6,7 @@ import XCTest
 
 final class LinearScaleTests: XCTestCase {
     func testLinearScaleTicks() {
-        let myScale = LinearScale(domain: 0 ... 1.0, isClamped: false)
+        let myScale = LinearScale(domain: 0 ... 1.0)
         XCTAssertFalse(myScale.isClamped)
 
         let testRange = CGFloat(0) ... CGFloat(100.0)
@@ -21,7 +21,7 @@ final class LinearScaleTests: XCTestCase {
     }
 
     func testLinearScaleManualTicks() {
-        let myScale = LinearScale(domain: 0 ... 1.0, isClamped: false)
+        let myScale = LinearScale(domain: 0 ... 1.0)
         XCTAssertFalse(myScale.isClamped)
 
         let testRange = CGFloat(0) ... CGFloat(100.0)
@@ -52,5 +52,32 @@ final class LinearScaleTests: XCTestCase {
             // XCTAssert(myTimeScale.domain.contains(tick.value))
             // print("tick \(tick.value) at location \(tick.rangeLocation)")
         }
+    }
+
+    func testLinearScaleClamp() {
+        let scale = LinearScale(domain: 0 ... 10.0)
+        let clampedScale = LinearScale(domain: 0 ... 10.0, isClamped: true)
+        XCTAssertFalse(scale.isClamped)
+        XCTAssertTrue(clampedScale.isClamped)
+        let testRange = CGFloat(0) ... CGFloat(100.0)
+
+        // no clamp effect
+        XCTAssertEqual(scale.scale(5, range: testRange), 50)
+        XCTAssertEqual(clampedScale.scale(5, range: testRange), 50)
+
+        // clamp constrained high
+        XCTAssertEqual(scale.scale(11, range: testRange), 110)
+        XCTAssertEqual(clampedScale.scale(11, range: testRange), 100)
+
+        // clamp constrained low
+        XCTAssertEqual(scale.scale(-1, range: testRange), -10)
+        XCTAssertEqual(clampedScale.scale(-1, range: testRange), 0)
+    }
+
+    func testLinearInvertClamp() {
+        let myScale = LinearScale(domain: 0 ... 10.0, isClamped: true)
+        XCTAssertTrue(myScale.isClamped)
+        let testRange = CGFloat(0) ... CGFloat(100.0)
+
     }
 }
