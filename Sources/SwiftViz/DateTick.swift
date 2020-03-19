@@ -8,7 +8,6 @@
 import CoreGraphics
 import Foundation
 
-@available(OSX 10.12, iOS 10.0, watchOS 3.0, *)
 public struct DateTick: Tick {
     public let id = UUID()
     // making this identifiable as a convenience
@@ -17,11 +16,6 @@ public struct DateTick: Tick {
 
     public let value: Date
     public let rangeLocation: CGFloat // location maps to the output range of the Scale
-
-    private let fm = ISO8601DateFormatter()
-    public var stringValue: String {
-        fm.string(from: value)
-    }
 
     // public initializer needed in a library, the auto-generated one isn't auto-public
     public init(value: Date, location: CGFloat) {

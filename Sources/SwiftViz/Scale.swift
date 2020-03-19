@@ -82,16 +82,30 @@ public protocol Scale {
     func ticks(count: Int, range: ClosedRange<CGFloat>) -> [TickType]
 }
 
+extension ClosedRange {
+    public func constrainedToRange(_ value: Bound) -> Bound {
+        if (value > self.upperBound) {
+            return self.upperBound
+        }
+        if (value < self.lowerBound) {
+            return self.lowerBound
+        }
+        return value
+    }
+}
+
 extension Scale {
     // returns the a constrained value to the provided IF isClamped is true
-    public func clamp(_ value: InputType, withinRange: ClosedRange<InputType>) -> InputType {
+    public func clampDomain(_ value: InputType, withinRange: ClosedRange<InputType>) -> InputType {
         if (self.isClamped) {
-            if (value > withinRange.upperBound) {
-                return withinRange.upperBound
-            }
-            if (value < withinRange.lowerBound) {
-                return withinRange.lowerBound
-            }
+            return withinRange.constrainedToRange(value)
+        }
+        return value
+    }
+    
+    public func clampRange(_ value: CGFloat, withinRange: ClosedRange<CGFloat>) -> CGFloat {
+        if (self.isClamped) {
+            return withinRange.constrainedToRange(value)
         }
         return value
     }
@@ -172,15 +186,12 @@ extension Scale where InputType == TickType.InputType {
 
 // MARK: - general functions used in various implementations of Scale
 
-/// normalize(a, b)(x) takes a domain value x in [a,b]
-/// and returns the corresponding parameter t in [0,1].
+/// normalize(x, a ... b) takes a value x and normalizes it across the domain a...b
+/// It returns the corresponding parameter within the range [0...1] if it was within the domain of the scale
+/// If the value provided is outside of the domain of the scale, the resulting normalized value will be extrapolated
 func normalize(_ x: CGFloat, domain: ClosedRange<CGFloat>) -> CGFloat {
-    if domain.contains(x) {
-        let overallDistance = domain.upperBound - domain.lowerBound
-        let foo = (x - domain.lowerBound) / overallDistance
-        return foo
-    }
-    return CGFloat.nan
+        let rangeDistance = domain.upperBound - domain.lowerBound
+        return (x - domain.lowerBound) / rangeDistance
 }
 
 // inspiration - https://github.com/d3/d3-interpolate#interpolateNumber

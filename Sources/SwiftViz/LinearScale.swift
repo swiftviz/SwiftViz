@@ -26,14 +26,14 @@ public struct LinearScale: Scale {
     public func scale(_ inputValue: CGFloat, range: ClosedRange<CGFloat>) -> CGFloat {
         let result = interpolate(normalize(inputValue, domain: domain), range: range)
         // if we're clamped, constrain the output to the range
-        return self.clamp(result, withinRange: range)
+        return self.clampRange(result, withinRange: range)
     }
 
     /// inverts the scale, taking a value in the output range and returning the relevant value from the input domain
     public func invert(_ outputValue: CGFloat, range: ClosedRange<CGFloat>) -> CGFloat {
         let result = interpolate(normalize(outputValue, domain: range), range: domain)
         // if we're clamped, constrain the output to the domain
-        return self.clamp(result, withinRange: range)
+        return self.clampDomain(result, withinRange: self.domain)
     }
 
     /// returns an array of the locations of ticks - (value, location)

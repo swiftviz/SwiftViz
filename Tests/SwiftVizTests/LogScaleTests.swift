@@ -97,4 +97,47 @@ class LogScaleTests: XCTestCase {
             XCTAssert(myScale.domain.contains(tick.value))
         }
     }
+
+    func testLogScaleClamp() {
+        let scale = LogScale(domain: 1 ... 100.0)
+        let clampedScale = LogScale(domain: 1 ... 100.0, isClamped: true)
+        
+        XCTAssertFalse(scale.isClamped)
+        XCTAssertTrue(clampedScale.isClamped)
+        let testRange = CGFloat(0) ... CGFloat(100.0)
+
+        // no clamp effect
+        XCTAssertEqual(scale.scale(10, range: testRange), 50)
+        XCTAssertEqual(clampedScale.scale(10, range: testRange), 50)
+
+        // clamp constrained high
+        XCTAssertEqual(scale.scale(1000, range: testRange), 150, accuracy: 0.001)
+        XCTAssertEqual(clampedScale.scale(1000, range: testRange), 100, accuracy: 0.001)
+
+        // clamp constrained low
+        XCTAssertEqual(scale.scale(0.1, range: testRange), -50)
+        XCTAssertEqual(clampedScale.scale(0.1, range: testRange), 0)
+    }
+
+    func testLogInvertClamp() {
+        let scale = LogScale(domain: 1 ... 100.0)
+        let clampedScale = LogScale(domain: 1 ... 100.0, isClamped: true)
+
+        XCTAssertFalse(scale.isClamped)
+        XCTAssertTrue(clampedScale.isClamped)
+        let testRange = CGFloat(0) ... CGFloat(100.0)
+
+
+        // no clamp effect
+        XCTAssertEqual(scale.invert(50, range: testRange), 10)
+        XCTAssertEqual(clampedScale.invert(50, range: testRange), 10)
+
+        // clamp constrained high
+        XCTAssertEqual(scale.invert(150, range: testRange), 1000, accuracy: 0.001)
+        XCTAssertEqual(clampedScale.invert(150, range: testRange), 100, accuracy: 0.001)
+
+        // clamp constrained low
+        XCTAssertEqual(scale.invert(-50, range: testRange), 0.1)
+        XCTAssertEqual(clampedScale.invert(-50, range: testRange), 1.0)
+    }
 }
