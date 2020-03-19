@@ -22,7 +22,6 @@ import Foundation
 // - D3 has a time format (https://github.com/d3/d3-time-format), but we can probably use
 //   IOS/MacOS NSTime, NSDate formatters and calendrical mechanisms
 
-@available(OSX 10.12, watchOS 3.0, *)
 public struct TimeScale: Scale {
     public typealias InputType = Date
     public typealias TickType = DateTick
@@ -43,7 +42,7 @@ public struct TimeScale: Scale {
         let inputAsFloat = CGFloat(inputValue.timeIntervalSince1970)
         let dateDomainAsFloat = CGFloat(domain.lowerBound.timeIntervalSince1970) ... CGFloat(domain.upperBound.timeIntervalSince1970)
         let valueMappedToRange = interpolate(normalize(inputAsFloat, domain: dateDomainAsFloat), range: range)
-        return valueMappedToRange
+        return clampRange(valueMappedToRange, withinRange: range)
     }
 
     /// converts back from the output "range" to a value within
@@ -57,10 +56,7 @@ public struct TimeScale: Scale {
         let normalizedFloatFromRange = normalize(outputValue, domain: range)
         let interpolatedInterval = CGFloat(domain.lowerBound.timeIntervalSince1970) * (1 - normalizedFloatFromRange) + CGFloat(domain.upperBound.timeIntervalSince1970) * normalizedFloatFromRange
         let attemptedDate = Date(timeIntervalSince1970: TimeInterval(interpolatedInterval))
-        //        if domain.contains(attemptedDate) {
-        //            return attemptedDate
-        //        }
-        return attemptedDate
+        return clampDomain(attemptedDate, withinRange: domain)
     }
 
     func interpolateDate(_ x: CGFloat, range: ClosedRange<Date>) -> Date {

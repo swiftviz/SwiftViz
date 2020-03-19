@@ -25,8 +25,23 @@ public protocol Scale {
     // this becomes a generic focused protocol - types implementing it will need to define the
     // protocol conformance in coordination with a generic type
 
-    // clamped constrains the output mapping through the input domain to the output range so that it's always
-    // inside the outputRange
+    /*
+     tape("linear.clamp(true) restricts output values to the range", function(test) {
+       test.equal(d3.scale.linear().clamp(true).range([10, 20])(2), 20);
+       test.equal(d3.scale.linear().clamp(true).range([10, 20])(-1), 10);
+       test.end();
+     });
+
+     tape("linear.clamp(true) restricts input values to the domain", function(test) {
+       test.equal(d3.scale.linear().clamp(true).range([10, 20]).invert(30), 1);
+       test.equal(d3.scale.linear().clamp(true).range([10, 20]).invert(0), 0);
+       test.end();
+     });
+     */
+
+    // clamped forces constraints on both the domain and the range. Any scaled values
+    // will be constrained the output range, and any inverted values will be constrained
+    // to the input domain.
     var isClamped: Bool { get }
 
     // input values
@@ -65,6 +80,35 @@ public protocol Scale {
     ///   the range we are mapping the values into with the scale
     /// - Returns: an Array of the values within the ClosedRange of range
     func ticks(count: Int, range: ClosedRange<CGFloat>) -> [TickType]
+}
+
+extension ClosedRange {
+    public func constrainedToRange(_ value: Bound) -> Bound {
+        if value > upperBound {
+            return upperBound
+        }
+        if value < lowerBound {
+            return lowerBound
+        }
+        return value
+    }
+}
+
+extension Scale {
+    // returns the a constrained value to the provided IF isClamped is true
+    public func clampDomain(_ value: InputType, withinRange: ClosedRange<InputType>) -> InputType {
+        if isClamped {
+            return withinRange.constrainedToRange(value)
+        }
+        return value
+    }
+
+    public func clampRange(_ value: CGFloat, withinRange: ClosedRange<CGFloat>) -> CGFloat {
+        if isClamped {
+            return withinRange.constrainedToRange(value)
+        }
+        return value
+    }
 }
 
 extension Scale where InputType == TickType.InputType {
@@ -142,15 +186,12 @@ extension Scale where InputType == TickType.InputType {
 
 // MARK: - general functions used in various implementations of Scale
 
-/// normalize(a, b)(x) takes a domain value x in [a,b]
-/// and returns the corresponding parameter t in [0,1].
+/// normalize(x, a ... b) takes a value x and normalizes it across the domain a...b
+/// It returns the corresponding parameter within the range [0...1] if it was within the domain of the scale
+/// If the value provided is outside of the domain of the scale, the resulting normalized value will be extrapolated
 func normalize(_ x: CGFloat, domain: ClosedRange<CGFloat>) -> CGFloat {
-    if domain.contains(x) {
-        let overallDistance = domain.upperBound - domain.lowerBound
-        let foo = (x - domain.lowerBound) / overallDistance
-        return foo
-    }
-    return CGFloat.nan
+    let rangeDistance = domain.upperBound - domain.lowerBound
+    return (x - domain.lowerBound) / rangeDistance
 }
 
 // inspiration - https://github.com/d3/d3-interpolate#interpolateNumber
