@@ -101,7 +101,7 @@ class LogScaleTests: XCTestCase {
     func testLogScaleClamp() {
         let scale = LogScale(domain: 1 ... 100.0)
         let clampedScale = LogScale(domain: 1 ... 100.0, isClamped: true)
-        
+
         XCTAssertFalse(scale.isClamped)
         XCTAssertTrue(clampedScale.isClamped)
         let testRange = CGFloat(0) ... CGFloat(100.0)
@@ -126,7 +126,6 @@ class LogScaleTests: XCTestCase {
         XCTAssertFalse(scale.isClamped)
         XCTAssertTrue(clampedScale.isClamped)
         let testRange = CGFloat(0) ... CGFloat(100.0)
-
 
         // no clamp effect
         XCTAssertEqual(scale.invert(50, range: testRange), 10)

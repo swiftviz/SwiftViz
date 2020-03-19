@@ -84,11 +84,11 @@ public protocol Scale {
 
 extension ClosedRange {
     public func constrainedToRange(_ value: Bound) -> Bound {
-        if (value > self.upperBound) {
-            return self.upperBound
+        if value > upperBound {
+            return upperBound
         }
-        if (value < self.lowerBound) {
-            return self.lowerBound
+        if value < lowerBound {
+            return lowerBound
         }
         return value
     }
@@ -97,14 +97,14 @@ extension ClosedRange {
 extension Scale {
     // returns the a constrained value to the provided IF isClamped is true
     public func clampDomain(_ value: InputType, withinRange: ClosedRange<InputType>) -> InputType {
-        if (self.isClamped) {
+        if isClamped {
             return withinRange.constrainedToRange(value)
         }
         return value
     }
-    
+
     public func clampRange(_ value: CGFloat, withinRange: ClosedRange<CGFloat>) -> CGFloat {
-        if (self.isClamped) {
+        if isClamped {
             return withinRange.constrainedToRange(value)
         }
         return value
@@ -190,8 +190,8 @@ extension Scale where InputType == TickType.InputType {
 /// It returns the corresponding parameter within the range [0...1] if it was within the domain of the scale
 /// If the value provided is outside of the domain of the scale, the resulting normalized value will be extrapolated
 func normalize(_ x: CGFloat, domain: ClosedRange<CGFloat>) -> CGFloat {
-        let rangeDistance = domain.upperBound - domain.lowerBound
-        return (x - domain.lowerBound) / rangeDistance
+    let rangeDistance = domain.upperBound - domain.lowerBound
+    return (x - domain.lowerBound) / rangeDistance
 }
 
 // inspiration - https://github.com/d3/d3-interpolate#interpolateNumber

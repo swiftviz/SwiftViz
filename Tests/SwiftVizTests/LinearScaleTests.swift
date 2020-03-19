@@ -73,6 +73,5 @@ final class LinearScaleTests: XCTestCase {
         // clamp constrained low
         XCTAssertEqual(scale.invert(-10, range: testRange), -1)
         XCTAssertEqual(clampedScale.invert(-10, range: testRange), 0)
-
     }
 }

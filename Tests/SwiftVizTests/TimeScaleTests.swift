@@ -1,6 +1,6 @@
 //
 //  TimeScaleTests.swift
-//  
+//
 //
 //  Created by Joseph Heck on 3/19/20.
 //
@@ -10,22 +10,21 @@ import XCTest
 
 func AssertEqualDates(_ firstDate: Date, _ secondDate: Date, accuracy: TimeInterval,
                       file: StaticString = #file, line: UInt = #line) {
-    //let timeDelta = firstDate.timeIntervalSince(secondDate)
-    XCTAssertTrue (firstDate.timeIntervalSince(secondDate) < accuracy, file: file, line: line)
+    // let timeDelta = firstDate.timeIntervalSince(secondDate)
+    XCTAssertTrue(firstDate.timeIntervalSince(secondDate) < accuracy, file: file, line: line)
 }
 
 // an extension to ClosedRange<Date>.contains to allow for slip in the date calculations
 // when interpretting through scale or invert
 extension ClosedRange where Bound == Date {
     public func contains(_ element: Bound, within: TimeInterval) -> Bool {
-        return element > self.lowerBound.addingTimeInterval(-within) &&
-            element < self.upperBound.addingTimeInterval(within)
+        element > lowerBound.addingTimeInterval(-within) &&
+            element < upperBound.addingTimeInterval(within)
     }
 }
 
 final class TimeScaleTests: XCTestCase {
     func testTimeScaleTicks() {
-
         let end = Date()
         let start = end - TimeInterval(300)
         let testRange = CGFloat(0) ... CGFloat(100.0)
@@ -40,9 +39,9 @@ final class TimeScaleTests: XCTestCase {
         for tick in defaultTicks {
             // every tick should be from within the scale's domain (input) range
             XCTAssertTrue(testRange.contains(tick.rangeLocation))
-            //print ("tick.value: \(tick.value) domain: \(scale.domain)")
+            // print ("tick.value: \(tick.value) domain: \(scale.domain)")
             // let result = scale.domain.contains(tick.value)
-            //print ("contained result: \(result)")
+            // print ("contained result: \(result)")
             XCTAssert(scale.domain.contains(tick.value, within: TimeInterval(0.1)))
         }
     }
@@ -120,6 +119,5 @@ final class TimeScaleTests: XCTestCase {
                          accuracy: TimeInterval(0.1))
         AssertEqualDates(clampedScale.invert(-50, range: testRange), start,
                          accuracy: TimeInterval(0.1))
-
     }
 }
