@@ -8,7 +8,7 @@
 @testable import SwiftViz
 import XCTest
 
-func AssertEqualDates(_ firstDate: Date, _ secondDate: Date, accuracy: TimeInterval,
+func assertEqualDates(_ firstDate: Date, _ secondDate: Date, accuracy: TimeInterval,
                       file: StaticString = #file, line: UInt = #line) {
     // let timeDelta = firstDate.timeIntervalSince(secondDate)
     XCTAssertTrue(firstDate.timeIntervalSince(secondDate) < accuracy, file: file, line: line)
@@ -103,21 +103,21 @@ final class TimeScaleTests: XCTestCase {
         let lowDate = end - TimeInterval(450)
 
         // no clamp effect
-        AssertEqualDates(scale.invert(50, range: testRange), middleDate,
+        assertEqualDates(scale.invert(50, range: testRange), middleDate,
                          accuracy: TimeInterval(0.1))
-        AssertEqualDates(clampedScale.invert(50, range: testRange), middleDate,
+        assertEqualDates(clampedScale.invert(50, range: testRange), middleDate,
                          accuracy: TimeInterval(0.1))
 
         // clamp constrained high
-        AssertEqualDates(scale.invert(150, range: testRange), highDate,
+        assertEqualDates(scale.invert(150, range: testRange), highDate,
                          accuracy: TimeInterval(0.1))
-        AssertEqualDates(clampedScale.invert(150, range: testRange), end,
+        assertEqualDates(clampedScale.invert(150, range: testRange), end,
                          accuracy: TimeInterval(0.1))
 
         // clamp constrained low
-        AssertEqualDates(scale.invert(-50, range: testRange), lowDate,
+        assertEqualDates(scale.invert(-50, range: testRange), lowDate,
                          accuracy: TimeInterval(0.1))
-        AssertEqualDates(clampedScale.invert(-50, range: testRange), start,
+        assertEqualDates(clampedScale.invert(-50, range: testRange), start,
                          accuracy: TimeInterval(0.1))
     }
 }
