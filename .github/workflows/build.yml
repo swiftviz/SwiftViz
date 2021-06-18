@@ -11,8 +11,8 @@ jobs:
     - name: Checkout Project
       uses: actions/checkout@v2
 
-    - name: Switch to Xcode 11
-      run: sudo xcode-select -s /Applications/Xcode_11.app
+    - name: Switch to Xcode 12
+      run: sudo xcode-select -s /Applications/Xcode_12.app
 
     - name: generate xcode project for xcodebuild
       run: swift package generate-xcodeproj
@@ -25,10 +25,6 @@ jobs:
 
     - name: Show Build SDK
       run: xcodebuild -showsdks
-
-    - name: Homebrew build helpers install
-      run: |
-        brew bundle
 
     - name: build and test
       run: swift test --enable-code-coverage -v
