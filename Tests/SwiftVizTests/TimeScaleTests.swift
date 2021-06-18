@@ -9,15 +9,16 @@
 import XCTest
 
 func assertEqualDates(_ firstDate: Date, _ secondDate: Date, accuracy: TimeInterval,
-                      file: StaticString = #file, line: UInt = #line) {
+                      file: StaticString = #file, line: UInt = #line)
+{
     // let timeDelta = firstDate.timeIntervalSince(secondDate)
     XCTAssertTrue(firstDate.timeIntervalSince(secondDate) < accuracy, file: file, line: line)
 }
 
 // an extension to ClosedRange<Date>.contains to allow for slip in the date calculations
 // when interpretting through scale or invert
-extension ClosedRange where Bound == Date {
-    public func contains(_ element: Bound, within: TimeInterval) -> Bool {
+public extension ClosedRange where Bound == Date {
+    func contains(_ element: Bound, within: TimeInterval) -> Bool {
         element > lowerBound.addingTimeInterval(-within) &&
             element < upperBound.addingTimeInterval(within)
     }

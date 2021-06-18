@@ -82,8 +82,8 @@ public protocol Scale {
     func ticks(count: Int, range: ClosedRange<CGFloat>) -> [TickType]
 }
 
-extension ClosedRange {
-    public func constrainedToRange(_ value: Bound) -> Bound {
+public extension ClosedRange {
+    func constrainedToRange(_ value: Bound) -> Bound {
         if value > upperBound {
             return upperBound
         }
@@ -94,16 +94,16 @@ extension ClosedRange {
     }
 }
 
-extension Scale {
+public extension Scale {
     // returns the a constrained value to the provided IF isClamped is true
-    public func clampDomain(_ value: InputType, withinRange: ClosedRange<InputType>) -> InputType {
+    func clampDomain(_ value: InputType, withinRange: ClosedRange<InputType>) -> InputType {
         if isClamped {
             return withinRange.constrainedToRange(value)
         }
         return value
     }
 
-    public func clampRange(_ value: CGFloat, withinRange: ClosedRange<CGFloat>) -> CGFloat {
+    func clampRange(_ value: CGFloat, withinRange: ClosedRange<CGFloat>) -> CGFloat {
         if isClamped {
             return withinRange.constrainedToRange(value)
         }
@@ -111,7 +111,7 @@ extension Scale {
     }
 }
 
-extension Scale where InputType == TickType.InputType {
+public extension Scale where InputType == TickType.InputType {
     /// Converts an array of values of the Scale's InputType into a set of Ticks.
     /// Used for manually specifying a series of ticks that you want to have displayed.
     ///
@@ -120,7 +120,7 @@ extension Scale where InputType == TickType.InputType {
     /// - Parameter inputValues: an array of values of the Scale's InputType
     /// - Parameter range: a ClosedRange representing the representing
     ///   the range we are mapping the values into with the scale
-    public func ticks(_ inputValues: [InputType], range: ClosedRange<CGFloat>) -> [TickType] {
+    func ticks(_ inputValues: [InputType], range: ClosedRange<CGFloat>) -> [TickType] {
         inputValues.compactMap { inputValue in
             if domain.contains(inputValue) {
                 return TickType(value: inputValue,
@@ -136,7 +136,7 @@ extension Scale where InputType == TickType.InputType {
     ///   - inputValues: A tuple of (InputValue, String) that is the labelled value
     ///   - range: a ClosedRange representing the representing
     ///   the range we are mapping the values into with the scale
-    public func labeledTickValues(_ inputValues: [(InputType, String)], range: ClosedRange<CGFloat>) -> [TickLabel] {
+    func labeledTickValues(_ inputValues: [(InputType, String)], range: ClosedRange<CGFloat>) -> [TickLabel] {
         inputValues.compactMap { inputTuple in
             let (inputValue, stringValue) = inputTuple
             if domain.contains(inputValue) {
@@ -154,7 +154,7 @@ extension Scale where InputType == TickType.InputType {
     /// - Parameter inputTickLabels: an array of TickLabels to validate against the scale
     /// - Parameter range: a ClosedRange representing the representing
     ///   the range we are mapping the values into with the scale.
-    public func validatedTickLabels(_ inputTickLabels: [TickLabel], range: ClosedRange<CGFloat>) -> [TickLabel] {
+    func validatedTickLabels(_ inputTickLabels: [TickLabel], range: ClosedRange<CGFloat>) -> [TickLabel] {
         inputTickLabels.compactMap { tick in
             let inputValue = invert(tick.rangeLocation, range: range)
             if domain.contains(inputValue) {
