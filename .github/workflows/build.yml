@@ -17,12 +17,12 @@ jobs:
     - name: Show Build Version
       run: xcodebuild -version
 
-    - name: Show Build Settings
-      run: xcodebuild -showBuildSettings
+    # - name: Show Build Settings
+    #   run: xcodebuild -scheme SwiftViz -showBuildSettings
 
-    - name: Show Build SDK
-      run: xcodebuild -showsdks
-    # xcodebuild -scheme SwiftViz
+    # - name: Show Build SDK
+    #   run: xcodebuild -scheme SwiftViz -showsdks
+    # xcodebuild 
 
     - name: build and test
       run: swift test --enable-code-coverage -v
