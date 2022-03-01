@@ -19,6 +19,8 @@ import Foundation
 
 // D3's scale also has a .nice() function that does some pleasant rounding of the domain,
 // extending it slightly so that it's nicer to view
+
+/// A scale maps values from an input _domain_ to an output _range_.
 public protocol Scale {
     associatedtype InputType: Comparable
     associatedtype TickType: Tick
@@ -39,19 +41,20 @@ public protocol Scale {
      });
      */
 
-    // clamped forces constraints on both the domain and the range. Any scaled values
-    // will be constrained the output range, and any inverted values will be constrained
-    // to the input domain.
+    /// A boolean value that indicates whether the output vales are constrained to the min and max of the output range.
+    ///
+    /// If `true`, values processed by the scale are constrained to the output range, and values processed backwards through the scale
+    /// are constrained to the input domain.
     var isClamped: Bool { get }
 
-    // input values
+    /// The range of input values
     var domain: ClosedRange<InputType> { get }
     // a variant of this might want to use ClosedRange<Int> - or maybe something that isn't even a range...
 
     // output values
     // var range: ClosedRange<Double> { get }
 
-    /// converts a value between the input "domain" and output "range"
+    /// Converts a value between the input _domain_ and output _range_
     ///
     /// - Parameter inputValue: a value within the bounds of the
     ///   ClosedRange for domain
@@ -61,8 +64,9 @@ public protocol Scale {
     ///   for range, or NaN if it maps outside the bounds
     func scale(_ inputValue: InputType, range: ClosedRange<CGFloat>) -> CGFloat
 
-    /// converts back from the output "range" to a value within
-    /// the input "domain". The inverse of scale()
+    /// Converts back from the output _range_ to a value within the input _domain_.
+    ///
+    /// The inverse of ``scale(_:range:)``.
     ///
     /// - Parameter outputValue: a value within the bounds of the
     ///   ClosedRange for range
@@ -72,8 +76,7 @@ public protocol Scale {
     ///   for domain, or NaN if it maps outside the bounds
     func invert(_ outputValue: CGFloat, range: ClosedRange<CGFloat>) -> InputType
 
-    /// returns an array of the locations within the ClosedRange of
-    /// range to locate ticks for the scale
+    /// Returns an array of the locations within the output range to locate ticks for the scale.
     ///
     /// - Parameter count: a number of ticks to display, defaulting to 10
     /// - Parameter range: a ClosedRange representing the representing

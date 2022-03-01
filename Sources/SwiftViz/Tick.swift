@@ -9,7 +9,8 @@ import CoreGraphics
 import Foundation
 
 /// A Tick is a visual representation of a point along an axis.
-/// When created based on a range, it includes a location along a single direction
+///
+/// When created based on a range, a tick includes a location along a single direction
 /// and a textual representation. It is meant to be created using a Scale, with some input domain
 /// being mapped to visualization using the Scale's output range.
 public protocol Tick: Identifiable {
