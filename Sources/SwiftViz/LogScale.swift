@@ -32,7 +32,7 @@ public struct LogScale: Scale {
         let logDomain = log10(domain.lowerBound) ... log10(domain.upperBound)
         let normalizedValueOnLogDomain = normalize(logResult, domain: logDomain)
         let valueMappedToRange = interpolate(normalizedValueOnLogDomain, range: range)
-        return clampRange(valueMappedToRange, withinRange: range)
+        return clamp(valueMappedToRange, within: range)
     }
 
     /// inverts the scale, taking a value in the output range and returning the relevant value from the input domain
@@ -40,7 +40,7 @@ public struct LogScale: Scale {
         let normalizedRangeValue = normalize(rangeValue, domain: range)
         let logDomain = log10(domain.lowerBound) ... log10(domain.upperBound)
         let linear = interpolate(normalizedRangeValue, range: logDomain)
-        return clampDomain(pow(10, linear), withinRange: domain)
+        return clamp(pow(10, linear), within: domain)
     }
 
     /// returns an array of the locations of ticks - (value, location)

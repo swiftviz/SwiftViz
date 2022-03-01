@@ -42,7 +42,7 @@ public struct TimeScale: Scale {
         let inputAsFloat = CGFloat(inputValue.timeIntervalSince1970)
         let dateDomainAsFloat = CGFloat(domain.lowerBound.timeIntervalSince1970) ... CGFloat(domain.upperBound.timeIntervalSince1970)
         let valueMappedToRange = interpolate(normalize(inputAsFloat, domain: dateDomainAsFloat), range: range)
-        return clampRange(valueMappedToRange, withinRange: range)
+        return clamp(valueMappedToRange, within: range)
     }
 
     /// converts back from the output "range" to a value within
@@ -56,7 +56,7 @@ public struct TimeScale: Scale {
         let normalizedFloatFromRange = normalize(outputValue, domain: range)
         let interpolatedInterval = CGFloat(domain.lowerBound.timeIntervalSince1970) * (1 - normalizedFloatFromRange) + CGFloat(domain.upperBound.timeIntervalSince1970) * normalizedFloatFromRange
         let attemptedDate = Date(timeIntervalSince1970: TimeInterval(interpolatedInterval))
-        return clampDomain(attemptedDate, withinRange: domain)
+        return clamp(attemptedDate, within: domain)
     }
 
     func interpolateDate(_ x: CGFloat, range: ClosedRange<Date>) -> Date {

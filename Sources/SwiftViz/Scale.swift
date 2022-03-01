@@ -98,17 +98,21 @@ public extension ClosedRange {
 }
 
 public extension Scale {
-    // returns the a constrained value to the provided IF isClamped is true
-    func clampDomain(_ value: InputType, withinRange: ClosedRange<InputType>) -> InputType {
+    /// Returns a constrained value to the provided domain if `isClamped` is `true`.
+    func clamp(_ value: InputType, within: ClosedRange<InputType>) -> InputType {
         if isClamped {
-            return withinRange.constrainedToRange(value)
+            return within.constrainedToRange(value)
         }
         return value
     }
-
-    func clampRange(_ value: CGFloat, withinRange: ClosedRange<CGFloat>) -> CGFloat {
+    
+    /// Returns a constrained value to the provided range if `isClamped` is `true`.
+    @_disfavoredOverload
+    func clamp(_ value: CGFloat, within: ClosedRange<CGFloat>) -> CGFloat {
+        // this version is bound explicitly to CGFloat to support converting InputTypes
+        // that aren't normally numbers into something that can be interpolated (such as Dates)
         if isClamped {
-            return withinRange.constrainedToRange(value)
+            return within.constrainedToRange(value)
         }
         return value
     }
@@ -183,6 +187,7 @@ public extension Scale where InputType == TickType.InputType {
 // even distribution over the input domain
 
 // Threshold Scale
+// Power Scale
 // Ordinal Scale
 // Band Scale
 // Point Scale
