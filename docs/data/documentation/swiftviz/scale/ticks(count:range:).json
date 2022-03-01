@@ -1,15 +1,7 @@
 {
   "abstract" : [
     {
-      "text" : "returns an array of the locations within the ClosedRange of",
-      "type" : "text"
-    },
-    {
-      "text" : " ",
-      "type" : "text"
-    },
-    {
-      "text" : "range to locate ticks for the scale",
+      "text" : "Returns an array of the locations within the output range to locate ticks for the scale.",
       "type" : "text"
     }
   ],
@@ -294,7 +286,36 @@
 },
 "doc://com.github.swiftviz.SwiftViz/documentation/SwiftViz/Scale": {
   "abstract" : [
-
+    {
+      "text" : "A scale maps values from an input ",
+      "type" : "text"
+    },
+    {
+      "inlineContent" : [
+        {
+          "text" : "domain",
+          "type" : "text"
+        }
+      ],
+      "type" : "emphasis"
+    },
+    {
+      "text" : " to an output ",
+      "type" : "text"
+    },
+    {
+      "inlineContent" : [
+        {
+          "text" : "range",
+          "type" : "text"
+        }
+      ],
+      "type" : "emphasis"
+    },
+    {
+      "text" : ".",
+      "type" : "text"
+    }
   ],
   "fragments" : [
     {
@@ -361,15 +382,7 @@
 "doc://com.github.swiftviz.SwiftViz/documentation/SwiftViz/Scale/ticks(count:range:)": {
   "abstract" : [
     {
-      "text" : "returns an array of the locations within the ClosedRange of",
-      "type" : "text"
-    },
-    {
-      "text" : " ",
-      "type" : "text"
-    },
-    {
-      "text" : "range to locate ticks for the scale",
+      "text" : "Returns an array of the locations within the output range to locate ticks for the scale.",
       "type" : "text"
     }
   ],

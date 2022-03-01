@@ -1,15 +1,7 @@
 {
   "abstract" : [
     {
-      "text" : "Inherited from ",
-      "type" : "text"
-    },
-    {
-      "code" : "Scale.domain",
-      "type" : "codeVoice"
-    },
-    {
-      "text" : ".",
+      "text" : "The range of input values",
       "type" : "text"
     }
   ],
@@ -226,7 +218,10 @@
 },
 "doc://com.github.swiftviz.SwiftViz/documentation/SwiftViz/TimeScale/domain": {
   "abstract" : [
-
+    {
+      "text" : "The range of input values",
+      "type" : "text"
+    }
   ],
   "fragments" : [
     {

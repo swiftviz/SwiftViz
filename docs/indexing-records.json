@@ -7,6 +7,118 @@
     "location" : {
       "reference" : {
         "interfaceLanguage" : "swift",
+        "url" : "doc:\/\/com.github.swiftviz.SwiftViz\/documentation\/SwiftViz\/CGFloatTick\/value"
+      },
+      "type" : "topLevelPage"
+    },
+    "rawIndexableTextContent" : "Inherited from Tick.value. ",
+    "summary" : "Inherited from Tick.value.",
+    "title" : "value"
+  },
+  {
+    "headings" : [
+      "Return Value"
+    ],
+    "kind" : "symbol",
+    "location" : {
+      "reference" : {
+        "interfaceLanguage" : "swift",
+        "url" : "doc:\/\/com.github.swiftviz.SwiftViz\/documentation\/SwiftViz\/TimeScale\/invert(_:range:)"
+      },
+      "type" : "topLevelPage"
+    },
+    "rawIndexableTextContent" : "converts back from the output “range” to a value within the input “domain”. The inverse of scale()  Return Value a value within the bounds of the ClosedRange for domain, or NaN if it maps outside the bounds a value within the bounds of the ClosedRange for range",
+    "summary" : "converts back from the output “range” to a value within the input “domain”. The inverse of scale()",
+    "title" : "invert(_:range:)"
+  },
+  {
+    "headings" : [
+      "Discussion"
+    ],
+    "kind" : "symbol",
+    "location" : {
+      "reference" : {
+        "interfaceLanguage" : "swift",
+        "url" : "doc:\/\/com.github.swiftviz.SwiftViz\/documentation\/SwiftViz\/LogScale\/isClamped"
+      },
+      "type" : "topLevelPage"
+    },
+    "rawIndexableTextContent" : "A boolean value that indicates whether the output vales are constrained to the min and max of the output range.  Discussion If true, values processed by the scale are constrained to the output range, and values processed backwards through the scale are constrained to the input domain.",
+    "summary" : "A boolean value that indicates whether the output vales are constrained to the min and max of the output range.",
+    "title" : "isClamped"
+  },
+  {
+    "headings" : [
+
+    ],
+    "kind" : "symbol",
+    "location" : {
+      "reference" : {
+        "interfaceLanguage" : "swift",
+        "url" : "doc:\/\/com.github.swiftviz.SwiftViz\/documentation\/SwiftViz\/DateTick\/value"
+      },
+      "type" : "topLevelPage"
+    },
+    "rawIndexableTextContent" : "Inherited from Tick.value. ",
+    "summary" : "Inherited from Tick.value.",
+    "title" : "value"
+  },
+  {
+    "headings" : [
+
+    ],
+    "kind" : "symbol",
+    "location" : {
+      "reference" : {
+        "interfaceLanguage" : "swift",
+        "url" : "doc:\/\/com.github.swiftviz.SwiftViz\/documentation\/SwiftViz\/LogScale\/clampRange(_:withinRange:)"
+      },
+      "type" : "topLevelPage"
+    },
+    "rawIndexableTextContent" : "Inherited from Scale.clampRange(_:withinRange:). ",
+    "summary" : "Inherited from Scale.clampRange(_:withinRange:).",
+    "title" : "clampRange(_:withinRange:)"
+  },
+  {
+    "headings" : [
+      "Return Value"
+    ],
+    "kind" : "symbol",
+    "location" : {
+      "reference" : {
+        "interfaceLanguage" : "swift",
+        "url" : "doc:\/\/com.github.swiftviz.SwiftViz\/documentation\/SwiftViz\/TimeScale\/ticks(count:range:)"
+      },
+      "type" : "topLevelPage"
+    },
+    "rawIndexableTextContent" : "returns an array of the locations of ticks  Return Value array of the locations of the ticks within self.range number of steps to take in the ticks, default of 10",
+    "summary" : "returns an array of the locations of ticks",
+    "title" : "ticks(count:range:)"
+  },
+  {
+    "headings" : [
+
+    ],
+    "kind" : "symbol",
+    "location" : {
+      "reference" : {
+        "interfaceLanguage" : "swift",
+        "url" : "doc:\/\/com.github.swiftviz.SwiftViz\/documentation\/SwiftViz\/LogScale\/init(domain:isClamped:)"
+      },
+      "type" : "topLevelPage"
+    },
+    "rawIndexableTextContent" : "No overview available. ",
+    "summary" : "No overview available.",
+    "title" : "init(domain:isClamped:)"
+  },
+  {
+    "headings" : [
+
+    ],
+    "kind" : "symbol",
+    "location" : {
+      "reference" : {
+        "interfaceLanguage" : "swift",
         "url" : "doc:\/\/com.github.swiftviz.SwiftViz\/documentation\/SwiftViz\/DoubleTick\/id-5hkki"
       },
       "type" : "topLevelPage"
@@ -23,13 +135,29 @@
     "location" : {
       "reference" : {
         "interfaceLanguage" : "swift",
-        "url" : "doc:\/\/com.github.swiftviz.SwiftViz\/documentation\/SwiftViz\/LinearScale\/isClamped"
+        "url" : "doc:\/\/com.github.swiftviz.SwiftViz\/documentation\/SwiftViz\/LogScale\/validatedTickLabels(_:range:)"
       },
       "type" : "topLevelPage"
     },
-    "rawIndexableTextContent" : "Inherited from Scale.isClamped. ",
-    "summary" : "Inherited from Scale.isClamped.",
-    "title" : "isClamped"
+    "rawIndexableTextContent" : "Validates a set of TickLabels against a given scale, removing any that don’t match the scale’s domain.  an array of TickLabels to validate against the scale a ClosedRange representing the representing the range we are mapping the values into with the scale.",
+    "summary" : "Validates a set of TickLabels against a given scale, removing any that don’t match the scale’s domain.",
+    "title" : "validatedTickLabels(_:range:)"
+  },
+  {
+    "headings" : [
+      "Discussion"
+    ],
+    "kind" : "symbol",
+    "location" : {
+      "reference" : {
+        "interfaceLanguage" : "swift",
+        "url" : "doc:\/\/com.github.swiftviz.SwiftViz\/documentation\/SwiftViz\/TimeScale\/ticks(_:range:)"
+      },
+      "type" : "topLevelPage"
+    },
+    "rawIndexableTextContent" : "Converts an array of values of the Scale’s InputType into a set of Ticks. Used for manually specifying a series of ticks that you want to have displayed.  an array of values of the Scale’s InputType a ClosedRange representing the representing the range we are mapping the values into with the scale Discussion Any values presented for display that are not within the domain of the scale are ignored and dropped.",
+    "summary" : "Converts an array of values of the Scale’s InputType into a set of Ticks. Used for manually specifying a series of ticks that you want to have displayed.",
+    "title" : "ticks(_:range:)"
   },
   {
     "headings" : [
@@ -39,44 +167,12 @@
     "location" : {
       "reference" : {
         "interfaceLanguage" : "swift",
-        "url" : "doc:\/\/com.github.swiftviz.SwiftViz\/documentation\/SwiftViz\/TimeScale\/clampDomain(_:withinRange:)"
+        "url" : "doc:\/\/com.github.swiftviz.SwiftViz\/documentation\/SwiftViz\/IntegerTick\/value"
       },
       "type" : "topLevelPage"
     },
-    "rawIndexableTextContent" : "Inherited from Scale.clampDomain(_:withinRange:). ",
-    "summary" : "Inherited from Scale.clampDomain(_:withinRange:).",
-    "title" : "clampDomain(_:withinRange:)"
-  },
-  {
-    "headings" : [
-
-    ],
-    "kind" : "symbol",
-    "location" : {
-      "reference" : {
-        "interfaceLanguage" : "swift",
-        "url" : "doc:\/\/com.github.swiftviz.SwiftViz\/documentation\/SwiftViz\/TimeScale\/domain"
-      },
-      "type" : "topLevelPage"
-    },
-    "rawIndexableTextContent" : "Inherited from Scale.domain. ",
-    "summary" : "Inherited from Scale.domain.",
-    "title" : "domain"
-  },
-  {
-    "headings" : [
-
-    ],
-    "kind" : "symbol",
-    "location" : {
-      "reference" : {
-        "interfaceLanguage" : "swift",
-        "url" : "doc:\/\/com.github.swiftviz.SwiftViz\/documentation\/SwiftViz\/Tick\/value"
-      },
-      "type" : "topLevelPage"
-    },
-    "rawIndexableTextContent" : "No overview available. ",
-    "summary" : "No overview available.",
+    "rawIndexableTextContent" : "Inherited from Tick.value. ",
+    "summary" : "Inherited from Tick.value.",
     "title" : "value"
   },
   {
@@ -87,61 +183,61 @@
     "location" : {
       "reference" : {
         "interfaceLanguage" : "swift",
-        "url" : "doc:\/\/com.github.swiftviz.SwiftViz\/documentation\/SwiftViz\/Scale\/TickType"
+        "url" : "doc:\/\/com.github.swiftviz.SwiftViz\/documentation\/SwiftViz\/DateTick"
       },
       "type" : "topLevelPage"
     },
     "rawIndexableTextContent" : "No overview available. ",
     "summary" : "No overview available.",
-    "title" : "TickType"
+    "title" : "DateTick"
   },
   {
     "headings" : [
 
     ],
-    "kind" : "symbol",
+    "kind" : "article",
     "location" : {
       "reference" : {
         "interfaceLanguage" : "swift",
-        "url" : "doc:\/\/com.github.swiftviz.SwiftViz\/documentation\/SwiftViz\/TimeScale\/validatedTickLabels(_:range:)"
+        "url" : "doc:\/\/com.github.swiftviz.SwiftViz\/documentation\/SwiftViz\/IntegerTick\/Identifiable-Implementations"
       },
       "type" : "topLevelPage"
     },
-    "rawIndexableTextContent" : "Validates a set of TickLabels against a given scale, removing any that don’t match the scale’s domain.  an array of TickLabels to validate against the scale a ClosedRange representing the representing the range we are mapping the values into with the scale.",
-    "summary" : "Validates a set of TickLabels against a given scale, removing any that don’t match the scale’s domain.",
-    "title" : "validatedTickLabels(_:range:)"
-  },
-  {
-    "headings" : [
-
-    ],
-    "kind" : "symbol",
-    "location" : {
-      "reference" : {
-        "interfaceLanguage" : "swift",
-        "url" : "doc:\/\/com.github.swiftviz.SwiftViz\/documentation\/SwiftViz\/LinearScale\/validatedTickLabels(_:range:)"
-      },
-      "type" : "topLevelPage"
-    },
-    "rawIndexableTextContent" : "Validates a set of TickLabels against a given scale, removing any that don’t match the scale’s domain.  an array of TickLabels to validate against the scale a ClosedRange representing the representing the range we are mapping the values into with the scale.",
-    "summary" : "Validates a set of TickLabels against a given scale, removing any that don’t match the scale’s domain.",
-    "title" : "validatedTickLabels(_:range:)"
-  },
-  {
-    "headings" : [
-
-    ],
-    "kind" : "symbol",
-    "location" : {
-      "reference" : {
-        "interfaceLanguage" : "swift",
-        "url" : "doc:\/\/com.github.swiftviz.SwiftViz\/documentation\/SwiftViz\/TimeScale"
-      },
-      "type" : "topLevelPage"
-    },
-    "rawIndexableTextContent" : "No overview available. ",
+    "rawIndexableTextContent" : "No overview available.",
     "summary" : "No overview available.",
-    "title" : "TimeScale"
+    "title" : "Identifiable Implementations"
+  },
+  {
+    "headings" : [
+      "Overview"
+    ],
+    "kind" : "symbol",
+    "location" : {
+      "reference" : {
+        "interfaceLanguage" : "swift",
+        "url" : "doc:\/\/com.github.swiftviz.SwiftViz\/documentation\/SwiftViz\/Tick"
+      },
+      "type" : "topLevelPage"
+    },
+    "rawIndexableTextContent" : "A Tick is a visual representation of a point along an axis.  Overview When created based on a range, a tick includes a location along a single direction and a textual representation. It is meant to be created using a Scale, with some input domain being mapped to visualization using the Scale’s output range.",
+    "summary" : "A Tick is a visual representation of a point along an axis.",
+    "title" : "Tick"
+  },
+  {
+    "headings" : [
+      "Discussion"
+    ],
+    "kind" : "symbol",
+    "location" : {
+      "reference" : {
+        "interfaceLanguage" : "swift",
+        "url" : "doc:\/\/com.github.swiftviz.SwiftViz\/documentation\/SwiftViz\/LogScale\/ticks(_:range:)"
+      },
+      "type" : "topLevelPage"
+    },
+    "rawIndexableTextContent" : "Converts an array of values of the Scale’s InputType into a set of Ticks. Used for manually specifying a series of ticks that you want to have displayed.  an array of values of the Scale’s InputType a ClosedRange representing the representing the range we are mapping the values into with the scale Discussion Any values presented for display that are not within the domain of the scale are ignored and dropped.",
+    "summary" : "Converts an array of values of the Scale’s InputType into a set of Ticks. Used for manually specifying a series of ticks that you want to have displayed.",
+    "title" : "ticks(_:range:)"
   },
   {
     "headings" : [
@@ -151,7 +247,23 @@
     "location" : {
       "reference" : {
         "interfaceLanguage" : "swift",
-        "url" : "doc:\/\/com.github.swiftviz.SwiftViz\/documentation\/SwiftViz\/IntegerTick\/id-1yqgu"
+        "url" : "doc:\/\/com.github.swiftviz.SwiftViz\/documentation\/SwiftViz\/LinearScale\/labeledTickValues(_:range:)"
+      },
+      "type" : "topLevelPage"
+    },
+    "rawIndexableTextContent" : "Takes an set of labelled input values and returns the relevant set of TickLabels converted to the correct location values associated with the provided range.  A tuple of (InputValue, String) that is the labelled value a ClosedRange representing the representing the range we are mapping the values into with the scale",
+    "summary" : "Takes an set of labelled input values and returns the relevant set of TickLabels converted to the correct location values associated with the provided range.",
+    "title" : "labeledTickValues(_:range:)"
+  },
+  {
+    "headings" : [
+
+    ],
+    "kind" : "symbol",
+    "location" : {
+      "reference" : {
+        "interfaceLanguage" : "swift",
+        "url" : "doc:\/\/com.github.swiftviz.SwiftViz\/documentation\/SwiftViz\/DoubleTick\/id-1yzs"
       },
       "type" : "topLevelPage"
     },
@@ -161,19 +273,51 @@
   },
   {
     "headings" : [
-
+      "Return Value"
     ],
     "kind" : "symbol",
     "location" : {
       "reference" : {
         "interfaceLanguage" : "swift",
-        "url" : "doc:\/\/com.github.swiftviz.SwiftViz\/documentation\/SwiftViz\/LinearScale\/clampDomain(_:withinRange:)"
+        "url" : "doc:\/\/com.github.swiftviz.SwiftViz\/documentation\/SwiftViz\/LinearScale\/scale(_:range:)"
       },
       "type" : "topLevelPage"
     },
-    "rawIndexableTextContent" : "Inherited from Scale.clampDomain(_:withinRange:). ",
-    "summary" : "Inherited from Scale.clampDomain(_:withinRange:).",
-    "title" : "clampDomain(_:withinRange:)"
+    "rawIndexableTextContent" : "scales the input value (within domain) per the scale to the relevant output (using range)  Return Value scaled value value within the domain",
+    "summary" : "scales the input value (within domain) per the scale to the relevant output (using range)",
+    "title" : "scale(_:range:)"
+  },
+  {
+    "headings" : [
+      "Discussion"
+    ],
+    "kind" : "symbol",
+    "location" : {
+      "reference" : {
+        "interfaceLanguage" : "swift",
+        "url" : "doc:\/\/com.github.swiftviz.SwiftViz\/documentation\/SwiftViz\/LinearScale\/isClamped"
+      },
+      "type" : "topLevelPage"
+    },
+    "rawIndexableTextContent" : "A boolean value that indicates whether the output vales are constrained to the min and max of the output range.  Discussion If true, values processed by the scale are constrained to the output range, and values processed backwards through the scale are constrained to the input domain.",
+    "summary" : "A boolean value that indicates whether the output vales are constrained to the min and max of the output range.",
+    "title" : "isClamped"
+  },
+  {
+    "headings" : [
+
+    ],
+    "kind" : "article",
+    "location" : {
+      "reference" : {
+        "interfaceLanguage" : "swift",
+        "url" : "doc:\/\/com.github.swiftviz.SwiftViz\/documentation\/SwiftViz\/TickLabel\/Identifiable-Implementations"
+      },
+      "type" : "topLevelPage"
+    },
+    "rawIndexableTextContent" : "No overview available.",
+    "summary" : "No overview available.",
+    "title" : "Identifiable Implementations"
   },
   {
     "headings" : [
@@ -183,13 +327,13 @@
     "location" : {
       "reference" : {
         "interfaceLanguage" : "swift",
-        "url" : "doc:\/\/com.github.swiftviz.SwiftViz\/documentation\/SwiftViz\/LogScale\/InputType"
+        "url" : "doc:\/\/com.github.swiftviz.SwiftViz\/documentation\/SwiftViz\/LogScale"
       },
       "type" : "topLevelPage"
     },
-    "rawIndexableTextContent" : "Inherited from Scale.InputType. ",
-    "summary" : "Inherited from Scale.InputType.",
-    "title" : "LogScale.InputType"
+    "rawIndexableTextContent" : "A linear scale is created using a continuous input domain and provides methods to convert values within that domain to an output range. ",
+    "summary" : "A linear scale is created using a continuous input domain and provides methods to convert values within that domain to an output range.",
+    "title" : "LogScale"
   },
   {
     "headings" : [
@@ -199,13 +343,13 @@
     "location" : {
       "reference" : {
         "interfaceLanguage" : "swift",
-        "url" : "doc:\/\/com.github.swiftviz.SwiftViz\/documentation\/SwiftViz\/DoubleTick\/init(value:location:)"
+        "url" : "doc:\/\/com.github.swiftviz.SwiftViz\/documentation\/SwiftViz\/Tick\/rangeLocation"
       },
       "type" : "topLevelPage"
     },
-    "rawIndexableTextContent" : "Inherited from Tick.init(value:location:). ",
-    "summary" : "Inherited from Tick.init(value:location:).",
-    "title" : "init(value:location:)"
+    "rawIndexableTextContent" : "No overview available. ",
+    "summary" : "No overview available.",
+    "title" : "rangeLocation"
   },
   {
     "headings" : [
@@ -231,6 +375,262 @@
     "location" : {
       "reference" : {
         "interfaceLanguage" : "swift",
+        "url" : "doc:\/\/com.github.swiftviz.SwiftViz\/documentation\/SwiftViz\/DateTick\/init(value:location:)"
+      },
+      "type" : "topLevelPage"
+    },
+    "rawIndexableTextContent" : "Inherited from Tick.init(value:location:). ",
+    "summary" : "Inherited from Tick.init(value:location:).",
+    "title" : "init(value:location:)"
+  },
+  {
+    "headings" : [
+
+    ],
+    "kind" : "symbol",
+    "location" : {
+      "reference" : {
+        "interfaceLanguage" : "swift",
+        "url" : "doc:\/\/com.github.swiftviz.SwiftViz\/documentation\/SwiftViz\/Tick\/InputType"
+      },
+      "type" : "topLevelPage"
+    },
+    "rawIndexableTextContent" : "No overview available. ",
+    "summary" : "No overview available.",
+    "title" : "InputType"
+  },
+  {
+    "headings" : [
+
+    ],
+    "kind" : "symbol",
+    "location" : {
+      "reference" : {
+        "interfaceLanguage" : "swift",
+        "url" : "doc:\/\/com.github.swiftviz.SwiftViz\/documentation\/SwiftViz\/Tick\/value"
+      },
+      "type" : "topLevelPage"
+    },
+    "rawIndexableTextContent" : "No overview available. ",
+    "summary" : "No overview available.",
+    "title" : "value"
+  },
+  {
+    "headings" : [
+
+    ],
+    "kind" : "symbol",
+    "location" : {
+      "reference" : {
+        "interfaceLanguage" : "swift",
+        "url" : "doc:\/\/com.github.swiftviz.SwiftViz\/documentation\/SwiftViz\/CGFloatTick\/rangeLocation"
+      },
+      "type" : "topLevelPage"
+    },
+    "rawIndexableTextContent" : "Inherited from Tick.rangeLocation. ",
+    "summary" : "Inherited from Tick.rangeLocation.",
+    "title" : "rangeLocation"
+  },
+  {
+    "headings" : [
+      "Overview"
+    ],
+    "kind" : "symbol",
+    "location" : {
+      "reference" : {
+        "interfaceLanguage" : "swift",
+        "url" : "doc:\/\/com.github.swiftviz.SwiftViz\/documentation\/SwiftViz"
+      },
+      "type" : "topLevelPage"
+    },
+    "rawIndexableTextContent" : "A collection of components to provide structures that support data visualization. Overview Loosely based on the APIs and the visualization constructs created by Mike Bostock and contributors to D3.js",
+    "summary" : "A collection of components to provide structures that support data visualization.",
+    "title" : "SwiftViz"
+  },
+  {
+    "headings" : [
+
+    ],
+    "kind" : "symbol",
+    "location" : {
+      "reference" : {
+        "interfaceLanguage" : "swift",
+        "url" : "doc:\/\/com.github.swiftviz.SwiftViz\/documentation\/SwiftViz\/TickLabel\/id-8zchb"
+      },
+      "type" : "topLevelPage"
+    },
+    "rawIndexableTextContent" : "Inherited from Identifiable.id. ",
+    "summary" : "Inherited from Identifiable.id.",
+    "title" : "id"
+  },
+  {
+    "headings" : [
+
+    ],
+    "kind" : "symbol",
+    "location" : {
+      "reference" : {
+        "interfaceLanguage" : "swift",
+        "url" : "doc:\/\/com.github.swiftviz.SwiftViz\/documentation\/SwiftViz\/LinearScale\/domain"
+      },
+      "type" : "topLevelPage"
+    },
+    "rawIndexableTextContent" : "The range of input values ",
+    "summary" : "The range of input values",
+    "title" : "domain"
+  },
+  {
+    "headings" : [
+
+    ],
+    "kind" : "symbol",
+    "location" : {
+      "reference" : {
+        "interfaceLanguage" : "swift",
+        "url" : "doc:\/\/com.github.swiftviz.SwiftViz\/documentation\/SwiftViz\/LinearScale\/TickType"
+      },
+      "type" : "topLevelPage"
+    },
+    "rawIndexableTextContent" : "Inherited from Scale.TickType. ",
+    "summary" : "Inherited from Scale.TickType.",
+    "title" : "LinearScale.TickType"
+  },
+  {
+    "headings" : [
+
+    ],
+    "kind" : "symbol",
+    "location" : {
+      "reference" : {
+        "interfaceLanguage" : "swift",
+        "url" : "doc:\/\/com.github.swiftviz.SwiftViz\/documentation\/SwiftViz\/Tick\/id"
+      },
+      "type" : "topLevelPage"
+    },
+    "rawIndexableTextContent" : "No overview available. ",
+    "summary" : "No overview available.",
+    "title" : "id"
+  },
+  {
+    "headings" : [
+
+    ],
+    "kind" : "article",
+    "location" : {
+      "reference" : {
+        "interfaceLanguage" : "swift",
+        "url" : "doc:\/\/com.github.swiftviz.SwiftViz\/documentation\/SwiftViz\/LogScale\/Scale-Implementations"
+      },
+      "type" : "topLevelPage"
+    },
+    "rawIndexableTextContent" : "No overview available.",
+    "summary" : "No overview available.",
+    "title" : "Scale Implementations"
+  },
+  {
+    "headings" : [
+
+    ],
+    "kind" : "symbol",
+    "location" : {
+      "reference" : {
+        "interfaceLanguage" : "swift",
+        "url" : "doc:\/\/com.github.swiftviz.SwiftViz\/documentation\/SwiftViz\/Scale"
+      },
+      "type" : "topLevelPage"
+    },
+    "rawIndexableTextContent" : "A scale maps values from an input domain to an output range. ",
+    "summary" : "A scale maps values from an input domain to an output range.",
+    "title" : "Scale"
+  },
+  {
+    "headings" : [
+
+    ],
+    "kind" : "symbol",
+    "location" : {
+      "reference" : {
+        "interfaceLanguage" : "swift",
+        "url" : "doc:\/\/com.github.swiftviz.SwiftViz\/documentation\/SwiftViz\/LinearScale\/validatedTickLabels(_:range:)"
+      },
+      "type" : "topLevelPage"
+    },
+    "rawIndexableTextContent" : "Validates a set of TickLabels against a given scale, removing any that don’t match the scale’s domain.  an array of TickLabels to validate against the scale a ClosedRange representing the representing the range we are mapping the values into with the scale.",
+    "summary" : "Validates a set of TickLabels against a given scale, removing any that don’t match the scale’s domain.",
+    "title" : "validatedTickLabels(_:range:)"
+  },
+  {
+    "headings" : [
+      "Return Value"
+    ],
+    "kind" : "symbol",
+    "location" : {
+      "reference" : {
+        "interfaceLanguage" : "swift",
+        "url" : "doc:\/\/com.github.swiftviz.SwiftViz\/documentation\/SwiftViz\/LogScale\/ticks(count:range:)"
+      },
+      "type" : "topLevelPage"
+    },
+    "rawIndexableTextContent" : "returns an array of the locations of ticks - (value, location)  Return Value array of the locations of the ticks within self.range number of steps to take in the ticks, default of 10",
+    "summary" : "returns an array of the locations of ticks - (value, location)",
+    "title" : "ticks(count:range:)"
+  },
+  {
+    "headings" : [
+
+    ],
+    "kind" : "symbol",
+    "location" : {
+      "reference" : {
+        "interfaceLanguage" : "swift",
+        "url" : "doc:\/\/com.github.swiftviz.SwiftViz\/documentation\/SwiftViz\/TickLabel\/init(rangeLocation:value:)"
+      },
+      "type" : "topLevelPage"
+    },
+    "rawIndexableTextContent" : "Convenience initializer for TickLabel  location (CGFloat) of the label within the output range of a scale String description of the label to be displayed",
+    "summary" : "Convenience initializer for TickLabel",
+    "title" : "init(rangeLocation:value:)"
+  },
+  {
+    "headings" : [
+
+    ],
+    "kind" : "symbol",
+    "location" : {
+      "reference" : {
+        "interfaceLanguage" : "swift",
+        "url" : "doc:\/\/com.github.swiftviz.SwiftViz\/documentation\/SwiftViz\/IntegerTick\/id-1yqgu"
+      },
+      "type" : "topLevelPage"
+    },
+    "rawIndexableTextContent" : "Inherited from Identifiable.id. ",
+    "summary" : "Inherited from Identifiable.id.",
+    "title" : "id"
+  },
+  {
+    "headings" : [
+
+    ],
+    "kind" : "article",
+    "location" : {
+      "reference" : {
+        "interfaceLanguage" : "swift",
+        "url" : "doc:\/\/com.github.swiftviz.SwiftViz\/documentation\/SwiftViz\/DoubleTick\/Identifiable-Implementations"
+      },
+      "type" : "topLevelPage"
+    },
+    "rawIndexableTextContent" : "No overview available.",
+    "summary" : "No overview available.",
+    "title" : "Identifiable Implementations"
+  },
+  {
+    "headings" : [
+
+    ],
+    "kind" : "symbol",
+    "location" : {
+      "reference" : {
+        "interfaceLanguage" : "swift",
         "url" : "doc:\/\/com.github.swiftviz.SwiftViz\/documentation\/SwiftViz\/DoubleTick\/value"
       },
       "type" : "topLevelPage"
@@ -247,6 +647,711 @@
     "location" : {
       "reference" : {
         "interfaceLanguage" : "swift",
+        "url" : "doc:\/\/com.github.swiftviz.SwiftViz\/documentation\/SwiftViz\/IntegerTick"
+      },
+      "type" : "topLevelPage"
+    },
+    "rawIndexableTextContent" : "No overview available. ",
+    "summary" : "No overview available.",
+    "title" : "IntegerTick"
+  },
+  {
+    "headings" : [
+      "Return Value"
+    ],
+    "kind" : "symbol",
+    "location" : {
+      "reference" : {
+        "interfaceLanguage" : "swift",
+        "url" : "doc:\/\/com.github.swiftviz.SwiftViz\/documentation\/SwiftViz\/Scale\/ticks(count:range:)"
+      },
+      "type" : "topLevelPage"
+    },
+    "rawIndexableTextContent" : "Returns an array of the locations within the output range to locate ticks for the scale.  Return Value an Array of the values within the ClosedRange of range a number of ticks to display, defaulting to 10 a ClosedRange representing the representing the range we are mapping the values into with the scale",
+    "summary" : "Returns an array of the locations within the output range to locate ticks for the scale.",
+    "title" : "ticks(count:range:)"
+  },
+  {
+    "headings" : [
+
+    ],
+    "kind" : "symbol",
+    "location" : {
+      "reference" : {
+        "interfaceLanguage" : "swift",
+        "url" : "doc:\/\/com.github.swiftviz.SwiftViz\/documentation\/SwiftViz\/IntegerTick\/stringValue"
+      },
+      "type" : "topLevelPage"
+    },
+    "rawIndexableTextContent" : "No overview available. ",
+    "summary" : "No overview available.",
+    "title" : "stringValue"
+  },
+  {
+    "headings" : [
+
+    ],
+    "kind" : "symbol",
+    "location" : {
+      "reference" : {
+        "interfaceLanguage" : "swift",
+        "url" : "doc:\/\/com.github.swiftviz.SwiftViz\/documentation\/SwiftViz\/CGFloatTick"
+      },
+      "type" : "topLevelPage"
+    },
+    "rawIndexableTextContent" : "No overview available. ",
+    "summary" : "No overview available.",
+    "title" : "CGFloatTick"
+  },
+  {
+    "headings" : [
+      "Discussion"
+    ],
+    "kind" : "symbol",
+    "location" : {
+      "reference" : {
+        "interfaceLanguage" : "swift",
+        "url" : "doc:\/\/com.github.swiftviz.SwiftViz\/documentation\/SwiftViz\/Scale\/ticks(_:range:)"
+      },
+      "type" : "topLevelPage"
+    },
+    "rawIndexableTextContent" : "Converts an array of values of the Scale’s InputType into a set of Ticks. Used for manually specifying a series of ticks that you want to have displayed.  an array of values of the Scale’s InputType a ClosedRange representing the representing the range we are mapping the values into with the scale Discussion Any values presented for display that are not within the domain of the scale are ignored and dropped.",
+    "summary" : "Converts an array of values of the Scale’s InputType into a set of Ticks. Used for manually specifying a series of ticks that you want to have displayed.",
+    "title" : "ticks(_:range:)"
+  },
+  {
+    "headings" : [
+
+    ],
+    "kind" : "symbol",
+    "location" : {
+      "reference" : {
+        "interfaceLanguage" : "swift",
+        "url" : "doc:\/\/com.github.swiftviz.SwiftViz\/documentation\/SwiftViz\/LinearScale\/invert(_:range:)"
+      },
+      "type" : "topLevelPage"
+    },
+    "rawIndexableTextContent" : "inverts the scale, taking a value in the output range and returning the relevant value from the input domain ",
+    "summary" : "inverts the scale, taking a value in the output range and returning the relevant value from the input domain",
+    "title" : "invert(_:range:)"
+  },
+  {
+    "headings" : [
+      "Discussion"
+    ],
+    "kind" : "symbol",
+    "location" : {
+      "reference" : {
+        "interfaceLanguage" : "swift",
+        "url" : "doc:\/\/com.github.swiftviz.SwiftViz\/documentation\/SwiftViz\/Scale\/isClamped"
+      },
+      "type" : "topLevelPage"
+    },
+    "rawIndexableTextContent" : "A boolean value that indicates whether the output vales are constrained to the min and max of the output range.  Discussion If true, values processed by the scale are constrained to the output range, and values processed backwards through the scale are constrained to the input domain.",
+    "summary" : "A boolean value that indicates whether the output vales are constrained to the min and max of the output range.",
+    "title" : "isClamped"
+  },
+  {
+    "headings" : [
+
+    ],
+    "kind" : "symbol",
+    "location" : {
+      "reference" : {
+        "interfaceLanguage" : "swift",
+        "url" : "doc:\/\/com.github.swiftviz.SwiftViz\/documentation\/SwiftViz\/TimeScale\/clampDomain(_:withinRange:)"
+      },
+      "type" : "topLevelPage"
+    },
+    "rawIndexableTextContent" : "Inherited from Scale.clampDomain(_:withinRange:). ",
+    "summary" : "Inherited from Scale.clampDomain(_:withinRange:).",
+    "title" : "clampDomain(_:withinRange:)"
+  },
+  {
+    "headings" : [
+      "Return Value"
+    ],
+    "kind" : "symbol",
+    "location" : {
+      "reference" : {
+        "interfaceLanguage" : "swift",
+        "url" : "doc:\/\/com.github.swiftviz.SwiftViz\/documentation\/SwiftViz\/LogScale\/scale(_:range:)"
+      },
+      "type" : "topLevelPage"
+    },
+    "rawIndexableTextContent" : "scales the input value (within domain) per the scale to the relevant output (using range)  Return Value scaled value value within the domain",
+    "summary" : "scales the input value (within domain) per the scale to the relevant output (using range)",
+    "title" : "scale(_:range:)"
+  },
+  {
+    "headings" : [
+
+    ],
+    "kind" : "symbol",
+    "location" : {
+      "reference" : {
+        "interfaceLanguage" : "swift",
+        "url" : "doc:\/\/com.github.swiftviz.SwiftViz\/documentation\/SwiftViz\/Tick\/init(value:location:)"
+      },
+      "type" : "topLevelPage"
+    },
+    "rawIndexableTextContent" : "No overview available. ",
+    "summary" : "No overview available.",
+    "title" : "init(value:location:)"
+  },
+  {
+    "headings" : [
+
+    ],
+    "kind" : "symbol",
+    "location" : {
+      "reference" : {
+        "interfaceLanguage" : "swift",
+        "url" : "doc:\/\/com.github.swiftviz.SwiftViz\/documentation\/SwiftViz\/CGFloatTick\/id-5vtvu"
+      },
+      "type" : "topLevelPage"
+    },
+    "rawIndexableTextContent" : "Inherited from Identifiable.id. ",
+    "summary" : "Inherited from Identifiable.id.",
+    "title" : "id"
+  },
+  {
+    "headings" : [
+
+    ],
+    "kind" : "symbol",
+    "location" : {
+      "reference" : {
+        "interfaceLanguage" : "swift",
+        "url" : "doc:\/\/com.github.swiftviz.SwiftViz\/documentation\/SwiftViz\/Scale\/TickType"
+      },
+      "type" : "topLevelPage"
+    },
+    "rawIndexableTextContent" : "No overview available. ",
+    "summary" : "No overview available.",
+    "title" : "TickType"
+  },
+  {
+    "headings" : [
+
+    ],
+    "kind" : "symbol",
+    "location" : {
+      "reference" : {
+        "interfaceLanguage" : "swift",
+        "url" : "doc:\/\/com.github.swiftviz.SwiftViz\/documentation\/SwiftViz\/LogScale\/InputType"
+      },
+      "type" : "topLevelPage"
+    },
+    "rawIndexableTextContent" : "Inherited from Scale.InputType. ",
+    "summary" : "Inherited from Scale.InputType.",
+    "title" : "LogScale.InputType"
+  },
+  {
+    "headings" : [
+
+    ],
+    "kind" : "symbol",
+    "location" : {
+      "reference" : {
+        "interfaceLanguage" : "swift",
+        "url" : "doc:\/\/com.github.swiftviz.SwiftViz\/documentation\/SwiftViz\/LinearScale\/InputType"
+      },
+      "type" : "topLevelPage"
+    },
+    "rawIndexableTextContent" : "Inherited from Scale.InputType. ",
+    "summary" : "Inherited from Scale.InputType.",
+    "title" : "LinearScale.InputType"
+  },
+  {
+    "headings" : [
+      "Discussion"
+    ],
+    "kind" : "symbol",
+    "location" : {
+      "reference" : {
+        "interfaceLanguage" : "swift",
+        "url" : "doc:\/\/com.github.swiftviz.SwiftViz\/documentation\/SwiftViz\/LinearScale\/ticks(_:range:)"
+      },
+      "type" : "topLevelPage"
+    },
+    "rawIndexableTextContent" : "Converts an array of values of the Scale’s InputType into a set of Ticks. Used for manually specifying a series of ticks that you want to have displayed.  an array of values of the Scale’s InputType a ClosedRange representing the representing the range we are mapping the values into with the scale Discussion Any values presented for display that are not within the domain of the scale are ignored and dropped.",
+    "summary" : "Converts an array of values of the Scale’s InputType into a set of Ticks. Used for manually specifying a series of ticks that you want to have displayed.",
+    "title" : "ticks(_:range:)"
+  },
+  {
+    "headings" : [
+
+    ],
+    "kind" : "symbol",
+    "location" : {
+      "reference" : {
+        "interfaceLanguage" : "swift",
+        "url" : "doc:\/\/com.github.swiftviz.SwiftViz\/documentation\/SwiftViz\/DateTick\/id-9kysu"
+      },
+      "type" : "topLevelPage"
+    },
+    "rawIndexableTextContent" : "Inherited from Identifiable.id. ",
+    "summary" : "Inherited from Identifiable.id.",
+    "title" : "id"
+  },
+  {
+    "headings" : [
+
+    ],
+    "kind" : "symbol",
+    "location" : {
+      "reference" : {
+        "interfaceLanguage" : "swift",
+        "url" : "doc:\/\/com.github.swiftviz.SwiftViz\/documentation\/SwiftViz\/TickLabel\/makeDefaultFormatter()"
+      },
+      "type" : "topLevelPage"
+    },
+    "rawIndexableTextContent" : "static function on TickLabel that returns a default Formatter object to assist in creating TickLabel instances ",
+    "summary" : "static function on TickLabel that returns a default Formatter object to assist in creating TickLabel instances",
+    "title" : "makeDefaultFormatter()"
+  },
+  {
+    "headings" : [
+
+    ],
+    "kind" : "symbol",
+    "location" : {
+      "reference" : {
+        "interfaceLanguage" : "swift",
+        "url" : "doc:\/\/com.github.swiftviz.SwiftViz\/documentation\/SwiftViz\/IntegerTick\/init(value:location:)"
+      },
+      "type" : "topLevelPage"
+    },
+    "rawIndexableTextContent" : "Inherited from Tick.init(value:location:). ",
+    "summary" : "Inherited from Tick.init(value:location:).",
+    "title" : "init(value:location:)"
+  },
+  {
+    "headings" : [
+
+    ],
+    "kind" : "symbol",
+    "location" : {
+      "reference" : {
+        "interfaceLanguage" : "swift",
+        "url" : "doc:\/\/com.github.swiftviz.SwiftViz\/documentation\/SwiftViz\/TimeScale\/domain"
+      },
+      "type" : "topLevelPage"
+    },
+    "rawIndexableTextContent" : "The range of input values ",
+    "summary" : "The range of input values",
+    "title" : "domain"
+  },
+  {
+    "headings" : [
+
+    ],
+    "kind" : "symbol",
+    "location" : {
+      "reference" : {
+        "interfaceLanguage" : "swift",
+        "url" : "doc:\/\/com.github.swiftviz.SwiftViz\/documentation\/SwiftViz\/Scale\/clampRange(_:withinRange:)"
+      },
+      "type" : "topLevelPage"
+    },
+    "rawIndexableTextContent" : "No overview available. ",
+    "summary" : "No overview available.",
+    "title" : "clampRange(_:withinRange:)"
+  },
+  {
+    "headings" : [
+
+    ],
+    "kind" : "symbol",
+    "location" : {
+      "reference" : {
+        "interfaceLanguage" : "swift",
+        "url" : "doc:\/\/com.github.swiftviz.SwiftViz\/documentation\/SwiftViz\/TimeScale\/clampRange(_:withinRange:)"
+      },
+      "type" : "topLevelPage"
+    },
+    "rawIndexableTextContent" : "Inherited from Scale.clampRange(_:withinRange:). ",
+    "summary" : "Inherited from Scale.clampRange(_:withinRange:).",
+    "title" : "clampRange(_:withinRange:)"
+  },
+  {
+    "headings" : [
+
+    ],
+    "kind" : "symbol",
+    "location" : {
+      "reference" : {
+        "interfaceLanguage" : "swift",
+        "url" : "doc:\/\/com.github.swiftviz.SwiftViz\/documentation\/SwiftViz\/LinearScale\/clampDomain(_:withinRange:)"
+      },
+      "type" : "topLevelPage"
+    },
+    "rawIndexableTextContent" : "Inherited from Scale.clampDomain(_:withinRange:). ",
+    "summary" : "Inherited from Scale.clampDomain(_:withinRange:).",
+    "title" : "clampDomain(_:withinRange:)"
+  },
+  {
+    "headings" : [
+
+    ],
+    "kind" : "symbol",
+    "location" : {
+      "reference" : {
+        "interfaceLanguage" : "swift",
+        "url" : "doc:\/\/com.github.swiftviz.SwiftViz\/documentation\/SwiftViz\/DoubleTick\/rangeLocation"
+      },
+      "type" : "topLevelPage"
+    },
+    "rawIndexableTextContent" : "Inherited from Tick.rangeLocation. ",
+    "summary" : "Inherited from Tick.rangeLocation.",
+    "title" : "rangeLocation"
+  },
+  {
+    "headings" : [
+
+    ],
+    "kind" : "symbol",
+    "location" : {
+      "reference" : {
+        "interfaceLanguage" : "swift",
+        "url" : "doc:\/\/com.github.swiftviz.SwiftViz\/documentation\/SwiftViz\/Scale\/clampDomain(_:withinRange:)"
+      },
+      "type" : "topLevelPage"
+    },
+    "rawIndexableTextContent" : "No overview available. ",
+    "summary" : "No overview available.",
+    "title" : "clampDomain(_:withinRange:)"
+  },
+  {
+    "headings" : [
+
+    ],
+    "kind" : "article",
+    "location" : {
+      "reference" : {
+        "interfaceLanguage" : "swift",
+        "url" : "doc:\/\/com.github.swiftviz.SwiftViz\/documentation\/SwiftViz\/TimeScale\/Scale-Implementations"
+      },
+      "type" : "topLevelPage"
+    },
+    "rawIndexableTextContent" : "No overview available.",
+    "summary" : "No overview available.",
+    "title" : "Scale Implementations"
+  },
+  {
+    "headings" : [
+
+    ],
+    "kind" : "symbol",
+    "location" : {
+      "reference" : {
+        "interfaceLanguage" : "swift",
+        "url" : "doc:\/\/com.github.swiftviz.SwiftViz\/documentation\/SwiftViz\/TickLabel\/id-1fm9l"
+      },
+      "type" : "topLevelPage"
+    },
+    "rawIndexableTextContent" : "Inherited from Identifiable.id. ",
+    "summary" : "Inherited from Identifiable.id.",
+    "title" : "id"
+  },
+  {
+    "headings" : [
+
+    ],
+    "kind" : "symbol",
+    "location" : {
+      "reference" : {
+        "interfaceLanguage" : "swift",
+        "url" : "doc:\/\/com.github.swiftviz.SwiftViz\/documentation\/SwiftViz\/DateTick\/id-6hbjh"
+      },
+      "type" : "topLevelPage"
+    },
+    "rawIndexableTextContent" : "Inherited from Identifiable.id. ",
+    "summary" : "Inherited from Identifiable.id.",
+    "title" : "id"
+  },
+  {
+    "headings" : [
+
+    ],
+    "kind" : "symbol",
+    "location" : {
+      "reference" : {
+        "interfaceLanguage" : "swift",
+        "url" : "doc:\/\/com.github.swiftviz.SwiftViz\/documentation\/SwiftViz\/TimeScale\/validatedTickLabels(_:range:)"
+      },
+      "type" : "topLevelPage"
+    },
+    "rawIndexableTextContent" : "Validates a set of TickLabels against a given scale, removing any that don’t match the scale’s domain.  an array of TickLabels to validate against the scale a ClosedRange representing the representing the range we are mapping the values into with the scale.",
+    "summary" : "Validates a set of TickLabels against a given scale, removing any that don’t match the scale’s domain.",
+    "title" : "validatedTickLabels(_:range:)"
+  },
+  {
+    "headings" : [
+
+    ],
+    "kind" : "symbol",
+    "location" : {
+      "reference" : {
+        "interfaceLanguage" : "swift",
+        "url" : "doc:\/\/com.github.swiftviz.SwiftViz\/documentation\/SwiftViz\/DoubleTick\/init(value:location:)"
+      },
+      "type" : "topLevelPage"
+    },
+    "rawIndexableTextContent" : "Inherited from Tick.init(value:location:). ",
+    "summary" : "Inherited from Tick.init(value:location:).",
+    "title" : "init(value:location:)"
+  },
+  {
+    "headings" : [
+
+    ],
+    "kind" : "symbol",
+    "location" : {
+      "reference" : {
+        "interfaceLanguage" : "swift",
+        "url" : "doc:\/\/com.github.swiftviz.SwiftViz\/documentation\/SwiftViz\/Scale\/labeledTickValues(_:range:)"
+      },
+      "type" : "topLevelPage"
+    },
+    "rawIndexableTextContent" : "Takes an set of labelled input values and returns the relevant set of TickLabels converted to the correct location values associated with the provided range.  A tuple of (InputValue, String) that is the labelled value a ClosedRange representing the representing the range we are mapping the values into with the scale",
+    "summary" : "Takes an set of labelled input values and returns the relevant set of TickLabels converted to the correct location values associated with the provided range.",
+    "title" : "labeledTickValues(_:range:)"
+  },
+  {
+    "headings" : [
+
+    ],
+    "kind" : "symbol",
+    "location" : {
+      "reference" : {
+        "interfaceLanguage" : "swift",
+        "url" : "doc:\/\/com.github.swiftviz.SwiftViz\/documentation\/SwiftViz\/LogScale\/labeledTickValues(_:range:)"
+      },
+      "type" : "topLevelPage"
+    },
+    "rawIndexableTextContent" : "Takes an set of labelled input values and returns the relevant set of TickLabels converted to the correct location values associated with the provided range.  A tuple of (InputValue, String) that is the labelled value a ClosedRange representing the representing the range we are mapping the values into with the scale",
+    "summary" : "Takes an set of labelled input values and returns the relevant set of TickLabels converted to the correct location values associated with the provided range.",
+    "title" : "labeledTickValues(_:range:)"
+  },
+  {
+    "headings" : [
+
+    ],
+    "kind" : "symbol",
+    "location" : {
+      "reference" : {
+        "interfaceLanguage" : "swift",
+        "url" : "doc:\/\/com.github.swiftviz.SwiftViz\/documentation\/SwiftViz\/Scale\/validatedTickLabels(_:range:)"
+      },
+      "type" : "topLevelPage"
+    },
+    "rawIndexableTextContent" : "Validates a set of TickLabels against a given scale, removing any that don’t match the scale’s domain.  an array of TickLabels to validate against the scale a ClosedRange representing the representing the range we are mapping the values into with the scale.",
+    "summary" : "Validates a set of TickLabels against a given scale, removing any that don’t match the scale’s domain.",
+    "title" : "validatedTickLabels(_:range:)"
+  },
+  {
+    "headings" : [
+
+    ],
+    "kind" : "symbol",
+    "location" : {
+      "reference" : {
+        "interfaceLanguage" : "swift",
+        "url" : "doc:\/\/com.github.swiftviz.SwiftViz\/documentation\/SwiftViz\/LogScale\/domain"
+      },
+      "type" : "topLevelPage"
+    },
+    "rawIndexableTextContent" : "The range of input values ",
+    "summary" : "The range of input values",
+    "title" : "domain"
+  },
+  {
+    "headings" : [
+      "Return Value",
+      "Discussion"
+    ],
+    "kind" : "symbol",
+    "location" : {
+      "reference" : {
+        "interfaceLanguage" : "swift",
+        "url" : "doc:\/\/com.github.swiftviz.SwiftViz\/documentation\/SwiftViz\/Scale\/invert(_:range:)"
+      },
+      "type" : "topLevelPage"
+    },
+    "rawIndexableTextContent" : "Converts back from the output range to a value within the input domain.  Return Value a value within the bounds of the ClosedRange for domain, or NaN if it maps outside the bounds a value within the bounds of the ClosedRange for range a ClosedRange representing the representing the range we are mapping the values into with the scale Discussion The inverse of scale(_:range:).",
+    "summary" : "Converts back from the output range to a value within the input domain.",
+    "title" : "invert(_:range:)"
+  },
+  {
+    "headings" : [
+
+    ],
+    "kind" : "article",
+    "location" : {
+      "reference" : {
+        "interfaceLanguage" : "swift",
+        "url" : "doc:\/\/com.github.swiftviz.SwiftViz\/documentation\/SwiftViz\/LinearScale\/Scale-Implementations"
+      },
+      "type" : "topLevelPage"
+    },
+    "rawIndexableTextContent" : "No overview available.",
+    "summary" : "No overview available.",
+    "title" : "Scale Implementations"
+  },
+  {
+    "headings" : [
+
+    ],
+    "kind" : "symbol",
+    "location" : {
+      "reference" : {
+        "interfaceLanguage" : "swift",
+        "url" : "doc:\/\/com.github.swiftviz.SwiftViz\/documentation\/SwiftViz\/IntegerTick\/id-6u65s"
+      },
+      "type" : "topLevelPage"
+    },
+    "rawIndexableTextContent" : "Inherited from Identifiable.id. ",
+    "summary" : "Inherited from Identifiable.id.",
+    "title" : "id"
+  },
+  {
+    "headings" : [
+
+    ],
+    "kind" : "symbol",
+    "location" : {
+      "reference" : {
+        "interfaceLanguage" : "swift",
+        "url" : "doc:\/\/com.github.swiftviz.SwiftViz\/documentation\/SwiftViz\/Scale\/InputType"
+      },
+      "type" : "topLevelPage"
+    },
+    "rawIndexableTextContent" : "No overview available. ",
+    "summary" : "No overview available.",
+    "title" : "InputType"
+  },
+  {
+    "headings" : [
+
+    ],
+    "kind" : "symbol",
+    "location" : {
+      "reference" : {
+        "interfaceLanguage" : "swift",
+        "url" : "doc:\/\/com.github.swiftviz.SwiftViz\/documentation\/SwiftViz\/LinearScale"
+      },
+      "type" : "topLevelPage"
+    },
+    "rawIndexableTextContent" : "A linear scale is created using a continuous input domain and provides methods to convert values within that domain to an output range. ",
+    "summary" : "A linear scale is created using a continuous input domain and provides methods to convert values within that domain to an output range.",
+    "title" : "LinearScale"
+  },
+  {
+    "headings" : [
+
+    ],
+    "kind" : "article",
+    "location" : {
+      "reference" : {
+        "interfaceLanguage" : "swift",
+        "url" : "doc:\/\/com.github.swiftviz.SwiftViz\/documentation\/SwiftViz\/DateTick\/Identifiable-Implementations"
+      },
+      "type" : "topLevelPage"
+    },
+    "rawIndexableTextContent" : "No overview available.",
+    "summary" : "No overview available.",
+    "title" : "Identifiable Implementations"
+  },
+  {
+    "headings" : [
+
+    ],
+    "kind" : "symbol",
+    "location" : {
+      "reference" : {
+        "interfaceLanguage" : "swift",
+        "url" : "doc:\/\/com.github.swiftviz.SwiftViz\/documentation\/SwiftViz\/TimeScale\/InputType"
+      },
+      "type" : "topLevelPage"
+    },
+    "rawIndexableTextContent" : "Inherited from Scale.InputType. ",
+    "summary" : "Inherited from Scale.InputType.",
+    "title" : "TimeScale.InputType"
+  },
+  {
+    "headings" : [
+
+    ],
+    "kind" : "symbol",
+    "location" : {
+      "reference" : {
+        "interfaceLanguage" : "swift",
+        "url" : "doc:\/\/com.github.swiftviz.SwiftViz\/documentation\/SwiftViz\/DoubleTick\/stringValue"
+      },
+      "type" : "topLevelPage"
+    },
+    "rawIndexableTextContent" : "No overview available. ",
+    "summary" : "No overview available.",
+    "title" : "stringValue"
+  },
+  {
+    "headings" : [
+      "Discussion"
+    ],
+    "kind" : "symbol",
+    "location" : {
+      "reference" : {
+        "interfaceLanguage" : "swift",
+        "url" : "doc:\/\/com.github.swiftviz.SwiftViz\/documentation\/SwiftViz\/TimeScale\/isClamped"
+      },
+      "type" : "topLevelPage"
+    },
+    "rawIndexableTextContent" : "A boolean value that indicates whether the output vales are constrained to the min and max of the output range.  Discussion If true, values processed by the scale are constrained to the output range, and values processed backwards through the scale are constrained to the input domain.",
+    "summary" : "A boolean value that indicates whether the output vales are constrained to the min and max of the output range.",
+    "title" : "isClamped"
+  },
+  {
+    "headings" : [
+
+    ],
+    "kind" : "symbol",
+    "location" : {
+      "reference" : {
+        "interfaceLanguage" : "swift",
+        "url" : "doc:\/\/com.github.swiftviz.SwiftViz\/documentation\/SwiftViz\/LogScale\/TickType"
+      },
+      "type" : "topLevelPage"
+    },
+    "rawIndexableTextContent" : "Inherited from Scale.TickType. ",
+    "summary" : "Inherited from Scale.TickType.",
+    "title" : "LogScale.TickType"
+  },
+  {
+    "headings" : [
+
+    ],
+    "kind" : "symbol",
+    "location" : {
+      "reference" : {
+        "interfaceLanguage" : "swift",
+        "url" : "doc:\/\/com.github.swiftviz.SwiftViz\/documentation\/SwiftViz\/Scale\/domain"
+      },
+      "type" : "topLevelPage"
+    },
+    "rawIndexableTextContent" : "The range of input values ",
+    "summary" : "The range of input values",
+    "title" : "domain"
+  },
+  {
+    "headings" : [
+
+    ],
+    "kind" : "symbol",
+    "location" : {
+      "reference" : {
+        "interfaceLanguage" : "swift",
         "url" : "doc:\/\/com.github.swiftviz.SwiftViz\/documentation\/SwiftViz\/TickLabel\/init(id:rangeLocation:value:)"
       },
       "type" : "topLevelPage"
@@ -254,6 +1359,22 @@
     "rawIndexableTextContent" : "Full initializer for a TickLabel  an instance of UUID location (CGFloat) of the label within the output range of a scale String description of the label to be displayed",
     "summary" : "Full initializer for a TickLabel",
     "title" : "init(id:rangeLocation:value:)"
+  },
+  {
+    "headings" : [
+
+    ],
+    "kind" : "symbol",
+    "location" : {
+      "reference" : {
+        "interfaceLanguage" : "swift",
+        "url" : "doc:\/\/com.github.swiftviz.SwiftViz\/documentation\/SwiftViz\/TimeScale\/labeledTickValues(_:range:)"
+      },
+      "type" : "topLevelPage"
+    },
+    "rawIndexableTextContent" : "Takes an set of labelled input values and returns the relevant set of TickLabels converted to the correct location values associated with the provided range.  A tuple of (InputValue, String) that is the labelled value a ClosedRange representing the representing the range we are mapping the values into with the scale",
+    "summary" : "Takes an set of labelled input values and returns the relevant set of TickLabels converted to the correct location values associated with the provided range.",
+    "title" : "labeledTickValues(_:range:)"
   },
   {
     "headings" : [
@@ -289,86 +1410,6 @@
   },
   {
     "headings" : [
-      "Discussion"
-    ],
-    "kind" : "symbol",
-    "location" : {
-      "reference" : {
-        "interfaceLanguage" : "swift",
-        "url" : "doc:\/\/com.github.swiftviz.SwiftViz\/documentation\/SwiftViz\/LogScale\/ticks(_:range:)"
-      },
-      "type" : "topLevelPage"
-    },
-    "rawIndexableTextContent" : "Converts an array of values of the Scale’s InputType into a set of Ticks. Used for manually specifying a series of ticks that you want to have displayed.  an array of values of the Scale’s InputType a ClosedRange representing the representing the range we are mapping the values into with the scale Discussion Any values presented for display that are not within the domain of the scale are ignored and dropped.",
-    "summary" : "Converts an array of values of the Scale’s InputType into a set of Ticks. Used for manually specifying a series of ticks that you want to have displayed.",
-    "title" : "ticks(_:range:)"
-  },
-  {
-    "headings" : [
-
-    ],
-    "kind" : "symbol",
-    "location" : {
-      "reference" : {
-        "interfaceLanguage" : "swift",
-        "url" : "doc:\/\/com.github.swiftviz.SwiftViz\/documentation\/SwiftViz\/LinearScale"
-      },
-      "type" : "topLevelPage"
-    },
-    "rawIndexableTextContent" : "A linear scale is created using a continuous input domain and provides methods to convert values within that domain to an output range. ",
-    "summary" : "A linear scale is created using a continuous input domain and provides methods to convert values within that domain to an output range.",
-    "title" : "LinearScale"
-  },
-  {
-    "headings" : [
-
-    ],
-    "kind" : "symbol",
-    "location" : {
-      "reference" : {
-        "interfaceLanguage" : "swift",
-        "url" : "doc:\/\/com.github.swiftviz.SwiftViz\/documentation\/SwiftViz\/LogScale\/invert(_:range:)"
-      },
-      "type" : "topLevelPage"
-    },
-    "rawIndexableTextContent" : "inverts the scale, taking a value in the output range and returning the relevant value from the input domain ",
-    "summary" : "inverts the scale, taking a value in the output range and returning the relevant value from the input domain",
-    "title" : "invert(_:range:)"
-  },
-  {
-    "headings" : [
-
-    ],
-    "kind" : "symbol",
-    "location" : {
-      "reference" : {
-        "interfaceLanguage" : "swift",
-        "url" : "doc:\/\/com.github.swiftviz.SwiftViz\/documentation\/SwiftViz\/Tick\/id"
-      },
-      "type" : "topLevelPage"
-    },
-    "rawIndexableTextContent" : "No overview available. ",
-    "summary" : "No overview available.",
-    "title" : "id"
-  },
-  {
-    "headings" : [
-
-    ],
-    "kind" : "symbol",
-    "location" : {
-      "reference" : {
-        "interfaceLanguage" : "swift",
-        "url" : "doc:\/\/com.github.swiftviz.SwiftViz\/documentation\/SwiftViz\/TimeScale\/clampRange(_:withinRange:)"
-      },
-      "type" : "topLevelPage"
-    },
-    "rawIndexableTextContent" : "Inherited from Scale.clampRange(_:withinRange:). ",
-    "summary" : "Inherited from Scale.clampRange(_:withinRange:).",
-    "title" : "clampRange(_:withinRange:)"
-  },
-  {
-    "headings" : [
 
     ],
     "kind" : "symbol",
@@ -385,19 +1426,35 @@
   },
   {
     "headings" : [
+
+    ],
+    "kind" : "symbol",
+    "location" : {
+      "reference" : {
+        "interfaceLanguage" : "swift",
+        "url" : "doc:\/\/com.github.swiftviz.SwiftViz\/documentation\/SwiftViz\/TimeScale\/TickType"
+      },
+      "type" : "topLevelPage"
+    },
+    "rawIndexableTextContent" : "Inherited from Scale.TickType. ",
+    "summary" : "Inherited from Scale.TickType.",
+    "title" : "TimeScale.TickType"
+  },
+  {
+    "headings" : [
       "Return Value"
     ],
     "kind" : "symbol",
     "location" : {
       "reference" : {
         "interfaceLanguage" : "swift",
-        "url" : "doc:\/\/com.github.swiftviz.SwiftViz\/documentation\/SwiftViz\/Scale\/ticks(count:range:)"
+        "url" : "doc:\/\/com.github.swiftviz.SwiftViz\/documentation\/SwiftViz\/TimeScale\/scale(_:range:)"
       },
       "type" : "topLevelPage"
     },
-    "rawIndexableTextContent" : "returns an array of the locations within the ClosedRange of range to locate ticks for the scale  Return Value an Array of the values within the ClosedRange of range a number of ticks to display, defaulting to 10 a ClosedRange representing the representing the range we are mapping the values into with the scale",
-    "summary" : "returns an array of the locations within the ClosedRange of range to locate ticks for the scale",
-    "title" : "ticks(count:range:)"
+    "rawIndexableTextContent" : "scales the input value (within domain) per the scale to the relevant output (using range)  Return Value scaled value value within the domain",
+    "summary" : "scales the input value (within domain) per the scale to the relevant output (using range)",
+    "title" : "scale(_:range:)"
   },
   {
     "headings" : [
@@ -407,7 +1464,7 @@
     "location" : {
       "reference" : {
         "interfaceLanguage" : "swift",
-        "url" : "doc:\/\/com.github.swiftviz.SwiftViz\/documentation\/SwiftViz\/DateTick\/id-9kysu"
+        "url" : "doc:\/\/com.github.swiftviz.SwiftViz\/documentation\/SwiftViz\/CGFloatTick\/id-9diks"
       },
       "type" : "topLevelPage"
     },
@@ -423,61 +1480,13 @@
     "location" : {
       "reference" : {
         "interfaceLanguage" : "swift",
-        "url" : "doc:\/\/com.github.swiftviz.SwiftViz\/documentation\/SwiftViz\/CGFloatTick"
+        "url" : "doc:\/\/com.github.swiftviz.SwiftViz\/documentation\/SwiftViz\/IntegerTick\/rangeLocation"
       },
       "type" : "topLevelPage"
     },
-    "rawIndexableTextContent" : "No overview available. ",
-    "summary" : "No overview available.",
-    "title" : "CGFloatTick"
-  },
-  {
-    "headings" : [
-
-    ],
-    "kind" : "symbol",
-    "location" : {
-      "reference" : {
-        "interfaceLanguage" : "swift",
-        "url" : "doc:\/\/com.github.swiftviz.SwiftViz\/documentation\/SwiftViz\/DoubleTick"
-      },
-      "type" : "topLevelPage"
-    },
-    "rawIndexableTextContent" : "No overview available. ",
-    "summary" : "No overview available.",
-    "title" : "DoubleTick"
-  },
-  {
-    "headings" : [
-
-    ],
-    "kind" : "symbol",
-    "location" : {
-      "reference" : {
-        "interfaceLanguage" : "swift",
-        "url" : "doc:\/\/com.github.swiftviz.SwiftViz\/documentation\/SwiftViz\/IntegerTick\/value"
-      },
-      "type" : "topLevelPage"
-    },
-    "rawIndexableTextContent" : "Inherited from Tick.value. ",
-    "summary" : "Inherited from Tick.value.",
-    "title" : "value"
-  },
-  {
-    "headings" : [
-
-    ],
-    "kind" : "article",
-    "location" : {
-      "reference" : {
-        "interfaceLanguage" : "swift",
-        "url" : "doc:\/\/com.github.swiftviz.SwiftViz\/documentation\/SwiftViz\/TickLabel\/Identifiable-Implementations"
-      },
-      "type" : "topLevelPage"
-    },
-    "rawIndexableTextContent" : "No overview available.",
-    "summary" : "No overview available.",
-    "title" : "Identifiable Implementations"
+    "rawIndexableTextContent" : "Inherited from Tick.rangeLocation. ",
+    "summary" : "Inherited from Tick.rangeLocation.",
+    "title" : "rangeLocation"
   },
   {
     "headings" : [
@@ -503,262 +1512,6 @@
     "location" : {
       "reference" : {
         "interfaceLanguage" : "swift",
-        "url" : "doc:\/\/com.github.swiftviz.SwiftViz\/documentation\/SwiftViz\/LinearScale\/labeledTickValues(_:range:)"
-      },
-      "type" : "topLevelPage"
-    },
-    "rawIndexableTextContent" : "Takes an set of labelled input values and returns the relevant set of TickLabels converted to the correct location values associated with the provided range.  A tuple of (InputValue, String) that is the labelled value a ClosedRange representing the representing the range we are mapping the values into with the scale",
-    "summary" : "Takes an set of labelled input values and returns the relevant set of TickLabels converted to the correct location values associated with the provided range.",
-    "title" : "labeledTickValues(_:range:)"
-  },
-  {
-    "headings" : [
-      "Overview"
-    ],
-    "kind" : "symbol",
-    "location" : {
-      "reference" : {
-        "interfaceLanguage" : "swift",
-        "url" : "doc:\/\/com.github.swiftviz.SwiftViz\/documentation\/SwiftViz"
-      },
-      "type" : "topLevelPage"
-    },
-    "rawIndexableTextContent" : "A collection of components to provide structures that support data visualization. Overview Loosely based on the APIs and the visualization constructs created by Mike Bostock and contributors to D3.js",
-    "summary" : "A collection of components to provide structures that support data visualization.",
-    "title" : "SwiftViz"
-  },
-  {
-    "headings" : [
-      "Return Value"
-    ],
-    "kind" : "symbol",
-    "location" : {
-      "reference" : {
-        "interfaceLanguage" : "swift",
-        "url" : "doc:\/\/com.github.swiftviz.SwiftViz\/documentation\/SwiftViz\/TimeScale\/ticks(count:range:)"
-      },
-      "type" : "topLevelPage"
-    },
-    "rawIndexableTextContent" : "returns an array of the locations of ticks  Return Value array of the locations of the ticks within self.range number of steps to take in the ticks, default of 10",
-    "summary" : "returns an array of the locations of ticks",
-    "title" : "ticks(count:range:)"
-  },
-  {
-    "headings" : [
-
-    ],
-    "kind" : "symbol",
-    "location" : {
-      "reference" : {
-        "interfaceLanguage" : "swift",
-        "url" : "doc:\/\/com.github.swiftviz.SwiftViz\/documentation\/SwiftViz\/CGFloatTick\/rangeLocation"
-      },
-      "type" : "topLevelPage"
-    },
-    "rawIndexableTextContent" : "Inherited from Tick.rangeLocation. ",
-    "summary" : "Inherited from Tick.rangeLocation.",
-    "title" : "rangeLocation"
-  },
-  {
-    "headings" : [
-      "Return Value"
-    ],
-    "kind" : "symbol",
-    "location" : {
-      "reference" : {
-        "interfaceLanguage" : "swift",
-        "url" : "doc:\/\/com.github.swiftviz.SwiftViz\/documentation\/SwiftViz\/TimeScale\/invert(_:range:)"
-      },
-      "type" : "topLevelPage"
-    },
-    "rawIndexableTextContent" : "converts back from the output “range” to a value within the input “domain”. The inverse of scale()  Return Value a value within the bounds of the ClosedRange for domain, or NaN if it maps outside the bounds a value within the bounds of the ClosedRange for range",
-    "summary" : "converts back from the output “range” to a value within the input “domain”. The inverse of scale()",
-    "title" : "invert(_:range:)"
-  },
-  {
-    "headings" : [
-
-    ],
-    "kind" : "symbol",
-    "location" : {
-      "reference" : {
-        "interfaceLanguage" : "swift",
-        "url" : "doc:\/\/com.github.swiftviz.SwiftViz\/documentation\/SwiftViz\/CGFloatTick\/value"
-      },
-      "type" : "topLevelPage"
-    },
-    "rawIndexableTextContent" : "Inherited from Tick.value. ",
-    "summary" : "Inherited from Tick.value.",
-    "title" : "value"
-  },
-  {
-    "headings" : [
-
-    ],
-    "kind" : "symbol",
-    "location" : {
-      "reference" : {
-        "interfaceLanguage" : "swift",
-        "url" : "doc:\/\/com.github.swiftviz.SwiftViz\/documentation\/SwiftViz\/TickLabel\/makeDefaultFormatter()"
-      },
-      "type" : "topLevelPage"
-    },
-    "rawIndexableTextContent" : "static function on TickLabel that returns a default Formatter object to assist in creating TickLabel instances ",
-    "summary" : "static function on TickLabel that returns a default Formatter object to assist in creating TickLabel instances",
-    "title" : "makeDefaultFormatter()"
-  },
-  {
-    "headings" : [
-
-    ],
-    "kind" : "symbol",
-    "location" : {
-      "reference" : {
-        "interfaceLanguage" : "swift",
-        "url" : "doc:\/\/com.github.swiftviz.SwiftViz\/documentation\/SwiftViz\/LogScale\/TickType"
-      },
-      "type" : "topLevelPage"
-    },
-    "rawIndexableTextContent" : "Inherited from Scale.TickType. ",
-    "summary" : "Inherited from Scale.TickType.",
-    "title" : "LogScale.TickType"
-  },
-  {
-    "headings" : [
-
-    ],
-    "kind" : "symbol",
-    "location" : {
-      "reference" : {
-        "interfaceLanguage" : "swift",
-        "url" : "doc:\/\/com.github.swiftviz.SwiftViz\/documentation\/SwiftViz\/IntegerTick\/id-6u65s"
-      },
-      "type" : "topLevelPage"
-    },
-    "rawIndexableTextContent" : "Inherited from Identifiable.id. ",
-    "summary" : "Inherited from Identifiable.id.",
-    "title" : "id"
-  },
-  {
-    "headings" : [
-
-    ],
-    "kind" : "symbol",
-    "location" : {
-      "reference" : {
-        "interfaceLanguage" : "swift",
-        "url" : "doc:\/\/com.github.swiftviz.SwiftViz\/documentation\/SwiftViz\/DateTick\/init(value:location:)"
-      },
-      "type" : "topLevelPage"
-    },
-    "rawIndexableTextContent" : "Inherited from Tick.init(value:location:). ",
-    "summary" : "Inherited from Tick.init(value:location:).",
-    "title" : "init(value:location:)"
-  },
-  {
-    "headings" : [
-
-    ],
-    "kind" : "symbol",
-    "location" : {
-      "reference" : {
-        "interfaceLanguage" : "swift",
-        "url" : "doc:\/\/com.github.swiftviz.SwiftViz\/documentation\/SwiftViz\/LogScale\/init(domain:isClamped:)"
-      },
-      "type" : "topLevelPage"
-    },
-    "rawIndexableTextContent" : "No overview available. ",
-    "summary" : "No overview available.",
-    "title" : "init(domain:isClamped:)"
-  },
-  {
-    "headings" : [
-
-    ],
-    "kind" : "article",
-    "location" : {
-      "reference" : {
-        "interfaceLanguage" : "swift",
-        "url" : "doc:\/\/com.github.swiftviz.SwiftViz\/documentation\/SwiftViz\/LinearScale\/Scale-Implementations"
-      },
-      "type" : "topLevelPage"
-    },
-    "rawIndexableTextContent" : "No overview available.",
-    "summary" : "No overview available.",
-    "title" : "Scale Implementations"
-  },
-  {
-    "headings" : [
-
-    ],
-    "kind" : "symbol",
-    "location" : {
-      "reference" : {
-        "interfaceLanguage" : "swift",
-        "url" : "doc:\/\/com.github.swiftviz.SwiftViz\/documentation\/SwiftViz\/Scale\/clampDomain(_:withinRange:)"
-      },
-      "type" : "topLevelPage"
-    },
-    "rawIndexableTextContent" : "No overview available. ",
-    "summary" : "No overview available.",
-    "title" : "clampDomain(_:withinRange:)"
-  },
-  {
-    "headings" : [
-
-    ],
-    "kind" : "symbol",
-    "location" : {
-      "reference" : {
-        "interfaceLanguage" : "swift",
-        "url" : "doc:\/\/com.github.swiftviz.SwiftViz\/documentation\/SwiftViz\/TickLabel\/id-1fm9l"
-      },
-      "type" : "topLevelPage"
-    },
-    "rawIndexableTextContent" : "Inherited from Identifiable.id. ",
-    "summary" : "Inherited from Identifiable.id.",
-    "title" : "id"
-  },
-  {
-    "headings" : [
-
-    ],
-    "kind" : "symbol",
-    "location" : {
-      "reference" : {
-        "interfaceLanguage" : "swift",
-        "url" : "doc:\/\/com.github.swiftviz.SwiftViz\/documentation\/SwiftViz\/IntegerTick"
-      },
-      "type" : "topLevelPage"
-    },
-    "rawIndexableTextContent" : "No overview available. ",
-    "summary" : "No overview available.",
-    "title" : "IntegerTick"
-  },
-  {
-    "headings" : [
-
-    ],
-    "kind" : "symbol",
-    "location" : {
-      "reference" : {
-        "interfaceLanguage" : "swift",
-        "url" : "doc:\/\/com.github.swiftviz.SwiftViz\/documentation\/SwiftViz\/DateTick"
-      },
-      "type" : "topLevelPage"
-    },
-    "rawIndexableTextContent" : "No overview available. ",
-    "summary" : "No overview available.",
-    "title" : "DateTick"
-  },
-  {
-    "headings" : [
-
-    ],
-    "kind" : "symbol",
-    "location" : {
-      "reference" : {
-        "interfaceLanguage" : "swift",
         "url" : "doc:\/\/com.github.swiftviz.SwiftViz\/documentation\/SwiftViz\/TickLabel\/rangeLocation"
       },
       "type" : "topLevelPage"
@@ -775,167 +1528,7 @@
     "location" : {
       "reference" : {
         "interfaceLanguage" : "swift",
-        "url" : "doc:\/\/com.github.swiftviz.SwiftViz\/documentation\/SwiftViz\/LinearScale\/domain"
-      },
-      "type" : "topLevelPage"
-    },
-    "rawIndexableTextContent" : "Inherited from Scale.domain. ",
-    "summary" : "Inherited from Scale.domain.",
-    "title" : "domain"
-  },
-  {
-    "headings" : [
-
-    ],
-    "kind" : "symbol",
-    "location" : {
-      "reference" : {
-        "interfaceLanguage" : "swift",
-        "url" : "doc:\/\/com.github.swiftviz.SwiftViz\/documentation\/SwiftViz\/TimeScale\/TickType"
-      },
-      "type" : "topLevelPage"
-    },
-    "rawIndexableTextContent" : "Inherited from Scale.TickType. ",
-    "summary" : "Inherited from Scale.TickType.",
-    "title" : "TimeScale.TickType"
-  },
-  {
-    "headings" : [
-
-    ],
-    "kind" : "symbol",
-    "location" : {
-      "reference" : {
-        "interfaceLanguage" : "swift",
-        "url" : "doc:\/\/com.github.swiftviz.SwiftViz\/documentation\/SwiftViz\/DateTick\/value"
-      },
-      "type" : "topLevelPage"
-    },
-    "rawIndexableTextContent" : "Inherited from Tick.value. ",
-    "summary" : "Inherited from Tick.value.",
-    "title" : "value"
-  },
-  {
-    "headings" : [
-
-    ],
-    "kind" : "symbol",
-    "location" : {
-      "reference" : {
-        "interfaceLanguage" : "swift",
-        "url" : "doc:\/\/com.github.swiftviz.SwiftViz\/documentation\/SwiftViz\/Scale\/isClamped"
-      },
-      "type" : "topLevelPage"
-    },
-    "rawIndexableTextContent" : "No overview available. ",
-    "summary" : "No overview available.",
-    "title" : "isClamped"
-  },
-  {
-    "headings" : [
-
-    ],
-    "kind" : "article",
-    "location" : {
-      "reference" : {
-        "interfaceLanguage" : "swift",
-        "url" : "doc:\/\/com.github.swiftviz.SwiftViz\/documentation\/SwiftViz\/DateTick\/Identifiable-Implementations"
-      },
-      "type" : "topLevelPage"
-    },
-    "rawIndexableTextContent" : "No overview available.",
-    "summary" : "No overview available.",
-    "title" : "Identifiable Implementations"
-  },
-  {
-    "headings" : [
-
-    ],
-    "kind" : "symbol",
-    "location" : {
-      "reference" : {
-        "interfaceLanguage" : "swift",
-        "url" : "doc:\/\/com.github.swiftviz.SwiftViz\/documentation\/SwiftViz\/Scale\/labeledTickValues(_:range:)"
-      },
-      "type" : "topLevelPage"
-    },
-    "rawIndexableTextContent" : "Takes an set of labelled input values and returns the relevant set of TickLabels converted to the correct location values associated with the provided range.  A tuple of (InputValue, String) that is the labelled value a ClosedRange representing the representing the range we are mapping the values into with the scale",
-    "summary" : "Takes an set of labelled input values and returns the relevant set of TickLabels converted to the correct location values associated with the provided range.",
-    "title" : "labeledTickValues(_:range:)"
-  },
-  {
-    "headings" : [
-
-    ],
-    "kind" : "symbol",
-    "location" : {
-      "reference" : {
-        "interfaceLanguage" : "swift",
-        "url" : "doc:\/\/com.github.swiftviz.SwiftViz\/documentation\/SwiftViz\/LogScale\/validatedTickLabels(_:range:)"
-      },
-      "type" : "topLevelPage"
-    },
-    "rawIndexableTextContent" : "Validates a set of TickLabels against a given scale, removing any that don’t match the scale’s domain.  an array of TickLabels to validate against the scale a ClosedRange representing the representing the range we are mapping the values into with the scale.",
-    "summary" : "Validates a set of TickLabels against a given scale, removing any that don’t match the scale’s domain.",
-    "title" : "validatedTickLabels(_:range:)"
-  },
-  {
-    "headings" : [
-
-    ],
-    "kind" : "symbol",
-    "location" : {
-      "reference" : {
-        "interfaceLanguage" : "swift",
-        "url" : "doc:\/\/com.github.swiftviz.SwiftViz\/documentation\/SwiftViz\/CGFloatTick\/id-5vtvu"
-      },
-      "type" : "topLevelPage"
-    },
-    "rawIndexableTextContent" : "Inherited from Identifiable.id. ",
-    "summary" : "Inherited from Identifiable.id.",
-    "title" : "id"
-  },
-  {
-    "headings" : [
-
-    ],
-    "kind" : "symbol",
-    "location" : {
-      "reference" : {
-        "interfaceLanguage" : "swift",
-        "url" : "doc:\/\/com.github.swiftviz.SwiftViz\/documentation\/SwiftViz\/Scale\/InputType"
-      },
-      "type" : "topLevelPage"
-    },
-    "rawIndexableTextContent" : "No overview available. ",
-    "summary" : "No overview available.",
-    "title" : "InputType"
-  },
-  {
-    "headings" : [
-
-    ],
-    "kind" : "symbol",
-    "location" : {
-      "reference" : {
-        "interfaceLanguage" : "swift",
-        "url" : "doc:\/\/com.github.swiftviz.SwiftViz\/documentation\/SwiftViz\/IntegerTick\/init(value:location:)"
-      },
-      "type" : "topLevelPage"
-    },
-    "rawIndexableTextContent" : "Inherited from Tick.init(value:location:). ",
-    "summary" : "Inherited from Tick.init(value:location:).",
-    "title" : "init(value:location:)"
-  },
-  {
-    "headings" : [
-
-    ],
-    "kind" : "symbol",
-    "location" : {
-      "reference" : {
-        "interfaceLanguage" : "swift",
-        "url" : "doc:\/\/com.github.swiftviz.SwiftViz\/documentation\/SwiftViz\/LinearScale\/invert(_:range:)"
+        "url" : "doc:\/\/com.github.swiftviz.SwiftViz\/documentation\/SwiftViz\/LogScale\/invert(_:range:)"
       },
       "type" : "topLevelPage"
     },
@@ -951,93 +1544,13 @@
     "location" : {
       "reference" : {
         "interfaceLanguage" : "swift",
-        "url" : "doc:\/\/com.github.swiftviz.SwiftViz\/documentation\/SwiftViz\/LinearScale\/TickType"
-      },
-      "type" : "topLevelPage"
-    },
-    "rawIndexableTextContent" : "Inherited from Scale.TickType. ",
-    "summary" : "Inherited from Scale.TickType.",
-    "title" : "LinearScale.TickType"
-  },
-  {
-    "headings" : [
-
-    ],
-    "kind" : "article",
-    "location" : {
-      "reference" : {
-        "interfaceLanguage" : "swift",
-        "url" : "doc:\/\/com.github.swiftviz.SwiftViz\/documentation\/SwiftViz\/IntegerTick\/Identifiable-Implementations"
-      },
-      "type" : "topLevelPage"
-    },
-    "rawIndexableTextContent" : "No overview available.",
-    "summary" : "No overview available.",
-    "title" : "Identifiable Implementations"
-  },
-  {
-    "headings" : [
-
-    ],
-    "kind" : "symbol",
-    "location" : {
-      "reference" : {
-        "interfaceLanguage" : "swift",
-        "url" : "doc:\/\/com.github.swiftviz.SwiftViz\/documentation\/SwiftViz\/Tick"
-      },
-      "type" : "topLevelPage"
-    },
-    "rawIndexableTextContent" : "A Tick is a visual representation of a point along an axis. When created based on a range, it includes a location along a single direction and a textual representation. It is meant to be created using a Scale, with some input domain being mapped to visualization using the Scale’s output range. ",
-    "summary" : "A Tick is a visual representation of a point along an axis. When created based on a range, it includes a location along a single direction and a textual representation. It is meant to be created using a Scale, with some input domain being mapped to visualization using the Scale’s output range.",
-    "title" : "Tick"
-  },
-  {
-    "headings" : [
-
-    ],
-    "kind" : "symbol",
-    "location" : {
-      "reference" : {
-        "interfaceLanguage" : "swift",
-        "url" : "doc:\/\/com.github.swiftviz.SwiftViz\/documentation\/SwiftViz\/Scale"
+        "url" : "doc:\/\/com.github.swiftviz.SwiftViz\/documentation\/SwiftViz\/DoubleTick"
       },
       "type" : "topLevelPage"
     },
     "rawIndexableTextContent" : "No overview available. ",
     "summary" : "No overview available.",
-    "title" : "Scale"
-  },
-  {
-    "headings" : [
-
-    ],
-    "kind" : "symbol",
-    "location" : {
-      "reference" : {
-        "interfaceLanguage" : "swift",
-        "url" : "doc:\/\/com.github.swiftviz.SwiftViz\/documentation\/SwiftViz\/Tick\/InputType"
-      },
-      "type" : "topLevelPage"
-    },
-    "rawIndexableTextContent" : "No overview available. ",
-    "summary" : "No overview available.",
-    "title" : "InputType"
-  },
-  {
-    "headings" : [
-
-    ],
-    "kind" : "symbol",
-    "location" : {
-      "reference" : {
-        "interfaceLanguage" : "swift",
-        "url" : "doc:\/\/com.github.swiftviz.SwiftViz\/documentation\/SwiftViz\/DoubleTick\/id-1yzs"
-      },
-      "type" : "topLevelPage"
-    },
-    "rawIndexableTextContent" : "Inherited from Identifiable.id. ",
-    "summary" : "Inherited from Identifiable.id.",
-    "title" : "id"
+    "title" : "DoubleTick"
   },
   {
     "headings" : [
@@ -1047,13 +1560,13 @@
     "location" : {
       "reference" : {
         "interfaceLanguage" : "swift",
-        "url" : "doc:\/\/com.github.swiftviz.SwiftViz\/documentation\/SwiftViz\/Scale\/invert(_:range:)"
+        "url" : "doc:\/\/com.github.swiftviz.SwiftViz\/documentation\/SwiftViz\/Scale\/scale(_:range:)"
       },
       "type" : "topLevelPage"
     },
-    "rawIndexableTextContent" : "converts back from the output “range” to a value within the input “domain”. The inverse of scale()  Return Value a value within the bounds of the ClosedRange for domain, or NaN if it maps outside the bounds a value within the bounds of the ClosedRange for range a ClosedRange representing the representing the range we are mapping the values into with the scale",
-    "summary" : "converts back from the output “range” to a value within the input “domain”. The inverse of scale()",
-    "title" : "invert(_:range:)"
+    "rawIndexableTextContent" : "Converts a value between the input domain and output range  Return Value a value within the bounds of the ClosedRange for range, or NaN if it maps outside the bounds a value within the bounds of the ClosedRange for domain a ClosedRange representing the representing the range we are mapping the values into with the scale",
+    "summary" : "Converts a value between the input domain and output range",
+    "title" : "scale(_:range:)"
   },
   {
     "headings" : [
@@ -1063,13 +1576,61 @@
     "location" : {
       "reference" : {
         "interfaceLanguage" : "swift",
-        "url" : "doc:\/\/com.github.swiftviz.SwiftViz\/documentation\/SwiftViz\/CGFloatTick\/id-9diks"
+        "url" : "doc:\/\/com.github.swiftviz.SwiftViz\/documentation\/SwiftViz\/TimeScale\/init(domain:isClamped:)"
       },
       "type" : "topLevelPage"
     },
-    "rawIndexableTextContent" : "Inherited from Identifiable.id. ",
-    "summary" : "Inherited from Identifiable.id.",
-    "title" : "id"
+    "rawIndexableTextContent" : "No overview available. ",
+    "summary" : "No overview available.",
+    "title" : "init(domain:isClamped:)"
+  },
+  {
+    "headings" : [
+
+    ],
+    "kind" : "symbol",
+    "location" : {
+      "reference" : {
+        "interfaceLanguage" : "swift",
+        "url" : "doc:\/\/com.github.swiftviz.SwiftViz\/documentation\/SwiftViz\/LogScale\/clampDomain(_:withinRange:)"
+      },
+      "type" : "topLevelPage"
+    },
+    "rawIndexableTextContent" : "Inherited from Scale.clampDomain(_:withinRange:). ",
+    "summary" : "Inherited from Scale.clampDomain(_:withinRange:).",
+    "title" : "clampDomain(_:withinRange:)"
+  },
+  {
+    "headings" : [
+
+    ],
+    "kind" : "symbol",
+    "location" : {
+      "reference" : {
+        "interfaceLanguage" : "swift",
+        "url" : "doc:\/\/com.github.swiftviz.SwiftViz\/documentation\/SwiftViz\/TimeScale"
+      },
+      "type" : "topLevelPage"
+    },
+    "rawIndexableTextContent" : "No overview available. ",
+    "summary" : "No overview available.",
+    "title" : "TimeScale"
+  },
+  {
+    "headings" : [
+
+    ],
+    "kind" : "symbol",
+    "location" : {
+      "reference" : {
+        "interfaceLanguage" : "swift",
+        "url" : "doc:\/\/com.github.swiftviz.SwiftViz\/documentation\/SwiftViz\/TickLabel\/value"
+      },
+      "type" : "topLevelPage"
+    },
+    "rawIndexableTextContent" : "No overview available. ",
+    "summary" : "No overview available.",
+    "title" : "value"
   },
   {
     "headings" : [
@@ -1105,438 +1666,6 @@
   },
   {
     "headings" : [
-
-    ],
-    "kind" : "symbol",
-    "location" : {
-      "reference" : {
-        "interfaceLanguage" : "swift",
-        "url" : "doc:\/\/com.github.swiftviz.SwiftViz\/documentation\/SwiftViz\/DateTick\/id-6hbjh"
-      },
-      "type" : "topLevelPage"
-    },
-    "rawIndexableTextContent" : "Inherited from Identifiable.id. ",
-    "summary" : "Inherited from Identifiable.id.",
-    "title" : "id"
-  },
-  {
-    "headings" : [
-      "Discussion"
-    ],
-    "kind" : "symbol",
-    "location" : {
-      "reference" : {
-        "interfaceLanguage" : "swift",
-        "url" : "doc:\/\/com.github.swiftviz.SwiftViz\/documentation\/SwiftViz\/TimeScale\/ticks(_:range:)"
-      },
-      "type" : "topLevelPage"
-    },
-    "rawIndexableTextContent" : "Converts an array of values of the Scale’s InputType into a set of Ticks. Used for manually specifying a series of ticks that you want to have displayed.  an array of values of the Scale’s InputType a ClosedRange representing the representing the range we are mapping the values into with the scale Discussion Any values presented for display that are not within the domain of the scale are ignored and dropped.",
-    "summary" : "Converts an array of values of the Scale’s InputType into a set of Ticks. Used for manually specifying a series of ticks that you want to have displayed.",
-    "title" : "ticks(_:range:)"
-  },
-  {
-    "headings" : [
-
-    ],
-    "kind" : "symbol",
-    "location" : {
-      "reference" : {
-        "interfaceLanguage" : "swift",
-        "url" : "doc:\/\/com.github.swiftviz.SwiftViz\/documentation\/SwiftViz\/TickLabel\/id-8zchb"
-      },
-      "type" : "topLevelPage"
-    },
-    "rawIndexableTextContent" : "Inherited from Identifiable.id. ",
-    "summary" : "Inherited from Identifiable.id.",
-    "title" : "id"
-  },
-  {
-    "headings" : [
-
-    ],
-    "kind" : "symbol",
-    "location" : {
-      "reference" : {
-        "interfaceLanguage" : "swift",
-        "url" : "doc:\/\/com.github.swiftviz.SwiftViz\/documentation\/SwiftViz\/IntegerTick\/stringValue"
-      },
-      "type" : "topLevelPage"
-    },
-    "rawIndexableTextContent" : "No overview available. ",
-    "summary" : "No overview available.",
-    "title" : "stringValue"
-  },
-  {
-    "headings" : [
-
-    ],
-    "kind" : "symbol",
-    "location" : {
-      "reference" : {
-        "interfaceLanguage" : "swift",
-        "url" : "doc:\/\/com.github.swiftviz.SwiftViz\/documentation\/SwiftViz\/Tick\/rangeLocation"
-      },
-      "type" : "topLevelPage"
-    },
-    "rawIndexableTextContent" : "No overview available. ",
-    "summary" : "No overview available.",
-    "title" : "rangeLocation"
-  },
-  {
-    "headings" : [
-      "Return Value"
-    ],
-    "kind" : "symbol",
-    "location" : {
-      "reference" : {
-        "interfaceLanguage" : "swift",
-        "url" : "doc:\/\/com.github.swiftviz.SwiftViz\/documentation\/SwiftViz\/Scale\/scale(_:range:)"
-      },
-      "type" : "topLevelPage"
-    },
-    "rawIndexableTextContent" : "converts a value between the input “domain” and output “range”  Return Value a value within the bounds of the ClosedRange for range, or NaN if it maps outside the bounds a value within the bounds of the ClosedRange for domain a ClosedRange representing the representing the range we are mapping the values into with the scale",
-    "summary" : "converts a value between the input “domain” and output “range”",
-    "title" : "scale(_:range:)"
-  },
-  {
-    "headings" : [
-
-    ],
-    "kind" : "symbol",
-    "location" : {
-      "reference" : {
-        "interfaceLanguage" : "swift",
-        "url" : "doc:\/\/com.github.swiftviz.SwiftViz\/documentation\/SwiftViz\/DoubleTick\/stringValue"
-      },
-      "type" : "topLevelPage"
-    },
-    "rawIndexableTextContent" : "No overview available. ",
-    "summary" : "No overview available.",
-    "title" : "stringValue"
-  },
-  {
-    "headings" : [
-
-    ],
-    "kind" : "symbol",
-    "location" : {
-      "reference" : {
-        "interfaceLanguage" : "swift",
-        "url" : "doc:\/\/com.github.swiftviz.SwiftViz\/documentation\/SwiftViz\/TimeScale\/labeledTickValues(_:range:)"
-      },
-      "type" : "topLevelPage"
-    },
-    "rawIndexableTextContent" : "Takes an set of labelled input values and returns the relevant set of TickLabels converted to the correct location values associated with the provided range.  A tuple of (InputValue, String) that is the labelled value a ClosedRange representing the representing the range we are mapping the values into with the scale",
-    "summary" : "Takes an set of labelled input values and returns the relevant set of TickLabels converted to the correct location values associated with the provided range.",
-    "title" : "labeledTickValues(_:range:)"
-  },
-  {
-    "headings" : [
-
-    ],
-    "kind" : "symbol",
-    "location" : {
-      "reference" : {
-        "interfaceLanguage" : "swift",
-        "url" : "doc:\/\/com.github.swiftviz.SwiftViz\/documentation\/SwiftViz\/TickLabel\/value"
-      },
-      "type" : "topLevelPage"
-    },
-    "rawIndexableTextContent" : "No overview available. ",
-    "summary" : "No overview available.",
-    "title" : "value"
-  },
-  {
-    "headings" : [
-      "Return Value"
-    ],
-    "kind" : "symbol",
-    "location" : {
-      "reference" : {
-        "interfaceLanguage" : "swift",
-        "url" : "doc:\/\/com.github.swiftviz.SwiftViz\/documentation\/SwiftViz\/LogScale\/scale(_:range:)"
-      },
-      "type" : "topLevelPage"
-    },
-    "rawIndexableTextContent" : "scales the input value (within domain) per the scale to the relevant output (using range)  Return Value scaled value value within the domain",
-    "summary" : "scales the input value (within domain) per the scale to the relevant output (using range)",
-    "title" : "scale(_:range:)"
-  },
-  {
-    "headings" : [
-
-    ],
-    "kind" : "article",
-    "location" : {
-      "reference" : {
-        "interfaceLanguage" : "swift",
-        "url" : "doc:\/\/com.github.swiftviz.SwiftViz\/documentation\/SwiftViz\/LogScale\/Scale-Implementations"
-      },
-      "type" : "topLevelPage"
-    },
-    "rawIndexableTextContent" : "No overview available.",
-    "summary" : "No overview available.",
-    "title" : "Scale Implementations"
-  },
-  {
-    "headings" : [
-
-    ],
-    "kind" : "symbol",
-    "location" : {
-      "reference" : {
-        "interfaceLanguage" : "swift",
-        "url" : "doc:\/\/com.github.swiftviz.SwiftViz\/documentation\/SwiftViz\/LogScale\/isClamped"
-      },
-      "type" : "topLevelPage"
-    },
-    "rawIndexableTextContent" : "Inherited from Scale.isClamped. ",
-    "summary" : "Inherited from Scale.isClamped.",
-    "title" : "isClamped"
-  },
-  {
-    "headings" : [
-
-    ],
-    "kind" : "symbol",
-    "location" : {
-      "reference" : {
-        "interfaceLanguage" : "swift",
-        "url" : "doc:\/\/com.github.swiftviz.SwiftViz\/documentation\/SwiftViz\/LogScale\/clampRange(_:withinRange:)"
-      },
-      "type" : "topLevelPage"
-    },
-    "rawIndexableTextContent" : "Inherited from Scale.clampRange(_:withinRange:). ",
-    "summary" : "Inherited from Scale.clampRange(_:withinRange:).",
-    "title" : "clampRange(_:withinRange:)"
-  },
-  {
-    "headings" : [
-      "Discussion"
-    ],
-    "kind" : "symbol",
-    "location" : {
-      "reference" : {
-        "interfaceLanguage" : "swift",
-        "url" : "doc:\/\/com.github.swiftviz.SwiftViz\/documentation\/SwiftViz\/LinearScale\/ticks(_:range:)"
-      },
-      "type" : "topLevelPage"
-    },
-    "rawIndexableTextContent" : "Converts an array of values of the Scale’s InputType into a set of Ticks. Used for manually specifying a series of ticks that you want to have displayed.  an array of values of the Scale’s InputType a ClosedRange representing the representing the range we are mapping the values into with the scale Discussion Any values presented for display that are not within the domain of the scale are ignored and dropped.",
-    "summary" : "Converts an array of values of the Scale’s InputType into a set of Ticks. Used for manually specifying a series of ticks that you want to have displayed.",
-    "title" : "ticks(_:range:)"
-  },
-  {
-    "headings" : [
-
-    ],
-    "kind" : "symbol",
-    "location" : {
-      "reference" : {
-        "interfaceLanguage" : "swift",
-        "url" : "doc:\/\/com.github.swiftviz.SwiftViz\/documentation\/SwiftViz\/Scale\/domain"
-      },
-      "type" : "topLevelPage"
-    },
-    "rawIndexableTextContent" : "No overview available. ",
-    "summary" : "No overview available.",
-    "title" : "domain"
-  },
-  {
-    "headings" : [
-
-    ],
-    "kind" : "symbol",
-    "location" : {
-      "reference" : {
-        "interfaceLanguage" : "swift",
-        "url" : "doc:\/\/com.github.swiftviz.SwiftViz\/documentation\/SwiftViz\/Tick\/init(value:location:)"
-      },
-      "type" : "topLevelPage"
-    },
-    "rawIndexableTextContent" : "No overview available. ",
-    "summary" : "No overview available.",
-    "title" : "init(value:location:)"
-  },
-  {
-    "headings" : [
-
-    ],
-    "kind" : "symbol",
-    "location" : {
-      "reference" : {
-        "interfaceLanguage" : "swift",
-        "url" : "doc:\/\/com.github.swiftviz.SwiftViz\/documentation\/SwiftViz\/TimeScale\/init(domain:isClamped:)"
-      },
-      "type" : "topLevelPage"
-    },
-    "rawIndexableTextContent" : "No overview available. ",
-    "summary" : "No overview available.",
-    "title" : "init(domain:isClamped:)"
-  },
-  {
-    "headings" : [
-
-    ],
-    "kind" : "symbol",
-    "location" : {
-      "reference" : {
-        "interfaceLanguage" : "swift",
-        "url" : "doc:\/\/com.github.swiftviz.SwiftViz\/documentation\/SwiftViz\/Scale\/validatedTickLabels(_:range:)"
-      },
-      "type" : "topLevelPage"
-    },
-    "rawIndexableTextContent" : "Validates a set of TickLabels against a given scale, removing any that don’t match the scale’s domain.  an array of TickLabels to validate against the scale a ClosedRange representing the representing the range we are mapping the values into with the scale.",
-    "summary" : "Validates a set of TickLabels against a given scale, removing any that don’t match the scale’s domain.",
-    "title" : "validatedTickLabels(_:range:)"
-  },
-  {
-    "headings" : [
-      "Return Value"
-    ],
-    "kind" : "symbol",
-    "location" : {
-      "reference" : {
-        "interfaceLanguage" : "swift",
-        "url" : "doc:\/\/com.github.swiftviz.SwiftViz\/documentation\/SwiftViz\/LinearScale\/scale(_:range:)"
-      },
-      "type" : "topLevelPage"
-    },
-    "rawIndexableTextContent" : "scales the input value (within domain) per the scale to the relevant output (using range)  Return Value scaled value value within the domain",
-    "summary" : "scales the input value (within domain) per the scale to the relevant output (using range)",
-    "title" : "scale(_:range:)"
-  },
-  {
-    "headings" : [
-      "Return Value"
-    ],
-    "kind" : "symbol",
-    "location" : {
-      "reference" : {
-        "interfaceLanguage" : "swift",
-        "url" : "doc:\/\/com.github.swiftviz.SwiftViz\/documentation\/SwiftViz\/TimeScale\/scale(_:range:)"
-      },
-      "type" : "topLevelPage"
-    },
-    "rawIndexableTextContent" : "scales the input value (within domain) per the scale to the relevant output (using range)  Return Value scaled value value within the domain",
-    "summary" : "scales the input value (within domain) per the scale to the relevant output (using range)",
-    "title" : "scale(_:range:)"
-  },
-  {
-    "headings" : [
-
-    ],
-    "kind" : "symbol",
-    "location" : {
-      "reference" : {
-        "interfaceLanguage" : "swift",
-        "url" : "doc:\/\/com.github.swiftviz.SwiftViz\/documentation\/SwiftViz\/Scale\/clampRange(_:withinRange:)"
-      },
-      "type" : "topLevelPage"
-    },
-    "rawIndexableTextContent" : "No overview available. ",
-    "summary" : "No overview available.",
-    "title" : "clampRange(_:withinRange:)"
-  },
-  {
-    "headings" : [
-
-    ],
-    "kind" : "symbol",
-    "location" : {
-      "reference" : {
-        "interfaceLanguage" : "swift",
-        "url" : "doc:\/\/com.github.swiftviz.SwiftViz\/documentation\/SwiftViz\/LogScale\/clampDomain(_:withinRange:)"
-      },
-      "type" : "topLevelPage"
-    },
-    "rawIndexableTextContent" : "Inherited from Scale.clampDomain(_:withinRange:). ",
-    "summary" : "Inherited from Scale.clampDomain(_:withinRange:).",
-    "title" : "clampDomain(_:withinRange:)"
-  },
-  {
-    "headings" : [
-      "Return Value"
-    ],
-    "kind" : "symbol",
-    "location" : {
-      "reference" : {
-        "interfaceLanguage" : "swift",
-        "url" : "doc:\/\/com.github.swiftviz.SwiftViz\/documentation\/SwiftViz\/LogScale\/ticks(count:range:)"
-      },
-      "type" : "topLevelPage"
-    },
-    "rawIndexableTextContent" : "returns an array of the locations of ticks - (value, location)  Return Value array of the locations of the ticks within self.range number of steps to take in the ticks, default of 10",
-    "summary" : "returns an array of the locations of ticks - (value, location)",
-    "title" : "ticks(count:range:)"
-  },
-  {
-    "headings" : [
-
-    ],
-    "kind" : "symbol",
-    "location" : {
-      "reference" : {
-        "interfaceLanguage" : "swift",
-        "url" : "doc:\/\/com.github.swiftviz.SwiftViz\/documentation\/SwiftViz\/LogScale"
-      },
-      "type" : "topLevelPage"
-    },
-    "rawIndexableTextContent" : "A linear scale is created using a continuous input domain and provides methods to convert values within that domain to an output range. ",
-    "summary" : "A linear scale is created using a continuous input domain and provides methods to convert values within that domain to an output range.",
-    "title" : "LogScale"
-  },
-  {
-    "headings" : [
-
-    ],
-    "kind" : "symbol",
-    "location" : {
-      "reference" : {
-        "interfaceLanguage" : "swift",
-        "url" : "doc:\/\/com.github.swiftviz.SwiftViz\/documentation\/SwiftViz\/LogScale\/labeledTickValues(_:range:)"
-      },
-      "type" : "topLevelPage"
-    },
-    "rawIndexableTextContent" : "Takes an set of labelled input values and returns the relevant set of TickLabels converted to the correct location values associated with the provided range.  A tuple of (InputValue, String) that is the labelled value a ClosedRange representing the representing the range we are mapping the values into with the scale",
-    "summary" : "Takes an set of labelled input values and returns the relevant set of TickLabels converted to the correct location values associated with the provided range.",
-    "title" : "labeledTickValues(_:range:)"
-  },
-  {
-    "headings" : [
-      "Discussion"
-    ],
-    "kind" : "symbol",
-    "location" : {
-      "reference" : {
-        "interfaceLanguage" : "swift",
-        "url" : "doc:\/\/com.github.swiftviz.SwiftViz\/documentation\/SwiftViz\/Scale\/ticks(_:range:)"
-      },
-      "type" : "topLevelPage"
-    },
-    "rawIndexableTextContent" : "Converts an array of values of the Scale’s InputType into a set of Ticks. Used for manually specifying a series of ticks that you want to have displayed.  an array of values of the Scale’s InputType a ClosedRange representing the representing the range we are mapping the values into with the scale Discussion Any values presented for display that are not within the domain of the scale are ignored and dropped.",
-    "summary" : "Converts an array of values of the Scale’s InputType into a set of Ticks. Used for manually specifying a series of ticks that you want to have displayed.",
-    "title" : "ticks(_:range:)"
-  },
-  {
-    "headings" : [
-
-    ],
-    "kind" : "symbol",
-    "location" : {
-      "reference" : {
-        "interfaceLanguage" : "swift",
-        "url" : "doc:\/\/com.github.swiftviz.SwiftViz\/documentation\/SwiftViz\/LogScale\/domain"
-      },
-      "type" : "topLevelPage"
-    },
-    "rawIndexableTextContent" : "Inherited from Scale.domain. ",
-    "summary" : "Inherited from Scale.domain.",
-    "title" : "domain"
-  },
-  {
-    "headings" : [
       "Return Value"
     ],
     "kind" : "symbol",
@@ -1550,133 +1679,5 @@
     "rawIndexableTextContent" : "returns an array of the locations of ticks - (value, location)  Return Value array of the locations of the ticks within self.range number of steps to take in the ticks, default of 10",
     "summary" : "returns an array of the locations of ticks - (value, location)",
     "title" : "ticks(count:range:)"
-  },
-  {
-    "headings" : [
-
-    ],
-    "kind" : "symbol",
-    "location" : {
-      "reference" : {
-        "interfaceLanguage" : "swift",
-        "url" : "doc:\/\/com.github.swiftviz.SwiftViz\/documentation\/SwiftViz\/LinearScale\/InputType"
-      },
-      "type" : "topLevelPage"
-    },
-    "rawIndexableTextContent" : "Inherited from Scale.InputType. ",
-    "summary" : "Inherited from Scale.InputType.",
-    "title" : "LinearScale.InputType"
-  },
-  {
-    "headings" : [
-
-    ],
-    "kind" : "symbol",
-    "location" : {
-      "reference" : {
-        "interfaceLanguage" : "swift",
-        "url" : "doc:\/\/com.github.swiftviz.SwiftViz\/documentation\/SwiftViz\/TickLabel\/init(rangeLocation:value:)"
-      },
-      "type" : "topLevelPage"
-    },
-    "rawIndexableTextContent" : "Convenience initializer for TickLabel  location (CGFloat) of the label within the output range of a scale String description of the label to be displayed",
-    "summary" : "Convenience initializer for TickLabel",
-    "title" : "init(rangeLocation:value:)"
-  },
-  {
-    "headings" : [
-
-    ],
-    "kind" : "article",
-    "location" : {
-      "reference" : {
-        "interfaceLanguage" : "swift",
-        "url" : "doc:\/\/com.github.swiftviz.SwiftViz\/documentation\/SwiftViz\/TimeScale\/Scale-Implementations"
-      },
-      "type" : "topLevelPage"
-    },
-    "rawIndexableTextContent" : "No overview available.",
-    "summary" : "No overview available.",
-    "title" : "Scale Implementations"
-  },
-  {
-    "headings" : [
-
-    ],
-    "kind" : "symbol",
-    "location" : {
-      "reference" : {
-        "interfaceLanguage" : "swift",
-        "url" : "doc:\/\/com.github.swiftviz.SwiftViz\/documentation\/SwiftViz\/IntegerTick\/rangeLocation"
-      },
-      "type" : "topLevelPage"
-    },
-    "rawIndexableTextContent" : "Inherited from Tick.rangeLocation. ",
-    "summary" : "Inherited from Tick.rangeLocation.",
-    "title" : "rangeLocation"
-  },
-  {
-    "headings" : [
-
-    ],
-    "kind" : "symbol",
-    "location" : {
-      "reference" : {
-        "interfaceLanguage" : "swift",
-        "url" : "doc:\/\/com.github.swiftviz.SwiftViz\/documentation\/SwiftViz\/TimeScale\/InputType"
-      },
-      "type" : "topLevelPage"
-    },
-    "rawIndexableTextContent" : "Inherited from Scale.InputType. ",
-    "summary" : "Inherited from Scale.InputType.",
-    "title" : "TimeScale.InputType"
-  },
-  {
-    "headings" : [
-
-    ],
-    "kind" : "article",
-    "location" : {
-      "reference" : {
-        "interfaceLanguage" : "swift",
-        "url" : "doc:\/\/com.github.swiftviz.SwiftViz\/documentation\/SwiftViz\/DoubleTick\/Identifiable-Implementations"
-      },
-      "type" : "topLevelPage"
-    },
-    "rawIndexableTextContent" : "No overview available.",
-    "summary" : "No overview available.",
-    "title" : "Identifiable Implementations"
-  },
-  {
-    "headings" : [
-
-    ],
-    "kind" : "symbol",
-    "location" : {
-      "reference" : {
-        "interfaceLanguage" : "swift",
-        "url" : "doc:\/\/com.github.swiftviz.SwiftViz\/documentation\/SwiftViz\/TimeScale\/isClamped"
-      },
-      "type" : "topLevelPage"
-    },
-    "rawIndexableTextContent" : "Inherited from Scale.isClamped. ",
-    "summary" : "Inherited from Scale.isClamped.",
-    "title" : "isClamped"
-  },
-  {
-    "headings" : [
-
-    ],
-    "kind" : "symbol",
-    "location" : {
-      "reference" : {
-        "interfaceLanguage" : "swift",
-        "url" : "doc:\/\/com.github.swiftviz.SwiftViz\/documentation\/SwiftViz\/DoubleTick\/rangeLocation"
-      },
-      "type" : "topLevelPage"
-    },
-    "rawIndexableTextContent" : "Inherited from Tick.rangeLocation. ",
-    "summary" : "Inherited from Tick.rangeLocation.",
-    "title" : "rangeLocation"
   }
 ]

@@ -1,15 +1,7 @@
 {
   "abstract" : [
     {
-      "text" : "Inherited from ",
-      "type" : "text"
-    },
-    {
-      "code" : "Scale.domain",
-      "type" : "codeVoice"
-    },
-    {
-      "text" : ".",
+      "text" : "The range of input values",
       "type" : "text"
     }
   ],
@@ -205,7 +197,10 @@
 },
 "doc://com.github.swiftviz.SwiftViz/documentation/SwiftViz/LogScale/domain": {
   "abstract" : [
-
+    {
+      "text" : "The range of input values",
+      "type" : "text"
+    }
   ],
   "fragments" : [
     {

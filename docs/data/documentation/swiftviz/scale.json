@@ -1,7 +1,33 @@
 {
   "abstract" : [
     {
-      "text" : "No overview available.",
+      "text" : "A scale maps values from an input ",
+      "type" : "text"
+    },
+    {
+      "inlineContent" : [
+        {
+          "text" : "domain",
+          "type" : "text"
+        }
+      ],
+      "type" : "emphasis"
+    },
+    {
+      "text" : " to an output ",
+      "type" : "text"
+    },
+    {
+      "inlineContent" : [
+        {
+          "text" : "range",
+          "type" : "text"
+        }
+      ],
+      "type" : "emphasis"
+    },
+    {
+      "text" : ".",
       "type" : "text"
     }
   ],
@@ -252,7 +278,36 @@
 },
 "doc://com.github.swiftviz.SwiftViz/documentation/SwiftViz/Scale": {
   "abstract" : [
-
+    {
+      "text" : "A scale maps values from an input ",
+      "type" : "text"
+    },
+    {
+      "inlineContent" : [
+        {
+          "text" : "domain",
+          "type" : "text"
+        }
+      ],
+      "type" : "emphasis"
+    },
+    {
+      "text" : " to an output ",
+      "type" : "text"
+    },
+    {
+      "inlineContent" : [
+        {
+          "text" : "range",
+          "type" : "text"
+        }
+      ],
+      "type" : "emphasis"
+    },
+    {
+      "text" : ".",
+      "type" : "text"
+    }
   ],
   "fragments" : [
     {
@@ -491,7 +546,10 @@
 },
 "doc://com.github.swiftviz.SwiftViz/documentation/SwiftViz/Scale/domain": {
   "abstract" : [
-
+    {
+      "text" : "The range of input values",
+      "type" : "text"
+    }
   ],
   "fragments" : [
     {
@@ -540,15 +598,33 @@
 "doc://com.github.swiftviz.SwiftViz/documentation/SwiftViz/Scale/invert(_:range:)": {
   "abstract" : [
     {
-      "text" : "converts back from the output “range” to a value within",
+      "text" : "Converts back from the output ",
       "type" : "text"
     },
     {
-      "text" : " ",
+      "inlineContent" : [
+        {
+          "text" : "range",
+          "type" : "text"
+        }
+      ],
+      "type" : "emphasis"
+    },
+    {
+      "text" : " to a value within the input ",
       "type" : "text"
     },
     {
-      "text" : "the input “domain”. The inverse of scale()",
+      "inlineContent" : [
+        {
+          "text" : "domain",
+          "type" : "text"
+        }
+      ],
+      "type" : "emphasis"
+    },
+    {
+      "text" : ".",
       "type" : "text"
     }
   ],
@@ -620,7 +696,10 @@
 },
 "doc://com.github.swiftviz.SwiftViz/documentation/SwiftViz/Scale/isClamped": {
   "abstract" : [
-
+    {
+      "text" : "A boolean value that indicates whether the output vales are constrained to the min and max of the output range.",
+      "type" : "text"
+    }
   ],
   "fragments" : [
     {
@@ -781,8 +860,30 @@
 "doc://com.github.swiftviz.SwiftViz/documentation/SwiftViz/Scale/scale(_:range:)": {
   "abstract" : [
     {
-      "text" : "converts a value between the input “domain” and output “range”",
+      "text" : "Converts a value between the input ",
       "type" : "text"
+    },
+    {
+      "inlineContent" : [
+        {
+          "text" : "domain",
+          "type" : "text"
+        }
+      ],
+      "type" : "emphasis"
+    },
+    {
+      "text" : " and output ",
+      "type" : "text"
+    },
+    {
+      "inlineContent" : [
+        {
+          "text" : "range",
+          "type" : "text"
+        }
+      ],
+      "type" : "emphasis"
     }
   ],
   "fragments" : [
@@ -970,15 +1071,7 @@
 "doc://com.github.swiftviz.SwiftViz/documentation/SwiftViz/Scale/ticks(count:range:)": {
   "abstract" : [
     {
-      "text" : "returns an array of the locations within the ClosedRange of",
-      "type" : "text"
-    },
-    {
-      "text" : " ",
-      "type" : "text"
-    },
-    {
-      "text" : "range to locate ticks for the scale",
+      "text" : "Returns an array of the locations within the output range to locate ticks for the scale.",
       "type" : "text"
     }
   ],

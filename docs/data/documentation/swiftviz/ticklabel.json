@@ -320,30 +320,6 @@
     {
       "text" : "A Tick is a visual representation of a point along an axis.",
       "type" : "text"
-    },
-    {
-      "text" : " ",
-      "type" : "text"
-    },
-    {
-      "text" : "When created based on a range, it includes a location along a single direction",
-      "type" : "text"
-    },
-    {
-      "text" : " ",
-      "type" : "text"
-    },
-    {
-      "text" : "and a textual representation. It is meant to be created using a Scale, with some input domain",
-      "type" : "text"
-    },
-    {
-      "text" : " ",
-      "type" : "text"
-    },
-    {
-      "text" : "being mapped to visualization using the Scale’s output range.",
-      "type" : "text"
     }
   ],
   "fragments" : [

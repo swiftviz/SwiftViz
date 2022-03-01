@@ -258,7 +258,36 @@
 },
 "doc://com.github.swiftviz.SwiftViz/documentation/SwiftViz/Scale": {
   "abstract" : [
-
+    {
+      "text" : "A scale maps values from an input ",
+      "type" : "text"
+    },
+    {
+      "inlineContent" : [
+        {
+          "text" : "domain",
+          "type" : "text"
+        }
+      ],
+      "type" : "emphasis"
+    },
+    {
+      "text" : " to an output ",
+      "type" : "text"
+    },
+    {
+      "inlineContent" : [
+        {
+          "text" : "range",
+          "type" : "text"
+        }
+      ],
+      "type" : "emphasis"
+    },
+    {
+      "text" : ".",
+      "type" : "text"
+    }
   ],
   "fragments" : [
     {
@@ -393,7 +422,10 @@
 },
 "doc://com.github.swiftviz.SwiftViz/documentation/SwiftViz/TimeScale/domain": {
   "abstract" : [
-
+    {
+      "text" : "The range of input values",
+      "type" : "text"
+    }
   ],
   "fragments" : [
     {
@@ -584,7 +616,10 @@
 },
 "doc://com.github.swiftviz.SwiftViz/documentation/SwiftViz/TimeScale/isClamped": {
   "abstract" : [
-
+    {
+      "text" : "A boolean value that indicates whether the output vales are constrained to the min and max of the output range.",
+      "type" : "text"
+    }
   ],
   "fragments" : [
     {

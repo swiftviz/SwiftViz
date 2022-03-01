@@ -3,30 +3,6 @@
     {
       "text" : "A Tick is a visual representation of a point along an axis.",
       "type" : "text"
-    },
-    {
-      "text" : " ",
-      "type" : "text"
-    },
-    {
-      "text" : "When created based on a range, it includes a location along a single direction",
-      "type" : "text"
-    },
-    {
-      "text" : " ",
-      "type" : "text"
-    },
-    {
-      "text" : "and a textual representation. It is meant to be created using a Scale, with some input domain",
-      "type" : "text"
-    },
-    {
-      "text" : " ",
-      "type" : "text"
-    },
-    {
-      "text" : "being mapped to visualization using the Scale’s output range.",
-      "type" : "text"
     }
   ],
   "hierarchy" : {
@@ -109,6 +85,42 @@
         }
       ],
       "kind" : "declarations"
+    },
+    {
+      "content" : [
+        {
+          "anchor" : "overview",
+          "level" : 2,
+          "text" : "Overview",
+          "type" : "heading"
+        },
+        {
+          "inlineContent" : [
+            {
+              "text" : "When created based on a range, a tick includes a location along a single direction",
+              "type" : "text"
+            },
+            {
+              "text" : " ",
+              "type" : "text"
+            },
+            {
+              "text" : "and a textual representation. It is meant to be created using a Scale, with some input domain",
+              "type" : "text"
+            },
+            {
+              "text" : " ",
+              "type" : "text"
+            },
+            {
+              "text" : "being mapped to visualization using the Scale’s output range.",
+              "type" : "text"
+            }
+          ],
+          "type" : "paragraph"
+        }
+      ],
+      "kind" : "content"
     }
   ],
   "relationshipsSections" : [
@@ -331,30 +343,6 @@
   "abstract" : [
     {
       "text" : "A Tick is a visual representation of a point along an axis.",
-      "type" : "text"
-    },
-    {
-      "text" : " ",
-      "type" : "text"
-    },
-    {
-      "text" : "When created based on a range, it includes a location along a single direction",
-      "type" : "text"
-    },
-    {
-      "text" : " ",
-      "type" : "text"
-    },
-    {
-      "text" : "and a textual representation. It is meant to be created using a Scale, with some input domain",
-      "type" : "text"
-    },
-    {
-      "text" : " ",
-      "type" : "text"
-    },
-    {
-      "text" : "being mapped to visualization using the Scale’s output range.",
       "type" : "text"
     }
   ],

@@ -1,15 +1,7 @@
 {
   "abstract" : [
     {
-      "text" : "Inherited from ",
-      "type" : "text"
-    },
-    {
-      "code" : "Scale.isClamped",
-      "type" : "codeVoice"
-    },
-    {
-      "text" : ".",
+      "text" : "A boolean value that indicates whether the output vales are constrained to the min and max of the output range.",
       "type" : "text"
     }
   ],
@@ -97,6 +89,42 @@
         }
       ],
       "kind" : "declarations"
+    },
+    {
+      "content" : [
+        {
+          "anchor" : "discussion",
+          "level" : 2,
+          "text" : "Discussion",
+          "type" : "heading"
+        },
+        {
+          "inlineContent" : [
+            {
+              "text" : "If ",
+              "type" : "text"
+            },
+            {
+              "code" : "true",
+              "type" : "codeVoice"
+            },
+            {
+              "text" : ", values processed by the scale are constrained to the output range, and values processed backwards through the scale",
+              "type" : "text"
+            },
+            {
+              "text" : " ",
+              "type" : "text"
+            },
+            {
+              "text" : "are constrained to the input domain.",
+              "type" : "text"
+            }
+          ],
+          "type" : "paragraph"
+        }
+      ],
+      "kind" : "content"
     }
   ],
   "schemaVersion" : {
@@ -168,7 +196,10 @@
 },
 "doc://com.github.swiftviz.SwiftViz/documentation/SwiftViz/TimeScale/isClamped": {
   "abstract" : [
-
+    {
+      "text" : "A boolean value that indicates whether the output vales are constrained to the min and max of the output range.",
+      "type" : "text"
+    }
   ],
   "fragments" : [
     {
