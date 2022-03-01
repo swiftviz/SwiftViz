@@ -1,0 +1,9 @@
+{
+  "bundleDisplayName" : "SwiftViz",
+  "bundleIdentifier" : "com.github.swiftviz.SwiftViz",
+  "schemaVersion" : {
+    "major" : 0,
+    "minor" : 1,
+    "patch" : 0
+  }
+}

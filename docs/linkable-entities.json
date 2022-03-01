@@ -1,0 +1,5941 @@
+[
+  {
+    "availableLanguages" : [
+      "swift"
+    ],
+    "fragments" : [
+      {
+        "kind" : "keyword",
+        "text" : "let"
+      },
+      {
+        "kind" : "text",
+        "text" : " "
+      },
+      {
+        "kind" : "identifier",
+        "text" : "id"
+      },
+      {
+        "kind" : "text",
+        "text" : ": "
+      },
+      {
+        "kind" : "typeIdentifier",
+        "preciseIdentifier" : "s:10Foundation4UUIDV",
+        "text" : "UUID"
+      }
+    ],
+    "kind" : "org.swift.docc.kind.instanceProperty",
+    "language" : "swift",
+    "path" : "\/documentation\/swiftviz\/doubletick\/id-5hkki",
+    "referenceURL" : "doc:\/\/com.github.swiftviz.SwiftViz\/documentation\/SwiftViz\/DoubleTick\/id-5hkki",
+    "taskGroups" : [
+
+    ],
+    "title" : "id",
+    "usr" : "s:8SwiftViz10DoubleTickV2id10Foundation4UUIDVvp"
+  },
+  {
+    "availableLanguages" : [
+      "swift"
+    ],
+    "fragments" : [
+      {
+        "kind" : "keyword",
+        "text" : "let"
+      },
+      {
+        "kind" : "text",
+        "text" : " "
+      },
+      {
+        "kind" : "identifier",
+        "text" : "isClamped"
+      },
+      {
+        "kind" : "text",
+        "text" : ": "
+      },
+      {
+        "kind" : "typeIdentifier",
+        "preciseIdentifier" : "s:Sb",
+        "text" : "Bool"
+      }
+    ],
+    "kind" : "org.swift.docc.kind.instanceProperty",
+    "language" : "swift",
+    "path" : "\/documentation\/swiftviz\/linearscale\/isclamped",
+    "referenceURL" : "doc:\/\/com.github.swiftviz.SwiftViz\/documentation\/SwiftViz\/LinearScale\/isClamped",
+    "taskGroups" : [
+
+    ],
+    "title" : "isClamped",
+    "usr" : "s:8SwiftViz11LinearScaleV9isClampedSbvp"
+  },
+  {
+    "availableLanguages" : [
+      "swift"
+    ],
+    "fragments" : [
+      {
+        "kind" : "keyword",
+        "text" : "func"
+      },
+      {
+        "kind" : "text",
+        "text" : " "
+      },
+      {
+        "kind" : "identifier",
+        "text" : "clampDomain"
+      },
+      {
+        "kind" : "text",
+        "text" : "("
+      },
+      {
+        "kind" : "typeIdentifier",
+        "preciseIdentifier" : "s:8SwiftViz5ScaleP9InputTypeQa",
+        "text" : "InputType"
+      },
+      {
+        "kind" : "text",
+        "text" : ", "
+      },
+      {
+        "kind" : "externalParam",
+        "text" : "withinRange"
+      },
+      {
+        "kind" : "text",
+        "text" : ": "
+      },
+      {
+        "kind" : "typeIdentifier",
+        "preciseIdentifier" : "s:SN",
+        "text" : "ClosedRange"
+      },
+      {
+        "kind" : "text",
+        "text" : "<"
+      },
+      {
+        "kind" : "typeIdentifier",
+        "preciseIdentifier" : "s:8SwiftViz5ScaleP9InputTypeQa",
+        "text" : "InputType"
+      },
+      {
+        "kind" : "text",
+        "text" : ">) -> "
+      },
+      {
+        "kind" : "typeIdentifier",
+        "preciseIdentifier" : "s:8SwiftViz5ScaleP9InputTypeQa",
+        "text" : "InputType"
+      }
+    ],
+    "kind" : "org.swift.docc.kind.instanceMethod",
+    "language" : "swift",
+    "path" : "\/documentation\/swiftviz\/timescale\/clampdomain(_:withinrange:)",
+    "referenceURL" : "doc:\/\/com.github.swiftviz.SwiftViz\/documentation\/SwiftViz\/TimeScale\/clampDomain(_:withinRange:)",
+    "taskGroups" : [
+
+    ],
+    "title" : "clampDomain(_:withinRange:)",
+    "usr" : "s:8SwiftViz5ScalePAAE11clampDomain_11withinRange9InputTypeQzAG_SNyAGGtF::SYNTHESIZED::s:8SwiftViz9TimeScaleV"
+  },
+  {
+    "availableLanguages" : [
+      "swift"
+    ],
+    "fragments" : [
+      {
+        "kind" : "keyword",
+        "text" : "let"
+      },
+      {
+        "kind" : "text",
+        "text" : " "
+      },
+      {
+        "kind" : "identifier",
+        "text" : "domain"
+      },
+      {
+        "kind" : "text",
+        "text" : ": "
+      },
+      {
+        "kind" : "typeIdentifier",
+        "preciseIdentifier" : "s:SN",
+        "text" : "ClosedRange"
+      },
+      {
+        "kind" : "text",
+        "text" : "<"
+      },
+      {
+        "kind" : "typeIdentifier",
+        "preciseIdentifier" : "s:8SwiftViz9TimeScaleV9InputTypea",
+        "text" : "InputType"
+      },
+      {
+        "kind" : "text",
+        "text" : ">"
+      }
+    ],
+    "kind" : "org.swift.docc.kind.instanceProperty",
+    "language" : "swift",
+    "path" : "\/documentation\/swiftviz\/timescale\/domain",
+    "referenceURL" : "doc:\/\/com.github.swiftviz.SwiftViz\/documentation\/SwiftViz\/TimeScale\/domain",
+    "taskGroups" : [
+
+    ],
+    "title" : "domain",
+    "usr" : "s:8SwiftViz9TimeScaleV6domainSNy10Foundation4DateVGvp"
+  },
+  {
+    "availableLanguages" : [
+      "swift"
+    ],
+    "fragments" : [
+      {
+        "kind" : "keyword",
+        "text" : "var"
+      },
+      {
+        "kind" : "text",
+        "text" : " "
+      },
+      {
+        "kind" : "identifier",
+        "text" : "value"
+      },
+      {
+        "kind" : "text",
+        "text" : ": "
+      },
+      {
+        "kind" : "typeIdentifier",
+        "preciseIdentifier" : "s:8SwiftViz4TickP9InputTypeQa",
+        "text" : "InputType"
+      }
+    ],
+    "kind" : "org.swift.docc.kind.instanceProperty",
+    "language" : "swift",
+    "path" : "\/documentation\/swiftviz\/tick\/value",
+    "referenceURL" : "doc:\/\/com.github.swiftviz.SwiftViz\/documentation\/SwiftViz\/Tick\/value",
+    "taskGroups" : [
+
+    ],
+    "title" : "value",
+    "usr" : "s:8SwiftViz4TickP5value9InputTypeQzvp"
+  },
+  {
+    "availableLanguages" : [
+      "swift"
+    ],
+    "fragments" : [
+      {
+        "kind" : "keyword",
+        "text" : "associatedtype"
+      },
+      {
+        "kind" : "text",
+        "text" : " "
+      },
+      {
+        "kind" : "identifier",
+        "text" : "TickType"
+      },
+      {
+        "kind" : "text",
+        "text" : " : "
+      },
+      {
+        "kind" : "typeIdentifier",
+        "preciseIdentifier" : "s:8SwiftViz4TickP",
+        "text" : "Tick"
+      }
+    ],
+    "kind" : "org.swift.docc.kind.associatedType",
+    "language" : "swift",
+    "path" : "\/documentation\/swiftviz\/scale\/ticktype",
+    "referenceURL" : "doc:\/\/com.github.swiftviz.SwiftViz\/documentation\/SwiftViz\/Scale\/TickType",
+    "taskGroups" : [
+
+    ],
+    "title" : "TickType",
+    "usr" : "s:8SwiftViz5ScaleP8TickTypeQa"
+  },
+  {
+    "abstract" : [
+      {
+        "text" : "Validates a set of TickLabels against a given scale, removing any that don’t match the scale’s domain.",
+        "type" : "text"
+      }
+    ],
+    "availableLanguages" : [
+      "swift"
+    ],
+    "fragments" : [
+      {
+        "kind" : "keyword",
+        "text" : "func"
+      },
+      {
+        "kind" : "text",
+        "text" : " "
+      },
+      {
+        "kind" : "identifier",
+        "text" : "validatedTickLabels"
+      },
+      {
+        "kind" : "text",
+        "text" : "(["
+      },
+      {
+        "kind" : "typeIdentifier",
+        "preciseIdentifier" : "s:8SwiftViz9TickLabelV",
+        "text" : "TickLabel"
+      },
+      {
+        "kind" : "text",
+        "text" : "], "
+      },
+      {
+        "kind" : "externalParam",
+        "text" : "range"
+      },
+      {
+        "kind" : "text",
+        "text" : ": "
+      },
+      {
+        "kind" : "typeIdentifier",
+        "preciseIdentifier" : "s:SN",
+        "text" : "ClosedRange"
+      },
+      {
+        "kind" : "text",
+        "text" : "<"
+      },
+      {
+        "kind" : "typeIdentifier",
+        "preciseIdentifier" : "s:12CoreGraphics7CGFloatV",
+        "text" : "CGFloat"
+      },
+      {
+        "kind" : "text",
+        "text" : ">) -> ["
+      },
+      {
+        "kind" : "typeIdentifier",
+        "preciseIdentifier" : "s:8SwiftViz9TickLabelV",
+        "text" : "TickLabel"
+      },
+      {
+        "kind" : "text",
+        "text" : "]"
+      }
+    ],
+    "kind" : "org.swift.docc.kind.instanceMethod",
+    "language" : "swift",
+    "path" : "\/documentation\/swiftviz\/timescale\/validatedticklabels(_:range:)",
+    "referenceURL" : "doc:\/\/com.github.swiftviz.SwiftViz\/documentation\/SwiftViz\/TimeScale\/validatedTickLabels(_:range:)",
+    "taskGroups" : [
+
+    ],
+    "title" : "validatedTickLabels(_:range:)",
+    "usr" : "s:8SwiftViz5ScalePAA8TickType_05InputE0QZAERtzrlE09validatedD6Labels_5rangeSayAA0D5LabelVGAL_SNy12CoreGraphics7CGFloatVGtF::SYNTHESIZED::s:8SwiftViz9TimeScaleV"
+  },
+  {
+    "abstract" : [
+      {
+        "text" : "Validates a set of TickLabels against a given scale, removing any that don’t match the scale’s domain.",
+        "type" : "text"
+      }
+    ],
+    "availableLanguages" : [
+      "swift"
+    ],
+    "fragments" : [
+      {
+        "kind" : "keyword",
+        "text" : "func"
+      },
+      {
+        "kind" : "text",
+        "text" : " "
+      },
+      {
+        "kind" : "identifier",
+        "text" : "validatedTickLabels"
+      },
+      {
+        "kind" : "text",
+        "text" : "(["
+      },
+      {
+        "kind" : "typeIdentifier",
+        "preciseIdentifier" : "s:8SwiftViz9TickLabelV",
+        "text" : "TickLabel"
+      },
+      {
+        "kind" : "text",
+        "text" : "], "
+      },
+      {
+        "kind" : "externalParam",
+        "text" : "range"
+      },
+      {
+        "kind" : "text",
+        "text" : ": "
+      },
+      {
+        "kind" : "typeIdentifier",
+        "preciseIdentifier" : "s:SN",
+        "text" : "ClosedRange"
+      },
+      {
+        "kind" : "text",
+        "text" : "<"
+      },
+      {
+        "kind" : "typeIdentifier",
+        "preciseIdentifier" : "s:12CoreGraphics7CGFloatV",
+        "text" : "CGFloat"
+      },
+      {
+        "kind" : "text",
+        "text" : ">) -> ["
+      },
+      {
+        "kind" : "typeIdentifier",
+        "preciseIdentifier" : "s:8SwiftViz9TickLabelV",
+        "text" : "TickLabel"
+      },
+      {
+        "kind" : "text",
+        "text" : "]"
+      }
+    ],
+    "kind" : "org.swift.docc.kind.instanceMethod",
+    "language" : "swift",
+    "path" : "\/documentation\/swiftviz\/linearscale\/validatedticklabels(_:range:)",
+    "referenceURL" : "doc:\/\/com.github.swiftviz.SwiftViz\/documentation\/SwiftViz\/LinearScale\/validatedTickLabels(_:range:)",
+    "taskGroups" : [
+
+    ],
+    "title" : "validatedTickLabels(_:range:)",
+    "usr" : "s:8SwiftViz5ScalePAA8TickType_05InputE0QZAERtzrlE09validatedD6Labels_5rangeSayAA0D5LabelVGAL_SNy12CoreGraphics7CGFloatVGtF::SYNTHESIZED::s:8SwiftViz11LinearScaleV"
+  },
+  {
+    "availableLanguages" : [
+      "swift"
+    ],
+    "fragments" : [
+      {
+        "kind" : "keyword",
+        "text" : "struct"
+      },
+      {
+        "kind" : "text",
+        "text" : " "
+      },
+      {
+        "kind" : "identifier",
+        "text" : "TimeScale"
+      }
+    ],
+    "kind" : "org.swift.docc.kind.structure",
+    "language" : "swift",
+    "path" : "\/documentation\/swiftviz\/timescale",
+    "referenceURL" : "doc:\/\/com.github.swiftviz.SwiftViz\/documentation\/SwiftViz\/TimeScale",
+    "taskGroups" : [
+      {
+        "identifiers" : [
+          "doc:\/\/com.github.swiftviz.SwiftViz\/documentation\/SwiftViz\/TimeScale\/init(domain:isClamped:)"
+        ],
+        "title" : "Initializers"
+      },
+      {
+        "identifiers" : [
+          "doc:\/\/com.github.swiftviz.SwiftViz\/documentation\/SwiftViz\/TimeScale\/domain",
+          "doc:\/\/com.github.swiftviz.SwiftViz\/documentation\/SwiftViz\/TimeScale\/isClamped"
+        ],
+        "title" : "Instance Properties"
+      },
+      {
+        "identifiers" : [
+          "doc:\/\/com.github.swiftviz.SwiftViz\/documentation\/SwiftViz\/TimeScale\/invert(_:range:)",
+          "doc:\/\/com.github.swiftviz.SwiftViz\/documentation\/SwiftViz\/TimeScale\/scale(_:range:)",
+          "doc:\/\/com.github.swiftviz.SwiftViz\/documentation\/SwiftViz\/TimeScale\/ticks(count:range:)"
+        ],
+        "title" : "Instance Methods"
+      },
+      {
+        "identifiers" : [
+          "doc:\/\/com.github.swiftviz.SwiftViz\/documentation\/SwiftViz\/TimeScale\/InputType",
+          "doc:\/\/com.github.swiftviz.SwiftViz\/documentation\/SwiftViz\/TimeScale\/TickType"
+        ],
+        "title" : "Type Aliases"
+      },
+      {
+        "identifiers" : [
+          "doc:\/\/com.github.swiftviz.SwiftViz\/documentation\/SwiftViz\/TimeScale\/Scale-Implementations"
+        ],
+        "title" : "Default Implementations"
+      }
+    ],
+    "title" : "TimeScale",
+    "usr" : "s:8SwiftViz9TimeScaleV"
+  },
+  {
+    "availableLanguages" : [
+      "swift"
+    ],
+    "fragments" : [
+      {
+        "kind" : "keyword",
+        "text" : "let"
+      },
+      {
+        "kind" : "text",
+        "text" : " "
+      },
+      {
+        "kind" : "identifier",
+        "text" : "id"
+      },
+      {
+        "kind" : "text",
+        "text" : ": "
+      },
+      {
+        "kind" : "typeIdentifier",
+        "preciseIdentifier" : "s:10Foundation4UUIDV",
+        "text" : "UUID"
+      }
+    ],
+    "kind" : "org.swift.docc.kind.instanceProperty",
+    "language" : "swift",
+    "path" : "\/documentation\/swiftviz\/integertick\/id-1yqgu",
+    "referenceURL" : "doc:\/\/com.github.swiftviz.SwiftViz\/documentation\/SwiftViz\/IntegerTick\/id-1yqgu",
+    "taskGroups" : [
+
+    ],
+    "title" : "id",
+    "usr" : "s:8SwiftViz11IntegerTickV2id10Foundation4UUIDVvp"
+  },
+  {
+    "availableLanguages" : [
+      "swift"
+    ],
+    "fragments" : [
+      {
+        "kind" : "keyword",
+        "text" : "func"
+      },
+      {
+        "kind" : "text",
+        "text" : " "
+      },
+      {
+        "kind" : "identifier",
+        "text" : "clampDomain"
+      },
+      {
+        "kind" : "text",
+        "text" : "("
+      },
+      {
+        "kind" : "typeIdentifier",
+        "preciseIdentifier" : "s:8SwiftViz5ScaleP9InputTypeQa",
+        "text" : "InputType"
+      },
+      {
+        "kind" : "text",
+        "text" : ", "
+      },
+      {
+        "kind" : "externalParam",
+        "text" : "withinRange"
+      },
+      {
+        "kind" : "text",
+        "text" : ": "
+      },
+      {
+        "kind" : "typeIdentifier",
+        "preciseIdentifier" : "s:SN",
+        "text" : "ClosedRange"
+      },
+      {
+        "kind" : "text",
+        "text" : "<"
+      },
+      {
+        "kind" : "typeIdentifier",
+        "preciseIdentifier" : "s:8SwiftViz5ScaleP9InputTypeQa",
+        "text" : "InputType"
+      },
+      {
+        "kind" : "text",
+        "text" : ">) -> "
+      },
+      {
+        "kind" : "typeIdentifier",
+        "preciseIdentifier" : "s:8SwiftViz5ScaleP9InputTypeQa",
+        "text" : "InputType"
+      }
+    ],
+    "kind" : "org.swift.docc.kind.instanceMethod",
+    "language" : "swift",
+    "path" : "\/documentation\/swiftviz\/linearscale\/clampdomain(_:withinrange:)",
+    "referenceURL" : "doc:\/\/com.github.swiftviz.SwiftViz\/documentation\/SwiftViz\/LinearScale\/clampDomain(_:withinRange:)",
+    "taskGroups" : [
+
+    ],
+    "title" : "clampDomain(_:withinRange:)",
+    "usr" : "s:8SwiftViz5ScalePAAE11clampDomain_11withinRange9InputTypeQzAG_SNyAGGtF::SYNTHESIZED::s:8SwiftViz11LinearScaleV"
+  },
+  {
+    "availableLanguages" : [
+      "swift"
+    ],
+    "fragments" : [
+      {
+        "kind" : "keyword",
+        "text" : "typealias"
+      },
+      {
+        "kind" : "text",
+        "text" : " "
+      },
+      {
+        "kind" : "identifier",
+        "text" : "InputType"
+      }
+    ],
+    "kind" : "org.swift.docc.kind.typeAlias",
+    "language" : "swift",
+    "path" : "\/documentation\/swiftviz\/logscale\/inputtype",
+    "referenceURL" : "doc:\/\/com.github.swiftviz.SwiftViz\/documentation\/SwiftViz\/LogScale\/InputType",
+    "taskGroups" : [
+
+    ],
+    "title" : "LogScale.InputType",
+    "usr" : "s:8SwiftViz8LogScaleV9InputTypea"
+  },
+  {
+    "availableLanguages" : [
+      "swift"
+    ],
+    "fragments" : [
+      {
+        "kind" : "keyword",
+        "text" : "init"
+      },
+      {
+        "kind" : "text",
+        "text" : "("
+      },
+      {
+        "kind" : "externalParam",
+        "text" : "value"
+      },
+      {
+        "kind" : "text",
+        "text" : ": "
+      },
+      {
+        "kind" : "typeIdentifier",
+        "preciseIdentifier" : "s:Sd",
+        "text" : "Double"
+      },
+      {
+        "kind" : "text",
+        "text" : ", "
+      },
+      {
+        "kind" : "externalParam",
+        "text" : "location"
+      },
+      {
+        "kind" : "text",
+        "text" : ": "
+      },
+      {
+        "kind" : "typeIdentifier",
+        "preciseIdentifier" : "s:12CoreGraphics7CGFloatV",
+        "text" : "CGFloat"
+      },
+      {
+        "kind" : "text",
+        "text" : ")"
+      }
+    ],
+    "kind" : "org.swift.docc.kind.initializer",
+    "language" : "swift",
+    "path" : "\/documentation\/swiftviz\/doubletick\/init(value:location:)",
+    "referenceURL" : "doc:\/\/com.github.swiftviz.SwiftViz\/documentation\/SwiftViz\/DoubleTick\/init(value:location:)",
+    "taskGroups" : [
+
+    ],
+    "title" : "init(value:location:)",
+    "usr" : "s:8SwiftViz10DoubleTickV5value8locationACSd_12CoreGraphics7CGFloatVtcfc"
+  },
+  {
+    "availableLanguages" : [
+      "swift"
+    ],
+    "fragments" : [
+      {
+        "kind" : "keyword",
+        "text" : "init"
+      },
+      {
+        "kind" : "text",
+        "text" : "("
+      },
+      {
+        "kind" : "externalParam",
+        "text" : "domain"
+      },
+      {
+        "kind" : "text",
+        "text" : ": "
+      },
+      {
+        "kind" : "typeIdentifier",
+        "preciseIdentifier" : "s:SN",
+        "text" : "ClosedRange"
+      },
+      {
+        "kind" : "text",
+        "text" : "<"
+      },
+      {
+        "kind" : "typeIdentifier",
+        "preciseIdentifier" : "s:12CoreGraphics7CGFloatV",
+        "text" : "CGFloat"
+      },
+      {
+        "kind" : "text",
+        "text" : ">, "
+      },
+      {
+        "kind" : "externalParam",
+        "text" : "isClamped"
+      },
+      {
+        "kind" : "text",
+        "text" : ": "
+      },
+      {
+        "kind" : "typeIdentifier",
+        "preciseIdentifier" : "s:Sb",
+        "text" : "Bool"
+      },
+      {
+        "kind" : "text",
+        "text" : ")"
+      }
+    ],
+    "kind" : "org.swift.docc.kind.initializer",
+    "language" : "swift",
+    "path" : "\/documentation\/swiftviz\/linearscale\/init(domain:isclamped:)",
+    "referenceURL" : "doc:\/\/com.github.swiftviz.SwiftViz\/documentation\/SwiftViz\/LinearScale\/init(domain:isClamped:)",
+    "taskGroups" : [
+
+    ],
+    "title" : "init(domain:isClamped:)",
+    "usr" : "s:8SwiftViz11LinearScaleV6domain9isClampedACSNy12CoreGraphics7CGFloatVG_Sbtcfc"
+  },
+  {
+    "availableLanguages" : [
+      "swift"
+    ],
+    "fragments" : [
+      {
+        "kind" : "keyword",
+        "text" : "let"
+      },
+      {
+        "kind" : "text",
+        "text" : " "
+      },
+      {
+        "kind" : "identifier",
+        "text" : "value"
+      },
+      {
+        "kind" : "text",
+        "text" : ": "
+      },
+      {
+        "kind" : "typeIdentifier",
+        "preciseIdentifier" : "s:Sd",
+        "text" : "Double"
+      }
+    ],
+    "kind" : "org.swift.docc.kind.instanceProperty",
+    "language" : "swift",
+    "path" : "\/documentation\/swiftviz\/doubletick\/value",
+    "referenceURL" : "doc:\/\/com.github.swiftviz.SwiftViz\/documentation\/SwiftViz\/DoubleTick\/value",
+    "taskGroups" : [
+
+    ],
+    "title" : "value",
+    "usr" : "s:8SwiftViz10DoubleTickV5valueSdvp"
+  },
+  {
+    "abstract" : [
+      {
+        "text" : "Full initializer for a TickLabel",
+        "type" : "text"
+      }
+    ],
+    "availableLanguages" : [
+      "swift"
+    ],
+    "fragments" : [
+      {
+        "kind" : "keyword",
+        "text" : "init"
+      },
+      {
+        "kind" : "text",
+        "text" : "("
+      },
+      {
+        "kind" : "externalParam",
+        "text" : "id"
+      },
+      {
+        "kind" : "text",
+        "text" : ": "
+      },
+      {
+        "kind" : "typeIdentifier",
+        "preciseIdentifier" : "s:10Foundation4UUIDV",
+        "text" : "UUID"
+      },
+      {
+        "kind" : "text",
+        "text" : ", "
+      },
+      {
+        "kind" : "externalParam",
+        "text" : "rangeLocation"
+      },
+      {
+        "kind" : "text",
+        "text" : ": "
+      },
+      {
+        "kind" : "typeIdentifier",
+        "preciseIdentifier" : "s:12CoreGraphics7CGFloatV",
+        "text" : "CGFloat"
+      },
+      {
+        "kind" : "text",
+        "text" : ", "
+      },
+      {
+        "kind" : "externalParam",
+        "text" : "value"
+      },
+      {
+        "kind" : "text",
+        "text" : ": "
+      },
+      {
+        "kind" : "typeIdentifier",
+        "preciseIdentifier" : "s:SS",
+        "text" : "String"
+      },
+      {
+        "kind" : "text",
+        "text" : ")"
+      }
+    ],
+    "kind" : "org.swift.docc.kind.initializer",
+    "language" : "swift",
+    "path" : "\/documentation\/swiftviz\/ticklabel\/init(id:rangelocation:value:)",
+    "referenceURL" : "doc:\/\/com.github.swiftviz.SwiftViz\/documentation\/SwiftViz\/TickLabel\/init(id:rangeLocation:value:)",
+    "taskGroups" : [
+
+    ],
+    "title" : "init(id:rangeLocation:value:)",
+    "usr" : "s:8SwiftViz9TickLabelV2id13rangeLocation5valueAC10Foundation4UUIDV_12CoreGraphics7CGFloatVSStcfc"
+  },
+  {
+    "availableLanguages" : [
+      "swift"
+    ],
+    "fragments" : [
+      {
+        "kind" : "keyword",
+        "text" : "var"
+      },
+      {
+        "kind" : "text",
+        "text" : " "
+      },
+      {
+        "kind" : "identifier",
+        "text" : "stringValue"
+      },
+      {
+        "kind" : "text",
+        "text" : ": "
+      },
+      {
+        "kind" : "typeIdentifier",
+        "preciseIdentifier" : "s:SS",
+        "text" : "String"
+      }
+    ],
+    "kind" : "org.swift.docc.kind.instanceProperty",
+    "language" : "swift",
+    "path" : "\/documentation\/swiftviz\/cgfloattick\/stringvalue",
+    "referenceURL" : "doc:\/\/com.github.swiftviz.SwiftViz\/documentation\/SwiftViz\/CGFloatTick\/stringValue",
+    "taskGroups" : [
+
+    ],
+    "title" : "stringValue",
+    "usr" : "s:8SwiftViz11CGFloatTickV11stringValueSSvp"
+  },
+  {
+    "availableLanguages" : [
+      "swift"
+    ],
+    "fragments" : [
+      {
+        "kind" : "keyword",
+        "text" : "init"
+      },
+      {
+        "kind" : "text",
+        "text" : "("
+      },
+      {
+        "kind" : "externalParam",
+        "text" : "value"
+      },
+      {
+        "kind" : "text",
+        "text" : ": "
+      },
+      {
+        "kind" : "typeIdentifier",
+        "preciseIdentifier" : "s:12CoreGraphics7CGFloatV",
+        "text" : "CGFloat"
+      },
+      {
+        "kind" : "text",
+        "text" : ", "
+      },
+      {
+        "kind" : "externalParam",
+        "text" : "location"
+      },
+      {
+        "kind" : "text",
+        "text" : ": "
+      },
+      {
+        "kind" : "typeIdentifier",
+        "preciseIdentifier" : "s:12CoreGraphics7CGFloatV",
+        "text" : "CGFloat"
+      },
+      {
+        "kind" : "text",
+        "text" : ")"
+      }
+    ],
+    "kind" : "org.swift.docc.kind.initializer",
+    "language" : "swift",
+    "path" : "\/documentation\/swiftviz\/cgfloattick\/init(value:location:)",
+    "referenceURL" : "doc:\/\/com.github.swiftviz.SwiftViz\/documentation\/SwiftViz\/CGFloatTick\/init(value:location:)",
+    "taskGroups" : [
+
+    ],
+    "title" : "init(value:location:)",
+    "usr" : "s:8SwiftViz11CGFloatTickV5value8locationAC12CoreGraphics0C0V_AHtcfc"
+  },
+  {
+    "abstract" : [
+      {
+        "text" : "Converts an array of values of the Scale’s InputType into a set of Ticks.",
+        "type" : "text"
+      },
+      {
+        "text" : " ",
+        "type" : "text"
+      },
+      {
+        "text" : "Used for manually specifying a series of ticks that you want to have displayed.",
+        "type" : "text"
+      }
+    ],
+    "availableLanguages" : [
+      "swift"
+    ],
+    "fragments" : [
+      {
+        "kind" : "keyword",
+        "text" : "func"
+      },
+      {
+        "kind" : "text",
+        "text" : " "
+      },
+      {
+        "kind" : "identifier",
+        "text" : "ticks"
+      },
+      {
+        "kind" : "text",
+        "text" : "(["
+      },
+      {
+        "kind" : "typeIdentifier",
+        "preciseIdentifier" : "s:8SwiftViz5ScaleP9InputTypeQa",
+        "text" : "InputType"
+      },
+      {
+        "kind" : "text",
+        "text" : "], "
+      },
+      {
+        "kind" : "externalParam",
+        "text" : "range"
+      },
+      {
+        "kind" : "text",
+        "text" : ": "
+      },
+      {
+        "kind" : "typeIdentifier",
+        "preciseIdentifier" : "s:SN",
+        "text" : "ClosedRange"
+      },
+      {
+        "kind" : "text",
+        "text" : "<"
+      },
+      {
+        "kind" : "typeIdentifier",
+        "preciseIdentifier" : "s:12CoreGraphics7CGFloatV",
+        "text" : "CGFloat"
+      },
+      {
+        "kind" : "text",
+        "text" : ">) -> ["
+      },
+      {
+        "kind" : "typeIdentifier",
+        "preciseIdentifier" : "s:8SwiftViz5ScaleP8TickTypeQa",
+        "text" : "TickType"
+      },
+      {
+        "kind" : "text",
+        "text" : "]"
+      }
+    ],
+    "kind" : "org.swift.docc.kind.instanceMethod",
+    "language" : "swift",
+    "path" : "\/documentation\/swiftviz\/logscale\/ticks(_:range:)",
+    "referenceURL" : "doc:\/\/com.github.swiftviz.SwiftViz\/documentation\/SwiftViz\/LogScale\/ticks(_:range:)",
+    "taskGroups" : [
+
+    ],
+    "title" : "ticks(_:range:)",
+    "usr" : "s:8SwiftViz5ScalePAA8TickType_05InputE0QZAERtzrlE5ticks_5rangeSayADQzGSayAGG_SNy12CoreGraphics7CGFloatVGtF::SYNTHESIZED::s:8SwiftViz8LogScaleV"
+  },
+  {
+    "abstract" : [
+      {
+        "text" : "A linear scale is created using a continuous input domain and provides methods to",
+        "type" : "text"
+      },
+      {
+        "text" : " ",
+        "type" : "text"
+      },
+      {
+        "text" : "convert values within that domain to an output range.",
+        "type" : "text"
+      }
+    ],
+    "availableLanguages" : [
+      "swift"
+    ],
+    "fragments" : [
+      {
+        "kind" : "keyword",
+        "text" : "struct"
+      },
+      {
+        "kind" : "text",
+        "text" : " "
+      },
+      {
+        "kind" : "identifier",
+        "text" : "LinearScale"
+      }
+    ],
+    "kind" : "org.swift.docc.kind.structure",
+    "language" : "swift",
+    "path" : "\/documentation\/swiftviz\/linearscale",
+    "referenceURL" : "doc:\/\/com.github.swiftviz.SwiftViz\/documentation\/SwiftViz\/LinearScale",
+    "taskGroups" : [
+      {
+        "identifiers" : [
+          "doc:\/\/com.github.swiftviz.SwiftViz\/documentation\/SwiftViz\/LinearScale\/init(domain:isClamped:)"
+        ],
+        "title" : "Initializers"
+      },
+      {
+        "identifiers" : [
+          "doc:\/\/com.github.swiftviz.SwiftViz\/documentation\/SwiftViz\/LinearScale\/domain",
+          "doc:\/\/com.github.swiftviz.SwiftViz\/documentation\/SwiftViz\/LinearScale\/isClamped"
+        ],
+        "title" : "Instance Properties"
+      },
+      {
+        "identifiers" : [
+          "doc:\/\/com.github.swiftviz.SwiftViz\/documentation\/SwiftViz\/LinearScale\/invert(_:range:)",
+          "doc:\/\/com.github.swiftviz.SwiftViz\/documentation\/SwiftViz\/LinearScale\/scale(_:range:)",
+          "doc:\/\/com.github.swiftviz.SwiftViz\/documentation\/SwiftViz\/LinearScale\/ticks(count:range:)"
+        ],
+        "title" : "Instance Methods"
+      },
+      {
+        "identifiers" : [
+          "doc:\/\/com.github.swiftviz.SwiftViz\/documentation\/SwiftViz\/LinearScale\/InputType",
+          "doc:\/\/com.github.swiftviz.SwiftViz\/documentation\/SwiftViz\/LinearScale\/TickType"
+        ],
+        "title" : "Type Aliases"
+      },
+      {
+        "identifiers" : [
+          "doc:\/\/com.github.swiftviz.SwiftViz\/documentation\/SwiftViz\/LinearScale\/Scale-Implementations"
+        ],
+        "title" : "Default Implementations"
+      }
+    ],
+    "title" : "LinearScale",
+    "usr" : "s:8SwiftViz11LinearScaleV"
+  },
+  {
+    "abstract" : [
+      {
+        "text" : "inverts the scale, taking a value in the output range and returning the relevant value from the input domain",
+        "type" : "text"
+      }
+    ],
+    "availableLanguages" : [
+      "swift"
+    ],
+    "fragments" : [
+      {
+        "kind" : "keyword",
+        "text" : "func"
+      },
+      {
+        "kind" : "text",
+        "text" : " "
+      },
+      {
+        "kind" : "identifier",
+        "text" : "invert"
+      },
+      {
+        "kind" : "text",
+        "text" : "("
+      },
+      {
+        "kind" : "typeIdentifier",
+        "preciseIdentifier" : "s:12CoreGraphics7CGFloatV",
+        "text" : "CGFloat"
+      },
+      {
+        "kind" : "text",
+        "text" : ", "
+      },
+      {
+        "kind" : "externalParam",
+        "text" : "range"
+      },
+      {
+        "kind" : "text",
+        "text" : ": "
+      },
+      {
+        "kind" : "typeIdentifier",
+        "preciseIdentifier" : "s:SN",
+        "text" : "ClosedRange"
+      },
+      {
+        "kind" : "text",
+        "text" : "<"
+      },
+      {
+        "kind" : "typeIdentifier",
+        "preciseIdentifier" : "s:12CoreGraphics7CGFloatV",
+        "text" : "CGFloat"
+      },
+      {
+        "kind" : "text",
+        "text" : ">) -> "
+      },
+      {
+        "kind" : "typeIdentifier",
+        "preciseIdentifier" : "s:12CoreGraphics7CGFloatV",
+        "text" : "CGFloat"
+      }
+    ],
+    "kind" : "org.swift.docc.kind.instanceMethod",
+    "language" : "swift",
+    "path" : "\/documentation\/swiftviz\/logscale\/invert(_:range:)",
+    "referenceURL" : "doc:\/\/com.github.swiftviz.SwiftViz\/documentation\/SwiftViz\/LogScale\/invert(_:range:)",
+    "taskGroups" : [
+
+    ],
+    "title" : "invert(_:range:)",
+    "usr" : "s:8SwiftViz8LogScaleV6invert_5range12CoreGraphics7CGFloatVAH_SNyAHGtF"
+  },
+  {
+    "availableLanguages" : [
+      "swift"
+    ],
+    "fragments" : [
+      {
+        "kind" : "keyword",
+        "text" : "var"
+      },
+      {
+        "kind" : "text",
+        "text" : " "
+      },
+      {
+        "kind" : "identifier",
+        "text" : "id"
+      },
+      {
+        "kind" : "text",
+        "text" : ": "
+      },
+      {
+        "kind" : "typeIdentifier",
+        "preciseIdentifier" : "s:10Foundation4UUIDV",
+        "text" : "UUID"
+      }
+    ],
+    "kind" : "org.swift.docc.kind.instanceProperty",
+    "language" : "swift",
+    "path" : "\/documentation\/swiftviz\/tick\/id",
+    "referenceURL" : "doc:\/\/com.github.swiftviz.SwiftViz\/documentation\/SwiftViz\/Tick\/id",
+    "taskGroups" : [
+
+    ],
+    "title" : "id",
+    "usr" : "s:8SwiftViz4TickP2id10Foundation4UUIDVvp"
+  },
+  {
+    "availableLanguages" : [
+      "swift"
+    ],
+    "fragments" : [
+      {
+        "kind" : "keyword",
+        "text" : "func"
+      },
+      {
+        "kind" : "text",
+        "text" : " "
+      },
+      {
+        "kind" : "identifier",
+        "text" : "clampRange"
+      },
+      {
+        "kind" : "text",
+        "text" : "("
+      },
+      {
+        "kind" : "typeIdentifier",
+        "preciseIdentifier" : "s:12CoreGraphics7CGFloatV",
+        "text" : "CGFloat"
+      },
+      {
+        "kind" : "text",
+        "text" : ", "
+      },
+      {
+        "kind" : "externalParam",
+        "text" : "withinRange"
+      },
+      {
+        "kind" : "text",
+        "text" : ": "
+      },
+      {
+        "kind" : "typeIdentifier",
+        "preciseIdentifier" : "s:SN",
+        "text" : "ClosedRange"
+      },
+      {
+        "kind" : "text",
+        "text" : "<"
+      },
+      {
+        "kind" : "typeIdentifier",
+        "preciseIdentifier" : "s:12CoreGraphics7CGFloatV",
+        "text" : "CGFloat"
+      },
+      {
+        "kind" : "text",
+        "text" : ">) -> "
+      },
+      {
+        "kind" : "typeIdentifier",
+        "preciseIdentifier" : "s:12CoreGraphics7CGFloatV",
+        "text" : "CGFloat"
+      }
+    ],
+    "kind" : "org.swift.docc.kind.instanceMethod",
+    "language" : "swift",
+    "path" : "\/documentation\/swiftviz\/timescale\/clamprange(_:withinrange:)",
+    "referenceURL" : "doc:\/\/com.github.swiftviz.SwiftViz\/documentation\/SwiftViz\/TimeScale\/clampRange(_:withinRange:)",
+    "taskGroups" : [
+
+    ],
+    "title" : "clampRange(_:withinRange:)",
+    "usr" : "s:8SwiftViz5ScalePAAE10clampRange_06withinE012CoreGraphics7CGFloatVAH_SNyAHGtF::SYNTHESIZED::s:8SwiftViz9TimeScaleV"
+  },
+  {
+    "abstract" : [
+      {
+        "text" : "A TickLabel is more specific to the visualization and",
+        "type" : "text"
+      },
+      {
+        "text" : " ",
+        "type" : "text"
+      },
+      {
+        "text" : "is generally created with the benefit of a formatter,",
+        "type" : "text"
+      },
+      {
+        "text" : " ",
+        "type" : "text"
+      },
+      {
+        "text" : "the type that we use being dependent on the type that’s",
+        "type" : "text"
+      },
+      {
+        "text" : " ",
+        "type" : "text"
+      },
+      {
+        "text" : "used for the domain of the Scale.",
+        "type" : "text"
+      }
+    ],
+    "availableLanguages" : [
+      "swift"
+    ],
+    "fragments" : [
+      {
+        "kind" : "keyword",
+        "text" : "struct"
+      },
+      {
+        "kind" : "text",
+        "text" : " "
+      },
+      {
+        "kind" : "identifier",
+        "text" : "TickLabel"
+      }
+    ],
+    "kind" : "org.swift.docc.kind.structure",
+    "language" : "swift",
+    "path" : "\/documentation\/swiftviz\/ticklabel",
+    "referenceURL" : "doc:\/\/com.github.swiftviz.SwiftViz\/documentation\/SwiftViz\/TickLabel",
+    "taskGroups" : [
+      {
+        "identifiers" : [
+          "doc:\/\/com.github.swiftviz.SwiftViz\/documentation\/SwiftViz\/TickLabel\/init(id:rangeLocation:value:)",
+          "doc:\/\/com.github.swiftviz.SwiftViz\/documentation\/SwiftViz\/TickLabel\/init(rangeLocation:value:)"
+        ],
+        "title" : "Initializers"
+      },
+      {
+        "identifiers" : [
+          "doc:\/\/com.github.swiftviz.SwiftViz\/documentation\/SwiftViz\/TickLabel\/id-8zchb",
+          "doc:\/\/com.github.swiftviz.SwiftViz\/documentation\/SwiftViz\/TickLabel\/rangeLocation",
+          "doc:\/\/com.github.swiftviz.SwiftViz\/documentation\/SwiftViz\/TickLabel\/value"
+        ],
+        "title" : "Instance Properties"
+      },
+      {
+        "identifiers" : [
+          "doc:\/\/com.github.swiftviz.SwiftViz\/documentation\/SwiftViz\/TickLabel\/makeDefaultFormatter()"
+        ],
+        "title" : "Type Methods"
+      },
+      {
+        "identifiers" : [
+          "doc:\/\/com.github.swiftviz.SwiftViz\/documentation\/SwiftViz\/TickLabel\/Identifiable-Implementations"
+        ],
+        "title" : "Default Implementations"
+      }
+    ],
+    "title" : "TickLabel",
+    "usr" : "s:8SwiftViz9TickLabelV"
+  },
+  {
+    "abstract" : [
+      {
+        "text" : "returns an array of the locations within the ClosedRange of",
+        "type" : "text"
+      },
+      {
+        "text" : " ",
+        "type" : "text"
+      },
+      {
+        "text" : "range to locate ticks for the scale",
+        "type" : "text"
+      }
+    ],
+    "availableLanguages" : [
+      "swift"
+    ],
+    "fragments" : [
+      {
+        "kind" : "keyword",
+        "text" : "func"
+      },
+      {
+        "kind" : "text",
+        "text" : " "
+      },
+      {
+        "kind" : "identifier",
+        "text" : "ticks"
+      },
+      {
+        "kind" : "text",
+        "text" : "("
+      },
+      {
+        "kind" : "externalParam",
+        "text" : "count"
+      },
+      {
+        "kind" : "text",
+        "text" : ": "
+      },
+      {
+        "kind" : "typeIdentifier",
+        "preciseIdentifier" : "s:Si",
+        "text" : "Int"
+      },
+      {
+        "kind" : "text",
+        "text" : ", "
+      },
+      {
+        "kind" : "externalParam",
+        "text" : "range"
+      },
+      {
+        "kind" : "text",
+        "text" : ": "
+      },
+      {
+        "kind" : "typeIdentifier",
+        "preciseIdentifier" : "s:SN",
+        "text" : "ClosedRange"
+      },
+      {
+        "kind" : "text",
+        "text" : "<"
+      },
+      {
+        "kind" : "typeIdentifier",
+        "preciseIdentifier" : "s:12CoreGraphics7CGFloatV",
+        "text" : "CGFloat"
+      },
+      {
+        "kind" : "text",
+        "text" : ">) -> ["
+      },
+      {
+        "kind" : "typeIdentifier",
+        "preciseIdentifier" : "s:8SwiftViz5ScaleP8TickTypeQa",
+        "text" : "TickType"
+      },
+      {
+        "kind" : "text",
+        "text" : "]"
+      }
+    ],
+    "kind" : "org.swift.docc.kind.instanceMethod",
+    "language" : "swift",
+    "path" : "\/documentation\/swiftviz\/scale\/ticks(count:range:)",
+    "referenceURL" : "doc:\/\/com.github.swiftviz.SwiftViz\/documentation\/SwiftViz\/Scale\/ticks(count:range:)",
+    "taskGroups" : [
+
+    ],
+    "title" : "ticks(count:range:)",
+    "usr" : "s:8SwiftViz5ScaleP5ticks5count5rangeSay8TickTypeQzGSi_SNy12CoreGraphics7CGFloatVGtF"
+  },
+  {
+    "availableLanguages" : [
+      "swift"
+    ],
+    "fragments" : [
+      {
+        "kind" : "keyword",
+        "text" : "let"
+      },
+      {
+        "kind" : "text",
+        "text" : " "
+      },
+      {
+        "kind" : "identifier",
+        "text" : "id"
+      },
+      {
+        "kind" : "text",
+        "text" : ": "
+      },
+      {
+        "kind" : "typeIdentifier",
+        "preciseIdentifier" : "s:10Foundation4UUIDV",
+        "text" : "UUID"
+      }
+    ],
+    "kind" : "org.swift.docc.kind.instanceProperty",
+    "language" : "swift",
+    "path" : "\/documentation\/swiftviz\/datetick\/id-9kysu",
+    "referenceURL" : "doc:\/\/com.github.swiftviz.SwiftViz\/documentation\/SwiftViz\/DateTick\/id-9kysu",
+    "taskGroups" : [
+
+    ],
+    "title" : "id",
+    "usr" : "s:8SwiftViz8DateTickV2id10Foundation4UUIDVvp"
+  },
+  {
+    "availableLanguages" : [
+      "swift"
+    ],
+    "fragments" : [
+      {
+        "kind" : "keyword",
+        "text" : "struct"
+      },
+      {
+        "kind" : "text",
+        "text" : " "
+      },
+      {
+        "kind" : "identifier",
+        "text" : "CGFloatTick"
+      }
+    ],
+    "kind" : "org.swift.docc.kind.structure",
+    "language" : "swift",
+    "path" : "\/documentation\/swiftviz\/cgfloattick",
+    "referenceURL" : "doc:\/\/com.github.swiftviz.SwiftViz\/documentation\/SwiftViz\/CGFloatTick",
+    "taskGroups" : [
+      {
+        "identifiers" : [
+          "doc:\/\/com.github.swiftviz.SwiftViz\/documentation\/SwiftViz\/CGFloatTick\/init(value:location:)"
+        ],
+        "title" : "Initializers"
+      },
+      {
+        "identifiers" : [
+          "doc:\/\/com.github.swiftviz.SwiftViz\/documentation\/SwiftViz\/CGFloatTick\/id-9diks",
+          "doc:\/\/com.github.swiftviz.SwiftViz\/documentation\/SwiftViz\/CGFloatTick\/rangeLocation",
+          "doc:\/\/com.github.swiftviz.SwiftViz\/documentation\/SwiftViz\/CGFloatTick\/stringValue",
+          "doc:\/\/com.github.swiftviz.SwiftViz\/documentation\/SwiftViz\/CGFloatTick\/value"
+        ],
+        "title" : "Instance Properties"
+      },
+      {
+        "identifiers" : [
+          "doc:\/\/com.github.swiftviz.SwiftViz\/documentation\/SwiftViz\/CGFloatTick\/Identifiable-Implementations"
+        ],
+        "title" : "Default Implementations"
+      }
+    ],
+    "title" : "CGFloatTick",
+    "usr" : "s:8SwiftViz11CGFloatTickV"
+  },
+  {
+    "availableLanguages" : [
+      "swift"
+    ],
+    "fragments" : [
+      {
+        "kind" : "keyword",
+        "text" : "struct"
+      },
+      {
+        "kind" : "text",
+        "text" : " "
+      },
+      {
+        "kind" : "identifier",
+        "text" : "DoubleTick"
+      }
+    ],
+    "kind" : "org.swift.docc.kind.structure",
+    "language" : "swift",
+    "path" : "\/documentation\/swiftviz\/doubletick",
+    "referenceURL" : "doc:\/\/com.github.swiftviz.SwiftViz\/documentation\/SwiftViz\/DoubleTick",
+    "taskGroups" : [
+      {
+        "identifiers" : [
+          "doc:\/\/com.github.swiftviz.SwiftViz\/documentation\/SwiftViz\/DoubleTick\/init(value:location:)"
+        ],
+        "title" : "Initializers"
+      },
+      {
+        "identifiers" : [
+          "doc:\/\/com.github.swiftviz.SwiftViz\/documentation\/SwiftViz\/DoubleTick\/id-5hkki",
+          "doc:\/\/com.github.swiftviz.SwiftViz\/documentation\/SwiftViz\/DoubleTick\/rangeLocation",
+          "doc:\/\/com.github.swiftviz.SwiftViz\/documentation\/SwiftViz\/DoubleTick\/stringValue",
+          "doc:\/\/com.github.swiftviz.SwiftViz\/documentation\/SwiftViz\/DoubleTick\/value"
+        ],
+        "title" : "Instance Properties"
+      },
+      {
+        "identifiers" : [
+          "doc:\/\/com.github.swiftviz.SwiftViz\/documentation\/SwiftViz\/DoubleTick\/Identifiable-Implementations"
+        ],
+        "title" : "Default Implementations"
+      }
+    ],
+    "title" : "DoubleTick",
+    "usr" : "s:8SwiftViz10DoubleTickV"
+  },
+  {
+    "availableLanguages" : [
+      "swift"
+    ],
+    "fragments" : [
+      {
+        "kind" : "keyword",
+        "text" : "let"
+      },
+      {
+        "kind" : "text",
+        "text" : " "
+      },
+      {
+        "kind" : "identifier",
+        "text" : "value"
+      },
+      {
+        "kind" : "text",
+        "text" : ": "
+      },
+      {
+        "kind" : "typeIdentifier",
+        "preciseIdentifier" : "s:Si",
+        "text" : "Int"
+      }
+    ],
+    "kind" : "org.swift.docc.kind.instanceProperty",
+    "language" : "swift",
+    "path" : "\/documentation\/swiftviz\/integertick\/value",
+    "referenceURL" : "doc:\/\/com.github.swiftviz.SwiftViz\/documentation\/SwiftViz\/IntegerTick\/value",
+    "taskGroups" : [
+
+    ],
+    "title" : "value",
+    "usr" : "s:8SwiftViz11IntegerTickV5valueSivp"
+  },
+  {
+    "availableLanguages" : [
+      "swift"
+    ],
+    "kind" : "org.swift.docc.kind.collectionGroup",
+    "language" : "swift",
+    "path" : "\/documentation\/swiftviz\/ticklabel\/identifiable-implementations",
+    "referenceURL" : "doc:\/\/com.github.swiftviz.SwiftViz\/documentation\/SwiftViz\/TickLabel\/Identifiable-Implementations",
+    "taskGroups" : [
+      {
+        "identifiers" : [
+          "doc:\/\/com.github.swiftviz.SwiftViz\/documentation\/SwiftViz\/TickLabel\/id-1fm9l"
+        ],
+        "title" : "Instance Properties"
+      }
+    ],
+    "title" : "Identifiable Implementations"
+  },
+  {
+    "availableLanguages" : [
+      "swift"
+    ],
+    "kind" : "org.swift.docc.kind.collectionGroup",
+    "language" : "swift",
+    "path" : "\/documentation\/swiftviz\/cgfloattick\/identifiable-implementations",
+    "referenceURL" : "doc:\/\/com.github.swiftviz.SwiftViz\/documentation\/SwiftViz\/CGFloatTick\/Identifiable-Implementations",
+    "taskGroups" : [
+      {
+        "identifiers" : [
+          "doc:\/\/com.github.swiftviz.SwiftViz\/documentation\/SwiftViz\/CGFloatTick\/id-5vtvu"
+        ],
+        "title" : "Instance Properties"
+      }
+    ],
+    "title" : "Identifiable Implementations"
+  },
+  {
+    "abstract" : [
+      {
+        "text" : "Takes an set of labelled input values and returns the relevant set of TickLabels converted",
+        "type" : "text"
+      },
+      {
+        "text" : " ",
+        "type" : "text"
+      },
+      {
+        "text" : "to the correct location values associated with the provided range.",
+        "type" : "text"
+      }
+    ],
+    "availableLanguages" : [
+      "swift"
+    ],
+    "fragments" : [
+      {
+        "kind" : "keyword",
+        "text" : "func"
+      },
+      {
+        "kind" : "text",
+        "text" : " "
+      },
+      {
+        "kind" : "identifier",
+        "text" : "labeledTickValues"
+      },
+      {
+        "kind" : "text",
+        "text" : "([("
+      },
+      {
+        "kind" : "typeIdentifier",
+        "preciseIdentifier" : "s:8SwiftViz5ScaleP9InputTypeQa",
+        "text" : "InputType"
+      },
+      {
+        "kind" : "text",
+        "text" : ", "
+      },
+      {
+        "kind" : "typeIdentifier",
+        "preciseIdentifier" : "s:SS",
+        "text" : "String"
+      },
+      {
+        "kind" : "text",
+        "text" : ")], "
+      },
+      {
+        "kind" : "externalParam",
+        "text" : "range"
+      },
+      {
+        "kind" : "text",
+        "text" : ": "
+      },
+      {
+        "kind" : "typeIdentifier",
+        "preciseIdentifier" : "s:SN",
+        "text" : "ClosedRange"
+      },
+      {
+        "kind" : "text",
+        "text" : "<"
+      },
+      {
+        "kind" : "typeIdentifier",
+        "preciseIdentifier" : "s:12CoreGraphics7CGFloatV",
+        "text" : "CGFloat"
+      },
+      {
+        "kind" : "text",
+        "text" : ">) -> ["
+      },
+      {
+        "kind" : "typeIdentifier",
+        "preciseIdentifier" : "s:8SwiftViz9TickLabelV",
+        "text" : "TickLabel"
+      },
+      {
+        "kind" : "text",
+        "text" : "]"
+      }
+    ],
+    "kind" : "org.swift.docc.kind.instanceMethod",
+    "language" : "swift",
+    "path" : "\/documentation\/swiftviz\/linearscale\/labeledtickvalues(_:range:)",
+    "referenceURL" : "doc:\/\/com.github.swiftviz.SwiftViz\/documentation\/SwiftViz\/LinearScale\/labeledTickValues(_:range:)",
+    "taskGroups" : [
+
+    ],
+    "title" : "labeledTickValues(_:range:)",
+    "usr" : "s:8SwiftViz5ScalePAA8TickType_05InputE0QZAERtzrlE07labeledD6Values_5rangeSayAA0D5LabelVGSayAG_SStG_SNy12CoreGraphics7CGFloatVGtF::SYNTHESIZED::s:8SwiftViz11LinearScaleV"
+  },
+  {
+    "abstract" : [
+      {
+        "text" : "A collection of components to provide structures that support data visualization.",
+        "type" : "text"
+      }
+    ],
+    "availableLanguages" : [
+      "swift"
+    ],
+    "kind" : "org.swift.docc.kind.module",
+    "language" : "swift",
+    "path" : "\/documentation\/swiftviz",
+    "referenceURL" : "doc:\/\/com.github.swiftviz.SwiftViz\/documentation\/SwiftViz",
+    "taskGroups" : [
+      {
+        "identifiers" : [
+          "doc:\/\/com.github.swiftviz.SwiftViz\/documentation\/SwiftViz\/Scale",
+          "doc:\/\/com.github.swiftviz.SwiftViz\/documentation\/SwiftViz\/TimeScale",
+          "doc:\/\/com.github.swiftviz.SwiftViz\/documentation\/SwiftViz\/LogScale",
+          "doc:\/\/com.github.swiftviz.SwiftViz\/documentation\/SwiftViz\/LinearScale"
+        ],
+        "title" : "Scales"
+      },
+      {
+        "identifiers" : [
+          "doc:\/\/com.github.swiftviz.SwiftViz\/documentation\/SwiftViz\/Tick",
+          "doc:\/\/com.github.swiftviz.SwiftViz\/documentation\/SwiftViz\/DateTick",
+          "doc:\/\/com.github.swiftviz.SwiftViz\/documentation\/SwiftViz\/DoubleTick",
+          "doc:\/\/com.github.swiftviz.SwiftViz\/documentation\/SwiftViz\/CGFloatTick",
+          "doc:\/\/com.github.swiftviz.SwiftViz\/documentation\/SwiftViz\/IntegerTick",
+          "doc:\/\/com.github.swiftviz.SwiftViz\/documentation\/SwiftViz\/TickLabel"
+        ],
+        "title" : "Axis"
+      }
+    ],
+    "title" : "SwiftViz",
+    "usr" : "SwiftViz"
+  },
+  {
+    "abstract" : [
+      {
+        "text" : "returns an array of the locations of ticks",
+        "type" : "text"
+      }
+    ],
+    "availableLanguages" : [
+      "swift"
+    ],
+    "fragments" : [
+      {
+        "kind" : "keyword",
+        "text" : "func"
+      },
+      {
+        "kind" : "text",
+        "text" : " "
+      },
+      {
+        "kind" : "identifier",
+        "text" : "ticks"
+      },
+      {
+        "kind" : "text",
+        "text" : "("
+      },
+      {
+        "kind" : "externalParam",
+        "text" : "count"
+      },
+      {
+        "kind" : "text",
+        "text" : ": "
+      },
+      {
+        "kind" : "typeIdentifier",
+        "preciseIdentifier" : "s:Si",
+        "text" : "Int"
+      },
+      {
+        "kind" : "text",
+        "text" : ", "
+      },
+      {
+        "kind" : "externalParam",
+        "text" : "range"
+      },
+      {
+        "kind" : "text",
+        "text" : ": "
+      },
+      {
+        "kind" : "typeIdentifier",
+        "preciseIdentifier" : "s:SN",
+        "text" : "ClosedRange"
+      },
+      {
+        "kind" : "text",
+        "text" : "<"
+      },
+      {
+        "kind" : "typeIdentifier",
+        "preciseIdentifier" : "s:12CoreGraphics7CGFloatV",
+        "text" : "CGFloat"
+      },
+      {
+        "kind" : "text",
+        "text" : ">) -> ["
+      },
+      {
+        "kind" : "typeIdentifier",
+        "preciseIdentifier" : "s:8SwiftViz8DateTickV",
+        "text" : "DateTick"
+      },
+      {
+        "kind" : "text",
+        "text" : "]"
+      }
+    ],
+    "kind" : "org.swift.docc.kind.instanceMethod",
+    "language" : "swift",
+    "path" : "\/documentation\/swiftviz\/timescale\/ticks(count:range:)",
+    "referenceURL" : "doc:\/\/com.github.swiftviz.SwiftViz\/documentation\/SwiftViz\/TimeScale\/ticks(count:range:)",
+    "taskGroups" : [
+
+    ],
+    "title" : "ticks(count:range:)",
+    "usr" : "s:8SwiftViz9TimeScaleV5ticks5count5rangeSayAA8DateTickVGSi_SNy12CoreGraphics7CGFloatVGtF"
+  },
+  {
+    "availableLanguages" : [
+      "swift"
+    ],
+    "fragments" : [
+      {
+        "kind" : "keyword",
+        "text" : "let"
+      },
+      {
+        "kind" : "text",
+        "text" : " "
+      },
+      {
+        "kind" : "identifier",
+        "text" : "rangeLocation"
+      },
+      {
+        "kind" : "text",
+        "text" : ": "
+      },
+      {
+        "kind" : "typeIdentifier",
+        "preciseIdentifier" : "s:12CoreGraphics7CGFloatV",
+        "text" : "CGFloat"
+      }
+    ],
+    "kind" : "org.swift.docc.kind.instanceProperty",
+    "language" : "swift",
+    "path" : "\/documentation\/swiftviz\/cgfloattick\/rangelocation",
+    "referenceURL" : "doc:\/\/com.github.swiftviz.SwiftViz\/documentation\/SwiftViz\/CGFloatTick\/rangeLocation",
+    "taskGroups" : [
+
+    ],
+    "title" : "rangeLocation",
+    "usr" : "s:8SwiftViz11CGFloatTickV13rangeLocation12CoreGraphics0C0Vvp"
+  },
+  {
+    "abstract" : [
+      {
+        "text" : "converts back from the output “range” to a value within",
+        "type" : "text"
+      },
+      {
+        "text" : " ",
+        "type" : "text"
+      },
+      {
+        "text" : "the input “domain”. The inverse of scale()",
+        "type" : "text"
+      }
+    ],
+    "availableLanguages" : [
+      "swift"
+    ],
+    "fragments" : [
+      {
+        "kind" : "keyword",
+        "text" : "func"
+      },
+      {
+        "kind" : "text",
+        "text" : " "
+      },
+      {
+        "kind" : "identifier",
+        "text" : "invert"
+      },
+      {
+        "kind" : "text",
+        "text" : "("
+      },
+      {
+        "kind" : "typeIdentifier",
+        "preciseIdentifier" : "s:12CoreGraphics7CGFloatV",
+        "text" : "CGFloat"
+      },
+      {
+        "kind" : "text",
+        "text" : ", "
+      },
+      {
+        "kind" : "externalParam",
+        "text" : "range"
+      },
+      {
+        "kind" : "text",
+        "text" : ": "
+      },
+      {
+        "kind" : "typeIdentifier",
+        "preciseIdentifier" : "s:SN",
+        "text" : "ClosedRange"
+      },
+      {
+        "kind" : "text",
+        "text" : "<"
+      },
+      {
+        "kind" : "typeIdentifier",
+        "preciseIdentifier" : "s:12CoreGraphics7CGFloatV",
+        "text" : "CGFloat"
+      },
+      {
+        "kind" : "text",
+        "text" : ">) -> "
+      },
+      {
+        "kind" : "typeIdentifier",
+        "preciseIdentifier" : "s:10Foundation4DateV",
+        "text" : "Date"
+      }
+    ],
+    "kind" : "org.swift.docc.kind.instanceMethod",
+    "language" : "swift",
+    "path" : "\/documentation\/swiftviz\/timescale\/invert(_:range:)",
+    "referenceURL" : "doc:\/\/com.github.swiftviz.SwiftViz\/documentation\/SwiftViz\/TimeScale\/invert(_:range:)",
+    "taskGroups" : [
+
+    ],
+    "title" : "invert(_:range:)",
+    "usr" : "s:8SwiftViz9TimeScaleV6invert_5range10Foundation4DateV12CoreGraphics7CGFloatV_SNyAKGtF"
+  },
+  {
+    "availableLanguages" : [
+      "swift"
+    ],
+    "fragments" : [
+      {
+        "kind" : "keyword",
+        "text" : "let"
+      },
+      {
+        "kind" : "text",
+        "text" : " "
+      },
+      {
+        "kind" : "identifier",
+        "text" : "value"
+      },
+      {
+        "kind" : "text",
+        "text" : ": "
+      },
+      {
+        "kind" : "typeIdentifier",
+        "preciseIdentifier" : "s:12CoreGraphics7CGFloatV",
+        "text" : "CGFloat"
+      }
+    ],
+    "kind" : "org.swift.docc.kind.instanceProperty",
+    "language" : "swift",
+    "path" : "\/documentation\/swiftviz\/cgfloattick\/value",
+    "referenceURL" : "doc:\/\/com.github.swiftviz.SwiftViz\/documentation\/SwiftViz\/CGFloatTick\/value",
+    "taskGroups" : [
+
+    ],
+    "title" : "value",
+    "usr" : "s:8SwiftViz11CGFloatTickV5value12CoreGraphics0C0Vvp"
+  },
+  {
+    "abstract" : [
+      {
+        "text" : "static function on TickLabel that returns a default Formatter",
+        "type" : "text"
+      },
+      {
+        "text" : " ",
+        "type" : "text"
+      },
+      {
+        "text" : "object to assist in creating TickLabel instances",
+        "type" : "text"
+      }
+    ],
+    "availableLanguages" : [
+      "swift"
+    ],
+    "fragments" : [
+      {
+        "kind" : "keyword",
+        "text" : "static"
+      },
+      {
+        "kind" : "text",
+        "text" : " "
+      },
+      {
+        "kind" : "keyword",
+        "text" : "func"
+      },
+      {
+        "kind" : "text",
+        "text" : " "
+      },
+      {
+        "kind" : "identifier",
+        "text" : "makeDefaultFormatter"
+      },
+      {
+        "kind" : "text",
+        "text" : "() -> "
+      },
+      {
+        "kind" : "typeIdentifier",
+        "preciseIdentifier" : "c:objc(cs)NSFormatter",
+        "text" : "Formatter"
+      }
+    ],
+    "kind" : "org.swift.docc.kind.typeMethod",
+    "language" : "swift",
+    "path" : "\/documentation\/swiftviz\/ticklabel\/makedefaultformatter()",
+    "referenceURL" : "doc:\/\/com.github.swiftviz.SwiftViz\/documentation\/SwiftViz\/TickLabel\/makeDefaultFormatter()",
+    "taskGroups" : [
+
+    ],
+    "title" : "makeDefaultFormatter()",
+    "usr" : "s:8SwiftViz9TickLabelV20makeDefaultFormatterSo11NSFormatterCyFZ"
+  },
+  {
+    "availableLanguages" : [
+      "swift"
+    ],
+    "fragments" : [
+      {
+        "kind" : "keyword",
+        "text" : "typealias"
+      },
+      {
+        "kind" : "text",
+        "text" : " "
+      },
+      {
+        "kind" : "identifier",
+        "text" : "TickType"
+      }
+    ],
+    "kind" : "org.swift.docc.kind.typeAlias",
+    "language" : "swift",
+    "path" : "\/documentation\/swiftviz\/logscale\/ticktype",
+    "referenceURL" : "doc:\/\/com.github.swiftviz.SwiftViz\/documentation\/SwiftViz\/LogScale\/TickType",
+    "taskGroups" : [
+
+    ],
+    "title" : "LogScale.TickType",
+    "usr" : "s:8SwiftViz8LogScaleV8TickTypea"
+  },
+  {
+    "availableLanguages" : [
+      "swift"
+    ],
+    "fragments" : [
+      {
+        "kind" : "keyword",
+        "text" : "var"
+      },
+      {
+        "kind" : "text",
+        "text" : " "
+      },
+      {
+        "kind" : "identifier",
+        "text" : "id"
+      },
+      {
+        "kind" : "text",
+        "text" : ": "
+      },
+      {
+        "kind" : "typeIdentifier",
+        "preciseIdentifier" : "s:SO",
+        "text" : "ObjectIdentifier"
+      }
+    ],
+    "kind" : "org.swift.docc.kind.instanceProperty",
+    "language" : "swift",
+    "path" : "\/documentation\/swiftviz\/integertick\/id-6u65s",
+    "platforms" : [
+      {
+        "beta" : false,
+        "deprecated" : false,
+        "introducedAt" : "13.0",
+        "name" : "iOS",
+        "unavailable" : false
+      },
+      {
+        "beta" : false,
+        "deprecated" : false,
+        "introducedAt" : "10.15",
+        "name" : "macOS",
+        "unavailable" : false
+      },
+      {
+        "beta" : false,
+        "deprecated" : false,
+        "introducedAt" : "13.0",
+        "name" : "tvOS",
+        "unavailable" : false
+      },
+      {
+        "beta" : false,
+        "deprecated" : false,
+        "introducedAt" : "6.0",
+        "name" : "watchOS",
+        "unavailable" : false
+      }
+    ],
+    "referenceURL" : "doc:\/\/com.github.swiftviz.SwiftViz\/documentation\/SwiftViz\/IntegerTick\/id-6u65s",
+    "taskGroups" : [
+
+    ],
+    "title" : "id",
+    "usr" : "s:s12IdentifiablePsRlzCrlE2idSOvp::SYNTHESIZED::s:8SwiftViz11IntegerTickV"
+  },
+  {
+    "availableLanguages" : [
+      "swift"
+    ],
+    "fragments" : [
+      {
+        "kind" : "keyword",
+        "text" : "init"
+      },
+      {
+        "kind" : "text",
+        "text" : "("
+      },
+      {
+        "kind" : "externalParam",
+        "text" : "value"
+      },
+      {
+        "kind" : "text",
+        "text" : ": "
+      },
+      {
+        "kind" : "typeIdentifier",
+        "preciseIdentifier" : "s:10Foundation4DateV",
+        "text" : "Date"
+      },
+      {
+        "kind" : "text",
+        "text" : ", "
+      },
+      {
+        "kind" : "externalParam",
+        "text" : "location"
+      },
+      {
+        "kind" : "text",
+        "text" : ": "
+      },
+      {
+        "kind" : "typeIdentifier",
+        "preciseIdentifier" : "s:12CoreGraphics7CGFloatV",
+        "text" : "CGFloat"
+      },
+      {
+        "kind" : "text",
+        "text" : ")"
+      }
+    ],
+    "kind" : "org.swift.docc.kind.initializer",
+    "language" : "swift",
+    "path" : "\/documentation\/swiftviz\/datetick\/init(value:location:)",
+    "referenceURL" : "doc:\/\/com.github.swiftviz.SwiftViz\/documentation\/SwiftViz\/DateTick\/init(value:location:)",
+    "taskGroups" : [
+
+    ],
+    "title" : "init(value:location:)",
+    "usr" : "s:8SwiftViz8DateTickV5value8locationAC10Foundation0C0V_12CoreGraphics7CGFloatVtcfc"
+  },
+  {
+    "availableLanguages" : [
+      "swift"
+    ],
+    "fragments" : [
+      {
+        "kind" : "keyword",
+        "text" : "init"
+      },
+      {
+        "kind" : "text",
+        "text" : "("
+      },
+      {
+        "kind" : "externalParam",
+        "text" : "domain"
+      },
+      {
+        "kind" : "text",
+        "text" : ": "
+      },
+      {
+        "kind" : "typeIdentifier",
+        "preciseIdentifier" : "s:SN",
+        "text" : "ClosedRange"
+      },
+      {
+        "kind" : "text",
+        "text" : "<"
+      },
+      {
+        "kind" : "typeIdentifier",
+        "preciseIdentifier" : "s:12CoreGraphics7CGFloatV",
+        "text" : "CGFloat"
+      },
+      {
+        "kind" : "text",
+        "text" : ">, "
+      },
+      {
+        "kind" : "externalParam",
+        "text" : "isClamped"
+      },
+      {
+        "kind" : "text",
+        "text" : ": "
+      },
+      {
+        "kind" : "typeIdentifier",
+        "preciseIdentifier" : "s:Sb",
+        "text" : "Bool"
+      },
+      {
+        "kind" : "text",
+        "text" : ")"
+      }
+    ],
+    "kind" : "org.swift.docc.kind.initializer",
+    "language" : "swift",
+    "path" : "\/documentation\/swiftviz\/logscale\/init(domain:isclamped:)",
+    "referenceURL" : "doc:\/\/com.github.swiftviz.SwiftViz\/documentation\/SwiftViz\/LogScale\/init(domain:isClamped:)",
+    "taskGroups" : [
+
+    ],
+    "title" : "init(domain:isClamped:)",
+    "usr" : "s:8SwiftViz8LogScaleV6domain9isClampedACSNy12CoreGraphics7CGFloatVG_Sbtcfc"
+  },
+  {
+    "availableLanguages" : [
+      "swift"
+    ],
+    "kind" : "org.swift.docc.kind.collectionGroup",
+    "language" : "swift",
+    "path" : "\/documentation\/swiftviz\/linearscale\/scale-implementations",
+    "referenceURL" : "doc:\/\/com.github.swiftviz.SwiftViz\/documentation\/SwiftViz\/LinearScale\/Scale-Implementations",
+    "taskGroups" : [
+      {
+        "identifiers" : [
+          "doc:\/\/com.github.swiftviz.SwiftViz\/documentation\/SwiftViz\/LinearScale\/clampDomain(_:withinRange:)",
+          "doc:\/\/com.github.swiftviz.SwiftViz\/documentation\/SwiftViz\/LinearScale\/clampRange(_:withinRange:)",
+          "doc:\/\/com.github.swiftviz.SwiftViz\/documentation\/SwiftViz\/LinearScale\/labeledTickValues(_:range:)",
+          "doc:\/\/com.github.swiftviz.SwiftViz\/documentation\/SwiftViz\/LinearScale\/ticks(_:range:)",
+          "doc:\/\/com.github.swiftviz.SwiftViz\/documentation\/SwiftViz\/LinearScale\/validatedTickLabels(_:range:)"
+        ],
+        "title" : "Instance Methods"
+      }
+    ],
+    "title" : "Scale Implementations"
+  },
+  {
+    "availableLanguages" : [
+      "swift"
+    ],
+    "fragments" : [
+      {
+        "kind" : "keyword",
+        "text" : "func"
+      },
+      {
+        "kind" : "text",
+        "text" : " "
+      },
+      {
+        "kind" : "identifier",
+        "text" : "clampDomain"
+      },
+      {
+        "kind" : "text",
+        "text" : "("
+      },
+      {
+        "kind" : "typeIdentifier",
+        "preciseIdentifier" : "s:8SwiftViz5ScaleP9InputTypeQa",
+        "text" : "InputType"
+      },
+      {
+        "kind" : "text",
+        "text" : ", "
+      },
+      {
+        "kind" : "externalParam",
+        "text" : "withinRange"
+      },
+      {
+        "kind" : "text",
+        "text" : ": "
+      },
+      {
+        "kind" : "typeIdentifier",
+        "preciseIdentifier" : "s:SN",
+        "text" : "ClosedRange"
+      },
+      {
+        "kind" : "text",
+        "text" : "<"
+      },
+      {
+        "kind" : "typeIdentifier",
+        "preciseIdentifier" : "s:8SwiftViz5ScaleP9InputTypeQa",
+        "text" : "InputType"
+      },
+      {
+        "kind" : "text",
+        "text" : ">) -> "
+      },
+      {
+        "kind" : "typeIdentifier",
+        "preciseIdentifier" : "s:8SwiftViz5ScaleP9InputTypeQa",
+        "text" : "InputType"
+      }
+    ],
+    "kind" : "org.swift.docc.kind.instanceMethod",
+    "language" : "swift",
+    "path" : "\/documentation\/swiftviz\/scale\/clampdomain(_:withinrange:)",
+    "referenceURL" : "doc:\/\/com.github.swiftviz.SwiftViz\/documentation\/SwiftViz\/Scale\/clampDomain(_:withinRange:)",
+    "taskGroups" : [
+
+    ],
+    "title" : "clampDomain(_:withinRange:)",
+    "usr" : "s:8SwiftViz5ScalePAAE11clampDomain_11withinRange9InputTypeQzAG_SNyAGGtF"
+  },
+  {
+    "availableLanguages" : [
+      "swift"
+    ],
+    "fragments" : [
+      {
+        "kind" : "keyword",
+        "text" : "var"
+      },
+      {
+        "kind" : "text",
+        "text" : " "
+      },
+      {
+        "kind" : "identifier",
+        "text" : "id"
+      },
+      {
+        "kind" : "text",
+        "text" : ": "
+      },
+      {
+        "kind" : "typeIdentifier",
+        "preciseIdentifier" : "s:SO",
+        "text" : "ObjectIdentifier"
+      }
+    ],
+    "kind" : "org.swift.docc.kind.instanceProperty",
+    "language" : "swift",
+    "path" : "\/documentation\/swiftviz\/ticklabel\/id-1fm9l",
+    "platforms" : [
+      {
+        "beta" : false,
+        "deprecated" : false,
+        "introducedAt" : "13.0",
+        "name" : "iOS",
+        "unavailable" : false
+      },
+      {
+        "beta" : false,
+        "deprecated" : false,
+        "introducedAt" : "10.15",
+        "name" : "macOS",
+        "unavailable" : false
+      },
+      {
+        "beta" : false,
+        "deprecated" : false,
+        "introducedAt" : "13.0",
+        "name" : "tvOS",
+        "unavailable" : false
+      },
+      {
+        "beta" : false,
+        "deprecated" : false,
+        "introducedAt" : "6.0",
+        "name" : "watchOS",
+        "unavailable" : false
+      }
+    ],
+    "referenceURL" : "doc:\/\/com.github.swiftviz.SwiftViz\/documentation\/SwiftViz\/TickLabel\/id-1fm9l",
+    "taskGroups" : [
+
+    ],
+    "title" : "id",
+    "usr" : "s:s12IdentifiablePsRlzCrlE2idSOvp::SYNTHESIZED::s:8SwiftViz9TickLabelV"
+  },
+  {
+    "availableLanguages" : [
+      "swift"
+    ],
+    "fragments" : [
+      {
+        "kind" : "keyword",
+        "text" : "struct"
+      },
+      {
+        "kind" : "text",
+        "text" : " "
+      },
+      {
+        "kind" : "identifier",
+        "text" : "IntegerTick"
+      }
+    ],
+    "kind" : "org.swift.docc.kind.structure",
+    "language" : "swift",
+    "path" : "\/documentation\/swiftviz\/integertick",
+    "referenceURL" : "doc:\/\/com.github.swiftviz.SwiftViz\/documentation\/SwiftViz\/IntegerTick",
+    "taskGroups" : [
+      {
+        "identifiers" : [
+          "doc:\/\/com.github.swiftviz.SwiftViz\/documentation\/SwiftViz\/IntegerTick\/init(value:location:)"
+        ],
+        "title" : "Initializers"
+      },
+      {
+        "identifiers" : [
+          "doc:\/\/com.github.swiftviz.SwiftViz\/documentation\/SwiftViz\/IntegerTick\/id-1yqgu",
+          "doc:\/\/com.github.swiftviz.SwiftViz\/documentation\/SwiftViz\/IntegerTick\/rangeLocation",
+          "doc:\/\/com.github.swiftviz.SwiftViz\/documentation\/SwiftViz\/IntegerTick\/stringValue",
+          "doc:\/\/com.github.swiftviz.SwiftViz\/documentation\/SwiftViz\/IntegerTick\/value"
+        ],
+        "title" : "Instance Properties"
+      },
+      {
+        "identifiers" : [
+          "doc:\/\/com.github.swiftviz.SwiftViz\/documentation\/SwiftViz\/IntegerTick\/Identifiable-Implementations"
+        ],
+        "title" : "Default Implementations"
+      }
+    ],
+    "title" : "IntegerTick",
+    "usr" : "s:8SwiftViz11IntegerTickV"
+  },
+  {
+    "availableLanguages" : [
+      "swift"
+    ],
+    "fragments" : [
+      {
+        "kind" : "keyword",
+        "text" : "struct"
+      },
+      {
+        "kind" : "text",
+        "text" : " "
+      },
+      {
+        "kind" : "identifier",
+        "text" : "DateTick"
+      }
+    ],
+    "kind" : "org.swift.docc.kind.structure",
+    "language" : "swift",
+    "path" : "\/documentation\/swiftviz\/datetick",
+    "referenceURL" : "doc:\/\/com.github.swiftviz.SwiftViz\/documentation\/SwiftViz\/DateTick",
+    "taskGroups" : [
+      {
+        "identifiers" : [
+          "doc:\/\/com.github.swiftviz.SwiftViz\/documentation\/SwiftViz\/DateTick\/init(value:location:)"
+        ],
+        "title" : "Initializers"
+      },
+      {
+        "identifiers" : [
+          "doc:\/\/com.github.swiftviz.SwiftViz\/documentation\/SwiftViz\/DateTick\/id-9kysu",
+          "doc:\/\/com.github.swiftviz.SwiftViz\/documentation\/SwiftViz\/DateTick\/rangeLocation",
+          "doc:\/\/com.github.swiftviz.SwiftViz\/documentation\/SwiftViz\/DateTick\/value"
+        ],
+        "title" : "Instance Properties"
+      },
+      {
+        "identifiers" : [
+          "doc:\/\/com.github.swiftviz.SwiftViz\/documentation\/SwiftViz\/DateTick\/Identifiable-Implementations"
+        ],
+        "title" : "Default Implementations"
+      }
+    ],
+    "title" : "DateTick",
+    "usr" : "s:8SwiftViz8DateTickV"
+  },
+  {
+    "availableLanguages" : [
+      "swift"
+    ],
+    "fragments" : [
+      {
+        "kind" : "keyword",
+        "text" : "let"
+      },
+      {
+        "kind" : "text",
+        "text" : " "
+      },
+      {
+        "kind" : "identifier",
+        "text" : "rangeLocation"
+      },
+      {
+        "kind" : "text",
+        "text" : ": "
+      },
+      {
+        "kind" : "typeIdentifier",
+        "preciseIdentifier" : "s:12CoreGraphics7CGFloatV",
+        "text" : "CGFloat"
+      }
+    ],
+    "kind" : "org.swift.docc.kind.instanceProperty",
+    "language" : "swift",
+    "path" : "\/documentation\/swiftviz\/ticklabel\/rangelocation",
+    "referenceURL" : "doc:\/\/com.github.swiftviz.SwiftViz\/documentation\/SwiftViz\/TickLabel\/rangeLocation",
+    "taskGroups" : [
+
+    ],
+    "title" : "rangeLocation",
+    "usr" : "s:8SwiftViz9TickLabelV13rangeLocation12CoreGraphics7CGFloatVvp"
+  },
+  {
+    "availableLanguages" : [
+      "swift"
+    ],
+    "fragments" : [
+      {
+        "kind" : "keyword",
+        "text" : "let"
+      },
+      {
+        "kind" : "text",
+        "text" : " "
+      },
+      {
+        "kind" : "identifier",
+        "text" : "domain"
+      },
+      {
+        "kind" : "text",
+        "text" : ": "
+      },
+      {
+        "kind" : "typeIdentifier",
+        "preciseIdentifier" : "s:SN",
+        "text" : "ClosedRange"
+      },
+      {
+        "kind" : "text",
+        "text" : "<"
+      },
+      {
+        "kind" : "typeIdentifier",
+        "preciseIdentifier" : "s:12CoreGraphics7CGFloatV",
+        "text" : "CGFloat"
+      },
+      {
+        "kind" : "text",
+        "text" : ">"
+      }
+    ],
+    "kind" : "org.swift.docc.kind.instanceProperty",
+    "language" : "swift",
+    "path" : "\/documentation\/swiftviz\/linearscale\/domain",
+    "referenceURL" : "doc:\/\/com.github.swiftviz.SwiftViz\/documentation\/SwiftViz\/LinearScale\/domain",
+    "taskGroups" : [
+
+    ],
+    "title" : "domain",
+    "usr" : "s:8SwiftViz11LinearScaleV6domainSNy12CoreGraphics7CGFloatVGvp"
+  },
+  {
+    "availableLanguages" : [
+      "swift"
+    ],
+    "fragments" : [
+      {
+        "kind" : "keyword",
+        "text" : "typealias"
+      },
+      {
+        "kind" : "text",
+        "text" : " "
+      },
+      {
+        "kind" : "identifier",
+        "text" : "TickType"
+      }
+    ],
+    "kind" : "org.swift.docc.kind.typeAlias",
+    "language" : "swift",
+    "path" : "\/documentation\/swiftviz\/timescale\/ticktype",
+    "referenceURL" : "doc:\/\/com.github.swiftviz.SwiftViz\/documentation\/SwiftViz\/TimeScale\/TickType",
+    "taskGroups" : [
+
+    ],
+    "title" : "TimeScale.TickType",
+    "usr" : "s:8SwiftViz9TimeScaleV8TickTypea"
+  },
+  {
+    "availableLanguages" : [
+      "swift"
+    ],
+    "fragments" : [
+      {
+        "kind" : "keyword",
+        "text" : "let"
+      },
+      {
+        "kind" : "text",
+        "text" : " "
+      },
+      {
+        "kind" : "identifier",
+        "text" : "value"
+      },
+      {
+        "kind" : "text",
+        "text" : ": "
+      },
+      {
+        "kind" : "typeIdentifier",
+        "preciseIdentifier" : "s:10Foundation4DateV",
+        "text" : "Date"
+      }
+    ],
+    "kind" : "org.swift.docc.kind.instanceProperty",
+    "language" : "swift",
+    "path" : "\/documentation\/swiftviz\/datetick\/value",
+    "referenceURL" : "doc:\/\/com.github.swiftviz.SwiftViz\/documentation\/SwiftViz\/DateTick\/value",
+    "taskGroups" : [
+
+    ],
+    "title" : "value",
+    "usr" : "s:8SwiftViz8DateTickV5value10Foundation0C0Vvp"
+  },
+  {
+    "availableLanguages" : [
+      "swift"
+    ],
+    "fragments" : [
+      {
+        "kind" : "keyword",
+        "text" : "var"
+      },
+      {
+        "kind" : "text",
+        "text" : " "
+      },
+      {
+        "kind" : "identifier",
+        "text" : "isClamped"
+      },
+      {
+        "kind" : "text",
+        "text" : ": "
+      },
+      {
+        "kind" : "typeIdentifier",
+        "preciseIdentifier" : "s:Sb",
+        "text" : "Bool"
+      }
+    ],
+    "kind" : "org.swift.docc.kind.instanceProperty",
+    "language" : "swift",
+    "path" : "\/documentation\/swiftviz\/scale\/isclamped",
+    "referenceURL" : "doc:\/\/com.github.swiftviz.SwiftViz\/documentation\/SwiftViz\/Scale\/isClamped",
+    "taskGroups" : [
+
+    ],
+    "title" : "isClamped",
+    "usr" : "s:8SwiftViz5ScaleP9isClampedSbvp"
+  },
+  {
+    "availableLanguages" : [
+      "swift"
+    ],
+    "kind" : "org.swift.docc.kind.collectionGroup",
+    "language" : "swift",
+    "path" : "\/documentation\/swiftviz\/datetick\/identifiable-implementations",
+    "referenceURL" : "doc:\/\/com.github.swiftviz.SwiftViz\/documentation\/SwiftViz\/DateTick\/Identifiable-Implementations",
+    "taskGroups" : [
+      {
+        "identifiers" : [
+          "doc:\/\/com.github.swiftviz.SwiftViz\/documentation\/SwiftViz\/DateTick\/id-6hbjh"
+        ],
+        "title" : "Instance Properties"
+      }
+    ],
+    "title" : "Identifiable Implementations"
+  },
+  {
+    "abstract" : [
+      {
+        "text" : "Takes an set of labelled input values and returns the relevant set of TickLabels converted",
+        "type" : "text"
+      },
+      {
+        "text" : " ",
+        "type" : "text"
+      },
+      {
+        "text" : "to the correct location values associated with the provided range.",
+        "type" : "text"
+      }
+    ],
+    "availableLanguages" : [
+      "swift"
+    ],
+    "fragments" : [
+      {
+        "kind" : "keyword",
+        "text" : "func"
+      },
+      {
+        "kind" : "text",
+        "text" : " "
+      },
+      {
+        "kind" : "identifier",
+        "text" : "labeledTickValues"
+      },
+      {
+        "kind" : "text",
+        "text" : "([("
+      },
+      {
+        "kind" : "typeIdentifier",
+        "preciseIdentifier" : "s:8SwiftViz5ScaleP9InputTypeQa",
+        "text" : "InputType"
+      },
+      {
+        "kind" : "text",
+        "text" : ", "
+      },
+      {
+        "kind" : "typeIdentifier",
+        "preciseIdentifier" : "s:SS",
+        "text" : "String"
+      },
+      {
+        "kind" : "text",
+        "text" : ")], "
+      },
+      {
+        "kind" : "externalParam",
+        "text" : "range"
+      },
+      {
+        "kind" : "text",
+        "text" : ": "
+      },
+      {
+        "kind" : "typeIdentifier",
+        "preciseIdentifier" : "s:SN",
+        "text" : "ClosedRange"
+      },
+      {
+        "kind" : "text",
+        "text" : "<"
+      },
+      {
+        "kind" : "typeIdentifier",
+        "preciseIdentifier" : "s:12CoreGraphics7CGFloatV",
+        "text" : "CGFloat"
+      },
+      {
+        "kind" : "text",
+        "text" : ">) -> ["
+      },
+      {
+        "kind" : "typeIdentifier",
+        "preciseIdentifier" : "s:8SwiftViz9TickLabelV",
+        "text" : "TickLabel"
+      },
+      {
+        "kind" : "text",
+        "text" : "]"
+      }
+    ],
+    "kind" : "org.swift.docc.kind.instanceMethod",
+    "language" : "swift",
+    "path" : "\/documentation\/swiftviz\/scale\/labeledtickvalues(_:range:)",
+    "referenceURL" : "doc:\/\/com.github.swiftviz.SwiftViz\/documentation\/SwiftViz\/Scale\/labeledTickValues(_:range:)",
+    "taskGroups" : [
+
+    ],
+    "title" : "labeledTickValues(_:range:)",
+    "usr" : "s:8SwiftViz5ScalePAA8TickType_05InputE0QZAERtzrlE07labeledD6Values_5rangeSayAA0D5LabelVGSayAG_SStG_SNy12CoreGraphics7CGFloatVGtF"
+  },
+  {
+    "abstract" : [
+      {
+        "text" : "Validates a set of TickLabels against a given scale, removing any that don’t match the scale’s domain.",
+        "type" : "text"
+      }
+    ],
+    "availableLanguages" : [
+      "swift"
+    ],
+    "fragments" : [
+      {
+        "kind" : "keyword",
+        "text" : "func"
+      },
+      {
+        "kind" : "text",
+        "text" : " "
+      },
+      {
+        "kind" : "identifier",
+        "text" : "validatedTickLabels"
+      },
+      {
+        "kind" : "text",
+        "text" : "(["
+      },
+      {
+        "kind" : "typeIdentifier",
+        "preciseIdentifier" : "s:8SwiftViz9TickLabelV",
+        "text" : "TickLabel"
+      },
+      {
+        "kind" : "text",
+        "text" : "], "
+      },
+      {
+        "kind" : "externalParam",
+        "text" : "range"
+      },
+      {
+        "kind" : "text",
+        "text" : ": "
+      },
+      {
+        "kind" : "typeIdentifier",
+        "preciseIdentifier" : "s:SN",
+        "text" : "ClosedRange"
+      },
+      {
+        "kind" : "text",
+        "text" : "<"
+      },
+      {
+        "kind" : "typeIdentifier",
+        "preciseIdentifier" : "s:12CoreGraphics7CGFloatV",
+        "text" : "CGFloat"
+      },
+      {
+        "kind" : "text",
+        "text" : ">) -> ["
+      },
+      {
+        "kind" : "typeIdentifier",
+        "preciseIdentifier" : "s:8SwiftViz9TickLabelV",
+        "text" : "TickLabel"
+      },
+      {
+        "kind" : "text",
+        "text" : "]"
+      }
+    ],
+    "kind" : "org.swift.docc.kind.instanceMethod",
+    "language" : "swift",
+    "path" : "\/documentation\/swiftviz\/logscale\/validatedticklabels(_:range:)",
+    "referenceURL" : "doc:\/\/com.github.swiftviz.SwiftViz\/documentation\/SwiftViz\/LogScale\/validatedTickLabels(_:range:)",
+    "taskGroups" : [
+
+    ],
+    "title" : "validatedTickLabels(_:range:)",
+    "usr" : "s:8SwiftViz5ScalePAA8TickType_05InputE0QZAERtzrlE09validatedD6Labels_5rangeSayAA0D5LabelVGAL_SNy12CoreGraphics7CGFloatVGtF::SYNTHESIZED::s:8SwiftViz8LogScaleV"
+  },
+  {
+    "availableLanguages" : [
+      "swift"
+    ],
+    "fragments" : [
+      {
+        "kind" : "keyword",
+        "text" : "var"
+      },
+      {
+        "kind" : "text",
+        "text" : " "
+      },
+      {
+        "kind" : "identifier",
+        "text" : "id"
+      },
+      {
+        "kind" : "text",
+        "text" : ": "
+      },
+      {
+        "kind" : "typeIdentifier",
+        "preciseIdentifier" : "s:SO",
+        "text" : "ObjectIdentifier"
+      }
+    ],
+    "kind" : "org.swift.docc.kind.instanceProperty",
+    "language" : "swift",
+    "path" : "\/documentation\/swiftviz\/cgfloattick\/id-5vtvu",
+    "platforms" : [
+      {
+        "beta" : false,
+        "deprecated" : false,
+        "introducedAt" : "13.0",
+        "name" : "iOS",
+        "unavailable" : false
+      },
+      {
+        "beta" : false,
+        "deprecated" : false,
+        "introducedAt" : "10.15",
+        "name" : "macOS",
+        "unavailable" : false
+      },
+      {
+        "beta" : false,
+        "deprecated" : false,
+        "introducedAt" : "13.0",
+        "name" : "tvOS",
+        "unavailable" : false
+      },
+      {
+        "beta" : false,
+        "deprecated" : false,
+        "introducedAt" : "6.0",
+        "name" : "watchOS",
+        "unavailable" : false
+      }
+    ],
+    "referenceURL" : "doc:\/\/com.github.swiftviz.SwiftViz\/documentation\/SwiftViz\/CGFloatTick\/id-5vtvu",
+    "taskGroups" : [
+
+    ],
+    "title" : "id",
+    "usr" : "s:s12IdentifiablePsRlzCrlE2idSOvp::SYNTHESIZED::s:8SwiftViz11CGFloatTickV"
+  },
+  {
+    "availableLanguages" : [
+      "swift"
+    ],
+    "fragments" : [
+      {
+        "kind" : "keyword",
+        "text" : "associatedtype"
+      },
+      {
+        "kind" : "text",
+        "text" : " "
+      },
+      {
+        "kind" : "identifier",
+        "text" : "InputType"
+      },
+      {
+        "kind" : "text",
+        "text" : " : "
+      },
+      {
+        "kind" : "typeIdentifier",
+        "preciseIdentifier" : "s:SL",
+        "text" : "Comparable"
+      }
+    ],
+    "kind" : "org.swift.docc.kind.associatedType",
+    "language" : "swift",
+    "path" : "\/documentation\/swiftviz\/scale\/inputtype",
+    "referenceURL" : "doc:\/\/com.github.swiftviz.SwiftViz\/documentation\/SwiftViz\/Scale\/InputType",
+    "taskGroups" : [
+
+    ],
+    "title" : "InputType",
+    "usr" : "s:8SwiftViz5ScaleP9InputTypeQa"
+  },
+  {
+    "availableLanguages" : [
+      "swift"
+    ],
+    "fragments" : [
+      {
+        "kind" : "keyword",
+        "text" : "init"
+      },
+      {
+        "kind" : "text",
+        "text" : "("
+      },
+      {
+        "kind" : "externalParam",
+        "text" : "value"
+      },
+      {
+        "kind" : "text",
+        "text" : ": "
+      },
+      {
+        "kind" : "typeIdentifier",
+        "preciseIdentifier" : "s:Si",
+        "text" : "Int"
+      },
+      {
+        "kind" : "text",
+        "text" : ", "
+      },
+      {
+        "kind" : "externalParam",
+        "text" : "location"
+      },
+      {
+        "kind" : "text",
+        "text" : ": "
+      },
+      {
+        "kind" : "typeIdentifier",
+        "preciseIdentifier" : "s:12CoreGraphics7CGFloatV",
+        "text" : "CGFloat"
+      },
+      {
+        "kind" : "text",
+        "text" : ")"
+      }
+    ],
+    "kind" : "org.swift.docc.kind.initializer",
+    "language" : "swift",
+    "path" : "\/documentation\/swiftviz\/integertick\/init(value:location:)",
+    "referenceURL" : "doc:\/\/com.github.swiftviz.SwiftViz\/documentation\/SwiftViz\/IntegerTick\/init(value:location:)",
+    "taskGroups" : [
+
+    ],
+    "title" : "init(value:location:)",
+    "usr" : "s:8SwiftViz11IntegerTickV5value8locationACSi_12CoreGraphics7CGFloatVtcfc"
+  },
+  {
+    "abstract" : [
+      {
+        "text" : "inverts the scale, taking a value in the output range and returning the relevant value from the input domain",
+        "type" : "text"
+      }
+    ],
+    "availableLanguages" : [
+      "swift"
+    ],
+    "fragments" : [
+      {
+        "kind" : "keyword",
+        "text" : "func"
+      },
+      {
+        "kind" : "text",
+        "text" : " "
+      },
+      {
+        "kind" : "identifier",
+        "text" : "invert"
+      },
+      {
+        "kind" : "text",
+        "text" : "("
+      },
+      {
+        "kind" : "typeIdentifier",
+        "preciseIdentifier" : "s:12CoreGraphics7CGFloatV",
+        "text" : "CGFloat"
+      },
+      {
+        "kind" : "text",
+        "text" : ", "
+      },
+      {
+        "kind" : "externalParam",
+        "text" : "range"
+      },
+      {
+        "kind" : "text",
+        "text" : ": "
+      },
+      {
+        "kind" : "typeIdentifier",
+        "preciseIdentifier" : "s:SN",
+        "text" : "ClosedRange"
+      },
+      {
+        "kind" : "text",
+        "text" : "<"
+      },
+      {
+        "kind" : "typeIdentifier",
+        "preciseIdentifier" : "s:12CoreGraphics7CGFloatV",
+        "text" : "CGFloat"
+      },
+      {
+        "kind" : "text",
+        "text" : ">) -> "
+      },
+      {
+        "kind" : "typeIdentifier",
+        "preciseIdentifier" : "s:12CoreGraphics7CGFloatV",
+        "text" : "CGFloat"
+      }
+    ],
+    "kind" : "org.swift.docc.kind.instanceMethod",
+    "language" : "swift",
+    "path" : "\/documentation\/swiftviz\/linearscale\/invert(_:range:)",
+    "referenceURL" : "doc:\/\/com.github.swiftviz.SwiftViz\/documentation\/SwiftViz\/LinearScale\/invert(_:range:)",
+    "taskGroups" : [
+
+    ],
+    "title" : "invert(_:range:)",
+    "usr" : "s:8SwiftViz11LinearScaleV6invert_5range12CoreGraphics7CGFloatVAH_SNyAHGtF"
+  },
+  {
+    "availableLanguages" : [
+      "swift"
+    ],
+    "fragments" : [
+      {
+        "kind" : "keyword",
+        "text" : "typealias"
+      },
+      {
+        "kind" : "text",
+        "text" : " "
+      },
+      {
+        "kind" : "identifier",
+        "text" : "TickType"
+      }
+    ],
+    "kind" : "org.swift.docc.kind.typeAlias",
+    "language" : "swift",
+    "path" : "\/documentation\/swiftviz\/linearscale\/ticktype",
+    "referenceURL" : "doc:\/\/com.github.swiftviz.SwiftViz\/documentation\/SwiftViz\/LinearScale\/TickType",
+    "taskGroups" : [
+
+    ],
+    "title" : "LinearScale.TickType",
+    "usr" : "s:8SwiftViz11LinearScaleV8TickTypea"
+  },
+  {
+    "availableLanguages" : [
+      "swift"
+    ],
+    "kind" : "org.swift.docc.kind.collectionGroup",
+    "language" : "swift",
+    "path" : "\/documentation\/swiftviz\/integertick\/identifiable-implementations",
+    "referenceURL" : "doc:\/\/com.github.swiftviz.SwiftViz\/documentation\/SwiftViz\/IntegerTick\/Identifiable-Implementations",
+    "taskGroups" : [
+      {
+        "identifiers" : [
+          "doc:\/\/com.github.swiftviz.SwiftViz\/documentation\/SwiftViz\/IntegerTick\/id-6u65s"
+        ],
+        "title" : "Instance Properties"
+      }
+    ],
+    "title" : "Identifiable Implementations"
+  },
+  {
+    "abstract" : [
+      {
+        "text" : "A Tick is a visual representation of a point along an axis.",
+        "type" : "text"
+      },
+      {
+        "text" : " ",
+        "type" : "text"
+      },
+      {
+        "text" : "When created based on a range, it includes a location along a single direction",
+        "type" : "text"
+      },
+      {
+        "text" : " ",
+        "type" : "text"
+      },
+      {
+        "text" : "and a textual representation. It is meant to be created using a Scale, with some input domain",
+        "type" : "text"
+      },
+      {
+        "text" : " ",
+        "type" : "text"
+      },
+      {
+        "text" : "being mapped to visualization using the Scale’s output range.",
+        "type" : "text"
+      }
+    ],
+    "availableLanguages" : [
+      "swift"
+    ],
+    "fragments" : [
+      {
+        "kind" : "keyword",
+        "text" : "protocol"
+      },
+      {
+        "kind" : "text",
+        "text" : " "
+      },
+      {
+        "kind" : "identifier",
+        "text" : "Tick"
+      }
+    ],
+    "kind" : "org.swift.docc.kind.protocol",
+    "language" : "swift",
+    "path" : "\/documentation\/swiftviz\/tick",
+    "referenceURL" : "doc:\/\/com.github.swiftviz.SwiftViz\/documentation\/SwiftViz\/Tick",
+    "taskGroups" : [
+      {
+        "identifiers" : [
+          "doc:\/\/com.github.swiftviz.SwiftViz\/documentation\/SwiftViz\/Tick\/InputType"
+        ],
+        "title" : "Associated Types"
+      },
+      {
+        "identifiers" : [
+          "doc:\/\/com.github.swiftviz.SwiftViz\/documentation\/SwiftViz\/Tick\/init(value:location:)"
+        ],
+        "title" : "Initializers"
+      },
+      {
+        "identifiers" : [
+          "doc:\/\/com.github.swiftviz.SwiftViz\/documentation\/SwiftViz\/Tick\/id",
+          "doc:\/\/com.github.swiftviz.SwiftViz\/documentation\/SwiftViz\/Tick\/rangeLocation",
+          "doc:\/\/com.github.swiftviz.SwiftViz\/documentation\/SwiftViz\/Tick\/value"
+        ],
+        "title" : "Instance Properties"
+      }
+    ],
+    "title" : "Tick",
+    "usr" : "s:8SwiftViz4TickP"
+  },
+  {
+    "availableLanguages" : [
+      "swift"
+    ],
+    "fragments" : [
+      {
+        "kind" : "keyword",
+        "text" : "protocol"
+      },
+      {
+        "kind" : "text",
+        "text" : " "
+      },
+      {
+        "kind" : "identifier",
+        "text" : "Scale"
+      }
+    ],
+    "kind" : "org.swift.docc.kind.protocol",
+    "language" : "swift",
+    "path" : "\/documentation\/swiftviz\/scale",
+    "referenceURL" : "doc:\/\/com.github.swiftviz.SwiftViz\/documentation\/SwiftViz\/Scale",
+    "taskGroups" : [
+      {
+        "identifiers" : [
+          "doc:\/\/com.github.swiftviz.SwiftViz\/documentation\/SwiftViz\/Scale\/InputType",
+          "doc:\/\/com.github.swiftviz.SwiftViz\/documentation\/SwiftViz\/Scale\/TickType"
+        ],
+        "title" : "Associated Types"
+      },
+      {
+        "identifiers" : [
+          "doc:\/\/com.github.swiftviz.SwiftViz\/documentation\/SwiftViz\/Scale\/domain",
+          "doc:\/\/com.github.swiftviz.SwiftViz\/documentation\/SwiftViz\/Scale\/isClamped"
+        ],
+        "title" : "Instance Properties"
+      },
+      {
+        "identifiers" : [
+          "doc:\/\/com.github.swiftviz.SwiftViz\/documentation\/SwiftViz\/Scale\/clampDomain(_:withinRange:)",
+          "doc:\/\/com.github.swiftviz.SwiftViz\/documentation\/SwiftViz\/Scale\/clampRange(_:withinRange:)",
+          "doc:\/\/com.github.swiftviz.SwiftViz\/documentation\/SwiftViz\/Scale\/invert(_:range:)",
+          "doc:\/\/com.github.swiftviz.SwiftViz\/documentation\/SwiftViz\/Scale\/labeledTickValues(_:range:)",
+          "doc:\/\/com.github.swiftviz.SwiftViz\/documentation\/SwiftViz\/Scale\/scale(_:range:)",
+          "doc:\/\/com.github.swiftviz.SwiftViz\/documentation\/SwiftViz\/Scale\/ticks(_:range:)",
+          "doc:\/\/com.github.swiftviz.SwiftViz\/documentation\/SwiftViz\/Scale\/ticks(count:range:)",
+          "doc:\/\/com.github.swiftviz.SwiftViz\/documentation\/SwiftViz\/Scale\/validatedTickLabels(_:range:)"
+        ],
+        "title" : "Instance Methods"
+      }
+    ],
+    "title" : "Scale",
+    "usr" : "s:8SwiftViz5ScaleP"
+  },
+  {
+    "availableLanguages" : [
+      "swift"
+    ],
+    "fragments" : [
+      {
+        "kind" : "keyword",
+        "text" : "associatedtype"
+      },
+      {
+        "kind" : "text",
+        "text" : " "
+      },
+      {
+        "kind" : "identifier",
+        "text" : "InputType"
+      },
+      {
+        "kind" : "text",
+        "text" : " : "
+      },
+      {
+        "kind" : "typeIdentifier",
+        "preciseIdentifier" : "s:SL",
+        "text" : "Comparable"
+      }
+    ],
+    "kind" : "org.swift.docc.kind.associatedType",
+    "language" : "swift",
+    "path" : "\/documentation\/swiftviz\/tick\/inputtype",
+    "referenceURL" : "doc:\/\/com.github.swiftviz.SwiftViz\/documentation\/SwiftViz\/Tick\/InputType",
+    "taskGroups" : [
+
+    ],
+    "title" : "InputType",
+    "usr" : "s:8SwiftViz4TickP9InputTypeQa"
+  },
+  {
+    "availableLanguages" : [
+      "swift"
+    ],
+    "fragments" : [
+      {
+        "kind" : "keyword",
+        "text" : "var"
+      },
+      {
+        "kind" : "text",
+        "text" : " "
+      },
+      {
+        "kind" : "identifier",
+        "text" : "id"
+      },
+      {
+        "kind" : "text",
+        "text" : ": "
+      },
+      {
+        "kind" : "typeIdentifier",
+        "preciseIdentifier" : "s:SO",
+        "text" : "ObjectIdentifier"
+      }
+    ],
+    "kind" : "org.swift.docc.kind.instanceProperty",
+    "language" : "swift",
+    "path" : "\/documentation\/swiftviz\/doubletick\/id-1yzs",
+    "platforms" : [
+      {
+        "beta" : false,
+        "deprecated" : false,
+        "introducedAt" : "13.0",
+        "name" : "iOS",
+        "unavailable" : false
+      },
+      {
+        "beta" : false,
+        "deprecated" : false,
+        "introducedAt" : "10.15",
+        "name" : "macOS",
+        "unavailable" : false
+      },
+      {
+        "beta" : false,
+        "deprecated" : false,
+        "introducedAt" : "13.0",
+        "name" : "tvOS",
+        "unavailable" : false
+      },
+      {
+        "beta" : false,
+        "deprecated" : false,
+        "introducedAt" : "6.0",
+        "name" : "watchOS",
+        "unavailable" : false
+      }
+    ],
+    "referenceURL" : "doc:\/\/com.github.swiftviz.SwiftViz\/documentation\/SwiftViz\/DoubleTick\/id-1yzs",
+    "taskGroups" : [
+
+    ],
+    "title" : "id",
+    "usr" : "s:s12IdentifiablePsRlzCrlE2idSOvp::SYNTHESIZED::s:8SwiftViz10DoubleTickV"
+  },
+  {
+    "abstract" : [
+      {
+        "text" : "converts back from the output “range” to a value within",
+        "type" : "text"
+      },
+      {
+        "text" : " ",
+        "type" : "text"
+      },
+      {
+        "text" : "the input “domain”. The inverse of scale()",
+        "type" : "text"
+      }
+    ],
+    "availableLanguages" : [
+      "swift"
+    ],
+    "fragments" : [
+      {
+        "kind" : "keyword",
+        "text" : "func"
+      },
+      {
+        "kind" : "text",
+        "text" : " "
+      },
+      {
+        "kind" : "identifier",
+        "text" : "invert"
+      },
+      {
+        "kind" : "text",
+        "text" : "("
+      },
+      {
+        "kind" : "typeIdentifier",
+        "preciseIdentifier" : "s:12CoreGraphics7CGFloatV",
+        "text" : "CGFloat"
+      },
+      {
+        "kind" : "text",
+        "text" : ", "
+      },
+      {
+        "kind" : "externalParam",
+        "text" : "range"
+      },
+      {
+        "kind" : "text",
+        "text" : ": "
+      },
+      {
+        "kind" : "typeIdentifier",
+        "preciseIdentifier" : "s:SN",
+        "text" : "ClosedRange"
+      },
+      {
+        "kind" : "text",
+        "text" : "<"
+      },
+      {
+        "kind" : "typeIdentifier",
+        "preciseIdentifier" : "s:12CoreGraphics7CGFloatV",
+        "text" : "CGFloat"
+      },
+      {
+        "kind" : "text",
+        "text" : ">) -> "
+      },
+      {
+        "kind" : "typeIdentifier",
+        "preciseIdentifier" : "s:8SwiftViz5ScaleP9InputTypeQa",
+        "text" : "InputType"
+      }
+    ],
+    "kind" : "org.swift.docc.kind.instanceMethod",
+    "language" : "swift",
+    "path" : "\/documentation\/swiftviz\/scale\/invert(_:range:)",
+    "referenceURL" : "doc:\/\/com.github.swiftviz.SwiftViz\/documentation\/SwiftViz\/Scale\/invert(_:range:)",
+    "taskGroups" : [
+
+    ],
+    "title" : "invert(_:range:)",
+    "usr" : "s:8SwiftViz5ScaleP6invert_5range9InputTypeQz12CoreGraphics7CGFloatV_SNyAJGtF"
+  },
+  {
+    "availableLanguages" : [
+      "swift"
+    ],
+    "fragments" : [
+      {
+        "kind" : "keyword",
+        "text" : "let"
+      },
+      {
+        "kind" : "text",
+        "text" : " "
+      },
+      {
+        "kind" : "identifier",
+        "text" : "id"
+      },
+      {
+        "kind" : "text",
+        "text" : ": "
+      },
+      {
+        "kind" : "typeIdentifier",
+        "preciseIdentifier" : "s:10Foundation4UUIDV",
+        "text" : "UUID"
+      }
+    ],
+    "kind" : "org.swift.docc.kind.instanceProperty",
+    "language" : "swift",
+    "path" : "\/documentation\/swiftviz\/cgfloattick\/id-9diks",
+    "referenceURL" : "doc:\/\/com.github.swiftviz.SwiftViz\/documentation\/SwiftViz\/CGFloatTick\/id-9diks",
+    "taskGroups" : [
+
+    ],
+    "title" : "id",
+    "usr" : "s:8SwiftViz11CGFloatTickV2id10Foundation4UUIDVvp"
+  },
+  {
+    "availableLanguages" : [
+      "swift"
+    ],
+    "fragments" : [
+      {
+        "kind" : "keyword",
+        "text" : "func"
+      },
+      {
+        "kind" : "text",
+        "text" : " "
+      },
+      {
+        "kind" : "identifier",
+        "text" : "clampRange"
+      },
+      {
+        "kind" : "text",
+        "text" : "("
+      },
+      {
+        "kind" : "typeIdentifier",
+        "preciseIdentifier" : "s:12CoreGraphics7CGFloatV",
+        "text" : "CGFloat"
+      },
+      {
+        "kind" : "text",
+        "text" : ", "
+      },
+      {
+        "kind" : "externalParam",
+        "text" : "withinRange"
+      },
+      {
+        "kind" : "text",
+        "text" : ": "
+      },
+      {
+        "kind" : "typeIdentifier",
+        "preciseIdentifier" : "s:SN",
+        "text" : "ClosedRange"
+      },
+      {
+        "kind" : "text",
+        "text" : "<"
+      },
+      {
+        "kind" : "typeIdentifier",
+        "preciseIdentifier" : "s:12CoreGraphics7CGFloatV",
+        "text" : "CGFloat"
+      },
+      {
+        "kind" : "text",
+        "text" : ">) -> "
+      },
+      {
+        "kind" : "typeIdentifier",
+        "preciseIdentifier" : "s:12CoreGraphics7CGFloatV",
+        "text" : "CGFloat"
+      }
+    ],
+    "kind" : "org.swift.docc.kind.instanceMethod",
+    "language" : "swift",
+    "path" : "\/documentation\/swiftviz\/linearscale\/clamprange(_:withinrange:)",
+    "referenceURL" : "doc:\/\/com.github.swiftviz.SwiftViz\/documentation\/SwiftViz\/LinearScale\/clampRange(_:withinRange:)",
+    "taskGroups" : [
+
+    ],
+    "title" : "clampRange(_:withinRange:)",
+    "usr" : "s:8SwiftViz5ScalePAAE10clampRange_06withinE012CoreGraphics7CGFloatVAH_SNyAHGtF::SYNTHESIZED::s:8SwiftViz11LinearScaleV"
+  },
+  {
+    "availableLanguages" : [
+      "swift"
+    ],
+    "fragments" : [
+      {
+        "kind" : "keyword",
+        "text" : "let"
+      },
+      {
+        "kind" : "text",
+        "text" : " "
+      },
+      {
+        "kind" : "identifier",
+        "text" : "rangeLocation"
+      },
+      {
+        "kind" : "text",
+        "text" : ": "
+      },
+      {
+        "kind" : "typeIdentifier",
+        "preciseIdentifier" : "s:12CoreGraphics7CGFloatV",
+        "text" : "CGFloat"
+      }
+    ],
+    "kind" : "org.swift.docc.kind.instanceProperty",
+    "language" : "swift",
+    "path" : "\/documentation\/swiftviz\/datetick\/rangelocation",
+    "referenceURL" : "doc:\/\/com.github.swiftviz.SwiftViz\/documentation\/SwiftViz\/DateTick\/rangeLocation",
+    "taskGroups" : [
+
+    ],
+    "title" : "rangeLocation",
+    "usr" : "s:8SwiftViz8DateTickV13rangeLocation12CoreGraphics7CGFloatVvp"
+  },
+  {
+    "availableLanguages" : [
+      "swift"
+    ],
+    "fragments" : [
+      {
+        "kind" : "keyword",
+        "text" : "var"
+      },
+      {
+        "kind" : "text",
+        "text" : " "
+      },
+      {
+        "kind" : "identifier",
+        "text" : "id"
+      },
+      {
+        "kind" : "text",
+        "text" : ": "
+      },
+      {
+        "kind" : "typeIdentifier",
+        "preciseIdentifier" : "s:SO",
+        "text" : "ObjectIdentifier"
+      }
+    ],
+    "kind" : "org.swift.docc.kind.instanceProperty",
+    "language" : "swift",
+    "path" : "\/documentation\/swiftviz\/datetick\/id-6hbjh",
+    "platforms" : [
+      {
+        "beta" : false,
+        "deprecated" : false,
+        "introducedAt" : "13.0",
+        "name" : "iOS",
+        "unavailable" : false
+      },
+      {
+        "beta" : false,
+        "deprecated" : false,
+        "introducedAt" : "10.15",
+        "name" : "macOS",
+        "unavailable" : false
+      },
+      {
+        "beta" : false,
+        "deprecated" : false,
+        "introducedAt" : "13.0",
+        "name" : "tvOS",
+        "unavailable" : false
+      },
+      {
+        "beta" : false,
+        "deprecated" : false,
+        "introducedAt" : "6.0",
+        "name" : "watchOS",
+        "unavailable" : false
+      }
+    ],
+    "referenceURL" : "doc:\/\/com.github.swiftviz.SwiftViz\/documentation\/SwiftViz\/DateTick\/id-6hbjh",
+    "taskGroups" : [
+
+    ],
+    "title" : "id",
+    "usr" : "s:s12IdentifiablePsRlzCrlE2idSOvp::SYNTHESIZED::s:8SwiftViz8DateTickV"
+  },
+  {
+    "abstract" : [
+      {
+        "text" : "Converts an array of values of the Scale’s InputType into a set of Ticks.",
+        "type" : "text"
+      },
+      {
+        "text" : " ",
+        "type" : "text"
+      },
+      {
+        "text" : "Used for manually specifying a series of ticks that you want to have displayed.",
+        "type" : "text"
+      }
+    ],
+    "availableLanguages" : [
+      "swift"
+    ],
+    "fragments" : [
+      {
+        "kind" : "keyword",
+        "text" : "func"
+      },
+      {
+        "kind" : "text",
+        "text" : " "
+      },
+      {
+        "kind" : "identifier",
+        "text" : "ticks"
+      },
+      {
+        "kind" : "text",
+        "text" : "(["
+      },
+      {
+        "kind" : "typeIdentifier",
+        "preciseIdentifier" : "s:8SwiftViz5ScaleP9InputTypeQa",
+        "text" : "InputType"
+      },
+      {
+        "kind" : "text",
+        "text" : "], "
+      },
+      {
+        "kind" : "externalParam",
+        "text" : "range"
+      },
+      {
+        "kind" : "text",
+        "text" : ": "
+      },
+      {
+        "kind" : "typeIdentifier",
+        "preciseIdentifier" : "s:SN",
+        "text" : "ClosedRange"
+      },
+      {
+        "kind" : "text",
+        "text" : "<"
+      },
+      {
+        "kind" : "typeIdentifier",
+        "preciseIdentifier" : "s:12CoreGraphics7CGFloatV",
+        "text" : "CGFloat"
+      },
+      {
+        "kind" : "text",
+        "text" : ">) -> ["
+      },
+      {
+        "kind" : "typeIdentifier",
+        "preciseIdentifier" : "s:8SwiftViz5ScaleP8TickTypeQa",
+        "text" : "TickType"
+      },
+      {
+        "kind" : "text",
+        "text" : "]"
+      }
+    ],
+    "kind" : "org.swift.docc.kind.instanceMethod",
+    "language" : "swift",
+    "path" : "\/documentation\/swiftviz\/timescale\/ticks(_:range:)",
+    "referenceURL" : "doc:\/\/com.github.swiftviz.SwiftViz\/documentation\/SwiftViz\/TimeScale\/ticks(_:range:)",
+    "taskGroups" : [
+
+    ],
+    "title" : "ticks(_:range:)",
+    "usr" : "s:8SwiftViz5ScalePAA8TickType_05InputE0QZAERtzrlE5ticks_5rangeSayADQzGSayAGG_SNy12CoreGraphics7CGFloatVGtF::SYNTHESIZED::s:8SwiftViz9TimeScaleV"
+  },
+  {
+    "availableLanguages" : [
+      "swift"
+    ],
+    "fragments" : [
+      {
+        "kind" : "keyword",
+        "text" : "let"
+      },
+      {
+        "kind" : "text",
+        "text" : " "
+      },
+      {
+        "kind" : "identifier",
+        "text" : "id"
+      },
+      {
+        "kind" : "text",
+        "text" : ": "
+      },
+      {
+        "kind" : "typeIdentifier",
+        "preciseIdentifier" : "s:10Foundation4UUIDV",
+        "text" : "UUID"
+      }
+    ],
+    "kind" : "org.swift.docc.kind.instanceProperty",
+    "language" : "swift",
+    "path" : "\/documentation\/swiftviz\/ticklabel\/id-8zchb",
+    "referenceURL" : "doc:\/\/com.github.swiftviz.SwiftViz\/documentation\/SwiftViz\/TickLabel\/id-8zchb",
+    "taskGroups" : [
+
+    ],
+    "title" : "id",
+    "usr" : "s:8SwiftViz9TickLabelV2id10Foundation4UUIDVvp"
+  },
+  {
+    "availableLanguages" : [
+      "swift"
+    ],
+    "fragments" : [
+      {
+        "kind" : "keyword",
+        "text" : "var"
+      },
+      {
+        "kind" : "text",
+        "text" : " "
+      },
+      {
+        "kind" : "identifier",
+        "text" : "stringValue"
+      },
+      {
+        "kind" : "text",
+        "text" : ": "
+      },
+      {
+        "kind" : "typeIdentifier",
+        "preciseIdentifier" : "s:SS",
+        "text" : "String"
+      }
+    ],
+    "kind" : "org.swift.docc.kind.instanceProperty",
+    "language" : "swift",
+    "path" : "\/documentation\/swiftviz\/integertick\/stringvalue",
+    "referenceURL" : "doc:\/\/com.github.swiftviz.SwiftViz\/documentation\/SwiftViz\/IntegerTick\/stringValue",
+    "taskGroups" : [
+
+    ],
+    "title" : "stringValue",
+    "usr" : "s:8SwiftViz11IntegerTickV11stringValueSSvp"
+  },
+  {
+    "availableLanguages" : [
+      "swift"
+    ],
+    "fragments" : [
+      {
+        "kind" : "keyword",
+        "text" : "var"
+      },
+      {
+        "kind" : "text",
+        "text" : " "
+      },
+      {
+        "kind" : "identifier",
+        "text" : "rangeLocation"
+      },
+      {
+        "kind" : "text",
+        "text" : ": "
+      },
+      {
+        "kind" : "typeIdentifier",
+        "preciseIdentifier" : "s:12CoreGraphics7CGFloatV",
+        "text" : "CGFloat"
+      }
+    ],
+    "kind" : "org.swift.docc.kind.instanceProperty",
+    "language" : "swift",
+    "path" : "\/documentation\/swiftviz\/tick\/rangelocation",
+    "referenceURL" : "doc:\/\/com.github.swiftviz.SwiftViz\/documentation\/SwiftViz\/Tick\/rangeLocation",
+    "taskGroups" : [
+
+    ],
+    "title" : "rangeLocation",
+    "usr" : "s:8SwiftViz4TickP13rangeLocation12CoreGraphics7CGFloatVvp"
+  },
+  {
+    "abstract" : [
+      {
+        "text" : "converts a value between the input “domain” and output “range”",
+        "type" : "text"
+      }
+    ],
+    "availableLanguages" : [
+      "swift"
+    ],
+    "fragments" : [
+      {
+        "kind" : "keyword",
+        "text" : "func"
+      },
+      {
+        "kind" : "text",
+        "text" : " "
+      },
+      {
+        "kind" : "identifier",
+        "text" : "scale"
+      },
+      {
+        "kind" : "text",
+        "text" : "("
+      },
+      {
+        "kind" : "typeIdentifier",
+        "preciseIdentifier" : "s:8SwiftViz5ScaleP9InputTypeQa",
+        "text" : "InputType"
+      },
+      {
+        "kind" : "text",
+        "text" : ", "
+      },
+      {
+        "kind" : "externalParam",
+        "text" : "range"
+      },
+      {
+        "kind" : "text",
+        "text" : ": "
+      },
+      {
+        "kind" : "typeIdentifier",
+        "preciseIdentifier" : "s:SN",
+        "text" : "ClosedRange"
+      },
+      {
+        "kind" : "text",
+        "text" : "<"
+      },
+      {
+        "kind" : "typeIdentifier",
+        "preciseIdentifier" : "s:12CoreGraphics7CGFloatV",
+        "text" : "CGFloat"
+      },
+      {
+        "kind" : "text",
+        "text" : ">) -> "
+      },
+      {
+        "kind" : "typeIdentifier",
+        "preciseIdentifier" : "s:12CoreGraphics7CGFloatV",
+        "text" : "CGFloat"
+      }
+    ],
+    "kind" : "org.swift.docc.kind.instanceMethod",
+    "language" : "swift",
+    "path" : "\/documentation\/swiftviz\/scale\/scale(_:range:)",
+    "referenceURL" : "doc:\/\/com.github.swiftviz.SwiftViz\/documentation\/SwiftViz\/Scale\/scale(_:range:)",
+    "taskGroups" : [
+
+    ],
+    "title" : "scale(_:range:)",
+    "usr" : "s:8SwiftViz5ScaleP5scale_5range12CoreGraphics7CGFloatV9InputTypeQz_SNyAHGtF"
+  },
+  {
+    "availableLanguages" : [
+      "swift"
+    ],
+    "fragments" : [
+      {
+        "kind" : "keyword",
+        "text" : "var"
+      },
+      {
+        "kind" : "text",
+        "text" : " "
+      },
+      {
+        "kind" : "identifier",
+        "text" : "stringValue"
+      },
+      {
+        "kind" : "text",
+        "text" : ": "
+      },
+      {
+        "kind" : "typeIdentifier",
+        "preciseIdentifier" : "s:SS",
+        "text" : "String"
+      }
+    ],
+    "kind" : "org.swift.docc.kind.instanceProperty",
+    "language" : "swift",
+    "path" : "\/documentation\/swiftviz\/doubletick\/stringvalue",
+    "referenceURL" : "doc:\/\/com.github.swiftviz.SwiftViz\/documentation\/SwiftViz\/DoubleTick\/stringValue",
+    "taskGroups" : [
+
+    ],
+    "title" : "stringValue",
+    "usr" : "s:8SwiftViz10DoubleTickV11stringValueSSvp"
+  },
+  {
+    "abstract" : [
+      {
+        "text" : "Takes an set of labelled input values and returns the relevant set of TickLabels converted",
+        "type" : "text"
+      },
+      {
+        "text" : " ",
+        "type" : "text"
+      },
+      {
+        "text" : "to the correct location values associated with the provided range.",
+        "type" : "text"
+      }
+    ],
+    "availableLanguages" : [
+      "swift"
+    ],
+    "fragments" : [
+      {
+        "kind" : "keyword",
+        "text" : "func"
+      },
+      {
+        "kind" : "text",
+        "text" : " "
+      },
+      {
+        "kind" : "identifier",
+        "text" : "labeledTickValues"
+      },
+      {
+        "kind" : "text",
+        "text" : "([("
+      },
+      {
+        "kind" : "typeIdentifier",
+        "preciseIdentifier" : "s:8SwiftViz5ScaleP9InputTypeQa",
+        "text" : "InputType"
+      },
+      {
+        "kind" : "text",
+        "text" : ", "
+      },
+      {
+        "kind" : "typeIdentifier",
+        "preciseIdentifier" : "s:SS",
+        "text" : "String"
+      },
+      {
+        "kind" : "text",
+        "text" : ")], "
+      },
+      {
+        "kind" : "externalParam",
+        "text" : "range"
+      },
+      {
+        "kind" : "text",
+        "text" : ": "
+      },
+      {
+        "kind" : "typeIdentifier",
+        "preciseIdentifier" : "s:SN",
+        "text" : "ClosedRange"
+      },
+      {
+        "kind" : "text",
+        "text" : "<"
+      },
+      {
+        "kind" : "typeIdentifier",
+        "preciseIdentifier" : "s:12CoreGraphics7CGFloatV",
+        "text" : "CGFloat"
+      },
+      {
+        "kind" : "text",
+        "text" : ">) -> ["
+      },
+      {
+        "kind" : "typeIdentifier",
+        "preciseIdentifier" : "s:8SwiftViz9TickLabelV",
+        "text" : "TickLabel"
+      },
+      {
+        "kind" : "text",
+        "text" : "]"
+      }
+    ],
+    "kind" : "org.swift.docc.kind.instanceMethod",
+    "language" : "swift",
+    "path" : "\/documentation\/swiftviz\/timescale\/labeledtickvalues(_:range:)",
+    "referenceURL" : "doc:\/\/com.github.swiftviz.SwiftViz\/documentation\/SwiftViz\/TimeScale\/labeledTickValues(_:range:)",
+    "taskGroups" : [
+
+    ],
+    "title" : "labeledTickValues(_:range:)",
+    "usr" : "s:8SwiftViz5ScalePAA8TickType_05InputE0QZAERtzrlE07labeledD6Values_5rangeSayAA0D5LabelVGSayAG_SStG_SNy12CoreGraphics7CGFloatVGtF::SYNTHESIZED::s:8SwiftViz9TimeScaleV"
+  },
+  {
+    "availableLanguages" : [
+      "swift"
+    ],
+    "fragments" : [
+      {
+        "kind" : "keyword",
+        "text" : "let"
+      },
+      {
+        "kind" : "text",
+        "text" : " "
+      },
+      {
+        "kind" : "identifier",
+        "text" : "value"
+      },
+      {
+        "kind" : "text",
+        "text" : ": "
+      },
+      {
+        "kind" : "typeIdentifier",
+        "preciseIdentifier" : "s:SS",
+        "text" : "String"
+      }
+    ],
+    "kind" : "org.swift.docc.kind.instanceProperty",
+    "language" : "swift",
+    "path" : "\/documentation\/swiftviz\/ticklabel\/value",
+    "referenceURL" : "doc:\/\/com.github.swiftviz.SwiftViz\/documentation\/SwiftViz\/TickLabel\/value",
+    "taskGroups" : [
+
+    ],
+    "title" : "value",
+    "usr" : "s:8SwiftViz9TickLabelV5valueSSvp"
+  },
+  {
+    "abstract" : [
+      {
+        "text" : "scales the input value (within domain) per the scale",
+        "type" : "text"
+      },
+      {
+        "text" : " ",
+        "type" : "text"
+      },
+      {
+        "text" : "to the relevant output (using range)",
+        "type" : "text"
+      }
+    ],
+    "availableLanguages" : [
+      "swift"
+    ],
+    "fragments" : [
+      {
+        "kind" : "keyword",
+        "text" : "func"
+      },
+      {
+        "kind" : "text",
+        "text" : " "
+      },
+      {
+        "kind" : "identifier",
+        "text" : "scale"
+      },
+      {
+        "kind" : "text",
+        "text" : "("
+      },
+      {
+        "kind" : "typeIdentifier",
+        "preciseIdentifier" : "s:12CoreGraphics7CGFloatV",
+        "text" : "CGFloat"
+      },
+      {
+        "kind" : "text",
+        "text" : ", "
+      },
+      {
+        "kind" : "externalParam",
+        "text" : "range"
+      },
+      {
+        "kind" : "text",
+        "text" : ": "
+      },
+      {
+        "kind" : "typeIdentifier",
+        "preciseIdentifier" : "s:SN",
+        "text" : "ClosedRange"
+      },
+      {
+        "kind" : "text",
+        "text" : "<"
+      },
+      {
+        "kind" : "typeIdentifier",
+        "preciseIdentifier" : "s:12CoreGraphics7CGFloatV",
+        "text" : "CGFloat"
+      },
+      {
+        "kind" : "text",
+        "text" : ">) -> "
+      },
+      {
+        "kind" : "typeIdentifier",
+        "preciseIdentifier" : "s:12CoreGraphics7CGFloatV",
+        "text" : "CGFloat"
+      }
+    ],
+    "kind" : "org.swift.docc.kind.instanceMethod",
+    "language" : "swift",
+    "path" : "\/documentation\/swiftviz\/logscale\/scale(_:range:)",
+    "referenceURL" : "doc:\/\/com.github.swiftviz.SwiftViz\/documentation\/SwiftViz\/LogScale\/scale(_:range:)",
+    "taskGroups" : [
+
+    ],
+    "title" : "scale(_:range:)",
+    "usr" : "s:8SwiftViz8LogScaleV5scale_5range12CoreGraphics7CGFloatVAH_SNyAHGtF"
+  },
+  {
+    "availableLanguages" : [
+      "swift"
+    ],
+    "kind" : "org.swift.docc.kind.collectionGroup",
+    "language" : "swift",
+    "path" : "\/documentation\/swiftviz\/logscale\/scale-implementations",
+    "referenceURL" : "doc:\/\/com.github.swiftviz.SwiftViz\/documentation\/SwiftViz\/LogScale\/Scale-Implementations",
+    "taskGroups" : [
+      {
+        "identifiers" : [
+          "doc:\/\/com.github.swiftviz.SwiftViz\/documentation\/SwiftViz\/LogScale\/clampDomain(_:withinRange:)",
+          "doc:\/\/com.github.swiftviz.SwiftViz\/documentation\/SwiftViz\/LogScale\/clampRange(_:withinRange:)",
+          "doc:\/\/com.github.swiftviz.SwiftViz\/documentation\/SwiftViz\/LogScale\/labeledTickValues(_:range:)",
+          "doc:\/\/com.github.swiftviz.SwiftViz\/documentation\/SwiftViz\/LogScale\/ticks(_:range:)",
+          "doc:\/\/com.github.swiftviz.SwiftViz\/documentation\/SwiftViz\/LogScale\/validatedTickLabels(_:range:)"
+        ],
+        "title" : "Instance Methods"
+      }
+    ],
+    "title" : "Scale Implementations"
+  },
+  {
+    "availableLanguages" : [
+      "swift"
+    ],
+    "fragments" : [
+      {
+        "kind" : "keyword",
+        "text" : "let"
+      },
+      {
+        "kind" : "text",
+        "text" : " "
+      },
+      {
+        "kind" : "identifier",
+        "text" : "isClamped"
+      },
+      {
+        "kind" : "text",
+        "text" : ": "
+      },
+      {
+        "kind" : "typeIdentifier",
+        "preciseIdentifier" : "s:Sb",
+        "text" : "Bool"
+      }
+    ],
+    "kind" : "org.swift.docc.kind.instanceProperty",
+    "language" : "swift",
+    "path" : "\/documentation\/swiftviz\/logscale\/isclamped",
+    "referenceURL" : "doc:\/\/com.github.swiftviz.SwiftViz\/documentation\/SwiftViz\/LogScale\/isClamped",
+    "taskGroups" : [
+
+    ],
+    "title" : "isClamped",
+    "usr" : "s:8SwiftViz8LogScaleV9isClampedSbvp"
+  },
+  {
+    "availableLanguages" : [
+      "swift"
+    ],
+    "fragments" : [
+      {
+        "kind" : "keyword",
+        "text" : "func"
+      },
+      {
+        "kind" : "text",
+        "text" : " "
+      },
+      {
+        "kind" : "identifier",
+        "text" : "clampRange"
+      },
+      {
+        "kind" : "text",
+        "text" : "("
+      },
+      {
+        "kind" : "typeIdentifier",
+        "preciseIdentifier" : "s:12CoreGraphics7CGFloatV",
+        "text" : "CGFloat"
+      },
+      {
+        "kind" : "text",
+        "text" : ", "
+      },
+      {
+        "kind" : "externalParam",
+        "text" : "withinRange"
+      },
+      {
+        "kind" : "text",
+        "text" : ": "
+      },
+      {
+        "kind" : "typeIdentifier",
+        "preciseIdentifier" : "s:SN",
+        "text" : "ClosedRange"
+      },
+      {
+        "kind" : "text",
+        "text" : "<"
+      },
+      {
+        "kind" : "typeIdentifier",
+        "preciseIdentifier" : "s:12CoreGraphics7CGFloatV",
+        "text" : "CGFloat"
+      },
+      {
+        "kind" : "text",
+        "text" : ">) -> "
+      },
+      {
+        "kind" : "typeIdentifier",
+        "preciseIdentifier" : "s:12CoreGraphics7CGFloatV",
+        "text" : "CGFloat"
+      }
+    ],
+    "kind" : "org.swift.docc.kind.instanceMethod",
+    "language" : "swift",
+    "path" : "\/documentation\/swiftviz\/logscale\/clamprange(_:withinrange:)",
+    "referenceURL" : "doc:\/\/com.github.swiftviz.SwiftViz\/documentation\/SwiftViz\/LogScale\/clampRange(_:withinRange:)",
+    "taskGroups" : [
+
+    ],
+    "title" : "clampRange(_:withinRange:)",
+    "usr" : "s:8SwiftViz5ScalePAAE10clampRange_06withinE012CoreGraphics7CGFloatVAH_SNyAHGtF::SYNTHESIZED::s:8SwiftViz8LogScaleV"
+  },
+  {
+    "abstract" : [
+      {
+        "text" : "Converts an array of values of the Scale’s InputType into a set of Ticks.",
+        "type" : "text"
+      },
+      {
+        "text" : " ",
+        "type" : "text"
+      },
+      {
+        "text" : "Used for manually specifying a series of ticks that you want to have displayed.",
+        "type" : "text"
+      }
+    ],
+    "availableLanguages" : [
+      "swift"
+    ],
+    "fragments" : [
+      {
+        "kind" : "keyword",
+        "text" : "func"
+      },
+      {
+        "kind" : "text",
+        "text" : " "
+      },
+      {
+        "kind" : "identifier",
+        "text" : "ticks"
+      },
+      {
+        "kind" : "text",
+        "text" : "(["
+      },
+      {
+        "kind" : "typeIdentifier",
+        "preciseIdentifier" : "s:8SwiftViz5ScaleP9InputTypeQa",
+        "text" : "InputType"
+      },
+      {
+        "kind" : "text",
+        "text" : "], "
+      },
+      {
+        "kind" : "externalParam",
+        "text" : "range"
+      },
+      {
+        "kind" : "text",
+        "text" : ": "
+      },
+      {
+        "kind" : "typeIdentifier",
+        "preciseIdentifier" : "s:SN",
+        "text" : "ClosedRange"
+      },
+      {
+        "kind" : "text",
+        "text" : "<"
+      },
+      {
+        "kind" : "typeIdentifier",
+        "preciseIdentifier" : "s:12CoreGraphics7CGFloatV",
+        "text" : "CGFloat"
+      },
+      {
+        "kind" : "text",
+        "text" : ">) -> ["
+      },
+      {
+        "kind" : "typeIdentifier",
+        "preciseIdentifier" : "s:8SwiftViz5ScaleP8TickTypeQa",
+        "text" : "TickType"
+      },
+      {
+        "kind" : "text",
+        "text" : "]"
+      }
+    ],
+    "kind" : "org.swift.docc.kind.instanceMethod",
+    "language" : "swift",
+    "path" : "\/documentation\/swiftviz\/linearscale\/ticks(_:range:)",
+    "referenceURL" : "doc:\/\/com.github.swiftviz.SwiftViz\/documentation\/SwiftViz\/LinearScale\/ticks(_:range:)",
+    "taskGroups" : [
+
+    ],
+    "title" : "ticks(_:range:)",
+    "usr" : "s:8SwiftViz5ScalePAA8TickType_05InputE0QZAERtzrlE5ticks_5rangeSayADQzGSayAGG_SNy12CoreGraphics7CGFloatVGtF::SYNTHESIZED::s:8SwiftViz11LinearScaleV"
+  },
+  {
+    "availableLanguages" : [
+      "swift"
+    ],
+    "fragments" : [
+      {
+        "kind" : "keyword",
+        "text" : "var"
+      },
+      {
+        "kind" : "text",
+        "text" : " "
+      },
+      {
+        "kind" : "identifier",
+        "text" : "domain"
+      },
+      {
+        "kind" : "text",
+        "text" : ": "
+      },
+      {
+        "kind" : "typeIdentifier",
+        "preciseIdentifier" : "s:SN",
+        "text" : "ClosedRange"
+      },
+      {
+        "kind" : "text",
+        "text" : "<"
+      },
+      {
+        "kind" : "typeIdentifier",
+        "preciseIdentifier" : "s:8SwiftViz5ScaleP9InputTypeQa",
+        "text" : "InputType"
+      },
+      {
+        "kind" : "text",
+        "text" : ">"
+      }
+    ],
+    "kind" : "org.swift.docc.kind.instanceProperty",
+    "language" : "swift",
+    "path" : "\/documentation\/swiftviz\/scale\/domain",
+    "referenceURL" : "doc:\/\/com.github.swiftviz.SwiftViz\/documentation\/SwiftViz\/Scale\/domain",
+    "taskGroups" : [
+
+    ],
+    "title" : "domain",
+    "usr" : "s:8SwiftViz5ScaleP6domainSNy9InputTypeQzGvp"
+  },
+  {
+    "availableLanguages" : [
+      "swift"
+    ],
+    "fragments" : [
+      {
+        "kind" : "keyword",
+        "text" : "init"
+      },
+      {
+        "kind" : "text",
+        "text" : "("
+      },
+      {
+        "kind" : "externalParam",
+        "text" : "value"
+      },
+      {
+        "kind" : "text",
+        "text" : ": "
+      },
+      {
+        "kind" : "typeIdentifier",
+        "preciseIdentifier" : "s:8SwiftViz4TickP9InputTypeQa",
+        "text" : "InputType"
+      },
+      {
+        "kind" : "text",
+        "text" : ", "
+      },
+      {
+        "kind" : "externalParam",
+        "text" : "location"
+      },
+      {
+        "kind" : "text",
+        "text" : ": "
+      },
+      {
+        "kind" : "typeIdentifier",
+        "preciseIdentifier" : "s:12CoreGraphics7CGFloatV",
+        "text" : "CGFloat"
+      },
+      {
+        "kind" : "text",
+        "text" : ")"
+      }
+    ],
+    "kind" : "org.swift.docc.kind.initializer",
+    "language" : "swift",
+    "path" : "\/documentation\/swiftviz\/tick\/init(value:location:)",
+    "referenceURL" : "doc:\/\/com.github.swiftviz.SwiftViz\/documentation\/SwiftViz\/Tick\/init(value:location:)",
+    "taskGroups" : [
+
+    ],
+    "title" : "init(value:location:)",
+    "usr" : "s:8SwiftViz4TickP5value8locationx9InputTypeQz_12CoreGraphics7CGFloatVtcfc"
+  },
+  {
+    "availableLanguages" : [
+      "swift"
+    ],
+    "fragments" : [
+      {
+        "kind" : "keyword",
+        "text" : "init"
+      },
+      {
+        "kind" : "text",
+        "text" : "("
+      },
+      {
+        "kind" : "externalParam",
+        "text" : "domain"
+      },
+      {
+        "kind" : "text",
+        "text" : ": "
+      },
+      {
+        "kind" : "typeIdentifier",
+        "preciseIdentifier" : "s:SN",
+        "text" : "ClosedRange"
+      },
+      {
+        "kind" : "text",
+        "text" : "<"
+      },
+      {
+        "kind" : "typeIdentifier",
+        "preciseIdentifier" : "s:10Foundation4DateV",
+        "text" : "Date"
+      },
+      {
+        "kind" : "text",
+        "text" : ">, "
+      },
+      {
+        "kind" : "externalParam",
+        "text" : "isClamped"
+      },
+      {
+        "kind" : "text",
+        "text" : ": "
+      },
+      {
+        "kind" : "typeIdentifier",
+        "preciseIdentifier" : "s:Sb",
+        "text" : "Bool"
+      },
+      {
+        "kind" : "text",
+        "text" : ")"
+      }
+    ],
+    "kind" : "org.swift.docc.kind.initializer",
+    "language" : "swift",
+    "path" : "\/documentation\/swiftviz\/timescale\/init(domain:isclamped:)",
+    "referenceURL" : "doc:\/\/com.github.swiftviz.SwiftViz\/documentation\/SwiftViz\/TimeScale\/init(domain:isClamped:)",
+    "taskGroups" : [
+
+    ],
+    "title" : "init(domain:isClamped:)",
+    "usr" : "s:8SwiftViz9TimeScaleV6domain9isClampedACSNy10Foundation4DateVG_Sbtcfc"
+  },
+  {
+    "abstract" : [
+      {
+        "text" : "Validates a set of TickLabels against a given scale, removing any that don’t match the scale’s domain.",
+        "type" : "text"
+      }
+    ],
+    "availableLanguages" : [
+      "swift"
+    ],
+    "fragments" : [
+      {
+        "kind" : "keyword",
+        "text" : "func"
+      },
+      {
+        "kind" : "text",
+        "text" : " "
+      },
+      {
+        "kind" : "identifier",
+        "text" : "validatedTickLabels"
+      },
+      {
+        "kind" : "text",
+        "text" : "(["
+      },
+      {
+        "kind" : "typeIdentifier",
+        "preciseIdentifier" : "s:8SwiftViz9TickLabelV",
+        "text" : "TickLabel"
+      },
+      {
+        "kind" : "text",
+        "text" : "], "
+      },
+      {
+        "kind" : "externalParam",
+        "text" : "range"
+      },
+      {
+        "kind" : "text",
+        "text" : ": "
+      },
+      {
+        "kind" : "typeIdentifier",
+        "preciseIdentifier" : "s:SN",
+        "text" : "ClosedRange"
+      },
+      {
+        "kind" : "text",
+        "text" : "<"
+      },
+      {
+        "kind" : "typeIdentifier",
+        "preciseIdentifier" : "s:12CoreGraphics7CGFloatV",
+        "text" : "CGFloat"
+      },
+      {
+        "kind" : "text",
+        "text" : ">) -> ["
+      },
+      {
+        "kind" : "typeIdentifier",
+        "preciseIdentifier" : "s:8SwiftViz9TickLabelV",
+        "text" : "TickLabel"
+      },
+      {
+        "kind" : "text",
+        "text" : "]"
+      }
+    ],
+    "kind" : "org.swift.docc.kind.instanceMethod",
+    "language" : "swift",
+    "path" : "\/documentation\/swiftviz\/scale\/validatedticklabels(_:range:)",
+    "referenceURL" : "doc:\/\/com.github.swiftviz.SwiftViz\/documentation\/SwiftViz\/Scale\/validatedTickLabels(_:range:)",
+    "taskGroups" : [
+
+    ],
+    "title" : "validatedTickLabels(_:range:)",
+    "usr" : "s:8SwiftViz5ScalePAA8TickType_05InputE0QZAERtzrlE09validatedD6Labels_5rangeSayAA0D5LabelVGAL_SNy12CoreGraphics7CGFloatVGtF"
+  },
+  {
+    "abstract" : [
+      {
+        "text" : "scales the input value (within domain) per the scale",
+        "type" : "text"
+      },
+      {
+        "text" : " ",
+        "type" : "text"
+      },
+      {
+        "text" : "to the relevant output (using range)",
+        "type" : "text"
+      }
+    ],
+    "availableLanguages" : [
+      "swift"
+    ],
+    "fragments" : [
+      {
+        "kind" : "keyword",
+        "text" : "func"
+      },
+      {
+        "kind" : "text",
+        "text" : " "
+      },
+      {
+        "kind" : "identifier",
+        "text" : "scale"
+      },
+      {
+        "kind" : "text",
+        "text" : "("
+      },
+      {
+        "kind" : "typeIdentifier",
+        "preciseIdentifier" : "s:12CoreGraphics7CGFloatV",
+        "text" : "CGFloat"
+      },
+      {
+        "kind" : "text",
+        "text" : ", "
+      },
+      {
+        "kind" : "externalParam",
+        "text" : "range"
+      },
+      {
+        "kind" : "text",
+        "text" : ": "
+      },
+      {
+        "kind" : "typeIdentifier",
+        "preciseIdentifier" : "s:SN",
+        "text" : "ClosedRange"
+      },
+      {
+        "kind" : "text",
+        "text" : "<"
+      },
+      {
+        "kind" : "typeIdentifier",
+        "preciseIdentifier" : "s:12CoreGraphics7CGFloatV",
+        "text" : "CGFloat"
+      },
+      {
+        "kind" : "text",
+        "text" : ">) -> "
+      },
+      {
+        "kind" : "typeIdentifier",
+        "preciseIdentifier" : "s:12CoreGraphics7CGFloatV",
+        "text" : "CGFloat"
+      }
+    ],
+    "kind" : "org.swift.docc.kind.instanceMethod",
+    "language" : "swift",
+    "path" : "\/documentation\/swiftviz\/linearscale\/scale(_:range:)",
+    "referenceURL" : "doc:\/\/com.github.swiftviz.SwiftViz\/documentation\/SwiftViz\/LinearScale\/scale(_:range:)",
+    "taskGroups" : [
+
+    ],
+    "title" : "scale(_:range:)",
+    "usr" : "s:8SwiftViz11LinearScaleV5scale_5range12CoreGraphics7CGFloatVAH_SNyAHGtF"
+  },
+  {
+    "abstract" : [
+      {
+        "text" : "scales the input value (within domain) per the scale to the relevant output (using range)",
+        "type" : "text"
+      }
+    ],
+    "availableLanguages" : [
+      "swift"
+    ],
+    "fragments" : [
+      {
+        "kind" : "keyword",
+        "text" : "func"
+      },
+      {
+        "kind" : "text",
+        "text" : " "
+      },
+      {
+        "kind" : "identifier",
+        "text" : "scale"
+      },
+      {
+        "kind" : "text",
+        "text" : "("
+      },
+      {
+        "kind" : "typeIdentifier",
+        "preciseIdentifier" : "s:8SwiftViz9TimeScaleV",
+        "text" : "TimeScale"
+      },
+      {
+        "kind" : "text",
+        "text" : "."
+      },
+      {
+        "kind" : "typeIdentifier",
+        "preciseIdentifier" : "s:8SwiftViz9TimeScaleV9InputTypea",
+        "text" : "InputType"
+      },
+      {
+        "kind" : "text",
+        "text" : ", "
+      },
+      {
+        "kind" : "externalParam",
+        "text" : "range"
+      },
+      {
+        "kind" : "text",
+        "text" : ": "
+      },
+      {
+        "kind" : "typeIdentifier",
+        "preciseIdentifier" : "s:SN",
+        "text" : "ClosedRange"
+      },
+      {
+        "kind" : "text",
+        "text" : "<"
+      },
+      {
+        "kind" : "typeIdentifier",
+        "preciseIdentifier" : "s:12CoreGraphics7CGFloatV",
+        "text" : "CGFloat"
+      },
+      {
+        "kind" : "text",
+        "text" : ">) -> "
+      },
+      {
+        "kind" : "typeIdentifier",
+        "preciseIdentifier" : "s:12CoreGraphics7CGFloatV",
+        "text" : "CGFloat"
+      }
+    ],
+    "kind" : "org.swift.docc.kind.instanceMethod",
+    "language" : "swift",
+    "path" : "\/documentation\/swiftviz\/timescale\/scale(_:range:)",
+    "referenceURL" : "doc:\/\/com.github.swiftviz.SwiftViz\/documentation\/SwiftViz\/TimeScale\/scale(_:range:)",
+    "taskGroups" : [
+
+    ],
+    "title" : "scale(_:range:)",
+    "usr" : "s:8SwiftViz9TimeScaleV5scale_5range12CoreGraphics7CGFloatV10Foundation4DateV_SNyAHGtF"
+  },
+  {
+    "availableLanguages" : [
+      "swift"
+    ],
+    "fragments" : [
+      {
+        "kind" : "keyword",
+        "text" : "func"
+      },
+      {
+        "kind" : "text",
+        "text" : " "
+      },
+      {
+        "kind" : "identifier",
+        "text" : "clampRange"
+      },
+      {
+        "kind" : "text",
+        "text" : "("
+      },
+      {
+        "kind" : "typeIdentifier",
+        "preciseIdentifier" : "s:12CoreGraphics7CGFloatV",
+        "text" : "CGFloat"
+      },
+      {
+        "kind" : "text",
+        "text" : ", "
+      },
+      {
+        "kind" : "externalParam",
+        "text" : "withinRange"
+      },
+      {
+        "kind" : "text",
+        "text" : ": "
+      },
+      {
+        "kind" : "typeIdentifier",
+        "preciseIdentifier" : "s:SN",
+        "text" : "ClosedRange"
+      },
+      {
+        "kind" : "text",
+        "text" : "<"
+      },
+      {
+        "kind" : "typeIdentifier",
+        "preciseIdentifier" : "s:12CoreGraphics7CGFloatV",
+        "text" : "CGFloat"
+      },
+      {
+        "kind" : "text",
+        "text" : ">) -> "
+      },
+      {
+        "kind" : "typeIdentifier",
+        "preciseIdentifier" : "s:12CoreGraphics7CGFloatV",
+        "text" : "CGFloat"
+      }
+    ],
+    "kind" : "org.swift.docc.kind.instanceMethod",
+    "language" : "swift",
+    "path" : "\/documentation\/swiftviz\/scale\/clamprange(_:withinrange:)",
+    "referenceURL" : "doc:\/\/com.github.swiftviz.SwiftViz\/documentation\/SwiftViz\/Scale\/clampRange(_:withinRange:)",
+    "taskGroups" : [
+
+    ],
+    "title" : "clampRange(_:withinRange:)",
+    "usr" : "s:8SwiftViz5ScalePAAE10clampRange_06withinE012CoreGraphics7CGFloatVAH_SNyAHGtF"
+  },
+  {
+    "availableLanguages" : [
+      "swift"
+    ],
+    "fragments" : [
+      {
+        "kind" : "keyword",
+        "text" : "func"
+      },
+      {
+        "kind" : "text",
+        "text" : " "
+      },
+      {
+        "kind" : "identifier",
+        "text" : "clampDomain"
+      },
+      {
+        "kind" : "text",
+        "text" : "("
+      },
+      {
+        "kind" : "typeIdentifier",
+        "preciseIdentifier" : "s:8SwiftViz5ScaleP9InputTypeQa",
+        "text" : "InputType"
+      },
+      {
+        "kind" : "text",
+        "text" : ", "
+      },
+      {
+        "kind" : "externalParam",
+        "text" : "withinRange"
+      },
+      {
+        "kind" : "text",
+        "text" : ": "
+      },
+      {
+        "kind" : "typeIdentifier",
+        "preciseIdentifier" : "s:SN",
+        "text" : "ClosedRange"
+      },
+      {
+        "kind" : "text",
+        "text" : "<"
+      },
+      {
+        "kind" : "typeIdentifier",
+        "preciseIdentifier" : "s:8SwiftViz5ScaleP9InputTypeQa",
+        "text" : "InputType"
+      },
+      {
+        "kind" : "text",
+        "text" : ">) -> "
+      },
+      {
+        "kind" : "typeIdentifier",
+        "preciseIdentifier" : "s:8SwiftViz5ScaleP9InputTypeQa",
+        "text" : "InputType"
+      }
+    ],
+    "kind" : "org.swift.docc.kind.instanceMethod",
+    "language" : "swift",
+    "path" : "\/documentation\/swiftviz\/logscale\/clampdomain(_:withinrange:)",
+    "referenceURL" : "doc:\/\/com.github.swiftviz.SwiftViz\/documentation\/SwiftViz\/LogScale\/clampDomain(_:withinRange:)",
+    "taskGroups" : [
+
+    ],
+    "title" : "clampDomain(_:withinRange:)",
+    "usr" : "s:8SwiftViz5ScalePAAE11clampDomain_11withinRange9InputTypeQzAG_SNyAGGtF::SYNTHESIZED::s:8SwiftViz8LogScaleV"
+  },
+  {
+    "abstract" : [
+      {
+        "text" : "returns an array of the locations of ticks - (value, location)",
+        "type" : "text"
+      }
+    ],
+    "availableLanguages" : [
+      "swift"
+    ],
+    "fragments" : [
+      {
+        "kind" : "keyword",
+        "text" : "func"
+      },
+      {
+        "kind" : "text",
+        "text" : " "
+      },
+      {
+        "kind" : "identifier",
+        "text" : "ticks"
+      },
+      {
+        "kind" : "text",
+        "text" : "("
+      },
+      {
+        "kind" : "externalParam",
+        "text" : "count"
+      },
+      {
+        "kind" : "text",
+        "text" : ": "
+      },
+      {
+        "kind" : "typeIdentifier",
+        "preciseIdentifier" : "s:Si",
+        "text" : "Int"
+      },
+      {
+        "kind" : "text",
+        "text" : ", "
+      },
+      {
+        "kind" : "externalParam",
+        "text" : "range"
+      },
+      {
+        "kind" : "text",
+        "text" : ": "
+      },
+      {
+        "kind" : "typeIdentifier",
+        "preciseIdentifier" : "s:SN",
+        "text" : "ClosedRange"
+      },
+      {
+        "kind" : "text",
+        "text" : "<"
+      },
+      {
+        "kind" : "typeIdentifier",
+        "preciseIdentifier" : "s:12CoreGraphics7CGFloatV",
+        "text" : "CGFloat"
+      },
+      {
+        "kind" : "text",
+        "text" : ">) -> ["
+      },
+      {
+        "kind" : "typeIdentifier",
+        "preciseIdentifier" : "s:8SwiftViz11CGFloatTickV",
+        "text" : "CGFloatTick"
+      },
+      {
+        "kind" : "text",
+        "text" : "]"
+      }
+    ],
+    "kind" : "org.swift.docc.kind.instanceMethod",
+    "language" : "swift",
+    "path" : "\/documentation\/swiftviz\/logscale\/ticks(count:range:)",
+    "referenceURL" : "doc:\/\/com.github.swiftviz.SwiftViz\/documentation\/SwiftViz\/LogScale\/ticks(count:range:)",
+    "taskGroups" : [
+
+    ],
+    "title" : "ticks(count:range:)",
+    "usr" : "s:8SwiftViz8LogScaleV5ticks5count5rangeSayAA11CGFloatTickVGSi_SNy12CoreGraphics0H0VGtF"
+  },
+  {
+    "abstract" : [
+      {
+        "text" : "A linear scale is created using a continuous input domain and provides methods to",
+        "type" : "text"
+      },
+      {
+        "text" : " ",
+        "type" : "text"
+      },
+      {
+        "text" : "convert values within that domain to an output range.",
+        "type" : "text"
+      }
+    ],
+    "availableLanguages" : [
+      "swift"
+    ],
+    "fragments" : [
+      {
+        "kind" : "keyword",
+        "text" : "struct"
+      },
+      {
+        "kind" : "text",
+        "text" : " "
+      },
+      {
+        "kind" : "identifier",
+        "text" : "LogScale"
+      }
+    ],
+    "kind" : "org.swift.docc.kind.structure",
+    "language" : "swift",
+    "path" : "\/documentation\/swiftviz\/logscale",
+    "referenceURL" : "doc:\/\/com.github.swiftviz.SwiftViz\/documentation\/SwiftViz\/LogScale",
+    "taskGroups" : [
+      {
+        "identifiers" : [
+          "doc:\/\/com.github.swiftviz.SwiftViz\/documentation\/SwiftViz\/LogScale\/init(domain:isClamped:)"
+        ],
+        "title" : "Initializers"
+      },
+      {
+        "identifiers" : [
+          "doc:\/\/com.github.swiftviz.SwiftViz\/documentation\/SwiftViz\/LogScale\/domain",
+          "doc:\/\/com.github.swiftviz.SwiftViz\/documentation\/SwiftViz\/LogScale\/isClamped"
+        ],
+        "title" : "Instance Properties"
+      },
+      {
+        "identifiers" : [
+          "doc:\/\/com.github.swiftviz.SwiftViz\/documentation\/SwiftViz\/LogScale\/invert(_:range:)",
+          "doc:\/\/com.github.swiftviz.SwiftViz\/documentation\/SwiftViz\/LogScale\/scale(_:range:)",
+          "doc:\/\/com.github.swiftviz.SwiftViz\/documentation\/SwiftViz\/LogScale\/ticks(count:range:)"
+        ],
+        "title" : "Instance Methods"
+      },
+      {
+        "identifiers" : [
+          "doc:\/\/com.github.swiftviz.SwiftViz\/documentation\/SwiftViz\/LogScale\/InputType",
+          "doc:\/\/com.github.swiftviz.SwiftViz\/documentation\/SwiftViz\/LogScale\/TickType"
+        ],
+        "title" : "Type Aliases"
+      },
+      {
+        "identifiers" : [
+          "doc:\/\/com.github.swiftviz.SwiftViz\/documentation\/SwiftViz\/LogScale\/Scale-Implementations"
+        ],
+        "title" : "Default Implementations"
+      }
+    ],
+    "title" : "LogScale",
+    "usr" : "s:8SwiftViz8LogScaleV"
+  },
+  {
+    "abstract" : [
+      {
+        "text" : "Takes an set of labelled input values and returns the relevant set of TickLabels converted",
+        "type" : "text"
+      },
+      {
+        "text" : " ",
+        "type" : "text"
+      },
+      {
+        "text" : "to the correct location values associated with the provided range.",
+        "type" : "text"
+      }
+    ],
+    "availableLanguages" : [
+      "swift"
+    ],
+    "fragments" : [
+      {
+        "kind" : "keyword",
+        "text" : "func"
+      },
+      {
+        "kind" : "text",
+        "text" : " "
+      },
+      {
+        "kind" : "identifier",
+        "text" : "labeledTickValues"
+      },
+      {
+        "kind" : "text",
+        "text" : "([("
+      },
+      {
+        "kind" : "typeIdentifier",
+        "preciseIdentifier" : "s:8SwiftViz5ScaleP9InputTypeQa",
+        "text" : "InputType"
+      },
+      {
+        "kind" : "text",
+        "text" : ", "
+      },
+      {
+        "kind" : "typeIdentifier",
+        "preciseIdentifier" : "s:SS",
+        "text" : "String"
+      },
+      {
+        "kind" : "text",
+        "text" : ")], "
+      },
+      {
+        "kind" : "externalParam",
+        "text" : "range"
+      },
+      {
+        "kind" : "text",
+        "text" : ": "
+      },
+      {
+        "kind" : "typeIdentifier",
+        "preciseIdentifier" : "s:SN",
+        "text" : "ClosedRange"
+      },
+      {
+        "kind" : "text",
+        "text" : "<"
+      },
+      {
+        "kind" : "typeIdentifier",
+        "preciseIdentifier" : "s:12CoreGraphics7CGFloatV",
+        "text" : "CGFloat"
+      },
+      {
+        "kind" : "text",
+        "text" : ">) -> ["
+      },
+      {
+        "kind" : "typeIdentifier",
+        "preciseIdentifier" : "s:8SwiftViz9TickLabelV",
+        "text" : "TickLabel"
+      },
+      {
+        "kind" : "text",
+        "text" : "]"
+      }
+    ],
+    "kind" : "org.swift.docc.kind.instanceMethod",
+    "language" : "swift",
+    "path" : "\/documentation\/swiftviz\/logscale\/labeledtickvalues(_:range:)",
+    "referenceURL" : "doc:\/\/com.github.swiftviz.SwiftViz\/documentation\/SwiftViz\/LogScale\/labeledTickValues(_:range:)",
+    "taskGroups" : [
+
+    ],
+    "title" : "labeledTickValues(_:range:)",
+    "usr" : "s:8SwiftViz5ScalePAA8TickType_05InputE0QZAERtzrlE07labeledD6Values_5rangeSayAA0D5LabelVGSayAG_SStG_SNy12CoreGraphics7CGFloatVGtF::SYNTHESIZED::s:8SwiftViz8LogScaleV"
+  },
+  {
+    "abstract" : [
+      {
+        "text" : "Converts an array of values of the Scale’s InputType into a set of Ticks.",
+        "type" : "text"
+      },
+      {
+        "text" : " ",
+        "type" : "text"
+      },
+      {
+        "text" : "Used for manually specifying a series of ticks that you want to have displayed.",
+        "type" : "text"
+      }
+    ],
+    "availableLanguages" : [
+      "swift"
+    ],
+    "fragments" : [
+      {
+        "kind" : "keyword",
+        "text" : "func"
+      },
+      {
+        "kind" : "text",
+        "text" : " "
+      },
+      {
+        "kind" : "identifier",
+        "text" : "ticks"
+      },
+      {
+        "kind" : "text",
+        "text" : "(["
+      },
+      {
+        "kind" : "typeIdentifier",
+        "preciseIdentifier" : "s:8SwiftViz5ScaleP9InputTypeQa",
+        "text" : "InputType"
+      },
+      {
+        "kind" : "text",
+        "text" : "], "
+      },
+      {
+        "kind" : "externalParam",
+        "text" : "range"
+      },
+      {
+        "kind" : "text",
+        "text" : ": "
+      },
+      {
+        "kind" : "typeIdentifier",
+        "preciseIdentifier" : "s:SN",
+        "text" : "ClosedRange"
+      },
+      {
+        "kind" : "text",
+        "text" : "<"
+      },
+      {
+        "kind" : "typeIdentifier",
+        "preciseIdentifier" : "s:12CoreGraphics7CGFloatV",
+        "text" : "CGFloat"
+      },
+      {
+        "kind" : "text",
+        "text" : ">) -> ["
+      },
+      {
+        "kind" : "typeIdentifier",
+        "preciseIdentifier" : "s:8SwiftViz5ScaleP8TickTypeQa",
+        "text" : "TickType"
+      },
+      {
+        "kind" : "text",
+        "text" : "]"
+      }
+    ],
+    "kind" : "org.swift.docc.kind.instanceMethod",
+    "language" : "swift",
+    "path" : "\/documentation\/swiftviz\/scale\/ticks(_:range:)",
+    "referenceURL" : "doc:\/\/com.github.swiftviz.SwiftViz\/documentation\/SwiftViz\/Scale\/ticks(_:range:)",
+    "taskGroups" : [
+
+    ],
+    "title" : "ticks(_:range:)",
+    "usr" : "s:8SwiftViz5ScalePAA8TickType_05InputE0QZAERtzrlE5ticks_5rangeSayADQzGSayAGG_SNy12CoreGraphics7CGFloatVGtF"
+  },
+  {
+    "availableLanguages" : [
+      "swift"
+    ],
+    "fragments" : [
+      {
+        "kind" : "keyword",
+        "text" : "let"
+      },
+      {
+        "kind" : "text",
+        "text" : " "
+      },
+      {
+        "kind" : "identifier",
+        "text" : "domain"
+      },
+      {
+        "kind" : "text",
+        "text" : ": "
+      },
+      {
+        "kind" : "typeIdentifier",
+        "preciseIdentifier" : "s:SN",
+        "text" : "ClosedRange"
+      },
+      {
+        "kind" : "text",
+        "text" : "<"
+      },
+      {
+        "kind" : "typeIdentifier",
+        "preciseIdentifier" : "s:12CoreGraphics7CGFloatV",
+        "text" : "CGFloat"
+      },
+      {
+        "kind" : "text",
+        "text" : ">"
+      }
+    ],
+    "kind" : "org.swift.docc.kind.instanceProperty",
+    "language" : "swift",
+    "path" : "\/documentation\/swiftviz\/logscale\/domain",
+    "referenceURL" : "doc:\/\/com.github.swiftviz.SwiftViz\/documentation\/SwiftViz\/LogScale\/domain",
+    "taskGroups" : [
+
+    ],
+    "title" : "domain",
+    "usr" : "s:8SwiftViz8LogScaleV6domainSNy12CoreGraphics7CGFloatVGvp"
+  },
+  {
+    "abstract" : [
+      {
+        "text" : "returns an array of the locations of ticks - (value, location)",
+        "type" : "text"
+      }
+    ],
+    "availableLanguages" : [
+      "swift"
+    ],
+    "fragments" : [
+      {
+        "kind" : "keyword",
+        "text" : "func"
+      },
+      {
+        "kind" : "text",
+        "text" : " "
+      },
+      {
+        "kind" : "identifier",
+        "text" : "ticks"
+      },
+      {
+        "kind" : "text",
+        "text" : "("
+      },
+      {
+        "kind" : "externalParam",
+        "text" : "count"
+      },
+      {
+        "kind" : "text",
+        "text" : ": "
+      },
+      {
+        "kind" : "typeIdentifier",
+        "preciseIdentifier" : "s:Si",
+        "text" : "Int"
+      },
+      {
+        "kind" : "text",
+        "text" : ", "
+      },
+      {
+        "kind" : "externalParam",
+        "text" : "range"
+      },
+      {
+        "kind" : "text",
+        "text" : ": "
+      },
+      {
+        "kind" : "typeIdentifier",
+        "preciseIdentifier" : "s:SN",
+        "text" : "ClosedRange"
+      },
+      {
+        "kind" : "text",
+        "text" : "<"
+      },
+      {
+        "kind" : "typeIdentifier",
+        "preciseIdentifier" : "s:12CoreGraphics7CGFloatV",
+        "text" : "CGFloat"
+      },
+      {
+        "kind" : "text",
+        "text" : ">) -> ["
+      },
+      {
+        "kind" : "typeIdentifier",
+        "preciseIdentifier" : "s:8SwiftViz11CGFloatTickV",
+        "text" : "CGFloatTick"
+      },
+      {
+        "kind" : "text",
+        "text" : "]"
+      }
+    ],
+    "kind" : "org.swift.docc.kind.instanceMethod",
+    "language" : "swift",
+    "path" : "\/documentation\/swiftviz\/linearscale\/ticks(count:range:)",
+    "referenceURL" : "doc:\/\/com.github.swiftviz.SwiftViz\/documentation\/SwiftViz\/LinearScale\/ticks(count:range:)",
+    "taskGroups" : [
+
+    ],
+    "title" : "ticks(count:range:)",
+    "usr" : "s:8SwiftViz11LinearScaleV5ticks5count5rangeSayAA11CGFloatTickVGSi_SNy12CoreGraphics0H0VGtF"
+  },
+  {
+    "availableLanguages" : [
+      "swift"
+    ],
+    "fragments" : [
+      {
+        "kind" : "keyword",
+        "text" : "typealias"
+      },
+      {
+        "kind" : "text",
+        "text" : " "
+      },
+      {
+        "kind" : "identifier",
+        "text" : "InputType"
+      }
+    ],
+    "kind" : "org.swift.docc.kind.typeAlias",
+    "language" : "swift",
+    "path" : "\/documentation\/swiftviz\/linearscale\/inputtype",
+    "referenceURL" : "doc:\/\/com.github.swiftviz.SwiftViz\/documentation\/SwiftViz\/LinearScale\/InputType",
+    "taskGroups" : [
+
+    ],
+    "title" : "LinearScale.InputType",
+    "usr" : "s:8SwiftViz11LinearScaleV9InputTypea"
+  },
+  {
+    "abstract" : [
+      {
+        "text" : "Convenience initializer for TickLabel",
+        "type" : "text"
+      }
+    ],
+    "availableLanguages" : [
+      "swift"
+    ],
+    "fragments" : [
+      {
+        "kind" : "keyword",
+        "text" : "init"
+      },
+      {
+        "kind" : "text",
+        "text" : "("
+      },
+      {
+        "kind" : "externalParam",
+        "text" : "rangeLocation"
+      },
+      {
+        "kind" : "text",
+        "text" : ": "
+      },
+      {
+        "kind" : "typeIdentifier",
+        "preciseIdentifier" : "s:12CoreGraphics7CGFloatV",
+        "text" : "CGFloat"
+      },
+      {
+        "kind" : "text",
+        "text" : ", "
+      },
+      {
+        "kind" : "externalParam",
+        "text" : "value"
+      },
+      {
+        "kind" : "text",
+        "text" : ": "
+      },
+      {
+        "kind" : "typeIdentifier",
+        "preciseIdentifier" : "s:SS",
+        "text" : "String"
+      },
+      {
+        "kind" : "text",
+        "text" : ")"
+      }
+    ],
+    "kind" : "org.swift.docc.kind.initializer",
+    "language" : "swift",
+    "path" : "\/documentation\/swiftviz\/ticklabel\/init(rangelocation:value:)",
+    "referenceURL" : "doc:\/\/com.github.swiftviz.SwiftViz\/documentation\/SwiftViz\/TickLabel\/init(rangeLocation:value:)",
+    "taskGroups" : [
+
+    ],
+    "title" : "init(rangeLocation:value:)",
+    "usr" : "s:8SwiftViz9TickLabelV13rangeLocation5valueAC12CoreGraphics7CGFloatV_SStcfc"
+  },
+  {
+    "availableLanguages" : [
+      "swift"
+    ],
+    "kind" : "org.swift.docc.kind.collectionGroup",
+    "language" : "swift",
+    "path" : "\/documentation\/swiftviz\/timescale\/scale-implementations",
+    "referenceURL" : "doc:\/\/com.github.swiftviz.SwiftViz\/documentation\/SwiftViz\/TimeScale\/Scale-Implementations",
+    "taskGroups" : [
+      {
+        "identifiers" : [
+          "doc:\/\/com.github.swiftviz.SwiftViz\/documentation\/SwiftViz\/TimeScale\/clampDomain(_:withinRange:)",
+          "doc:\/\/com.github.swiftviz.SwiftViz\/documentation\/SwiftViz\/TimeScale\/clampRange(_:withinRange:)",
+          "doc:\/\/com.github.swiftviz.SwiftViz\/documentation\/SwiftViz\/TimeScale\/labeledTickValues(_:range:)",
+          "doc:\/\/com.github.swiftviz.SwiftViz\/documentation\/SwiftViz\/TimeScale\/ticks(_:range:)",
+          "doc:\/\/com.github.swiftviz.SwiftViz\/documentation\/SwiftViz\/TimeScale\/validatedTickLabels(_:range:)"
+        ],
+        "title" : "Instance Methods"
+      }
+    ],
+    "title" : "Scale Implementations"
+  },
+  {
+    "availableLanguages" : [
+      "swift"
+    ],
+    "fragments" : [
+      {
+        "kind" : "keyword",
+        "text" : "let"
+      },
+      {
+        "kind" : "text",
+        "text" : " "
+      },
+      {
+        "kind" : "identifier",
+        "text" : "rangeLocation"
+      },
+      {
+        "kind" : "text",
+        "text" : ": "
+      },
+      {
+        "kind" : "typeIdentifier",
+        "preciseIdentifier" : "s:12CoreGraphics7CGFloatV",
+        "text" : "CGFloat"
+      }
+    ],
+    "kind" : "org.swift.docc.kind.instanceProperty",
+    "language" : "swift",
+    "path" : "\/documentation\/swiftviz\/integertick\/rangelocation",
+    "referenceURL" : "doc:\/\/com.github.swiftviz.SwiftViz\/documentation\/SwiftViz\/IntegerTick\/rangeLocation",
+    "taskGroups" : [
+
+    ],
+    "title" : "rangeLocation",
+    "usr" : "s:8SwiftViz11IntegerTickV13rangeLocation12CoreGraphics7CGFloatVvp"
+  },
+  {
+    "availableLanguages" : [
+      "swift"
+    ],
+    "fragments" : [
+      {
+        "kind" : "keyword",
+        "text" : "typealias"
+      },
+      {
+        "kind" : "text",
+        "text" : " "
+      },
+      {
+        "kind" : "identifier",
+        "text" : "InputType"
+      }
+    ],
+    "kind" : "org.swift.docc.kind.typeAlias",
+    "language" : "swift",
+    "path" : "\/documentation\/swiftviz\/timescale\/inputtype",
+    "referenceURL" : "doc:\/\/com.github.swiftviz.SwiftViz\/documentation\/SwiftViz\/TimeScale\/InputType",
+    "taskGroups" : [
+
+    ],
+    "title" : "TimeScale.InputType",
+    "usr" : "s:8SwiftViz9TimeScaleV9InputTypea"
+  },
+  {
+    "availableLanguages" : [
+      "swift"
+    ],
+    "kind" : "org.swift.docc.kind.collectionGroup",
+    "language" : "swift",
+    "path" : "\/documentation\/swiftviz\/doubletick\/identifiable-implementations",
+    "referenceURL" : "doc:\/\/com.github.swiftviz.SwiftViz\/documentation\/SwiftViz\/DoubleTick\/Identifiable-Implementations",
+    "taskGroups" : [
+      {
+        "identifiers" : [
+          "doc:\/\/com.github.swiftviz.SwiftViz\/documentation\/SwiftViz\/DoubleTick\/id-1yzs"
+        ],
+        "title" : "Instance Properties"
+      }
+    ],
+    "title" : "Identifiable Implementations"
+  },
+  {
+    "availableLanguages" : [
+      "swift"
+    ],
+    "fragments" : [
+      {
+        "kind" : "keyword",
+        "text" : "let"
+      },
+      {
+        "kind" : "text",
+        "text" : " "
+      },
+      {
+        "kind" : "identifier",
+        "text" : "isClamped"
+      },
+      {
+        "kind" : "text",
+        "text" : ": "
+      },
+      {
+        "kind" : "typeIdentifier",
+        "preciseIdentifier" : "s:Sb",
+        "text" : "Bool"
+      }
+    ],
+    "kind" : "org.swift.docc.kind.instanceProperty",
+    "language" : "swift",
+    "path" : "\/documentation\/swiftviz\/timescale\/isclamped",
+    "referenceURL" : "doc:\/\/com.github.swiftviz.SwiftViz\/documentation\/SwiftViz\/TimeScale\/isClamped",
+    "taskGroups" : [
+
+    ],
+    "title" : "isClamped",
+    "usr" : "s:8SwiftViz9TimeScaleV9isClampedSbvp"
+  },
+  {
+    "availableLanguages" : [
+      "swift"
+    ],
+    "fragments" : [
+      {
+        "kind" : "keyword",
+        "text" : "let"
+      },
+      {
+        "kind" : "text",
+        "text" : " "
+      },
+      {
+        "kind" : "identifier",
+        "text" : "rangeLocation"
+      },
+      {
+        "kind" : "text",
+        "text" : ": "
+      },
+      {
+        "kind" : "typeIdentifier",
+        "preciseIdentifier" : "s:12CoreGraphics7CGFloatV",
+        "text" : "CGFloat"
+      }
+    ],
+    "kind" : "org.swift.docc.kind.instanceProperty",
+    "language" : "swift",
+    "path" : "\/documentation\/swiftviz\/doubletick\/rangelocation",
+    "referenceURL" : "doc:\/\/com.github.swiftviz.SwiftViz\/documentation\/SwiftViz\/DoubleTick\/rangeLocation",
+    "taskGroups" : [
+
+    ],
+    "title" : "rangeLocation",
+    "usr" : "s:8SwiftViz10DoubleTickV13rangeLocation12CoreGraphics7CGFloatVvp"
+  }
+]
