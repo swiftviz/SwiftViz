@@ -9,7 +9,8 @@
 import XCTest
 
 func assertEqualDates(_ firstDate: Date, _ secondDate: Date, accuracy: TimeInterval,
-                      file: StaticString = #file, line: UInt = #line) {
+                      file: StaticString = #file, line: UInt = #line)
+{
     // let timeDelta = firstDate.timeIntervalSince(secondDate)
     XCTAssertTrue(firstDate.timeIntervalSince(secondDate) < accuracy, file: file, line: line)
 }
