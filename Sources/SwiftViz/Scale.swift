@@ -116,6 +116,76 @@ public extension Scale {
         }
         return value
     }
+    
+    /// Returns a nice number approximately equal to the value you provide.
+    ///
+    /// - Parameters:
+    ///   - x: The number to convert
+    ///   - round: A Boolean value indicating whether to round the number when providing a nice value.
+    /// - Returns: A value rounded to a pleasing interval, or the ceiling of the value if rounding is disabled.
+    private func niceify(_ x: CGFloat, round: Bool) -> CGFloat {
+        let exp = floor(log10(x)) // exponent of x
+        let f = x / pow(10, exp) // fractional part of x, in 1...10
+        let niceFraction: CGFloat = {
+            if (round) {
+                if (f < 1.5) {
+                    return 1
+                } else if (f < 3) {
+                    return 2
+                } else if (f < 7) {
+                    return 5
+                } else {
+                    return 10
+                }
+            } else {
+                if (f <= 1) {
+                    return 1
+                } else if (f <= 2) {
+                    return 2
+                } else if (f <= 5) {
+                    return 5
+                } else {
+                    return 10
+                }
+            }
+        }()
+        return niceFraction * pow(10, exp)
+    }
+
+        /*
+         /// The calculated 'nice' range, which should include the 'raw' range used to initialize this object.
+             public lazy var range: ValueRange = {
+                 guard tickInterval != 0 else { return 0...0 } // avoid NaN error in creating range
+                 let min = floor(rawRange.lowerBound / tickInterval) * tickInterval
+                 let max = ceil(rawRange.upperBound / tickInterval) * tickInterval
+                 return min ... max
+             }()
+         /// The distance between bounds of the range.
+         public lazy var extent: T = {
+             range.upperBound - range.lowerBound
+         }()
+         
+         /// The number of ticks in the range. This may differ from the desiredTicks used to initialize the object.
+         public lazy var ticks: Int = {
+             guard tickInterval > 0 else { return 0 }
+             return Int(extent / tickInterval) + 1
+         }()
+         
+         /// The values for the ticks in the range.
+         public lazy var tickValues: [T] = {
+             (0..<ticks).map {
+                 range.lowerBound + (T($0) * tickInterval)
+             }
+         }()
+         
+         /// The distance between ticks in the range.
+         public lazy var tickInterval: T = {
+             let rawExtent = rawRange.upperBound - rawRange.lowerBound
+             let niceExtent = niceify(rawExtent, round: false)
+             return niceify(niceExtent / T(desiredTicks - 1), round: true)
+         }()
+
+         */
 }
 
 public extension Scale where InputType == TickType.InputType {
