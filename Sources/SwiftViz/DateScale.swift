@@ -22,7 +22,7 @@ import Foundation
 // - D3 has a time format (https://github.com/d3/d3-time-format), but we can probably use
 //   IOS/MacOS NSTime, NSDate formatters and calendrical mechanisms
 
-public struct TimeScale: Scale {
+public struct DateScale: Scale {
     public typealias InputType = Date
     public typealias TickType = DateTick
 
@@ -38,7 +38,7 @@ public struct TimeScale: Scale {
     ///
     /// - Parameter x: value within the domain
     /// - Returns: scaled value
-    public func scale(_ inputValue: TimeScale.InputType, range: ClosedRange<CGFloat>) -> CGFloat {
+    public func scale(_ inputValue: DateScale.InputType, range: ClosedRange<CGFloat>) -> CGFloat {
         let inputAsFloat = CGFloat(inputValue.timeIntervalSince1970)
         let dateDomainAsFloat = CGFloat(domain.lowerBound.timeIntervalSince1970) ... CGFloat(domain.upperBound.timeIntervalSince1970)
         let valueMappedToRange = interpolate(normalize(inputAsFloat, domain: dateDomainAsFloat), range: range)

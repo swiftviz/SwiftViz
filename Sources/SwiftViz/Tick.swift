@@ -25,3 +25,9 @@ public protocol Tick: Identifiable {
 
     init(value: InputType, location: CGFloat)
 }
+
+//extension Tick where InputType == Date {
+//    func dateTick(value: Date, location: CGFloat) -> some Tick {
+//        return DateTick(value: value, location: location)
+//    }
+//}

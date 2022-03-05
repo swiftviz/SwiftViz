@@ -6,12 +6,11 @@ import XCTest
 
 final class LinearScaleTests: XCTestCase {
     
-    // this is coming out as -18.503, which is VERY wrong...
-    // incoming value example: stddev    NSTimeInterval    0.00062460815272012726
-    // range to process that within: 1 ... 367
-    // resulting value SHOULD be between those - not negative!
-
     func testScaleExampleValues() {
+        // this is coming out as -18.503, which is VERY wrong...
+        // incoming value example: stddev    NSTimeInterval    0.00062460815272012726
+        // range to process that within: 1 ... 367
+        // resulting value SHOULD be between those - not negative!
         let incoming: TimeInterval = TimeInterval(0.00062460815272012726)
         let outputRange = CGFloat(1)...CGFloat(367)
         // domain appears to be 0..0 in my example where this is failing
