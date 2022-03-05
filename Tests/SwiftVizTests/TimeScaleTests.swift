@@ -30,7 +30,7 @@ final class TimeScaleTests: XCTestCase {
         let start = end - TimeInterval(300)
         let testRange = CGFloat(0) ... CGFloat(100.0)
 
-        let scale = TimeScale(domain: start ... end)
+        let scale = DateScale(domain: start ... end)
         XCTAssertFalse(scale.isClamped)
         // XCTAssertTrue(scale.domain.contains(end))
         // XCTAssertTrue(scale.domain.contains(start))
@@ -52,7 +52,7 @@ final class TimeScaleTests: XCTestCase {
         let start = end - TimeInterval(300)
         let testRange = CGFloat(0) ... CGFloat(100.0)
 
-        let scale = TimeScale(domain: start ... end)
+        let scale = DateScale(domain: start ... end)
 
         let middleDate = end - TimeInterval(150)
         let manualTicks = scale.ticks([start, middleDate, end], range: testRange)
@@ -72,8 +72,8 @@ final class TimeScaleTests: XCTestCase {
         let end = Date()
         let start = end - TimeInterval(300)
         let testRange = CGFloat(0) ... CGFloat(100.0)
-        let scale = TimeScale(domain: start ... end)
-        let clampedScale = TimeScale(domain: start ... end, isClamped: true)
+        let scale = DateScale(domain: start ... end)
+        let clampedScale = DateScale(domain: start ... end, isClamped: true)
 
         let middleDate = end - TimeInterval(150)
         let highDate = end + TimeInterval(150)
@@ -96,8 +96,8 @@ final class TimeScaleTests: XCTestCase {
         let end = Date()
         let start = end - TimeInterval(300)
         let testRange = CGFloat(0) ... CGFloat(100.0)
-        let scale = TimeScale(domain: start ... end)
-        let clampedScale = TimeScale(domain: start ... end, isClamped: true)
+        let scale = DateScale(domain: start ... end)
+        let clampedScale = DateScale(domain: start ... end, isClamped: true)
 
         let middleDate = end - TimeInterval(150)
         let highDate = end + TimeInterval(150)
