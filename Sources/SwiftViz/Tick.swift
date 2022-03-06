@@ -5,7 +5,7 @@
 //  Created by Joseph Heck on 3/2/20.
 //
 
-import CoreGraphics
+import Numerics
 import Foundation
 
 /// A Tick is a visual representation of a point along an axis.
@@ -13,21 +13,16 @@ import Foundation
 /// When created based on a range, a tick includes a location along a single direction
 /// and a textual representation. It is meant to be created using a Scale, with some input domain
 /// being mapped to visualization using the Scale's output range.
-public protocol Tick: Identifiable {
+public struct Tick<InputType, OutputType>: Identifiable {
     // this becomes a generic focused protocol - types implementing it will need to define the
     // protocol conformance in coordination with a generic type
-    associatedtype InputType: Comparable
+    public var id: UUID = UUID()
 
-    var id: UUID { get }
+    let value: InputType
+    let rangeLocation: OutputType
 
-    var value: InputType { get }
-    var rangeLocation: CGFloat { get }
-
-    init(value: InputType, location: CGFloat)
+    init(value: InputType, location: OutputType) {
+        self.value = value
+        self.rangeLocation = location
+    }
 }
-
-//extension Tick where InputType == Date {
-//    func dateTick(value: Date, location: CGFloat) -> some Tick {
-//        return DateTick(value: value, location: location)
-//    }
-//}
