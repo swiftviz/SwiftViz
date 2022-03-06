@@ -79,7 +79,7 @@ public protocol Scale {
     ///   the range we are mapping the values into with the scale
     /// - Returns: a value within the bounds of the ClosedRange
     ///   for domain, or NaN if it maps outside the bounds
-    func invert(_ outputValue: OutputType, range: ClosedRange<InputType>) -> InputType
+    func invert(_ outputValue: OutputType, domain: ClosedRange<InputType>) -> InputType
 
     /// Returns an array of the locations within the output range to locate ticks for the scale.
     ///
@@ -87,6 +87,11 @@ public protocol Scale {
     ///   the range we are mapping the values into with the scale
     /// - Returns: an Array of the values within the ClosedRange of range
     func ticks(range: ClosedRange<OutputType>) -> [Tick<InputType, OutputType>]
+    
+    func cast(value: InputType) -> OutputType
+    func cast(value: OutputType) -> InputType
+    func cast(range: ClosedRange<InputType>) -> ClosedRange<OutputType>
+    func cast(range: ClosedRange<OutputType>) -> ClosedRange<InputType>
 }
 
 public extension ClosedRange where Bound: Comparable {
@@ -201,7 +206,7 @@ public extension Scale {
     ///   the range we are mapping the values into with the scale.
     func validatedTickLabels(_ inputTickLabels: [TickLabel<OutputType>], range: ClosedRange<OutputType>) -> [TickLabel<OutputType>] {
         inputTickLabels.compactMap { tick in
-            let inputValue = invert(tick.rangeLocation, range: range)
+            let inputValue = invert(tick.rangeLocation, domain: domain)
             if domain.contains(inputValue) {
                 return tick
             }
