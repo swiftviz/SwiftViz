@@ -23,7 +23,7 @@ class LogScaleTests: XCTestCase {
         let myScale = LogScale(domain: 1 ... 100.0, isClamped: false)
         XCTAssertFalse(myScale.isClamped)
 
-        let testRange = CGFloat(0) ... CGFloat(100.0)
+        let testRange = Float(0) ... Float(100.0)
 
         XCTAssertEqual(50.0, myScale.scale(10.0, range: testRange), accuracy: 0.01)
     }
@@ -31,7 +31,7 @@ class LogScaleTests: XCTestCase {
     func testLogScale_invert() {
         let myScale = LogScale(domain: 1 ... 100.0, isClamped: false)
         XCTAssertFalse(myScale.isClamped)
-        let testRange = CGFloat(0) ... CGFloat(100.0)
+        let testRange = Float(0) ... Float(100.0)
         let result = myScale.invert(50.0, range: testRange)
         XCTAssertEqual(10, result, accuracy: 0.01)
     }
@@ -40,7 +40,7 @@ class LogScaleTests: XCTestCase {
         let myScale = LogScale(domain: 0.01 ... 100.0, isClamped: false)
         XCTAssertFalse(myScale.isClamped)
 
-        let testRange = CGFloat(0.0) ... CGFloat(100.0)
+        let testRange = Float(0.0) ... Float(100.0)
 
         let defaultTicks = myScale.ticks(range: testRange)
         XCTAssertEqual(defaultTicks.count, 37)
@@ -55,7 +55,7 @@ class LogScaleTests: XCTestCase {
         let myScale = LogScale(domain: 0.01 ... 100.0, isClamped: false)
         XCTAssertFalse(myScale.isClamped)
 
-        let testRange = CGFloat(0) ... CGFloat(100.0)
+        let testRange = Float(0) ... Float(100.0)
 
         let manualTicks = myScale.ticks([0.1, 1, 10], range: testRange)
 
@@ -71,7 +71,7 @@ class LogScaleTests: XCTestCase {
         let myScale = LogScale(domain: 0.8 ... 999.0, isClamped: false)
         XCTAssertFalse(myScale.isClamped)
 
-        let testRange = CGFloat(0.0) ... CGFloat(100.0)
+        let testRange = Float(0.0) ... Float(100.0)
 
         let defaultTicks = myScale.ticks(range: testRange)
         XCTAssertEqual(defaultTicks.count, 28)
@@ -86,7 +86,7 @@ class LogScaleTests: XCTestCase {
         let myScale = LogScale(domain: 10 ... 1000.0, isClamped: false)
         XCTAssertFalse(myScale.isClamped)
 
-        let testRange = CGFloat(0.0) ... CGFloat(100.0)
+        let testRange = Float(0.0) ... Float(100.0)
 
         let manualTicks = myScale.ticks([0.1, 1, 10, 100, 1000], range: testRange)
 
@@ -104,7 +104,7 @@ class LogScaleTests: XCTestCase {
 
         XCTAssertFalse(scale.isClamped)
         XCTAssertTrue(clampedScale.isClamped)
-        let testRange = CGFloat(0) ... CGFloat(100.0)
+        let testRange = Float(0) ... Float(100.0)
 
         // no clamp effect
         XCTAssertEqual(scale.scale(10, range: testRange), 50)
@@ -125,7 +125,7 @@ class LogScaleTests: XCTestCase {
 
         XCTAssertFalse(scale.isClamped)
         XCTAssertTrue(clampedScale.isClamped)
-        let testRange = CGFloat(0) ... CGFloat(100.0)
+        let testRange = Float(0) ... Float(100.0)
 
         // no clamp effect
         XCTAssertEqual(scale.invert(50, range: testRange), 10)

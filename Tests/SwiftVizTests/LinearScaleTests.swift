@@ -12,7 +12,7 @@ final class LinearScaleTests: XCTestCase {
         // range to process that within: 1 ... 367
         // resulting value SHOULD be between those - not negative!
         let incoming: TimeInterval = TimeInterval(0.00062460815272012726)
-        let outputRange = CGFloat(1)...CGFloat(367)
+        let outputRange = Float(1)...Float(367)
         // domain appears to be 0..0 in my example where this is failing
         let scale = LinearScale(domain: 0.003 ... 0.056)
         let result = scale.scale(incoming + 0.003, range: outputRange)
@@ -23,7 +23,7 @@ final class LinearScaleTests: XCTestCase {
         let myScale = LinearScale(domain: 0 ... 1.0)
         XCTAssertFalse(myScale.isClamped)
 
-        let testRange = CGFloat(0) ... CGFloat(100.0)
+        let testRange = Float(0) ... Float(100.0)
 
         let defaultTicks = myScale.ticks(range: testRange)
         XCTAssertEqual(defaultTicks.count, 11)
@@ -38,7 +38,7 @@ final class LinearScaleTests: XCTestCase {
         let myScale = LinearScale(domain: 0 ... 1.0)
         XCTAssertFalse(myScale.isClamped)
 
-        let testRange = CGFloat(0) ... CGFloat(100.0)
+        let testRange = Float(0) ... Float(100.0)
         let manualTicks = myScale.ticks([0.1, 0.5], range: testRange)
 
         XCTAssertEqual(manualTicks.count, 2)
@@ -54,7 +54,7 @@ final class LinearScaleTests: XCTestCase {
         let clampedScale = LinearScale(domain: 0 ... 10.0, isClamped: true)
         XCTAssertFalse(scale.isClamped)
         XCTAssertTrue(clampedScale.isClamped)
-        let testRange = CGFloat(0) ... CGFloat(100.0)
+        let testRange = Float(0) ... Float(100.0)
 
         // no clamp effect
         XCTAssertEqual(scale.scale(5, range: testRange), 50)
@@ -74,7 +74,7 @@ final class LinearScaleTests: XCTestCase {
         let clampedScale = LinearScale(domain: 0 ... 10.0, isClamped: true)
         XCTAssertFalse(scale.isClamped)
         XCTAssertTrue(clampedScale.isClamped)
-        let testRange = CGFloat(0) ... CGFloat(100.0)
+        let testRange = Float(0) ... Float(100.0)
 
         // no clamp effect
         XCTAssertEqual(scale.invert(50, range: testRange), 5)

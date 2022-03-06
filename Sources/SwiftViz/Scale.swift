@@ -1,5 +1,5 @@
-import CoreGraphics
 import Foundation
+import Numerics
 
 // =============================================================
 //  Scale.swift
@@ -22,8 +22,8 @@ import Foundation
 
 /// A scale maps values from an input _domain_ to an output _range_.
 public protocol Scale {
-    associatedtype InputType: Comparable
-    associatedtype TickType: Tick
+    associatedtype InputType: Real
+    associatedtype OutputType: Real
     // this becomes a generic focused protocol - types implementing it will need to define the
     // protocol conformance in coordination with a generic type
 
@@ -40,7 +40,12 @@ public protocol Scale {
        test.end();
      });
      */
-
+    
+    /// The number of ticks desired when creating the scale.
+    ///
+    /// This number may not match the number of ticks returned by ``ticks(count:range:)``.
+    var desiredTicks: Int { get }
+    
     /// A boolean value that indicates whether the output vales are constrained to the min and max of the output range.
     ///
     /// If `true`, values processed by the scale are constrained to the output range, and values processed backwards through the scale
@@ -62,7 +67,7 @@ public protocol Scale {
     ///   the range we are mapping the values into with the scale
     /// - Returns: a value within the bounds of the ClosedRange
     ///   for range, or NaN if it maps outside the bounds
-    func scale(_ inputValue: InputType, range: ClosedRange<CGFloat>) -> CGFloat
+    func scale(_ inputValue: InputType, range: ClosedRange<OutputType>) -> OutputType
 
     /// Converts back from the output _range_ to a value within the input _domain_.
     ///
@@ -74,18 +79,17 @@ public protocol Scale {
     ///   the range we are mapping the values into with the scale
     /// - Returns: a value within the bounds of the ClosedRange
     ///   for domain, or NaN if it maps outside the bounds
-    func invert(_ outputValue: CGFloat, range: ClosedRange<CGFloat>) -> InputType
+    func invert(_ outputValue: OutputType, range: ClosedRange<InputType>) -> InputType
 
     /// Returns an array of the locations within the output range to locate ticks for the scale.
     ///
-    /// - Parameter count: a number of ticks to display, defaulting to 10
     /// - Parameter range: a ClosedRange representing the representing
     ///   the range we are mapping the values into with the scale
     /// - Returns: an Array of the values within the ClosedRange of range
-    func ticks(count: Int, range: ClosedRange<CGFloat>) -> [TickType]
+    func ticks(range: ClosedRange<OutputType>) -> [Tick<InputType, OutputType>]
 }
 
-public extension ClosedRange {
+public extension ClosedRange where Bound: Comparable {
     func constrainedToRange(_ value: Bound) -> Bound {
         if value > upperBound {
             return upperBound
@@ -94,6 +98,12 @@ public extension ClosedRange {
             return lowerBound
         }
         return value
+    }
+}
+
+public extension ClosedRange where Bound: AdditiveArithmetic {
+    var extent: Bound {
+        return upperBound - lowerBound
     }
 }
 
@@ -106,29 +116,18 @@ public extension Scale {
         return value
     }
     
-    /// Returns a constrained value to the provided range if `isClamped` is `true`.
-    @_disfavoredOverload
-    func clamp(_ value: CGFloat, within: ClosedRange<CGFloat>) -> CGFloat {
-        // this version is bound explicitly to CGFloat to support converting InputTypes
-        // that aren't normally numbers into something that can be interpolated (such as Dates)
-        if isClamped {
-            return within.constrainedToRange(value)
-        }
-        return value
-    }
-    
     /// Returns a nice number approximately equal to the value you provide.
     ///
     /// - Parameters:
     ///   - x: The number to convert
     ///   - round: A Boolean value indicating whether to round the number when providing a nice value.
     /// - Returns: A value rounded to a pleasing interval, or the ceiling of the value if rounding is disabled.
-    private func niceify(_ x: CGFloat, round: Bool) -> CGFloat {
-        let exp = floor(log10(x)) // exponent of x
-        let f = x / pow(10, exp) // fractional part of x, in 1...10
-        let niceFraction: CGFloat = {
+    private func niceify(_ x: InputType, round: Bool) -> InputType {
+        let exp = floor(InputType.log10(x)) // exponent of x
+        let f = x / InputType.pow(10, exp) // fractional part of x, in 1...10
+        let niceFraction: InputType = {
             if (round) {
-                if (f < 1.5) {
+                if (f*2 < 3) { // equiv to f < 1.5, but allowing for integer comparison
                     return 1
                 } else if (f < 3) {
                     return 2
@@ -149,46 +148,15 @@ public extension Scale {
                 }
             }
         }()
-        return niceFraction * pow(10, exp)
+        return niceFraction * InputType.pow(10, exp)
     }
 
-        /*
-         /// The calculated 'nice' range, which should include the 'raw' range used to initialize this object.
-             public lazy var range: ValueRange = {
-                 guard tickInterval != 0 else { return 0...0 } // avoid NaN error in creating range
-                 let min = floor(rawRange.lowerBound / tickInterval) * tickInterval
-                 let max = ceil(rawRange.upperBound / tickInterval) * tickInterval
-                 return min ... max
-             }()
-         /// The distance between bounds of the range.
-         public lazy var extent: T = {
-             range.upperBound - range.lowerBound
-         }()
-         
-         /// The number of ticks in the range. This may differ from the desiredTicks used to initialize the object.
-         public lazy var ticks: Int = {
-             guard tickInterval > 0 else { return 0 }
-             return Int(extent / tickInterval) + 1
-         }()
-         
-         /// The values for the ticks in the range.
-         public lazy var tickValues: [T] = {
-             (0..<ticks).map {
-                 range.lowerBound + (T($0) * tickInterval)
-             }
-         }()
-         
-         /// The distance between ticks in the range.
-         public lazy var tickInterval: T = {
-             let rawExtent = rawRange.upperBound - rawRange.lowerBound
-             let niceExtent = niceify(rawExtent, round: false)
-             return niceify(niceExtent / T(desiredTicks - 1), round: true)
-         }()
+    /// The distance between ticks in the output range.
+    var tickInterval: InputType {
+        let niceExtent = niceify(domain.extent, round: false)
+        return niceify(niceExtent / (Self.InputType(desiredTicks) - 1), round: true)
+    }
 
-         */
-}
-
-public extension Scale where InputType == TickType.InputType {
     /// Converts an array of values of the Scale's InputType into a set of Ticks.
     /// Used for manually specifying a series of ticks that you want to have displayed.
     ///
@@ -197,11 +165,11 @@ public extension Scale where InputType == TickType.InputType {
     /// - Parameter inputValues: an array of values of the Scale's InputType
     /// - Parameter range: a ClosedRange representing the representing
     ///   the range we are mapping the values into with the scale
-    func ticks(_ inputValues: [InputType], range: ClosedRange<CGFloat>) -> [TickType] {
+    func ticks(_ inputValues: [InputType], range: ClosedRange<OutputType>) -> [Tick<InputType, OutputType>] {
         inputValues.compactMap { inputValue in
             if domain.contains(inputValue) {
-                return TickType(value: inputValue,
-                                location: scale(inputValue, range: range))
+                return Tick(value: inputValue,
+                            location: scale(inputValue, range: range))
             }
             return nil
         }
@@ -213,7 +181,7 @@ public extension Scale where InputType == TickType.InputType {
     ///   - inputValues: A tuple of (InputValue, String) that is the labelled value
     ///   - range: a ClosedRange representing the representing
     ///   the range we are mapping the values into with the scale
-    func labeledTickValues(_ inputValues: [(InputType, String)], range: ClosedRange<CGFloat>) -> [TickLabel] {
+    func labeledTickValues(_ inputValues: [(InputType, String)], range: ClosedRange<OutputType>) -> [TickLabel<OutputType>] {
         inputValues.compactMap { inputTuple in
             let (inputValue, stringValue) = inputTuple
             if domain.contains(inputValue) {
@@ -231,7 +199,7 @@ public extension Scale where InputType == TickType.InputType {
     /// - Parameter inputTickLabels: an array of TickLabels to validate against the scale
     /// - Parameter range: a ClosedRange representing the representing
     ///   the range we are mapping the values into with the scale.
-    func validatedTickLabels(_ inputTickLabels: [TickLabel], range: ClosedRange<CGFloat>) -> [TickLabel] {
+    func validatedTickLabels(_ inputTickLabels: [TickLabel<OutputType>], range: ClosedRange<OutputType>) -> [TickLabel<OutputType>] {
         inputTickLabels.compactMap { tick in
             let inputValue = invert(tick.rangeLocation, range: range)
             if domain.contains(inputValue) {
@@ -241,6 +209,45 @@ public extension Scale where InputType == TickType.InputType {
         }
     }
 }
+
+public extension Scale where InputType == Float {
+    /// The number of ticks in the range. This may differ from the desiredTicks used to initialize the object.
+    var ticks: Int {
+        guard tickInterval > 0 else { return 0 }
+        return Int(round(domain.extent / tickInterval)) + 1
+    }
+}
+
+public extension Scale where InputType == Double {
+    /// The number of ticks in the range. This may differ from the desiredTicks used to initialize the object.
+    var ticks: Int {
+        guard tickInterval > 0 else { return 0 }
+        return Int(round(domain.extent / tickInterval)) + 1
+    }
+}
+    /*
+     /// The calculated 'nice' range, which should include the 'raw' range used to initialize this object.
+         public lazy var range: ValueRange = {
+             guard tickInterval != 0 else { return 0...0 } // avoid NaN error in creating range
+             let min = floor(rawRange.lowerBound / tickInterval) * tickInterval
+             let max = ceil(rawRange.upperBound / tickInterval) * tickInterval
+             return min ... max
+         }()
+     /// The distance between bounds of the range.
+     public lazy var extent: T = {
+         range.upperBound - range.lowerBound
+     }()
+              
+     /// The values for the ticks in the range.
+     public lazy var tickValues: [T] = {
+         (0..<ticks).map {
+             range.lowerBound + (T($0) * tickInterval)
+         }
+     }()
+     
+
+     */
+
 
 // NOTE(heckj): OTHER SCALES: make a PowScale (& maybe Sqrt, Log, Ln)
 
@@ -267,7 +274,7 @@ public extension Scale where InputType == TickType.InputType {
 /// normalize(x, a ... b) takes a value x and normalizes it across the domain a...b
 /// It returns the corresponding parameter within the range [0...1] if it was within the domain of the scale
 /// If the value provided is outside of the domain of the scale, the resulting normalized value will be extrapolated
-func normalize(_ x: CGFloat, domain: ClosedRange<CGFloat>) -> CGFloat {
+func normalize<T: Real>(_ x: T, domain: ClosedRange<T>) -> T {
     let rangeDistance = domain.upperBound - domain.lowerBound
     return (x - domain.lowerBound) / rangeDistance
 }
@@ -275,6 +282,6 @@ func normalize(_ x: CGFloat, domain: ClosedRange<CGFloat>) -> CGFloat {
 // inspiration - https://github.com/d3/d3-interpolate#interpolateNumber
 /// interpolate(a, b)(t) takes a parameter t in [0,1] and
 /// returns the corresponding range value x in [a,b].
-func interpolate(_ x: CGFloat, range: ClosedRange<CGFloat>) -> CGFloat {
+func interpolate<T: Real>(_ x: T, range: ClosedRange<T>) -> T {
     range.lowerBound * (1 - x) + range.upperBound * x
 }
