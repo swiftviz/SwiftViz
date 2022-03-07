@@ -5,10 +5,10 @@
 ////  Created by Joseph Heck on 3/4/20.
 ////
 //
-//import Numerics
-//import Foundation
+// import Numerics
+// import Foundation
 //
-//public struct DoubleTick: Tick {
+// public struct DoubleTick: Tick {
 //    public let id = UUID()
 //    // making this identifiable as a convenience
 //    // for use within SwiftUI. You can then use ForEach over
@@ -26,4 +26,4 @@
 //        self.value = value
 //        rangeLocation = location
 //    }
-//}
+// }

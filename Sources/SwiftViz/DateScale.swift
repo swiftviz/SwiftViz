@@ -1,5 +1,5 @@
-//import Numerics
-//import Foundation
+// import Numerics
+// import Foundation
 //
 //// =============================================================
 ////  TimeScale.swift
@@ -22,7 +22,7 @@
 //// - D3 has a time format (https://github.com/d3/d3-time-format), but we can probably use
 ////   IOS/MacOS NSTime, NSDate formatters and calendrical mechanisms
 //
-//public struct DateScale: Scale {
+// public struct DateScale: Scale {
 //    public typealias InputType = TimeInterval
 //    public typealias TickType = DateTick
 //
@@ -78,4 +78,4 @@
 //        }
 //        return result
 //    }
-//}
+// }

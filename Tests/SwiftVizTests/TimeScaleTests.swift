@@ -5,26 +5,26 @@
 ////  Created by Joseph Heck on 3/19/20.
 ////
 //
-//@testable import SwiftViz
-//import XCTest
+// @testable import SwiftViz
+// import XCTest
 //
-//func assertEqualDates(_ firstDate: Date, _ secondDate: Date, accuracy: TimeInterval,
+// func assertEqualDates(_ firstDate: Date, _ secondDate: Date, accuracy: TimeInterval,
 //                      file: StaticString = #file, line: UInt = #line)
-//{
+// {
 //    // let timeDelta = firstDate.timeIntervalSince(secondDate)
 //    XCTAssertTrue(firstDate.timeIntervalSince(secondDate) < accuracy, file: file, line: line)
-//}
+// }
 //
 //// an extension to ClosedRange<Date>.contains to allow for slip in the date calculations
 //// when interpretting through scale or invert
-//public extension ClosedRange where Bound == Date {
+// public extension ClosedRange where Bound == Date {
 //    func contains(_ element: Bound, within: TimeInterval) -> Bool {
 //        element > lowerBound.addingTimeInterval(-within) &&
 //            element < upperBound.addingTimeInterval(within)
 //    }
-//}
+// }
 //
-//final class TimeScaleTests: XCTestCase {
+// final class TimeScaleTests: XCTestCase {
 //    func testTimeScaleTicks() {
 //        let end = Date()
 //        let start = end - TimeInterval(300)
@@ -121,4 +121,4 @@
 //        assertEqualDates(clampedScale.invert(-50, range: testRange), start,
 //                         accuracy: TimeInterval(0.1))
 //    }
-//}
+// }

@@ -1,6 +1,6 @@
-import Numerics
-import Foundation
 import CloudKit
+import Foundation
+import Numerics
 
 // =============================================================
 //  LinearScale.swift
@@ -14,16 +14,16 @@ public struct LinearScale: Scale {
     public let domainLower: Double
     public let domainHigher: Double
     public let domainExtent: Double
-    
+
     public let isClamped: Bool
     public let desiredTicks: Int
 
     public init(from lower: Double, to higher: Double, isClamped: Bool = false, desiredTicks: Int = 10) {
         precondition(lower < higher)
         self.isClamped = isClamped
-        self.domainLower = lower
-        self.domainHigher = higher
-        self.domainExtent = higher - lower
+        domainLower = lower
+        domainHigher = higher
+        domainExtent = higher - lower
         self.desiredTicks = desiredTicks
     }
 
@@ -33,9 +33,8 @@ public struct LinearScale: Scale {
         // if we're clamped, constrain the output to the range
         let clampedValue = clamp(result, lower: Double(lower), higher: Double(higher))
         return Float(clampedValue)
-
     }
-    
+
     public func invert(_ rangeValue: Float, from lower: Float, to higher: Float) -> Double {
         // inverts the scale, taking a value in the output range and returning the relevant value from the input domain
         let normalizedRangeValue = normalize(Double(rangeValue), lower: Double(lower), higher: Double(higher))
