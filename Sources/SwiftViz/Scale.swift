@@ -17,8 +17,8 @@ import Numerics
 
 /// A type that maps values from an input _domain_ to an output _range_ and provides generation and validation methods for values within those ranges.
 public protocol Scale {
-    associatedtype InputType: Real
-    associatedtype OutputType: Real
+    associatedtype InputType: Numeric, Comparable
+    associatedtype OutputType: Numeric, Comparable
     // this becomes a generic focused protocol - types implementing it will need to define the
     // protocol conformance in coordination with a generic type
 
@@ -81,34 +81,6 @@ public extension Scale {
         value >= domainLower && value <= domainHigher
     }
 
-    /// The distance between ticks in the output range.
-    var tickInterval: InputType {
-        let niceExtent = niceify(domainExtent, round: false)
-        return niceify(niceExtent / (Self.InputType(desiredTicks) - 1), round: true)
-    }
-
-    /// Returns an array of the locations within the output range to locate ticks for the scale.
-    ///
-    /// - Parameter range: a ClosedRange representing the representing
-    ///   the range we are mapping the values into with the scale
-    /// - Returns: an Array of the values within the ClosedRange of range
-    func ticks(rangeLower: OutputType, rangeHigher: OutputType) -> [Tick<InputType, OutputType>] {
-        var tickList: [Tick<InputType, OutputType>] = []
-        guard tickInterval != 0 else {
-            return tickList
-        }
-
-        let min = floor(domainLower / tickInterval) * tickInterval
-        let max = ceil(domainHigher / tickInterval) * tickInterval
-        var domainValue = min
-        while domainValue <= max {
-            let tickValue = min + (domainValue * tickInterval)
-            let tickRangeLocation = scale(tickValue, from: rangeLower, to: rangeHigher)
-            tickList.append(Tick(value: tickValue, location: tickRangeLocation))
-            domainValue += tickInterval
-        }
-        return tickList
-    }
 
     /// Converts an array of values of the Scale's InputType into a set of Ticks.
     /// Used for manually specifying a series of ticks that you want to have displayed.
@@ -139,9 +111,7 @@ public extension Scale {
             let (inputValue, stringValue) = inputTuple
             if domainContains(inputValue) {
                 let location = scale(inputValue, from: lower, to: higher)
-                if !location.isNaN {
-                    return TickLabel(rangeLocation: location, value: stringValue)
-                }
+                return TickLabel(rangeLocation: location, value: stringValue)
             }
             return nil
         }
@@ -177,11 +147,77 @@ public extension Scale {
     }
 }
 
+public extension Scale where InputType == Int {
+    /// The number of ticks in the range. This may differ from the desiredTicks used to initialize the object.
+    var ticks: Int {
+        guard tickInterval > 0 else { return 0 }
+        return Int(round(Double(domainExtent) / tickInterval)) + 1
+    }
+    
+    /// The distance between ticks in the output range.
+    var tickInterval: Double {
+        let niceExtent = niceify(Double(domainExtent), round: false)
+        return niceify(niceExtent / (Double(desiredTicks) - 1), round: true)
+    }
+
+    /// Returns an array of the locations within the output range to locate ticks for the scale.
+    ///
+    /// - Parameter range: a ClosedRange representing the representing
+    ///   the range we are mapping the values into with the scale
+    /// - Returns: an Array of the values within the ClosedRange of range
+    func ticks(rangeLower: OutputType, rangeHigher: OutputType) -> [Tick<InputType, OutputType>] {
+        var tickList: [Tick<InputType, OutputType>] = []
+        guard tickInterval != 0 else {
+            return tickList
+        }
+
+        let min = floor(Double(domainLower) / tickInterval) * tickInterval
+        let max = ceil(Double(domainHigher) / tickInterval) * tickInterval
+        var domainValue = min
+        while domainValue <= max {
+            let tickValue = min + (domainValue * tickInterval)
+            let tickRangeLocation = scale(tickValue, from: rangeLower, to: rangeHigher)
+            tickList.append(Tick(value: tickValue, location: tickRangeLocation))
+            domainValue += tickInterval
+        }
+        return tickList
+    }
+}
+
 public extension Scale where InputType == Float {
     /// The number of ticks in the range. This may differ from the desiredTicks used to initialize the object.
     var ticks: Int {
         guard tickInterval > 0 else { return 0 }
-        return Int(round(domainExtent / tickInterval)) + 1
+        return Int(round(Double(domainExtent) / tickInterval)) + 1
+    }
+    
+    /// The distance between ticks in the output range.
+    var tickInterval: Double {
+        let niceExtent = niceify(Double(domainExtent), round: false)
+        return niceify(niceExtent / (Double(desiredTicks) - 1), round: true)
+    }
+
+    /// Returns an array of the locations within the output range to locate ticks for the scale.
+    ///
+    /// - Parameter range: a ClosedRange representing the representing
+    ///   the range we are mapping the values into with the scale
+    /// - Returns: an Array of the values within the ClosedRange of range
+    func ticks(rangeLower: OutputType, rangeHigher: OutputType) -> [Tick<InputType, OutputType>] {
+        var tickList: [Tick<InputType, OutputType>] = []
+        guard tickInterval != 0 else {
+            return tickList
+        }
+
+        let min = floor(Double(domainLower) / tickInterval) * tickInterval
+        let max = ceil(Double(domainHigher) / tickInterval) * tickInterval
+        var domainValue = min
+        while domainValue <= max {
+            let tickValue = min + (domainValue * tickInterval)
+            let tickRangeLocation = scale(InputType(tickValue), from: rangeLower, to: rangeHigher)
+            tickList.append(Tick(value: tickValue, location: tickRangeLocation))
+            domainValue += tickInterval
+        }
+        return tickList
     }
 }
 
@@ -190,6 +226,35 @@ public extension Scale where InputType == Double {
     var ticks: Int {
         guard tickInterval > 0 else { return 0 }
         return Int(round(domainExtent / tickInterval)) + 1
+    }
+    
+    /// The distance between ticks in the output range.
+    var tickInterval: Double {
+        let niceExtent = niceify(Double(domainExtent), round: false)
+        return niceify(niceExtent / (Double(desiredTicks) - 1), round: true)
+    }
+
+    /// Returns an array of the locations within the output range to locate ticks for the scale.
+    ///
+    /// - Parameter range: a ClosedRange representing the representing
+    ///   the range we are mapping the values into with the scale
+    /// - Returns: an Array of the values within the ClosedRange of range
+    func ticks(rangeLower: OutputType, rangeHigher: OutputType) -> [Tick<InputType, OutputType>] {
+        var tickList: [Tick<InputType, OutputType>] = []
+        guard tickInterval != 0 else {
+            return tickList
+        }
+
+        let min = floor(Double(domainLower) / tickInterval) * tickInterval
+        let max = ceil(Double(domainHigher) / tickInterval) * tickInterval
+        var domainValue = min
+        while domainValue <= max {
+            let tickValue = min + (domainValue * tickInterval)
+            let tickRangeLocation = scale(tickValue, from: rangeLower, to: rangeHigher)
+            tickList.append(Tick(value: tickValue, location: tickRangeLocation))
+            domainValue += tickInterval
+        }
+        return tickList
     }
 }
 
