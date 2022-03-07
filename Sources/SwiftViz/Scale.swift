@@ -4,23 +4,18 @@ import Numerics
 // =============================================================
 //  Scale.swift
 
-/// Inspired by D3's scale concept - maps input values (domain) to an output range (range)
-/// - https://github.com/d3/d3-scale
-/// - https://github.com/pshrmn/notes/blob/master/d3/scales.md
+// Inspired by D3's scale concept - maps input values (domain) to an output range (range)
+// - https://github.com/d3/d3-scale
+// - https://github.com/pshrmn/notes/blob/master/d3/scales.md
 
-// in d3, it's used like:
-//  someScale()
-//    .domain([....])
-//    .range([....])
-
-// .ticks(5) - hint to return 5 ticks - note this is just a hint, not a guarantee, and is
-// determined by the scale's domain() values
+// .ticks(5) - hint to return 5 ticks - note this is just a hint, not a guarantee, and the specific number
+// is determined by the scale's domain() values.
 // - e.g. domain with 3 discrete values would would return 2 or 3 ticks?)
-
+//
 // D3's scale also has a .nice() function that does some pleasant rounding of the domain,
 // extending it slightly so that it's nicer to view
 
-/// A scale maps values from an input _domain_ to an output _range_.
+/// A type that maps values from an input _domain_ to an output _range_ and provides generation and validation methods for values within those ranges.
 public protocol Scale {
     associatedtype InputType: Real
     associatedtype OutputType: Real

@@ -41,7 +41,8 @@
         let testRange = Float(0.0) ... Float(100.0)
 
         let defaultTicks = myScale.ticks(rangeLower: testRange.lowerBound, rangeHigher: testRange.upperBound)
-        XCTAssertEqual(defaultTicks.count, 37)
+        print(defaultTicks.map { $0.value })
+        XCTAssertEqual(defaultTicks.count, 11)
         for tick in defaultTicks {
             // every tick should be from within the scale's range (output area)
             XCTAssertTrue(testRange.contains(tick.rangeLocation))
@@ -74,7 +75,8 @@
         let testRange = Float(0.0) ... Float(100.0)
 
         let defaultTicks = myScale.ticks(rangeLower: testRange.lowerBound, rangeHigher: testRange.upperBound)
-        XCTAssertEqual(defaultTicks.count, 28)
+        print(defaultTicks.map { $0.value })
+        XCTAssertEqual(defaultTicks.count, 11)
         for tick in defaultTicks {
             // every tick should be from within the scale's range (output area)
             XCTAssertTrue(testRange.contains(tick.rangeLocation))
