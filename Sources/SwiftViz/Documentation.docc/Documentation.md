@@ -11,15 +11,10 @@ Loosely based on the APIs and the visualization constructs created by Mike Bosto
 ### Scales
 
 - ``Scale``
-- ``TimeScale``
 - ``LogScale``
 - ``LinearScale``
 
 ### Axis
 
 - ``Tick``
-- ``DateTick``
-- ``DoubleTick``
-- ``CGFloatTick``
-- ``IntegerTick``
 - ``TickLabel``
