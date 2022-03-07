@@ -25,7 +25,7 @@ final class TickLabelTests: XCTestCase {
     }
 
     func testTickLabelConvenienceInitWithDefaultFormatter() throws {
-        let formatter = TickLabel.makeDefaultFormatter()
+        let formatter = TickLabel<Double>.makeDefaultFormatter()
         let value = 1.0
         let result = TickLabel(rangeLocation: CGFloat(value), value: formatter.string(for: value)!)
         XCTAssertNotNil(result)

@@ -1,5 +1,6 @@
 import Numerics
 import Foundation
+import CloudKit
 
 // =============================================================
 //  LinearScale.swift
@@ -7,54 +8,39 @@ import Foundation
 /// A linear scale is created using a continuous input domain and provides methods to
 /// convert values within that domain to an output range.
 public struct LinearScale: Scale {
-    public typealias InputType = Float
+    public typealias InputType = Double
     public typealias OutputType = Float
-    public func cast(value: Float) -> Float {
-        return value
-    }
-    public func cast(range: ClosedRange<Float>) -> ClosedRange<Float> {
-        return range
-    }
 
+    public let domainLower: Double
+    public let domainHigher: Double
+    public let domainExtent: Double
+    
     public let isClamped: Bool
-    public let domain: ClosedRange<InputType>
     public let desiredTicks: Int
 
-    public init(domain: ClosedRange<InputType>, isClamped: Bool = false, desiredTicks: Int = 10) {
+    public init(from lower: Double, to higher: Double, isClamped: Bool = false, desiredTicks: Int = 10) {
+        precondition(lower < higher)
         self.isClamped = isClamped
-        self.domain = domain
+        self.domainLower = lower
+        self.domainHigher = higher
+        self.domainExtent = higher - lower
         self.desiredTicks = desiredTicks
     }
 
-    /// scales the input value (within domain) per the scale
-    /// to the relevant output (using range)
-    ///
-    /// - Parameter x: value within the domain
-    /// - Returns: scaled value
-    public func scale(_ inputValue: InputType, range: ClosedRange<InputType>) -> OutputType {
-        let result: InputType = interpolate(normalize(inputValue, domain: domain), range: range)
+    public func scale(_ domainValue: Double, from lower: Float, to higher: Float) -> Float {
+        let normalizedInput = normalize(domainValue, lower: domainLower, higher: domainHigher)
+        let result: InputType = interpolate(normalizedInput, lower: Double(lower), higher: Double(higher))
         // if we're clamped, constrain the output to the range
-        return clamp(cast(value: result), within: cast(range: range))
-    }
+        let clampedValue = clamp(result, lower: Double(lower), higher: Double(higher))
+        return Float(clampedValue)
 
-    /// inverts the scale, taking a value in the output range and returning the relevant value from the input domain
-    public func invert(_ outputValue: OutputType, domain: ClosedRange<InputType>) -> InputType {
-        let result: OutputType = interpolate(normalize(outputValue, domain: domain), range: domain)
-        // if we're clamped, constrain the output to the domain
-        return clamp(result, within: cast(range: domain))
     }
-
-    /// returns an array of the locations of ticks - (value, location)
-    ///
-    /// - Parameter count: number of steps to take in the ticks, default of 10
-    /// - Returns: array of the locations of the ticks within self.range
-    public func ticks(range: ClosedRange<InputType>) -> [Tick<InputType,OutputType>] {
-        var result: [Tick<InputType,OutputType>] = Array()
-        for i in stride(from: 0, through: desiredTicks, by: 1) {
-            let tickDomainValue = interpolate(LinearScale.InputType(i / desiredTicks), range: domain)
-            result.append(Tick(value: tickDomainValue,
-                                      location: scale(tickDomainValue, range: range)))
-        }
-        return result
+    
+    public func invert(_ rangeValue: Float, from lower: Float, to higher: Float) -> Double {
+        // inverts the scale, taking a value in the output range and returning the relevant value from the input domain
+        let normalizedRangeValue = normalize(Double(rangeValue), lower: Double(lower), higher: Double(higher))
+        let mappedToDomain = interpolate(normalizedRangeValue, lower: domainLower, higher: domainHigher)
+        let clampedValue = clamp(mappedToDomain, lower: domainLower, higher: domainHigher)
+        return clampedValue
     }
 }
