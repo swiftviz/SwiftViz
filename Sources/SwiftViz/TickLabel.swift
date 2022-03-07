@@ -6,8 +6,8 @@
 //  Copyright © 2020 JFH Consulting. All rights reserved.
 //
 
-import Numerics
 import Foundation
+import Numerics
 
 /// A TickLabel is more specific to the visualization and
 /// is generally created with the benefit of a formatter,

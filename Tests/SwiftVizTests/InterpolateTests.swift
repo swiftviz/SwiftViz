@@ -9,7 +9,6 @@ import XCTest
 
 final class InterpolateTests: XCTestCase {
     func testInterpolateMid() {
-        
         let resultValue = interpolate(0.5, lower: 100.0, higher: 200.0)
         XCTAssertEqual(resultValue, 150.0, accuracy: 0.1)
     }

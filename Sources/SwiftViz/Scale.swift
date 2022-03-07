@@ -26,38 +26,38 @@ public protocol Scale {
     associatedtype OutputType: Real
     // this becomes a generic focused protocol - types implementing it will need to define the
     // protocol conformance in coordination with a generic type
-    
+
     /*
      tape("linear.clamp(true) restricts output values to the range", function(test) {
      test.equal(d3.scale.linear().clamp(true).range([10, 20])(2), 20);
      test.equal(d3.scale.linear().clamp(true).range([10, 20])(-1), 10);
      test.end();
      });
-     
+
      tape("linear.clamp(true) restricts input values to the domain", function(test) {
      test.equal(d3.scale.linear().clamp(true).range([10, 20]).invert(30), 1);
      test.equal(d3.scale.linear().clamp(true).range([10, 20]).invert(0), 0);
      test.end();
      });
      */
-    
+
     /// The number of ticks desired when creating the scale.
     ///
     /// This number may not match the number of ticks returned by ``ticks(count:range:)``.
     var desiredTicks: Int { get }
-    
+
     /// A boolean value that indicates whether the output vales are constrained to the min and max of the output range.
     ///
     /// If `true`, values processed by the scale are constrained to the output range, and values processed backwards through the scale
     /// are constrained to the input domain.
     var isClamped: Bool { get }
-    
+
     /// The range of input values
     var domainLower: InputType { get }
     var domainHigher: InputType { get }
     var domainExtent: InputType { get }
     func domainContains(_: InputType) -> Bool
-    
+
     /// Converts a value between the input _domain_ and output _range_
     ///
     /// - Parameter inputValue: a value within the bounds of the
@@ -67,7 +67,7 @@ public protocol Scale {
     /// - Returns: a value within the bounds of the ClosedRange
     ///   for range, or NaN if it maps outside the bounds
     func scale(_ domainValue: InputType, from: OutputType, to: OutputType) -> OutputType
-    
+
     /// Converts back from the output _range_ to a value within the input _domain_.
     ///
     /// The inverse of ``scale(_:range:)``.
@@ -82,30 +82,16 @@ public protocol Scale {
 }
 
 public extension Scale {
-    
     func domainContains(_ value: InputType) -> Bool {
         value >= domainLower && value <= domainHigher
     }
-    
-    /// Returns a constrained value to the provided domain if `isClamped` is `true`.
-    func clamp(_ value: InputType, lower: InputType, higher: InputType) -> InputType {
-        if isClamped {
-            if value > higher {
-                return higher
-            }
-            if value < lower {
-                return lower
-            }
-        }
-        return value
-    }
-    
+
     /// The distance between ticks in the output range.
     var tickInterval: InputType {
         let niceExtent = niceify(domainExtent, round: false)
         return niceify(niceExtent / (Self.InputType(desiredTicks) - 1), round: true)
     }
-    
+
     /// Returns an array of the locations within the output range to locate ticks for the scale.
     ///
     /// - Parameter range: a ClosedRange representing the representing
@@ -116,7 +102,7 @@ public extension Scale {
         guard tickInterval != 0 else {
             return tickList
         }
-        
+
         let min = floor(domainLower / tickInterval) * tickInterval
         let max = ceil(domainHigher / tickInterval) * tickInterval
         var domainValue = min
@@ -128,7 +114,7 @@ public extension Scale {
         }
         return tickList
     }
-    
+
     /// Converts an array of values of the Scale's InputType into a set of Ticks.
     /// Used for manually specifying a series of ticks that you want to have displayed.
     ///
@@ -146,7 +132,7 @@ public extension Scale {
             return nil
         }
     }
-    
+
     /// Takes an set of labelled input values and returns the relevant set of TickLabels converted
     /// to the correct location values associated with the provided range.
     /// - Parameters:
@@ -165,7 +151,20 @@ public extension Scale {
             return nil
         }
     }
-    
+
+    /// Returns a constrained value to the provided domain if `isClamped` is `true`.
+    func clamp<T: Real>(_ value: T, lower: T, higher: T) -> T {
+        if isClamped {
+            if value > higher {
+                return higher
+            }
+            if value < lower {
+                return lower
+            }
+        }
+        return value
+    }
+
     /// Validates a set of TickLabels against a given scale, removing any that don't match the scale's domain.
     ///
     /// - Parameter inputTickLabels: an array of TickLabels to validate against the scale
@@ -248,22 +247,22 @@ func niceify<T: Real>(_ x: T, round: Bool) -> T {
     let exp = floor(T.log10(x)) // exponent of x
     let f = x / T.pow(10, exp) // fractional part of x, in 1...10
     let niceFraction: T = {
-        if (round) {
-            if (f*2 < 3) { // equiv to f < 1.5, but allowing for integer comparison
+        if round {
+            if f * 2 < 3 { // equiv to f < 1.5, but allowing for integer comparison
                 return 1
-            } else if (f < 3) {
+            } else if f < 3 {
                 return 2
-            } else if (f < 7) {
+            } else if f < 7 {
                 return 5
             } else {
                 return 10
             }
         } else {
-            if (f <= 1) {
+            if f <= 1 {
                 return 1
-            } else if (f <= 2) {
+            } else if f <= 2 {
                 return 2
-            } else if (f <= 5) {
+            } else if f <= 5 {
                 return 5
             } else {
                 return 10

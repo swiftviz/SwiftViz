@@ -5,8 +5,8 @@
 //  Created by Joseph Heck on 3/2/20.
 //
 
-import Numerics
 import Foundation
+import Numerics
 
 /// A Tick is a visual representation of a point along an axis.
 ///
@@ -16,13 +16,13 @@ import Foundation
 public struct Tick<InputType, OutputType>: Identifiable {
     // this becomes a generic focused protocol - types implementing it will need to define the
     // protocol conformance in coordination with a generic type
-    public var id: UUID = UUID()
+    public var id: UUID = .init()
 
     let value: InputType
     let rangeLocation: OutputType
 
     init(value: InputType, location: OutputType) {
         self.value = value
-        self.rangeLocation = location
+        rangeLocation = location
     }
 }

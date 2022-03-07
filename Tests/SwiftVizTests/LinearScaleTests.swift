@@ -5,20 +5,19 @@
 import XCTest
 
 final class LinearScaleTests: XCTestCase {
-    
     func testScaleExampleValues() {
         // this is coming out as -18.503, which is VERY wrong...
         // incoming value example: stddev    NSTimeInterval    0.00062460815272012726
         // range to process that within: 1 ... 367
         // resulting value SHOULD be between those - not negative!
-        let incoming: TimeInterval = TimeInterval(0.00062460815272012726)
-        let outputRange = Float(1)...Float(367)
+        let incoming = TimeInterval(0.00062460815272012726)
+        let outputRange = Float(1) ... Float(367)
         // domain appears to be 0..0 in my example where this is failing
         let scale = LinearScale(from: 0.003, to: 0.056)
         let result = scale.scale(incoming + 0.003, from: Float(1.0), to: Float(367.0))
         XCTAssertTrue(outputRange.contains(result))
     }
-    
+
     func testLinearScaleTicks() {
         let myScale = LinearScale(from: 0.0, to: 1.0)
         XCTAssertFalse(myScale.isClamped)
