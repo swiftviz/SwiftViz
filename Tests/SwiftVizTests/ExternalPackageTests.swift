@@ -11,20 +11,32 @@ import XCTest
 
 final class PackagingTests: XCTestCase {
     func testManualTicks() {
-        let scale = LinearScale.DoubleScale(from: 0.0, to: 10.0, isClamped: false)
+        let scale = LinearScale.DoubleScale(from: 0.0, to: 10.0, transform: .none)
         // verifies the method is visible externally - else this won't compile
         let ticks = scale.ticks([2.0], range: 0 ... 10.0)
         XCTAssertEqual(ticks.count, 1)
     }
 
-    func testManualTicksOutsideRange() {
-        let scale = LinearScale.DoubleScale(from: 0.0, to: 10.0, isClamped: false)
+    func testManualTicksOutsideRangeNone() {
+        let scale = LinearScale.DoubleScale(from: 0.0, to: 10.0, transform: .none)
+        let ticks = scale.ticks([2.0, 4.0, 8.0, 16.0], range: 0 ... 10.0)
+        XCTAssertEqual(ticks.count, 4)
+    }
+
+    func testManualTicksOutsideRangeClamped() {
+        let scale = LinearScale.DoubleScale(from: 0.0, to: 10.0, transform: .clamp)
+        let ticks = scale.ticks([2.0, 4.0, 8.0, 16.0], range: 0 ... 10.0)
+        XCTAssertEqual(ticks.count, 4)
+    }
+
+    func testManualTicksOutsideRangeDropped() {
+        let scale = LinearScale.DoubleScale(from: 0.0, to: 10.0, transform: .drop)
         let ticks = scale.ticks([2.0, 4.0, 8.0, 16.0], range: 0 ... 10.0)
         XCTAssertEqual(ticks.count, 3)
     }
 
     func testManualTickLabelValidation() {
-        let scale = LinearScale.DoubleScale(from: 0.0, to: 10.0, isClamped: false)
+        let scale = LinearScale.DoubleScale(from: 0.0, to: 10.0, transform: .none)
         let manualLabels = [
             TickLabel(rangeLocation: Float(-1.0), value: "-1.0"),
             TickLabel(rangeLocation: Float(1.0), value: "1.0"),
@@ -36,7 +48,7 @@ final class PackagingTests: XCTestCase {
     }
 
     func testManualTickLabelsThroughScale() {
-        let scale = LinearScale.DoubleScale(from: 0.0, to: 10.0, isClamped: false)
+        let scale = LinearScale.DoubleScale(from: 0.0, to: 10.0, transform: .none)
         let labeledValues = [
             (Double(-1.0), "-1"),
             (Double(1.0), "1"),
@@ -49,16 +61,17 @@ final class PackagingTests: XCTestCase {
         XCTAssertEqual(validatedSet[1].value, "10")
     }
 
-    func testScaleClamp() {
-        let scale = LinearScale.DoubleScale(from: 0.0, to: 10.0, isClamped: false)
+    func testScaleTransform() {
+        let scale = LinearScale.DoubleScale(from: 0.0, to: 10.0, transform: .none)
         // default isClamped is false - no clamping
-        XCTAssertEqual(scale.clamp(11.0, lower: 5.0, higher: 10.0), 11.0)
-        XCTAssertEqual(scale.clamp(1.0, lower: 5.0, higher: 10.0), 1.0)
-        XCTAssertEqual(scale.clamp(7.0, lower: 5.0, higher: 10.0), 7.0)
+        let inputs = [11.0, 1.0, 7.0]
+        XCTAssertEqual(inputs.map { scale.transformAgainstDomain($0) }, inputs)
 
-        let cScale = LinearScale.DoubleScale(from: 5.0, to: 10.0, isClamped: true)
-        XCTAssertEqual(cScale.clamp(11.0, lower: 5.0, higher: 10.0), 10.0)
-        XCTAssertEqual(cScale.clamp(1.0, lower: 5.0, higher: 10.0), 5.0)
-        XCTAssertEqual(cScale.clamp(7.0, lower: 5.0, higher: 10.0), 7.0)
+        let cScale = LinearScale.DoubleScale(from: 5.0, to: 10.0, transform: .clamp)
+        XCTAssertEqual(inputs.map { cScale.transformAgainstDomain($0) }, [10.0, 5.0, 7.0])
+
+        let dScale = LinearScale.DoubleScale(from: 5.0, to: 10.0, transform: .drop)
+        XCTAssertEqual(inputs.map { dScale.transformAgainstDomain($0) }, [nil, nil, 7.0])
+
     }
 }
