@@ -15,6 +15,21 @@ import Numerics
 // D3's scale also has a .nice() function that does some pleasant rounding of the domain,
 // extending it slightly so that it's nicer to view
 
+
+/* Idea for structuring this from Tekl - inverting the generics on this and making the LinearScalable a protocol, and conform the types I'm interested in to those protocos:
+ 
+ protocol LinearScalable {
+     // whatever operations you need these things to do
+ }
+
+ struct LinearScale<T: LinearScalable> { … }
+
+ extension Double: LinearScalable {}
+ extension Float: LinearScalable {}
+ extension Int: LinearScalable {}
+ 
+ */
+
 /// A type that maps values from an input _domain_ to an output _range_ and provides generation and validation methods for values within those ranges.
 public protocol Scale {
     associatedtype InputType: Numeric, Comparable
@@ -51,7 +66,11 @@ public protocol Scale {
     var domainLower: InputType { get }
     var domainHigher: InputType { get }
     var domainExtent: InputType { get }
-    func domainContains(_: InputType) -> Bool
+    
+    /// Returns a Boolean value that indicates whether the value you provided is within the scale's domain.
+    /// - Parameter value: The value to compare.
+    /// - Returns: `true` if the value is between the lower and upper domain values.
+    func domainContains(_ value: InputType) -> Bool
 
     /// Converts a value between the input _domain_ and output _range_
     ///
@@ -74,13 +93,16 @@ public protocol Scale {
     /// - Returns: a value within the bounds of the ClosedRange
     ///   for domain, or NaN if it maps outside the bounds
     func invert(_ rangeValue: OutputType, from: OutputType, to: OutputType) -> InputType
+    
 }
 
 public extension Scale {
+    /// Returns a Boolean value that indicates whether the value you provided is within the scale's domain.
+    /// - Parameter value: The value to compare.
+    /// - Returns: `true` if the value is between the lower and upper domain values.
     func domainContains(_ value: InputType) -> Bool {
         value >= domainLower && value <= domainHigher
     }
-
 
     /// Converts an array of values of the Scale's InputType into a set of Ticks.
     /// Used for manually specifying a series of ticks that you want to have displayed.
@@ -117,7 +139,12 @@ public extension Scale {
         }
     }
 
-    /// Returns a constrained value to the provided domain if `isClamped` is `true`.
+    /// Returns a value constrained to within the range of lower to higher when the scale has clamping enabled.
+    /// - Parameters:
+    ///   - value: The value to potentially constrain.
+    ///   - lower: The lower end of the allowable values.
+    ///   - higher: The higher end of the allowable values.
+    /// - Returns: A value between `lower` and `higher` if `isClamped` is `true`; otherwise, the original value.
     func clamp<T: Real>(_ value: T, lower: T, higher: T) -> T {
         if isClamped {
             if value > higher {
@@ -176,8 +203,8 @@ public extension Scale where InputType == Int {
         var domainValue = min
         while domainValue <= max {
             let tickValue = min + (domainValue * tickInterval)
-            let tickRangeLocation = scale(tickValue, from: rangeLower, to: rangeHigher)
-            tickList.append(Tick(value: tickValue, location: tickRangeLocation))
+            let tickRangeLocation = scale(Int(tickValue), from: rangeLower, to: rangeHigher)
+            tickList.append(Tick(value: Int(tickValue), location: tickRangeLocation))
             domainValue += tickInterval
         }
         return tickList
@@ -214,7 +241,7 @@ public extension Scale where InputType == Float {
         while domainValue <= max {
             let tickValue = min + (domainValue * tickInterval)
             let tickRangeLocation = scale(InputType(tickValue), from: rangeLower, to: rangeHigher)
-            tickList.append(Tick(value: tickValue, location: tickRangeLocation))
+            tickList.append(Tick(value: Float(tickValue), location: tickRangeLocation))
             domainValue += tickInterval
         }
         return tickList
@@ -258,6 +285,27 @@ public extension Scale where InputType == Double {
     }
 }
 
+// MARK: - static generators for supported scale types
+
+public extension Scale {
+    
+    static func linear(_ low: Double, _ high: Double) -> LinearScale.DoubleScale {
+        return LinearScale.DoubleScale(from: low, to: high)
+    }
+    
+    static func linear(_ low: Date, _ high: Date) -> LinearScale.DoubleScale {
+        return LinearScale.DoubleScale(from: low.timeIntervalSince1970, to: high.timeIntervalSince1970)
+    }
+    
+    static func linear(_ low: Float, _ high: Float) -> LinearScale.FloatScale {
+        return LinearScale.FloatScale(from: low, to: high)
+    }
+    
+    static func linear(_ low: Int, _ high: Int) -> LinearScale.IntScale {
+        return LinearScale.IntScale(from: low, to: high)
+    }
+
+}
 // NOTE(heckj): OTHER SCALES: make a PowScale (& maybe Sqrt, Log, Ln)
 
 // Quantize scale: Quantize scales use a discrete range and a
@@ -304,6 +352,13 @@ func interpolate<T: Real>(_ x: T, lower: T, higher: T) -> T {
 ///   - round: A Boolean value indicating whether to round the number when providing a nice value.
 /// - Returns: A value rounded to a pleasing interval, or the ceiling of the value if rounding is disabled.
 func niceify<T: Real>(_ x: T, round: Bool) -> T {
+    // The logic for this algorithm sources from "Nice Numbers for Graph Labels"
+    // in "Graphics Gems, Volume 1" by Andrew Glassner. The details are exposed in
+    // stackoverflow at:
+    // https://stackoverflow.com/questions/8506881/nice-label-algorithm-for-charts-with-minimum-ticks
+    //
+    // The gist is that "nice" numbers for graph ticks seem to be one of 1, 2, 5, or powers
+    // of town of those numbers.
     let exp = floor(T.log10(x)) // exponent of x
     let f = x / T.pow(10, exp) // fractional part of x, in 1...10
     let niceFraction: T = {
