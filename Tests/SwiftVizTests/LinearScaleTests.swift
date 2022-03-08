@@ -13,13 +13,13 @@ final class LinearScaleTests: XCTestCase {
         let incoming = TimeInterval(0.00062460815272012726)
         let outputRange = Float(1) ... Float(367)
         // domain appears to be 0..0 in my example where this is failing
-        let scale = LinearScale(from: 0.003, to: 0.056)
+        let scale = LinearScale.DoubleScale(from: 0.003, to: 0.056)
         let result = scale.scale(incoming + 0.003, from: Float(1.0), to: Float(367.0))
         XCTAssertTrue(outputRange.contains(result))
     }
 
     func testLinearScaleTicks() {
-        let myScale = LinearScale(from: 0.0, to: 1.0)
+        let myScale = LinearScale.DoubleScale(from: 0.0, to: 1.0)
         XCTAssertFalse(myScale.isClamped)
 
         let testRange = Float(0) ... Float(100.0)
@@ -34,7 +34,7 @@ final class LinearScaleTests: XCTestCase {
     }
 
     func testLinearScaleManualTicks() {
-        let myScale = LinearScale(from: 0.0, to: 10.0)
+        let myScale = LinearScale.DoubleScale(from: 0.0, to: 10.0)
         XCTAssertFalse(myScale.isClamped)
 
         let testRange = Float(0) ... Float(100.0)
@@ -50,8 +50,8 @@ final class LinearScaleTests: XCTestCase {
     }
 
     func testLinearScaleClamp() {
-        let scale = LinearScale(from: 0.0, to: 10.0)
-        let clampedScale = LinearScale(from: 0.0, to: 10.0, isClamped: true)
+        let scale = LinearScale.DoubleScale(from: 0.0, to: 10.0)
+        let clampedScale = LinearScale.DoubleScale(from: 0.0, to: 10.0, isClamped: true)
         XCTAssertFalse(scale.isClamped)
         XCTAssertTrue(clampedScale.isClamped)
         let testRange = Float(0) ... Float(100.0)
@@ -70,8 +70,8 @@ final class LinearScaleTests: XCTestCase {
     }
 
     func testLinearInvertClamp() {
-        let scale = LinearScale(from: 0.0, to: 10.0)
-        let clampedScale = LinearScale(from: 0.0, to: 10.0, isClamped: true)
+        let scale = LinearScale.DoubleScale(from: 0.0, to: 10.0)
+        let clampedScale = LinearScale.DoubleScale(from: 0.0, to: 10.0, isClamped: true)
         XCTAssertFalse(scale.isClamped)
         XCTAssertTrue(clampedScale.isClamped)
         let testRange = Float(0) ... Float(100.0)
