@@ -30,6 +30,16 @@ import Numerics
  
  */
 
+/// A collection of methods for dealing with data transformation when displaying against a scale.
+public enum DomainDataTransform {
+    /// Data processed against a scale isn't influenced by the scale's domain.
+    case none
+    /// Data processed against a scale is dropped if the value is outside of the scale's domain.
+    case drop
+    /// Data processed against a scale is clamped to the upper and lower values of the scale's domain.
+    case clamp
+}
+
 /// A type that maps values from an input _domain_ to an output _range_ and provides generation and validation methods for values within those ranges.
 public protocol Scale {
     associatedtype InputType: Numeric, Comparable
@@ -60,7 +70,7 @@ public protocol Scale {
     ///
     /// If `true`, values processed by the scale are constrained to the output range, and values processed backwards through the scale
     /// are constrained to the input domain.
-    var isClamped: Bool { get }
+    var transformType: DomainDataTransform { get }
 
     /// The range of input values
     var domainLower: InputType { get }
@@ -72,27 +82,26 @@ public protocol Scale {
     /// - Returns: `true` if the value is between the lower and upper domain values.
     func domainContains(_ value: InputType) -> Bool
 
-    /// Converts a value between the input _domain_ and output _range_
+    /// Converts a value between the input _domain_ and output _range_.
     ///
-    /// - Parameter inputValue: a value within the bounds of the
-    ///   ClosedRange for domain
-    /// - Parameter range: a ClosedRange representing the representing
-    ///   the range we are mapping the values into with the scale
-    /// - Returns: a value within the bounds of the ClosedRange
-    ///   for range, or NaN if it maps outside the bounds
-    func scale(_ domainValue: InputType, from: OutputType, to: OutputType) -> OutputType
+    /// Before scaling the value, the scale may transform or drop the value based on the setting of ``Scale/transformType``.
+    ///
+    /// - Parameter inputValue: The value to be scaled.
+    /// - Parameter from: The lower bounding value of the range to transform to.
+    /// - Parameter to: The higher bounding value of the range to transform to.
+    /// - Returns: a value within the bounds of the range values you provide, or `nil` if the value was dropped.
+    func scale(_ domainValue: InputType, from: OutputType, to: OutputType) -> OutputType?
 
     /// Converts back from the output _range_ to a value within the input _domain_.
     ///
-    /// The inverse of ``scale(_:range:)``.
+    /// The inverse of ``Scale/scale(_:from:to:)``.
+    /// After converting the data back to the domain range, the scale may transform or drop the value based on the setting of ``Scale/transformType``.
     ///
-    /// - Parameter outputValue: a value within the bounds of the
-    ///   ClosedRange for range
-    /// - Parameter range: a ClosedRange representing the representing
-    ///   the range we are mapping the values into with the scale
-    /// - Returns: a value within the bounds of the ClosedRange
-    ///   for domain, or NaN if it maps outside the bounds
-    func invert(_ rangeValue: OutputType, from: OutputType, to: OutputType) -> InputType
+    /// - Parameter rangeValue: The value to be scaled back from the range values to the domain.
+    /// - Parameter from: The lower bounding value of the range to transform from.
+    /// - Parameter to: The higher bounding value of the range to transform from.
+    /// - Returns: a value within the bounds of the range values you provide, or `nil` if the value was dropped.
+    func invert(_ rangeValue: OutputType, from: OutputType, to: OutputType) -> InputType?
     
 }
 
@@ -104,7 +113,8 @@ public extension Scale {
         value >= domainLower && value <= domainHigher
     }
 
-    /// Converts an array of values of the Scale's InputType into a set of Ticks.
+    /// Converts an array of values that matches the scale's input type to a list of ticks that are within the scale's domain.
+    ///
     /// Used for manually specifying a series of ticks that you want to have displayed.
     ///
     /// Any values presented for display that are *not* within the domain of the scale
@@ -114,14 +124,15 @@ public extension Scale {
     ///   the range we are mapping the values into with the scale
     func ticks(_ inputValues: [InputType], range: ClosedRange<OutputType>) -> [Tick<InputType, OutputType>] {
         inputValues.compactMap { inputValue in
-            if domainContains(inputValue) {
-                return Tick(value: inputValue,
-                            location: scale(inputValue, from: range.lowerBound, to: range.upperBound))
+            if let rangeValue = scale(inputValue, from: range.lowerBound, to: range.upperBound) {
+                return Tick(value: inputValue, location: rangeValue)
             }
             return nil
         }
     }
 
+    /// Converts an array of values with matching strings, that are within the scale's domain and returns a list of tick labels using the strings you provide.
+    ///
     /// Takes an set of labelled input values and returns the relevant set of TickLabels converted
     /// to the correct location values associated with the provided range.
     /// - Parameters:
@@ -132,29 +143,44 @@ public extension Scale {
         inputValues.compactMap { inputTuple in
             let (inputValue, stringValue) = inputTuple
             if domainContains(inputValue) {
-                let location = scale(inputValue, from: lower, to: higher)
-                return TickLabel(rangeLocation: location, value: stringValue)
+                if let location = scale(inputValue, from: lower, to: higher) {
+                    return TickLabel(rangeLocation: location, value: stringValue)
+                }
             }
             return nil
         }
     }
 
-    /// Returns a value constrained to within the range of lower to higher when the scale has clamping enabled.
+    /// Processes a value against the scale, potentially constraining or dropping the value.
+    ///
+    /// The value is transformed based on the scale's ``Scale/transformType`` setting.
+    /// | ``Scale/transformType`` | transform effect |
+    /// | ------------------------ | --------- |
+    /// | ``DomainDataTransform/none`` | The method doesn't adjusted or drop the value. |
+    /// | ``DomainDataTransform/drop`` | Values outside the scale's domain are dropped. |
+    /// | ``DomainDataTransform/clamp`` | Values outside the scale's domain are adjusted to match the highest or lowest values of the domain. |
+    ///
     /// - Parameters:
-    ///   - value: The value to potentially constrain.
-    ///   - lower: The lower end of the allowable values.
-    ///   - higher: The higher end of the allowable values.
-    /// - Returns: A value between `lower` and `higher` if `isClamped` is `true`; otherwise, the original value.
-    func clamp<T: Real>(_ value: T, lower: T, higher: T) -> T {
-        if isClamped {
-            if value > higher {
-                return higher
+    ///   - value: The value to transform against the domain of the scale.
+    /// - Returns: An updated value, or `nil` if the value was dropped.
+    func transformAgainstDomain(_ value: InputType) -> InputType? {
+        switch transformType {
+            
+        case .none:
+            return value
+        case .drop:
+            if value > domainHigher  || value < domainLower {
+                return nil
             }
-            if value < lower {
-                return lower
+            return value
+        case .clamp:
+            if value > domainHigher {
+                return domainHigher
+            } else if value < domainLower {
+                return domainLower
             }
+            return value
         }
-        return value
     }
 
     /// Validates a set of TickLabels against a given scale, removing any that don't match the scale's domain.
@@ -163,11 +189,12 @@ public extension Scale {
     /// - Parameter range: a ClosedRange representing the representing
     ///   the range we are mapping the values into with the scale.
     func validatedTickLabels(_ inputTickLabels: [TickLabel<OutputType>], from lower: OutputType, to higher: OutputType) -> [TickLabel<OutputType>] {
-        inputTickLabels.compactMap { tick in
-            // THIS is where I need the invert function
-            let inputValue = invert(tick.rangeLocation, from: lower, to: higher)
+        inputTickLabels.compactMap { tickLabel in
+            guard let inputValue = invert(tickLabel.rangeLocation, from: lower, to: higher) else {
+                return nil
+            }
             if domainContains(inputValue) {
-                return tick
+                return tickLabel
             }
             return nil
         }
@@ -203,8 +230,9 @@ public extension Scale where InputType == Int {
         var domainValue = min
         while domainValue <= max {
             let tickValue = min + (domainValue * tickInterval)
-            let tickRangeLocation = scale(Int(tickValue), from: rangeLower, to: rangeHigher)
-            tickList.append(Tick(value: Int(tickValue), location: tickRangeLocation))
+            if let tickRangeLocation = scale(Int(tickValue), from: rangeLower, to: rangeHigher) {
+                tickList.append(Tick(value: Int(tickValue), location: tickRangeLocation))
+            }
             domainValue += tickInterval
         }
         return tickList
@@ -240,8 +268,9 @@ public extension Scale where InputType == Float {
         var domainValue = min
         while domainValue <= max {
             let tickValue = min + (domainValue * tickInterval)
-            let tickRangeLocation = scale(InputType(tickValue), from: rangeLower, to: rangeHigher)
-            tickList.append(Tick(value: Float(tickValue), location: tickRangeLocation))
+            if let tickRangeLocation = scale(InputType(tickValue), from: rangeLower, to: rangeHigher) {
+                tickList.append(Tick(value: Float(tickValue), location: tickRangeLocation))
+            }
             domainValue += tickInterval
         }
         return tickList
@@ -277,8 +306,9 @@ public extension Scale where InputType == Double {
         var domainValue = min
         while domainValue <= max {
             let tickValue = min + (domainValue * tickInterval)
-            let tickRangeLocation = scale(tickValue, from: rangeLower, to: rangeHigher)
-            tickList.append(Tick(value: tickValue, location: tickRangeLocation))
+            if let tickRangeLocation = scale(tickValue, from: rangeLower, to: rangeHigher) {
+                tickList.append(Tick(value: tickValue, location: tickRangeLocation))
+            }
             domainValue += tickInterval
         }
         return tickList

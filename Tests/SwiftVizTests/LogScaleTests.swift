@@ -20,23 +20,30 @@
     }
 
     func testLogScale_scale() {
-        let myScale = LogScale(from: 1.0, to: 100.0, isClamped: false)
-        XCTAssertFalse(myScale.isClamped)
+        let myScale = LogScale(from: 1.0, to: 100.0, transform: .none)
+        XCTAssertEqual(myScale.transformType, .none)
         let testRange = Float(0) ... Float(100.0)
-        XCTAssertEqual(50.0, myScale.scale(10.0, from: testRange.lowerBound, to: testRange.upperBound), accuracy: 0.01)
+        guard let scaledValue = myScale.scale(10.0, from: testRange.lowerBound, to: testRange.upperBound) else {
+            XCTFail("scaling dropped value")
+            return
+        }
+        XCTAssertEqual(50.0, scaledValue, accuracy: 0.01)
     }
 
     func testLogScale_invert() {
-        let myScale = LogScale(from: 1.0, to: 100.0,  isClamped: false)
-        XCTAssertFalse(myScale.isClamped)
+        let myScale = LogScale(from: 1.0, to: 100.0,  transform: .none)
+        XCTAssertEqual(myScale.transformType, .none)
         let testRange = Float(0) ... Float(100.0)
-        let result = myScale.invert(50.0, from: testRange.lowerBound, to: testRange.upperBound)
+        guard let result = myScale.invert(50.0, from: testRange.lowerBound, to: testRange.upperBound) else {
+            XCTFail("invert dropped value")
+            return
+        }
         XCTAssertEqual(10, result, accuracy: 0.01)
     }
 
     func testLogScaleTicks() {
-        let myScale = LogScale(from: 0.01, to: 100.0, isClamped: false)
-        XCTAssertFalse(myScale.isClamped)
+        let myScale = LogScale(from: 0.01, to: 100.0, transform: .none)
+        XCTAssertEqual(myScale.transformType, .none)
 
         let testRange = Float(0.0) ... Float(100.0)
 
@@ -52,8 +59,8 @@
     }
 
     func testLogScaleManualTicks() {
-        let myScale = LogScale(from: 0.01, to: 100.0, isClamped: false)
-        XCTAssertFalse(myScale.isClamped)
+        let myScale = LogScale(from: 0.01, to: 100.0, transform: .none)
+        XCTAssertEqual(myScale.transformType, .none)
 
         let testRange = Float(0) ... Float(100.0)
 
@@ -69,8 +76,8 @@
     }
 
     func testLogScaleTicksWeirdDomain() {
-        let myScale = LogScale(from: 0.8, to: 999.0, isClamped: false)
-        XCTAssertFalse(myScale.isClamped)
+        let myScale = LogScale(from: 0.8, to: 999.0, transform: .none)
+        XCTAssertEqual(myScale.transformType, .none)
 
         let testRange = Float(0.0) ... Float(100.0)
 
@@ -86,8 +93,8 @@
     }
 
     func testLogScaleTicksOutsideDomain() {
-        let myScale = LogScale(from: 10.0, to: 1000.0, isClamped: false)
-        XCTAssertFalse(myScale.isClamped)
+        let myScale = LogScale(from: 10.0, to: 1000.0, transform: .none)
+        XCTAssertEqual(myScale.transformType, .none)
 
         let testRange = Float(0.0) ... Float(100.0)
 
@@ -104,10 +111,10 @@
 
     func testLogScaleClamp() {
         let scale = LogScale(from: 1.0, to: 100.0)
-        let clampedScale = LogScale(from: 1.0, to: 100.0, isClamped: true)
+        let clampedScale = LogScale(from: 1.0, to: 100.0, transform: .clamp)
 
-        XCTAssertFalse(scale.isClamped)
-        XCTAssertTrue(clampedScale.isClamped)
+        XCTAssertEqual(scale.transformType, .none)
+        XCTAssertEqual(clampedScale.transformType, .clamp)
         let testRange = Float(0) ... Float(100.0)
 
         // no clamp effect
@@ -115,8 +122,16 @@
         XCTAssertEqual(clampedScale.scale(10, from: testRange.lowerBound, to: testRange.upperBound), 50)
 
         // clamp constrained high
-        XCTAssertEqual(scale.scale(1000, from: testRange.lowerBound, to: testRange.upperBound), 150, accuracy: 0.001)
-        XCTAssertEqual(clampedScale.scale(1000, from: testRange.lowerBound, to: testRange.upperBound), 100, accuracy: 0.001)
+        guard let scaledValue = scale.scale(1000, from: testRange.lowerBound, to: testRange.upperBound) else {
+            XCTFail()
+            return
+        }
+        XCTAssertEqual(scaledValue, 150, accuracy: 0.001)
+        guard let clampedScaledValue = clampedScale.scale(1000, from: testRange.lowerBound, to: testRange.upperBound) else {
+            XCTFail()
+            return
+        }
+        XCTAssertEqual(clampedScaledValue, 100, accuracy: 0.001)
 
         // clamp constrained low
         XCTAssertEqual(scale.scale(0.1, from: testRange.lowerBound, to: testRange.upperBound), -50)
@@ -125,10 +140,10 @@
 
     func testLogInvertClamp() {
         let scale = LogScale(from: 1.0, to: 100.0)
-        let clampedScale = LogScale(from: 1.0, to: 100.0, isClamped: true)
+        let clampedScale = LogScale(from: 1.0, to: 100.0, transform: .clamp)
 
-        XCTAssertFalse(scale.isClamped)
-        XCTAssertTrue(clampedScale.isClamped)
+        XCTAssertEqual(scale.transformType, .none)
+        XCTAssertEqual(clampedScale.transformType, .clamp)
         let testRange = Float(0) ... Float(100.0)
 
         // no clamp effect
@@ -136,8 +151,16 @@
         XCTAssertEqual(clampedScale.invert(50, from: testRange.lowerBound, to: testRange.upperBound), 10)
 
         // clamp constrained high
-        XCTAssertEqual(scale.invert(150, from: testRange.lowerBound, to: testRange.upperBound), 1000, accuracy: 0.001)
-        XCTAssertEqual(clampedScale.invert(150, from: testRange.lowerBound, to: testRange.upperBound), 100, accuracy: 0.001)
+        guard let scaledValue = scale.invert(150, from: testRange.lowerBound, to: testRange.upperBound) else {
+            XCTFail()
+            return
+        }
+        XCTAssertEqual(scaledValue, 1000, accuracy: 0.001)
+        guard let clampedScaleValue = clampedScale.invert(150, from: testRange.lowerBound, to: testRange.upperBound) else {
+            XCTFail()
+            return
+        }
+        XCTAssertEqual(clampedScaleValue, 100, accuracy: 0.001)
 
         // clamp constrained low
         XCTAssertEqual(scale.invert(-50, from: testRange.lowerBound, to: testRange.upperBound), 0.1)
