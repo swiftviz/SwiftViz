@@ -20,13 +20,13 @@ final class PackagingTests: XCTestCase {
     func testManualTicksOutsideRangeNone() {
         let scale = LinearScale.DoubleScale(from: 0.0, to: 10.0, transform: .none)
         let ticks = scale.ticks([2.0, 4.0, 8.0, 16.0], range: 0 ... 10.0)
-        XCTAssertEqual(ticks.count, 4)
+        XCTAssertEqual(ticks.count, 3)
     }
 
     func testManualTicksOutsideRangeClamped() {
         let scale = LinearScale.DoubleScale(from: 0.0, to: 10.0, transform: .clamp)
         let ticks = scale.ticks([2.0, 4.0, 8.0, 16.0], range: 0 ... 10.0)
-        XCTAssertEqual(ticks.count, 4)
+        XCTAssertEqual(ticks.count, 3)
     }
 
     func testManualTicksOutsideRangeDropped() {

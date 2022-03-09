@@ -20,6 +20,13 @@ final class NormalizeTests: XCTestCase {
         XCTAssertEqual(resultValue, 0.0, accuracy: 0.01)
     }
 
+    func testNormalizeNearZero() {
+        let resultValue = normalize(0.1, lower: 0.0, higher: 100.0)
+
+        XCTAssertFalse(resultValue.isNaN)
+        XCTAssertEqual(resultValue, 0.0, accuracy: 0.01)
+    }
+
     func testNormalizeUpper() {
         let resultValue = normalize(199.9, lower: 100.0, higher: 200.0)
         XCTAssertFalse(resultValue.isNaN)

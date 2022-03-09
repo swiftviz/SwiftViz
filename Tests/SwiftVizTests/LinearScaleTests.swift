@@ -27,8 +27,9 @@ final class LinearScaleTests: XCTestCase {
 
         let testRange = Float(0) ... Float(100.0)
         let defaultTicks = myScale.ticks(rangeLower: testRange.lowerBound, rangeHigher: testRange.upperBound)
-        XCTAssertEqual(defaultTicks.count, 11)
+        XCTAssertEqual(defaultTicks.count, 6)
         for tick in defaultTicks {
+             print(tick)
             // every tick should be from within the scale's domain (input) range
             XCTAssertTrue(testRange.contains(tick.rangeLocation))
             XCTAssertTrue(tick.value >= myScale.domainLower)
