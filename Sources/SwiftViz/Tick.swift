@@ -8,7 +8,7 @@
 import Foundation
 import Numerics
 
-/// A Tick is a visual representation of a point along an axis.
+/// A  visual representation of a point along an axis.
 ///
 /// When created based on a range, a tick includes a location along a single direction
 /// and a textual representation. It is meant to be created using a Scale, with some input domain

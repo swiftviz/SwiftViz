@@ -81,25 +81,33 @@ extension Double: NiceValue {
     public static func rangeOfNiceValues(min: Double, max: Double, ofSize size: Int) -> [Double] {
         precondition(size > 1)
         let niceMin = niceMinimumValueForRange(min: min, max: max)
-        
+        // print("niced min: \(niceMin)")
         let step = (max - niceMin) / Double(size - 1)
+        // print("step: \(step)")
         let niceStep = niceVersion(for: step, min: false)
+        // print("niced step: \(niceStep)")
         var niceMax = niceVersion(for: max+niceStep, min: true)
         // niceMax should never be below the provided 'max' value, so increment by the
         // calculated step value until it's above it:
         while niceMax < max {
             niceMax += niceStep
         }
+        
         var result:[Double] = []
+        // incrementing the comparison point by a half step
+        // prevents some slight rounding errors that could lead
+        // to a final value not getting appendded.
+        let comparisonPoint = niceMax + (0.5 * niceStep)
         result.append(niceMin)
         for i in 1...size - 1 {
             let steppedValue = niceMin + Double(i) * niceStep
-            if (steppedValue <= niceMax) {
+            if (steppedValue <= comparisonPoint) {
                 result.append(steppedValue)
             } else {
                 break
             }
         }
+        print(result)
         return result
     }
 }
@@ -144,9 +152,12 @@ extension Float: NiceValue {
     
     public static func rangeOfNiceValues(min: Float, max: Float, ofSize size: Int) -> [Float] {
         let niceMin = niceMinimumValueForRange(min: min, max: max)
+        //print("niceMin: \(niceMin)")
         let step = (max - niceMin) / Float(size - 1)
+        //print("step: \(step)")
         let niceStep = niceVersion(for: step, min: false)
-
+        //print("niced step: \(niceStep)")
+        
         var result: [Float] = []
         result.append(niceMin)
         for i in 1...size - 1 {

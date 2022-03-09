@@ -9,10 +9,7 @@
 import Foundation
 import Numerics
 
-/// A TickLabel is more specific to the visualization and
-/// is generally created with the benefit of a formatter,
-/// the type that we use being dependent on the type that's
-/// used for the domain of the Scale.
+/// A struct that provides string representation of a value with an accompanying location that represents a tick on an axis of a chart.
 public struct TickLabel<OutputType>: Identifiable {
     public let id: UUID
     public let rangeLocation: OutputType
