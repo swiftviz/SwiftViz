@@ -88,8 +88,10 @@ final class LinearScaleTests: XCTestCase {
     func testDoubleLinearScaleClamp() {
         let scale = LinearScale.DoubleScale(from: 0.0, to: 10.0)
         let clampedScale = LinearScale.DoubleScale(from: 0.0, to: 10.0, transform: .clamp)
+        let dropScale = LinearScale.DoubleScale(from: 0, to: 10, transform: .drop)
         XCTAssertEqual(scale.transformType, .none)
         XCTAssertEqual(clampedScale.transformType, .clamp)
+        XCTAssertEqual(dropScale.transformType, .drop)
         let testRange = Float(0) ... Float(100.0)
 
         // no clamp effect
@@ -107,17 +109,22 @@ final class LinearScaleTests: XCTestCase {
             return
         }
         XCTAssertEqual(clampedScaleValue, 100, accuracy: 0.001)
+        XCTAssertNil(dropScale.scale(110, from:testRange.lowerBound, to:testRange.upperBound))
 
         // clamp constrained low
         XCTAssertEqual(scale.scale(-1, from: testRange.lowerBound, to: testRange.upperBound), -10)
         XCTAssertEqual(clampedScale.scale(-1, from: testRange.lowerBound, to: testRange.upperBound), 0)
+        XCTAssertNil(dropScale.scale(-1, from:testRange.lowerBound, to:testRange.upperBound))
+
     }
 
     func testFloatLinearScaleClamp() {
         let scale = LinearScale.FloatScale(from: 0.0, to: 10.0)
         let clampedScale = LinearScale.FloatScale(from: 0.0, to: 10.0, transform: .clamp)
+        let dropScale = LinearScale.FloatScale(from: 0, to: 10, transform: .drop)
         XCTAssertEqual(scale.transformType, .none)
         XCTAssertEqual(clampedScale.transformType, .clamp)
+        XCTAssertEqual(dropScale.transformType, .drop)
         let testRange = Float(0) ... Float(100.0)
 
         // no clamp effect
@@ -135,17 +142,23 @@ final class LinearScaleTests: XCTestCase {
             return
         }
         XCTAssertEqual(clampedScaleValue, 100, accuracy: 0.001)
-
+        XCTAssertNil(dropScale.scale(110, from:testRange.lowerBound, to:testRange.upperBound))
+        
         // clamp constrained low
         XCTAssertEqual(scale.scale(-1, from: testRange.lowerBound, to: testRange.upperBound), -10)
         XCTAssertEqual(clampedScale.scale(-1, from: testRange.lowerBound, to: testRange.upperBound), 0)
+        XCTAssertNil(dropScale.scale(-1, from:testRange.lowerBound, to:testRange.upperBound))
     }
 
     func testIntLinearScaleClamp() {
         let scale = LinearScale.IntScale(from: 0, to: 10)
         let clampedScale = LinearScale.IntScale(from: 0, to: 10, transform: .clamp)
+        let dropScale = LinearScale.IntScale(from: 0, to: 10, transform: .drop)
+        
         XCTAssertEqual(scale.transformType, .none)
         XCTAssertEqual(clampedScale.transformType, .clamp)
+        XCTAssertEqual(dropScale.transformType, .drop)
+
         let testRange = Float(0) ... Float(100.0)
 
         // no clamp effect
@@ -163,17 +176,21 @@ final class LinearScaleTests: XCTestCase {
             return
         }
         XCTAssertEqual(clampedScaleValue, 100, accuracy: 0.001)
+        XCTAssertNil(dropScale.scale(110, from:testRange.lowerBound, to:testRange.upperBound))
 
         // clamp constrained low
         XCTAssertEqual(scale.scale(-1, from: testRange.lowerBound, to: testRange.upperBound), -10)
         XCTAssertEqual(clampedScale.scale(-1, from: testRange.lowerBound, to: testRange.upperBound), 0)
+        XCTAssertNil(dropScale.scale(-1, from:testRange.lowerBound, to:testRange.upperBound))
     }
 
     func testDoubleLinearInvertClamp() {
         let scale = LinearScale.DoubleScale(from: 0.0, to: 10.0)
         let clampedScale = LinearScale.DoubleScale(from: 0.0, to: 10.0, transform: .clamp)
+        let dropScale = LinearScale.DoubleScale(from: 0, to: 10, transform: .drop)
         XCTAssertEqual(scale.transformType, .none)
         XCTAssertEqual(clampedScale.transformType, .clamp)
+        XCTAssertEqual(dropScale.transformType, .drop)
         let testRange = Float(0) ... Float(100.0)
 
         // no clamp effect
@@ -191,17 +208,22 @@ final class LinearScaleTests: XCTestCase {
             return
         }
         XCTAssertEqual(invertedClampedValue, 10, accuracy: 0.001)
+        XCTAssertNil(dropScale.invert(110, from:testRange.lowerBound, to:testRange.upperBound))
 
         // clamp constrained low
         XCTAssertEqual(scale.invert(-10, from: testRange.lowerBound, to: testRange.upperBound), -1)
         XCTAssertEqual(clampedScale.invert(-10, from: testRange.lowerBound, to: testRange.upperBound), 0)
+        XCTAssertNil(dropScale.invert(-10, from:testRange.lowerBound, to:testRange.upperBound))
+
     }
 
     func testFloatLinearInvertClamp() {
         let scale = LinearScale.FloatScale(from: 0.0, to: 10.0)
         let clampedScale = LinearScale.FloatScale(from: 0.0, to: 10.0, transform: .clamp)
+        let dropScale = LinearScale.FloatScale(from: 0, to: 10, transform: .drop)
         XCTAssertEqual(scale.transformType, .none)
         XCTAssertEqual(clampedScale.transformType, .clamp)
+        XCTAssertEqual(dropScale.transformType, .drop)
         let testRange = Float(0) ... Float(100.0)
 
         // no clamp effect
@@ -219,17 +241,21 @@ final class LinearScaleTests: XCTestCase {
             return
         }
         XCTAssertEqual(invertedClampedValue, 10, accuracy: 0.001)
-
+        XCTAssertNil(dropScale.invert(110, from:testRange.lowerBound, to:testRange.upperBound))
+        
         // clamp constrained low
         XCTAssertEqual(scale.invert(-10, from: testRange.lowerBound, to: testRange.upperBound), -1)
         XCTAssertEqual(clampedScale.invert(-10, from: testRange.lowerBound, to: testRange.upperBound), 0)
+        XCTAssertNil(dropScale.invert(-10, from:testRange.lowerBound, to:testRange.upperBound))
     }
 
     func testIntLinearInvertClamp() {
         let scale = LinearScale.IntScale(from: 0, to: 10)
         let clampedScale = LinearScale.IntScale(from: 0, to: 10, transform: .clamp)
+        let dropScale = LinearScale.IntScale(from: 0, to: 10, transform: .drop)
         XCTAssertEqual(scale.transformType, .none)
         XCTAssertEqual(clampedScale.transformType, .clamp)
+        XCTAssertEqual(dropScale.transformType, .drop)
         let testRange = Float(0) ... Float(100.0)
 
         // no clamp effect
@@ -247,9 +273,12 @@ final class LinearScaleTests: XCTestCase {
             return
         }
         XCTAssertEqual(invertedClampedValue, 10)
-
+        XCTAssertNil(dropScale.invert(110, from:testRange.lowerBound, to:testRange.upperBound))
+        
         // clamp constrained low
         XCTAssertEqual(scale.invert(-10, from: testRange.lowerBound, to: testRange.upperBound), -1)
         XCTAssertEqual(clampedScale.invert(-10, from: testRange.lowerBound, to: testRange.upperBound), 0)
+        XCTAssertNil(dropScale.invert(-10, from:testRange.lowerBound, to:testRange.upperBound))
     }
+    
 }

@@ -41,8 +41,8 @@ public enum DomainDataTransform {
 
 /// A type that maps values from an input _domain_ to an output _range_ and provides generation and validation methods for values within those ranges.
 public protocol Scale {
-    associatedtype InputType: Numeric, Comparable
-    associatedtype OutputType: Numeric, Comparable
+    associatedtype InputType: Numeric, Comparable, NiceValue
+    associatedtype OutputType: Numeric, Comparable, NiceValue
     // this becomes a generic focused protocol - types implementing it will need to define the
     // protocol conformance in coordination with a generic type
 
