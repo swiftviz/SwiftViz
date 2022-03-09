@@ -18,8 +18,8 @@ public struct Tick<InputType, OutputType: Real>: Identifiable {
     // protocol conformance in coordination with a generic type
     public var id: UUID = .init()
 
-    let value: InputType
-    let rangeLocation: OutputType
+    public let value: InputType
+    public let rangeLocation: OutputType
 
     init?(value: InputType, location: OutputType) {
         self.value = value
