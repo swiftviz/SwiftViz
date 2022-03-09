@@ -22,12 +22,11 @@ final class InterpolateTests: XCTestCase {
         let resultValue = interpolate(1.0, lower: 100.0, higher: 200.0)
         XCTAssertEqual(resultValue, 200.0, accuracy: 0.1)
     }
-    
+
     func testInterpolateNearZero() {
         let resultValue = normalize(0.001, lower: 0.0, higher: 100.0)
 
         XCTAssertFalse(resultValue.isNaN)
         XCTAssertEqual(resultValue, 0.0, accuracy: 0.01)
     }
-
 }

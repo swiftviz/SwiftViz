@@ -29,7 +29,7 @@ final class LinearScaleTests: XCTestCase {
         let defaultTicks = myScale.ticks(rangeLower: testRange.lowerBound, rangeHigher: testRange.upperBound)
         XCTAssertEqual(defaultTicks.count, 6)
         for tick in defaultTicks {
-             print(tick)
+            print(tick)
             // every tick should be from within the scale's domain (input) range
             XCTAssertTrue(testRange.contains(tick.rangeLocation))
             XCTAssertTrue(tick.value >= myScale.domainLower)
@@ -45,7 +45,7 @@ final class LinearScaleTests: XCTestCase {
         let defaultTicks = myScale.ticks(rangeLower: testRange.lowerBound, rangeHigher: testRange.upperBound)
         XCTAssertEqual(defaultTicks.count, 6)
         for tick in defaultTicks {
-             print(tick)
+            print(tick)
             // every tick should be from within the scale's domain (input) range
             XCTAssertTrue(testRange.contains(tick.rangeLocation))
             XCTAssertTrue(tick.value >= myScale.domainLower)
@@ -141,7 +141,6 @@ final class LinearScaleTests: XCTestCase {
         XCTAssertEqual(clampedScale.scale(-1, from: testRange.lowerBound, to: testRange.upperBound), 0)
     }
 
-    
     func testIntLinearScaleClamp() {
         let scale = LinearScale.IntScale(from: 0, to: 10)
         let clampedScale = LinearScale.IntScale(from: 0, to: 10, transform: .clamp)
@@ -197,7 +196,7 @@ final class LinearScaleTests: XCTestCase {
         XCTAssertEqual(scale.invert(-10, from: testRange.lowerBound, to: testRange.upperBound), -1)
         XCTAssertEqual(clampedScale.invert(-10, from: testRange.lowerBound, to: testRange.upperBound), 0)
     }
-    
+
     func testFloatLinearInvertClamp() {
         let scale = LinearScale.FloatScale(from: 0.0, to: 10.0)
         let clampedScale = LinearScale.FloatScale(from: 0.0, to: 10.0, transform: .clamp)

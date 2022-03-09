@@ -1,6 +1,6 @@
 //
 //  NiceValueTests.swift
-//  
+//
 //
 //  Created by Joseph Heck on 3/7/22.
 //
@@ -8,14 +8,13 @@
 import XCTest
 
 class NiceValueTests: XCTestCase {
-
     func doubleConversionMatches(input: Double, lower: Double, higher: Double) {
         let lowConvertedValue = Double.niceVersion(for: input, min: true)
         let highConvertedValue = Double.niceVersion(for: input, min: false)
         XCTAssertEqual(lower, lowConvertedValue)
         XCTAssertEqual(higher, highConvertedValue)
     }
-    
+
     func floatConversionMatches(input: Float, lower: Float, higher: Float) {
         let lowConvertedValue = Float.niceVersion(for: input, min: true)
         let highConvertedValue = Float.niceVersion(for: input, min: false)
@@ -29,7 +28,7 @@ class NiceValueTests: XCTestCase {
         XCTAssertEqual(lower, lowConvertedValue)
         XCTAssertEqual(higher, highConvertedValue)
     }
-    
+
     func testNegativeNiceValues() throws {
         doubleConversionMatches(input: 0.0, lower: 0.0, higher: 0.0)
         doubleConversionMatches(input: -1.0, lower: -1.0, higher: -1.0)
@@ -126,7 +125,7 @@ class NiceValueTests: XCTestCase {
         XCTAssertEqual(Double.niceMinimumValueForRange(min: -3, max: 10), -5)
         XCTAssertEqual(Double.niceMinimumValueForRange(min: -3, max: 100), -5)
     }
-    
+
     func testNiceMinimumForRangeDouble() throws {
         XCTAssertEqual(Double.niceMinimumValueForRange(min: 0, max: 10), 0)
         XCTAssertEqual(Double.niceMinimumValueForRange(min: 1, max: 10), 0)
@@ -186,7 +185,7 @@ class NiceValueTests: XCTestCase {
         XCTAssertEqual(Int.niceMinimumValueForRange(min: 2, max: 100), 0)
         XCTAssertEqual(Int.niceMinimumValueForRange(min: 3, max: 100), 0)
     }
-    
+
     func verifyRangeAttributes(min: Double, max: Double, steps: Int, calcSteps: Int, stepsize: Double, niceMax: Double) throws {
         XCTAssertTrue(steps > 1)
         let calculatedRange = Double.rangeOfNiceValues(min: min, max: max, ofSize: steps)
@@ -197,10 +196,10 @@ class NiceValueTests: XCTestCase {
         XCTAssertEqual(derivedStepSize, stepsize, accuracy: 0.01)
         XCTAssertEqual(calculatedRange.last!, niceMax, accuracy: 0.01)
     }
-        
+
     func testDoubleNiceRange() throws {
-        let min: Double = 0.1
-        let max: Double = 12.56
+        let min = 0.1
+        let max = 12.56
         try verifyRangeAttributes(min: min, max: max, steps: 2, calcSteps: 2, stepsize: 20, niceMax: 20)
         try verifyRangeAttributes(min: min, max: max, steps: 3, calcSteps: 3, stepsize: 10, niceMax: 20)
         try verifyRangeAttributes(min: min, max: max, steps: 4, calcSteps: 4, stepsize: 5, niceMax: 15)
@@ -238,7 +237,7 @@ class NiceValueTests: XCTestCase {
         try verifyRangeAttributes(min: min, max: max, steps: 180, calcSteps: 127, stepsize: 0.1, niceMax: 12.6)
         try verifyRangeAttributes(min: min, max: max, steps: 190, calcSteps: 127, stepsize: 0.1, niceMax: 12.6)
     }
-    
+
     func verifyFloatRangeAttributes(min: Float, max: Float, steps: Int, calcSteps: Int, stepsize: Float, niceMax: Float) throws {
         XCTAssertTrue(steps > 1)
         let calculatedRange = Float.rangeOfNiceValues(min: min, max: max, ofSize: steps)
@@ -289,5 +288,24 @@ class NiceValueTests: XCTestCase {
         try verifyFloatRangeAttributes(min: min, max: max, steps: 170, calcSteps: 127, stepsize: 0.1, niceMax: 12.6)
         try verifyFloatRangeAttributes(min: min, max: max, steps: 180, calcSteps: 127, stepsize: 0.1, niceMax: 12.6)
         try verifyFloatRangeAttributes(min: min, max: max, steps: 190, calcSteps: 127, stepsize: 0.1, niceMax: 12.6)
+    }
+    
+    func verifyIntRangeAttributes(min: Int, max: Int, steps: Int, calcSteps: Int, stepsize: Int, niceMax: Int) throws {
+        XCTAssertTrue(steps > 1)
+        let calculatedRange = Int.rangeOfNiceValues(min: min, max: max, ofSize: steps)
+        XCTAssertTrue(calculatedRange.first! <= min)
+        XCTAssertTrue(calculatedRange.last! >= max)
+        XCTAssertEqual(calculatedRange.count, calcSteps)
+        let derivedStepSize = calculatedRange[1] - calculatedRange[0]
+        XCTAssertEqual(derivedStepSize, stepsize)
+        XCTAssertEqual(calculatedRange.last!, niceMax)
+    }
+    
+    func testIntNiceRange() throws {
+        let min: Int = 1
+        let max: Int = 125
+        try verifyIntRangeAttributes(min: min, max: max, steps: 2, calcSteps: 2, stepsize: 200, niceMax: 200)
+        try verifyIntRangeAttributes(min: min, max: max, steps: 3, calcSteps: 3, stepsize: 100, niceMax: 200)
+        try verifyIntRangeAttributes(min: min, max: max, steps: 3, calcSteps: 3, stepsize: 100, niceMax: 200)
     }
 }

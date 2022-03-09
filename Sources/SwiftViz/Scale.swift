@@ -15,9 +15,8 @@ import Numerics
 // D3's scale also has a .nice() function that does some pleasant rounding of the domain,
 // extending it slightly so that it's nicer to view
 
-
 /* Idea for structuring this from Tekl - inverting the generics on this and making the LinearScalable a protocol, and conform the types I'm interested in to those protocos:
- 
+
  protocol LinearScalable {
      // whatever operations you need these things to do
  }
@@ -27,7 +26,7 @@ import Numerics
  extension Double: LinearScalable {}
  extension Float: LinearScalable {}
  extension Int: LinearScalable {}
- 
+
  */
 
 /// A collection of methods for dealing with data transformation when displaying against a scale.
@@ -76,7 +75,7 @@ public protocol Scale {
     var domainLower: InputType { get }
     var domainHigher: InputType { get }
     var domainExtent: InputType { get }
-    
+
     /// Returns a Boolean value that indicates whether the value you provided is within the scale's domain.
     /// - Parameter value: The value to compare.
     /// - Returns: `true` if the value is between the lower and upper domain values.
@@ -102,7 +101,6 @@ public protocol Scale {
     /// - Parameter to: The higher bounding value of the range to transform from.
     /// - Returns: a value within the bounds of the range values you provide, or `nil` if the value was dropped.
     func invert(_ rangeValue: OutputType, from: OutputType, to: OutputType) -> InputType?
-    
 }
 
 public extension Scale {
@@ -120,11 +118,10 @@ public extension Scale {
     /// - Returns: An updated value, or `nil` if the value was dropped.
     func transformAgainstDomain(_ value: InputType) -> InputType? {
         switch transformType {
-            
         case .none:
             return value
         case .drop:
-            if value > domainHigher  || value < domainLower {
+            if value > domainHigher || value < domainLower {
                 return nil
             }
             return value
@@ -160,12 +157,13 @@ public extension Scale where OutputType: Real {
     func ticks(_ inputValues: [InputType], from lower: OutputType, to higher: OutputType) -> [Tick<InputType, OutputType>] {
         inputValues.compactMap { inputValue in
             if domainContains(inputValue),
-               let rangeValue = scale(inputValue, from: lower, to: higher) {
+               let rangeValue = scale(inputValue, from: lower, to: higher)
+            {
                 switch transformType {
                 case .none:
                     return Tick(value: inputValue, location: rangeValue)
                 case .drop:
-                    if rangeValue > higher  || rangeValue < lower {
+                    if rangeValue > higher || rangeValue < lower {
                         return nil
                     }
                     return Tick(value: inputValue, location: rangeValue)
@@ -199,7 +197,7 @@ public extension Scale where OutputType: Real {
                     case .none:
                         return TickLabel(rangeLocation: location, value: stringValue)
                     case .drop:
-                        if location > higher  || location < lower {
+                        if location > higher || location < lower {
                             return nil
                         }
                         return TickLabel(rangeLocation: location, value: stringValue)
@@ -235,7 +233,7 @@ public extension Scale where OutputType: Real {
     }
 }
 
-public extension Scale where InputType == Int, OutputType: Real  {
+public extension Scale where InputType == Int, OutputType: Real {
     /// Returns an array of the locations within the output range to locate ticks for the scale.
     ///
     /// - Parameter range: a ClosedRange representing the representing the range we are mapping the values into with the scale
@@ -268,7 +266,6 @@ public extension Scale where InputType == Float, OutputType: Real {
 }
 
 public extension Scale where InputType == Double, OutputType: Real {
-
     /// Returns an array of the locations within the output range to locate ticks for the scale.
     ///
     /// - Parameter range: a ClosedRange representing the representing the range we are mapping the values into with the scale
@@ -277,8 +274,9 @@ public extension Scale where InputType == Double, OutputType: Real {
         let tickValues = InputType.rangeOfNiceValues(min: domainLower, max: domainHigher, ofSize: desiredTicks)
         return tickValues.compactMap { tickValue in
             if let tickRangeLocation = scale(tickValue, from: rangeLower, to: rangeHigher),
-                tickRangeLocation <= rangeHigher {
-                    return Tick(value: tickValue, location: tickRangeLocation)
+               tickRangeLocation <= rangeHigher
+            {
+                return Tick(value: tickValue, location: tickRangeLocation)
             }
             return nil
         }
@@ -288,24 +286,23 @@ public extension Scale where InputType == Double, OutputType: Real {
 // MARK: - static generators for supported scale types
 
 public extension Scale {
-    
     static func linear(_ low: Double, _ high: Double) -> LinearScale.DoubleScale {
-        return LinearScale.DoubleScale(from: low, to: high)
-    }
-    
-    static func linear(_ low: Date, _ high: Date) -> LinearScale.DoubleScale {
-        return LinearScale.DoubleScale(from: low.timeIntervalSince1970, to: high.timeIntervalSince1970)
-    }
-    
-    static func linear(_ low: Float, _ high: Float) -> LinearScale.FloatScale {
-        return LinearScale.FloatScale(from: low, to: high)
-    }
-    
-    static func linear(_ low: Int, _ high: Int) -> LinearScale.IntScale {
-        return LinearScale.IntScale(from: low, to: high)
+        LinearScale.DoubleScale(from: low, to: high)
     }
 
+    static func linear(_ low: Date, _ high: Date) -> LinearScale.DoubleScale {
+        LinearScale.DoubleScale(from: low.timeIntervalSince1970, to: high.timeIntervalSince1970)
+    }
+
+    static func linear(_ low: Float, _ high: Float) -> LinearScale.FloatScale {
+        LinearScale.FloatScale(from: low, to: high)
+    }
+
+    static func linear(_ low: Int, _ high: Int) -> LinearScale.IntScale {
+        LinearScale.IntScale(from: low, to: high)
+    }
 }
+
 // NOTE(heckj): OTHER SCALES: make a PowScale (& maybe Sqrt, Log, Ln)
 
 // Quantize scale: Quantize scales use a discrete range and a
@@ -343,46 +340,4 @@ func normalize<T: Real>(_ x: T, lower: T, higher: T) -> T {
 func interpolate<T: Real>(_ x: T, lower: T, higher: T) -> T {
     precondition(lower < higher)
     return lower * (1 - x) + higher * x
-}
-
-/// Returns a nice number approximately equal to the value you provide.
-///
-/// - Parameters:
-///   - x: The number to convert
-///   - round: A Boolean value indicating whether to round the number when providing a nice value.
-/// - Returns: A value rounded to a pleasing interval, or the ceiling of the value if rounding is disabled.
-func niceify<T: Real>(_ x: T, round: Bool) -> T {
-    // The logic for this algorithm sources from "Nice Numbers for Graph Labels"
-    // in "Graphics Gems, Volume 1" by Andrew Glassner. The details are exposed in
-    // stackoverflow at:
-    // https://stackoverflow.com/questions/8506881/nice-label-algorithm-for-charts-with-minimum-ticks
-    //
-    // The gist is that "nice" numbers for graph ticks seem to be one of 1, 2, 5, or powers
-    // of town of those numbers.
-    let exp = floor(T.log10(x)) // exponent of x
-    let f = x / T.pow(10, exp) // fractional part of x, in 1...10
-    let niceFraction: T = {
-        if round {
-            if f * 2 < 3 { // equiv to f < 1.5, but allowing for integer comparison
-                return 1
-            } else if f < 3 {
-                return 2
-            } else if f < 7 {
-                return 5
-            } else {
-                return 10
-            }
-        } else {
-            if f <= 1 {
-                return 1
-            } else if f <= 2 {
-                return 2
-            } else if f <= 5 {
-                return 5
-            } else {
-                return 10
-            }
-        }
-    }()
-    return niceFraction * T.pow(10, exp)
 }

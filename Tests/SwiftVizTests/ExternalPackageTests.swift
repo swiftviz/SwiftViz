@@ -72,6 +72,5 @@ final class PackagingTests: XCTestCase {
 
         let dScale = LinearScale.DoubleScale(from: 5.0, to: 10.0, transform: .drop)
         XCTAssertEqual(inputs.map { dScale.transformAgainstDomain($0) }, [nil, nil, 7.0])
-
     }
 }
