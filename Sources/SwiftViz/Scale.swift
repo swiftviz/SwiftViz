@@ -283,26 +283,6 @@ public extension Scale where InputType == Double, OutputType: Real {
     }
 }
 
-// MARK: - static generators for supported scale types
-
-public extension Scale {
-    static func linear(_ low: Double, _ high: Double) -> LinearScale.DoubleScale {
-        LinearScale.DoubleScale(from: low, to: high)
-    }
-
-    static func linear(_ low: Date, _ high: Date) -> LinearScale.DoubleScale {
-        LinearScale.DoubleScale(from: low.timeIntervalSince1970, to: high.timeIntervalSince1970)
-    }
-
-    static func linear(_ low: Float, _ high: Float) -> LinearScale.FloatScale {
-        LinearScale.FloatScale(from: low, to: high)
-    }
-
-    static func linear(_ low: Int, _ high: Int) -> LinearScale.IntScale {
-        LinearScale.IntScale(from: low, to: high)
-    }
-}
-
 // NOTE(heckj): OTHER SCALES: make a PowScale (& maybe Sqrt, Log, Ln)
 
 // Quantize scale: Quantize scales use a discrete range and a

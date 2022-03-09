@@ -126,4 +126,58 @@ public enum LinearScale {
             return transformAgainstDomain(Int(mappedToDomain))
         }
     }
+    
+    // MARK: - Factory (convenience) Methods
+    
+    // Double
+    
+    public static func create(_ low: Double, _ high: Double) -> LinearScale.DoubleScale {
+        LinearScale.DoubleScale(from: low, to: high)
+    }
+
+    public static func create(_ range: ClosedRange<Double>) -> LinearScale.DoubleScale {
+        LinearScale.DoubleScale(from: range.lowerBound, to: range.upperBound)
+    }
+
+    public static func create(_ high: Double) -> LinearScale.DoubleScale {
+        LinearScale.DoubleScale(from: 0, to: high)
+    }
+
+    public static func create(_ low: Date, _ high: Date) -> LinearScale.DoubleScale {
+        LinearScale.DoubleScale(from: low.timeIntervalSince1970, to: high.timeIntervalSince1970)
+    }
+
+    public static func create(_ range: ClosedRange<Date>) -> LinearScale.DoubleScale {
+        LinearScale.DoubleScale(from: range.lowerBound.timeIntervalSince1970, to: range.upperBound.timeIntervalSince1970)
+    }
+
+    // Float
+
+    public static func create(_ low: Float, _ high: Float) -> LinearScale.FloatScale {
+        LinearScale.FloatScale(from: low, to: high)
+    }
+
+    public static func create(_ range: ClosedRange<Float>) -> LinearScale.FloatScale {
+        LinearScale.FloatScale(from: range.lowerBound, to: range.upperBound)
+    }
+
+    public static func create(_ high: Float) -> LinearScale.FloatScale {
+        LinearScale.FloatScale(from: 0, to: high)
+    }
+
+    // Int
+
+    public static func create(_ low: Int, _ high: Int) -> LinearScale.IntScale {
+        LinearScale.IntScale(from: low, to: high)
+    }
+
+    public static func create(_ high: Int) -> LinearScale.IntScale {
+        LinearScale.IntScale(from: 0, to: high)
+    }
+
+    public static func create(_ range: ClosedRange<Int>) -> LinearScale.IntScale {
+        LinearScale.IntScale(from: range.lowerBound, to: range.upperBound)
+    }
+
+
 }
