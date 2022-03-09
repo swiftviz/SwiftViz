@@ -6,7 +6,7 @@
  import Numerics
  import Foundation
 
-/// A linear scale is created using a continuous input domain and provides methods to
+/// A logrithmic scale is created using a continuous input domain and provides methods to
 /// convert values within that domain to an output range.
  public struct LogScale: Scale {
      public typealias InputType = Double

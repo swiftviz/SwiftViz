@@ -63,7 +63,7 @@ public protocol Scale {
 
     /// The number of ticks desired when creating the scale.
     ///
-    /// This number may not match the number of ticks returned by ``ticks(count:range:)``.
+    /// This number may not match the number of ticks returned by ``Scale/ticks(_:range:)``.
     var desiredTicks: Int { get }
 
     /// A boolean value that indicates whether the output vales are constrained to the min and max of the output range.
@@ -154,25 +154,26 @@ public extension Scale where OutputType: Real {
     /// Values presented for display that are *not* within the domain of the scale are dropped.
     /// Values that scale outside of the range you provide are adjusted based on the setting of ``Scale/transformType``.
     /// - Parameter inputValues: an array of values of the Scale's InputType
-    /// - Parameter range: a ClosedRange representing the representing
-    ///   the range we are mapping the values into with the scale
-    func ticks(_ inputValues: [InputType], range: ClosedRange<OutputType>) -> [Tick<InputType, OutputType>] {
+    /// - Parameter lower: The lower value of the range the scale maps to.
+    /// - Parameter higher: The higher value of the range the scale maps to.
+    /// - Returns: A list of tick values validated against the domain, and range based on the setting of ``Scale/transformType``
+    func ticks(_ inputValues: [InputType], from lower: OutputType, to higher: OutputType) -> [Tick<InputType, OutputType>] {
         inputValues.compactMap { inputValue in
             if domainContains(inputValue),
-               let rangeValue = scale(inputValue, from: range.lowerBound, to: range.upperBound) {
+               let rangeValue = scale(inputValue, from: lower, to: higher) {
                 switch transformType {
                 case .none:
                     return Tick(value: inputValue, location: rangeValue)
                 case .drop:
-                    if rangeValue > range.upperBound  || rangeValue < range.lowerBound {
+                    if rangeValue > higher  || rangeValue < lower {
                         return nil
                     }
                     return Tick(value: inputValue, location: rangeValue)
                 case .clamp:
-                    if rangeValue > range.upperBound {
-                        return Tick(value: inputValue, location: range.upperBound)
-                    } else if rangeValue < range.lowerBound {
-                        return Tick(value: inputValue, location: range.lowerBound)
+                    if rangeValue > higher {
+                        return Tick(value: inputValue, location: higher)
+                    } else if rangeValue < lower {
+                        return Tick(value: inputValue, location: lower)
                     }
                     return Tick(value: inputValue, location: rangeValue)
                 }
