@@ -4,10 +4,8 @@ import Numerics
 
 /// A collection of linear scales.
 public enum LinearScale {
-    
     /// A linear scale is created using a continuous input of type double converting to an output of type float.
     public struct DoubleScale: Scale {
-
         public typealias InputType = Double
         public typealias OutputType = Float
 
@@ -20,7 +18,7 @@ public enum LinearScale {
 
         public init(from lower: InputType, to higher: InputType, transform: DomainDataTransform = .none, desiredTicks: Int = 10) {
             precondition(lower < higher)
-            self.transformType = transform
+            transformType = transform
             domainLower = lower
             domainHigher = higher
             domainExtent = higher - lower
@@ -28,7 +26,7 @@ public enum LinearScale {
         }
 
         // MARK: - Double
-        
+
         public func scale(_ domainValue: Double, from lower: Float, to higher: Float) -> Float? {
             if let domainValue = transformAgainstDomain(domainValue) {
                 let normalizedInput = normalize(domainValue, lower: domainLower, higher: domainHigher)
@@ -45,10 +43,9 @@ public enum LinearScale {
             return transformAgainstDomain(mappedToDomain)
         }
     }
-    
+
     /// A linear scale is created using a continuous input of type float  converting to an output of type float.
     public struct FloatScale: Scale {
-
         public typealias InputType = Float
         public typealias OutputType = Float
 
@@ -61,7 +58,7 @@ public enum LinearScale {
 
         public init(from lower: InputType, to higher: InputType, transform: DomainDataTransform = .none, desiredTicks: Int = 10) {
             precondition(lower < higher)
-            self.transformType = transform
+            transformType = transform
             domainLower = lower
             domainHigher = higher
             domainExtent = higher - lower
@@ -86,10 +83,9 @@ public enum LinearScale {
             return transformAgainstDomain(mappedToDomain)
         }
     }
-    
+
     /// A linear scale is created using a continuous input of type int  converting to an output of type float.
     public struct IntScale: Scale {
-
         public typealias InputType = Int
         public typealias OutputType = Float
 
@@ -102,7 +98,7 @@ public enum LinearScale {
 
         public init(from lower: InputType, to higher: InputType, transform: DomainDataTransform = .none, desiredTicks: Int = 10) {
             precondition(lower < higher)
-            self.transformType = transform
+            transformType = transform
             domainLower = lower
             domainHigher = higher
             domainExtent = higher - lower
@@ -130,5 +126,4 @@ public enum LinearScale {
             return transformAgainstDomain(Int(mappedToDomain))
         }
     }
-    
 }

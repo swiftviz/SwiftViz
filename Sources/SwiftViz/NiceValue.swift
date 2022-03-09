@@ -1,6 +1,6 @@
 //
 //  NiceNumber.swift
-//  
+//
 //
 //  Created by Joseph Heck on 3/7/22.
 //
@@ -15,7 +15,7 @@ public protocol NiceValue {
     ///   - number: The number to convert into a nice value.
     ///   - min: A Boolean value that indicates to take the lower, rather than higher, nearest nice number as a result.
     static func niceVersion(for number: NumberType, min: Bool) -> NumberType
-    
+
     /// Returns a nice minimum value for a given range.
     ///
     /// The value returned will be lower than or equal to the minimum value of the range.
@@ -24,7 +24,7 @@ public protocol NiceValue {
     ///   - min: The minimum value of the range.
     ///   - max: The maximum value of the range.
     static func niceMinimumValueForRange(min: NumberType, max: NumberType) -> NumberType
-    
+
     /// Generates a range of numbers with a minimum, maximum, and step interval that's visually pleasing.
     ///
     /// The values are based on "Nice Numbers for Graph Labels"  in the book "Graphics Gems, Volume 1" by Andrew Glassner.
@@ -76,7 +76,7 @@ extension Double: NiceValue {
         }
         return niceFraction * pow(10, exponent)
     }
-    
+
     public static func niceMinimumValueForRange(min: NumberType, max: NumberType) -> NumberType {
         let negativeMinValue = min < 0
         let nice = niceVersion(for: min, min: !negativeMinValue)
@@ -89,7 +89,7 @@ extension Double: NiceValue {
         // than 10% of the extent of the range, round it down to 0.
         return nice <= (max / 10) ? 0 : nice
     }
-    
+
     public static func rangeOfNiceValues(min: NumberType, max: NumberType, ofSize size: Int) -> [NumberType] {
         precondition(size > 1)
         let niceMin = niceMinimumValueForRange(min: min, max: max)
@@ -98,23 +98,23 @@ extension Double: NiceValue {
         // print("step: \(step)")
         let niceStep = niceVersion(for: step, min: false)
         // print("niced step: \(niceStep)")
-        var niceMax = niceVersion(for: max+niceStep, min: true)
+        var niceMax = niceVersion(for: max + niceStep, min: true)
         // print("niced max: \(niceMax)")
         // niceMax should never be below the provided 'max' value, so increment by the
         // calculated step value until it's above it:
         while niceMax < max {
             niceMax += niceStep
         }
-        
-        var result:[NumberType] = []
+
+        var result: [NumberType] = []
         // incrementing the comparison point by a half step
         // prevents some slight rounding errors that could lead
         // to a final value not getting appendded.
         let comparisonPoint = niceMax + (0.5 * niceStep)
         result.append(niceMin)
-        for i in 1...size - 1 {
+        for i in 1 ... size - 1 {
             let steppedValue = niceMin + Double(i) * niceStep
-            if (steppedValue <= comparisonPoint) {
+            if steppedValue <= comparisonPoint {
                 result.append(steppedValue)
             } else {
                 break
@@ -174,7 +174,7 @@ extension Float: NiceValue {
         // than 10% of the extent of the range, round it down to 0.
         return nice <= (max / 10) ? 0 : nice
     }
-    
+
     public static func rangeOfNiceValues(min: NumberType, max: NumberType, ofSize size: Int) -> [NumberType] {
         precondition(size > 1)
         let niceMin = niceMinimumValueForRange(min: min, max: max)
@@ -183,22 +183,22 @@ extension Float: NiceValue {
         // print("step: \(step)")
         let niceStep = niceVersion(for: step, min: false)
         // print("niced step: \(niceStep)")
-        var niceMax = niceVersion(for: max+niceStep, min: true)
+        var niceMax = niceVersion(for: max + niceStep, min: true)
         // niceMax should never be below the provided 'max' value, so increment by the
         // calculated step value until it's above it:
         while niceMax < max {
             niceMax += niceStep
         }
-        
-        var result:[NumberType] = []
+
+        var result: [NumberType] = []
         // incrementing the comparison point by a half step
         // prevents some slight rounding errors that could lead
         // to a final value not getting appendded.
         let comparisonPoint = niceMax + (0.5 * niceStep)
         result.append(niceMin)
-        for i in 1...size - 1 {
+        for i in 1 ... size - 1 {
             let steppedValue = niceMin + Float(i) * niceStep
-            if (steppedValue <= comparisonPoint) {
+            if steppedValue <= comparisonPoint {
                 result.append(steppedValue)
             } else {
                 break
@@ -213,7 +213,7 @@ extension Float: NiceValue {
 
 extension Int: NiceValue {
     public typealias NumberType = Int
-    
+
     public static func niceVersion(for number: NumberType, min: Bool) -> NumberType {
         let negativeInput: Bool = number < 0
         let positiveNumber = abs(number)
@@ -248,7 +248,7 @@ extension Int: NiceValue {
         }
         return Int(niceFraction * pow(10, exponent))
     }
-    
+
     public static func niceMinimumValueForRange(min: NumberType, max: NumberType) -> NumberType {
         let negativeMinValue = min < 0
         let nice = niceVersion(for: min, min: !negativeMinValue)
@@ -270,16 +270,16 @@ extension Int: NiceValue {
         // print("step: \(step)")
         let niceStep = niceVersion(for: step, min: false)
         // print("niced step: \(niceStep)")
-        var niceMax = niceVersion(for: max+niceStep, min: true)
+        var niceMax = niceVersion(for: max + niceStep, min: true)
         // niceMax should never be below the provided 'max' value, so increment by the
         // calculated step value until it's above it:
         while niceMax < max {
             niceMax += niceStep
         }
-        
-        var result:[NumberType] = []
+
+        var result: [NumberType] = []
         result.append(niceMin)
-        for i in 1...size - 1 {
+        for i in 1 ... size - 1 {
             result.append(niceMin + i * Int(niceStep))
         }
         return result
