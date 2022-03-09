@@ -238,4 +238,56 @@ class NiceValueTests: XCTestCase {
         try verifyRangeAttributes(min: min, max: max, steps: 180, calcSteps: 127, stepsize: 0.1, niceMax: 12.6)
         try verifyRangeAttributes(min: min, max: max, steps: 190, calcSteps: 127, stepsize: 0.1, niceMax: 12.6)
     }
+    
+    func verifyFloatRangeAttributes(min: Float, max: Float, steps: Int, calcSteps: Int, stepsize: Float, niceMax: Float) throws {
+        XCTAssertTrue(steps > 1)
+        let calculatedRange = Float.rangeOfNiceValues(min: min, max: max, ofSize: steps)
+        XCTAssertTrue(calculatedRange.first! <= min)
+        XCTAssertTrue(calculatedRange.last! >= max)
+        XCTAssertEqual(calculatedRange.count, calcSteps)
+        let derivedStepSize = calculatedRange[1] - calculatedRange[0]
+        XCTAssertEqual(derivedStepSize, stepsize, accuracy: 0.01)
+        XCTAssertEqual(calculatedRange.last!, niceMax, accuracy: 0.01)
+    }
+
+    func testFloatNiceRange() throws {
+        let min: Float = 0.1
+        let max: Float = 12.56
+        try verifyFloatRangeAttributes(min: min, max: max, steps: 2, calcSteps: 2, stepsize: 20, niceMax: 20)
+        try verifyFloatRangeAttributes(min: min, max: max, steps: 3, calcSteps: 3, stepsize: 10, niceMax: 20)
+        try verifyFloatRangeAttributes(min: min, max: max, steps: 4, calcSteps: 4, stepsize: 5, niceMax: 15)
+        try verifyFloatRangeAttributes(min: min, max: max, steps: 5, calcSteps: 5, stepsize: 5, niceMax: 20)
+        try verifyFloatRangeAttributes(min: min, max: max, steps: 6, calcSteps: 5, stepsize: 5, niceMax: 20)
+        try verifyFloatRangeAttributes(min: min, max: max, steps: 7, calcSteps: 5, stepsize: 5, niceMax: 20)
+        try verifyFloatRangeAttributes(min: min, max: max, steps: 8, calcSteps: 8, stepsize: 2, niceMax: 14)
+        try verifyFloatRangeAttributes(min: min, max: max, steps: 9, calcSteps: 8, stepsize: 2, niceMax: 14)
+        try verifyFloatRangeAttributes(min: min, max: max, steps: 10, calcSteps: 8, stepsize: 2, niceMax: 14)
+        try verifyFloatRangeAttributes(min: min, max: max, steps: 11, calcSteps: 8, stepsize: 2, niceMax: 14)
+        try verifyFloatRangeAttributes(min: min, max: max, steps: 12, calcSteps: 8, stepsize: 2, niceMax: 14)
+        try verifyFloatRangeAttributes(min: min, max: max, steps: 13, calcSteps: 8, stepsize: 2, niceMax: 14)
+        try verifyFloatRangeAttributes(min: min, max: max, steps: 14, calcSteps: 14, stepsize: 1, niceMax: 13)
+        try verifyFloatRangeAttributes(min: min, max: max, steps: 15, calcSteps: 14, stepsize: 1, niceMax: 13)
+        try verifyFloatRangeAttributes(min: min, max: max, steps: 16, calcSteps: 14, stepsize: 1, niceMax: 13)
+        try verifyFloatRangeAttributes(min: min, max: max, steps: 17, calcSteps: 14, stepsize: 1, niceMax: 13)
+        try verifyFloatRangeAttributes(min: min, max: max, steps: 18, calcSteps: 14, stepsize: 1, niceMax: 13)
+        try verifyFloatRangeAttributes(min: min, max: max, steps: 19, calcSteps: 14, stepsize: 1, niceMax: 13)
+        try verifyFloatRangeAttributes(min: min, max: max, steps: 20, calcSteps: 14, stepsize: 1, niceMax: 13)
+        try verifyFloatRangeAttributes(min: min, max: max, steps: 30, calcSteps: 27, stepsize: 0.5, niceMax: 13)
+        try verifyFloatRangeAttributes(min: min, max: max, steps: 40, calcSteps: 27, stepsize: 0.5, niceMax: 13)
+        try verifyFloatRangeAttributes(min: min, max: max, steps: 50, calcSteps: 27, stepsize: 0.5, niceMax: 13)
+        try verifyFloatRangeAttributes(min: min, max: max, steps: 60, calcSteps: 27, stepsize: 0.5, niceMax: 13)
+        try verifyFloatRangeAttributes(min: min, max: max, steps: 70, calcSteps: 64, stepsize: 0.2, niceMax: 12.6)
+        try verifyFloatRangeAttributes(min: min, max: max, steps: 80, calcSteps: 64, stepsize: 0.2, niceMax: 12.6)
+        try verifyFloatRangeAttributes(min: min, max: max, steps: 90, calcSteps: 64, stepsize: 0.2, niceMax: 12.6)
+        try verifyFloatRangeAttributes(min: min, max: max, steps: 100, calcSteps: 64, stepsize: 0.2, niceMax: 12.6)
+        try verifyFloatRangeAttributes(min: min, max: max, steps: 110, calcSteps: 64, stepsize: 0.2, niceMax: 12.6)
+        try verifyFloatRangeAttributes(min: min, max: max, steps: 120, calcSteps: 64, stepsize: 0.2, niceMax: 12.6)
+        try verifyFloatRangeAttributes(min: min, max: max, steps: 130, calcSteps: 127, stepsize: 0.1, niceMax: 12.6)
+        try verifyFloatRangeAttributes(min: min, max: max, steps: 140, calcSteps: 127, stepsize: 0.1, niceMax: 12.6)
+        try verifyFloatRangeAttributes(min: min, max: max, steps: 150, calcSteps: 127, stepsize: 0.1, niceMax: 12.6)
+        try verifyFloatRangeAttributes(min: min, max: max, steps: 160, calcSteps: 127, stepsize: 0.1, niceMax: 12.6)
+        try verifyFloatRangeAttributes(min: min, max: max, steps: 170, calcSteps: 127, stepsize: 0.1, niceMax: 12.6)
+        try verifyFloatRangeAttributes(min: min, max: max, steps: 180, calcSteps: 127, stepsize: 0.1, niceMax: 12.6)
+        try verifyFloatRangeAttributes(min: min, max: max, steps: 190, calcSteps: 127, stepsize: 0.1, niceMax: 12.6)
+    }
 }
