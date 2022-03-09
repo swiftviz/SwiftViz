@@ -4,6 +4,7 @@ import Numerics
 
 /// A collection of linear scales.
 public enum LinearScale {
+    
     /// A linear scale is created using a continuous input of type double converting to an output of type float.
     public struct DoubleScale: Scale {
 
