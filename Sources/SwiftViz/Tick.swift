@@ -13,7 +13,7 @@ import Numerics
 /// When created based on a range, a tick includes a location along a single direction
 /// and a textual representation. It is meant to be created using a Scale, with some input domain
 /// being mapped to visualization using the Scale's output range.
-public struct Tick<InputType, OutputType>: Identifiable {
+public struct Tick<InputType, OutputType: Real>: Identifiable {
     // this becomes a generic focused protocol - types implementing it will need to define the
     // protocol conformance in coordination with a generic type
     public var id: UUID = .init()
@@ -21,8 +21,12 @@ public struct Tick<InputType, OutputType>: Identifiable {
     let value: InputType
     let rangeLocation: OutputType
 
-    init(value: InputType, location: OutputType) {
+    init?(value: InputType, location: OutputType) {
         self.value = value
-        rangeLocation = location
+        if location.isNaN {
+            return nil
+        } else {
+            rangeLocation = location
+        }
     }
 }

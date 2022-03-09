@@ -106,51 +106,6 @@ public protocol Scale {
 }
 
 public extension Scale {
-    /// Returns a Boolean value that indicates whether the value you provided is within the scale's domain.
-    /// - Parameter value: The value to compare.
-    /// - Returns: `true` if the value is between the lower and upper domain values.
-    func domainContains(_ value: InputType) -> Bool {
-        value >= domainLower && value <= domainHigher
-    }
-
-    /// Converts an array of values that matches the scale's input type to a list of ticks that are within the scale's domain.
-    ///
-    /// Used for manually specifying a series of ticks that you want to have displayed.
-    ///
-    /// Any values presented for display that are *not* within the domain of the scale
-    /// are ignored and dropped.
-    /// - Parameter inputValues: an array of values of the Scale's InputType
-    /// - Parameter range: a ClosedRange representing the representing
-    ///   the range we are mapping the values into with the scale
-    func ticks(_ inputValues: [InputType], range: ClosedRange<OutputType>) -> [Tick<InputType, OutputType>] {
-        inputValues.compactMap { inputValue in
-            if let rangeValue = scale(inputValue, from: range.lowerBound, to: range.upperBound) {
-                return Tick(value: inputValue, location: rangeValue)
-            }
-            return nil
-        }
-    }
-
-    /// Converts an array of values with matching strings, that are within the scale's domain and returns a list of tick labels using the strings you provide.
-    ///
-    /// Takes an set of labelled input values and returns the relevant set of TickLabels converted
-    /// to the correct location values associated with the provided range.
-    /// - Parameters:
-    ///   - inputValues: A tuple of (InputValue, String) that is the labelled value
-    ///   - range: a ClosedRange representing the representing
-    ///   the range we are mapping the values into with the scale
-    func labeledTickValues(_ inputValues: [(InputType, String)], from lower: OutputType, to higher: OutputType) -> [TickLabel<OutputType>] {
-        inputValues.compactMap { inputTuple in
-            let (inputValue, stringValue) = inputTuple
-            if domainContains(inputValue) {
-                if let location = scale(inputValue, from: lower, to: higher) {
-                    return TickLabel(rangeLocation: location, value: stringValue)
-                }
-            }
-            return nil
-        }
-    }
-
     /// Processes a value against the scale, potentially constraining or dropping the value.
     ///
     /// The value is transformed based on the scale's ``Scale/transformType`` setting.
@@ -182,6 +137,84 @@ public extension Scale {
             return value
         }
     }
+}
+
+public extension Scale where OutputType: Real {
+    /// Returns a Boolean value that indicates whether the value you provided is within the scale's domain.
+    /// - Parameter value: The value to compare.
+    /// - Returns: `true` if the value is between the lower and upper domain values.
+    func domainContains(_ value: InputType) -> Bool {
+        value >= domainLower && value <= domainHigher
+    }
+
+    /// Converts an array of values that matches the scale's input type to a list of ticks that are within the scale's domain.
+    ///
+    /// Used for manually specifying a series of ticks that you want to have displayed.
+    ///
+    /// Values presented for display that are *not* within the domain of the scale are dropped.
+    /// Values that scale outside of the range you provide are adjusted based on the setting of ``Scale/transformType``.
+    /// - Parameter inputValues: an array of values of the Scale's InputType
+    /// - Parameter range: a ClosedRange representing the representing
+    ///   the range we are mapping the values into with the scale
+    func ticks(_ inputValues: [InputType], range: ClosedRange<OutputType>) -> [Tick<InputType, OutputType>] {
+        inputValues.compactMap { inputValue in
+            if domainContains(inputValue),
+               let rangeValue = scale(inputValue, from: range.lowerBound, to: range.upperBound) {
+                switch transformType {
+                case .none:
+                    return Tick(value: inputValue, location: rangeValue)
+                case .drop:
+                    if rangeValue > range.upperBound  || rangeValue < range.lowerBound {
+                        return nil
+                    }
+                    return Tick(value: inputValue, location: rangeValue)
+                case .clamp:
+                    if rangeValue > range.upperBound {
+                        return Tick(value: inputValue, location: range.upperBound)
+                    } else if rangeValue < range.lowerBound {
+                        return Tick(value: inputValue, location: range.lowerBound)
+                    }
+                    return Tick(value: inputValue, location: rangeValue)
+                }
+            }
+            return nil
+        }
+    }
+
+    /// Converts an array of values with matching strings, that are within the scale's domain and returns a list of tick labels using the strings you provide.
+    ///
+    /// Takes an set of labelled input values and returns the relevant set of TickLabels converted
+    /// to the correct location values associated with the provided range.
+    /// - Parameters:
+    ///   - inputValues: A tuple of (InputValue, String) that is the labelled value
+    ///   - range: a ClosedRange representing the representing
+    ///   the range we are mapping the values into with the scale
+    func labeledTickValues(_ inputValues: [(InputType, String)], from lower: OutputType, to higher: OutputType) -> [TickLabel<OutputType>] {
+        inputValues.compactMap { inputTuple in
+            let (inputValue, stringValue) = inputTuple
+            if domainContains(inputValue) {
+                if let location = scale(inputValue, from: lower, to: higher) {
+                    switch transformType {
+                    case .none:
+                        return TickLabel(rangeLocation: location, value: stringValue)
+                    case .drop:
+                        if location > higher  || location < lower {
+                            return nil
+                        }
+                        return TickLabel(rangeLocation: location, value: stringValue)
+                    case .clamp:
+                        if location > higher {
+                            return TickLabel(rangeLocation: higher, value: stringValue)
+                        } else if location < lower {
+                            return TickLabel(rangeLocation: lower, value: stringValue)
+                        }
+                        return TickLabel(rangeLocation: location, value: stringValue)
+                    }
+                }
+            }
+            return nil
+        }
+    }
 
     /// Validates a set of TickLabels against a given scale, removing any that don't match the scale's domain.
     ///
@@ -201,117 +234,53 @@ public extension Scale {
     }
 }
 
-public extension Scale where InputType == Int {
-    /// The number of ticks in the range. This may differ from the desiredTicks used to initialize the object.
-    var ticks: Int {
-        guard tickInterval > 0 else { return 0 }
-        return Int(round(Double(domainExtent) / tickInterval)) + 1
-    }
-    
-    /// The distance between ticks in the output range.
-    var tickInterval: Double {
-        let niceExtent = niceify(Double(domainExtent), round: false)
-        return niceify(niceExtent / (Double(desiredTicks) - 1), round: true)
-    }
-
+public extension Scale where InputType == Int, OutputType: Real  {
     /// Returns an array of the locations within the output range to locate ticks for the scale.
     ///
-    /// - Parameter range: a ClosedRange representing the representing
-    ///   the range we are mapping the values into with the scale
+    /// - Parameter range: a ClosedRange representing the representing the range we are mapping the values into with the scale
     /// - Returns: an Array of the values within the ClosedRange of range
     func ticks(rangeLower: OutputType, rangeHigher: OutputType) -> [Tick<InputType, OutputType>] {
-        var tickList: [Tick<InputType, OutputType>] = []
-        guard tickInterval != 0 else {
-            return tickList
-        }
-
-        let min = floor(Double(domainLower) / tickInterval) * tickInterval
-        let max = ceil(Double(domainHigher) / tickInterval) * tickInterval
-        var domainValue = min
-        while domainValue <= max {
-            let tickValue = min + (domainValue * tickInterval)
-            if let tickRangeLocation = scale(Int(tickValue), from: rangeLower, to: rangeHigher) {
-                tickList.append(Tick(value: Int(tickValue), location: tickRangeLocation))
-            }
-            domainValue += tickInterval
-        }
-        return tickList
-    }
-}
-
-public extension Scale where InputType == Float {
-    /// The number of ticks in the range. This may differ from the desiredTicks used to initialize the object.
-    var ticks: Int {
-        guard tickInterval > 0 else { return 0 }
-        return Int(round(Double(domainExtent) / tickInterval)) + 1
-    }
-    
-    /// The distance between ticks in the output range.
-    var tickInterval: Double {
-        let niceExtent = niceify(Double(domainExtent), round: false)
-        return niceify(niceExtent / (Double(desiredTicks) - 1), round: true)
-    }
-
-    /// Returns an array of the locations within the output range to locate ticks for the scale.
-    ///
-    /// - Parameter range: a ClosedRange representing the representing
-    ///   the range we are mapping the values into with the scale
-    /// - Returns: an Array of the values within the ClosedRange of range
-    func ticks(rangeLower: OutputType, rangeHigher: OutputType) -> [Tick<InputType, OutputType>] {
-        var tickList: [Tick<InputType, OutputType>] = []
-        guard tickInterval != 0 else {
-            return tickList
-        }
-
-        let min = floor(Double(domainLower) / tickInterval) * tickInterval
-        let max = ceil(Double(domainHigher) / tickInterval) * tickInterval
-        var domainValue = min
-        while domainValue <= max {
-            let tickValue = min + (domainValue * tickInterval)
-            if let tickRangeLocation = scale(InputType(tickValue), from: rangeLower, to: rangeHigher) {
-                tickList.append(Tick(value: Float(tickValue), location: tickRangeLocation))
-            }
-            domainValue += tickInterval
-        }
-        return tickList
-    }
-}
-
-public extension Scale where InputType == Double {
-    /// The number of ticks in the range. This may differ from the desiredTicks used to initialize the object.
-    var ticks: Int {
-        guard tickInterval > 0 else { return 0 }
-        return Int(round(domainExtent / tickInterval)) + 1
-    }
-    
-    /// The distance between ticks in the output range.
-    var tickInterval: Double {
-        let niceExtent = niceify(Double(domainExtent), round: false)
-        return niceify(niceExtent / (Double(desiredTicks) - 1), round: true)
-    }
-
-    /// Returns an array of the locations within the output range to locate ticks for the scale.
-    ///
-    /// - Parameter range: a ClosedRange representing the representing
-    ///   the range we are mapping the values into with the scale
-    /// - Returns: an Array of the values within the ClosedRange of range
-    func ticks(rangeLower: OutputType, rangeHigher: OutputType) -> [Tick<InputType, OutputType>] {
-        var tickList: [Tick<InputType, OutputType>] = []
-        guard tickInterval != 0 else {
-            return tickList
-        }
-
-        let min = floor(Double(domainLower) / tickInterval) * tickInterval
-        let max = ceil(Double(domainHigher) / tickInterval) * tickInterval
-        var domainValue = min
-        while domainValue <= max {
-            let tickValue = min + (domainValue * tickInterval)
+        let tickValues = InputType.rangeOfNiceValues(min: domainLower, max: domainHigher, ofSize: desiredTicks)
+        return tickValues.compactMap { tickValue in
             if let tickRangeLocation = scale(tickValue, from: rangeLower, to: rangeHigher) {
-                tickList.append(Tick(value: tickValue, location: tickRangeLocation))
+                return Tick(value: tickValue, location: tickRangeLocation)
             }
-            domainValue += tickInterval
+            return nil
         }
-        return tickList
+    }
+}
+
+public extension Scale where InputType == Float, OutputType: Real {
+    /// Returns an array of the locations within the output range to locate ticks for the scale.
+    ///
+    /// - Parameter range: a ClosedRange representing the representing the range we are mapping the values into with the scale
+    /// - Returns: an Array of the values within the ClosedRange of range
+    func ticks(rangeLower: OutputType, rangeHigher: OutputType) -> [Tick<InputType, OutputType>] {
+        let tickValues = InputType.rangeOfNiceValues(min: domainLower, max: domainHigher, ofSize: desiredTicks)
+        return tickValues.compactMap { tickValue in
+            if let tickRangeLocation = scale(tickValue, from: rangeLower, to: rangeHigher) {
+                return Tick(value: tickValue, location: tickRangeLocation)
+            }
+            return nil
+        }
+    }
+}
+
+public extension Scale where InputType == Double, OutputType: Real {
+
+    /// Returns an array of the locations within the output range to locate ticks for the scale.
+    ///
+    /// - Parameter range: a ClosedRange representing the representing the range we are mapping the values into with the scale
+    /// - Returns: an Array of the values within the ClosedRange of range
+    func ticks(rangeLower: OutputType, rangeHigher: OutputType) -> [Tick<InputType, OutputType>] {
+        let tickValues = InputType.rangeOfNiceValues(min: domainLower, max: domainHigher, ofSize: desiredTicks)
+        return tickValues.compactMap { tickValue in
+            if let tickRangeLocation = scale(tickValue, from: rangeLower, to: rangeHigher),
+                tickRangeLocation <= rangeHigher {
+                    return Tick(value: tickValue, location: tickRangeLocation)
+            }
+            return nil
+        }
     }
 }
 

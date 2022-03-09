@@ -29,6 +29,20 @@ class NiceValueTests: XCTestCase {
         XCTAssertEqual(lower, lowConvertedValue)
         XCTAssertEqual(higher, highConvertedValue)
     }
+    
+    func testNegativeNiceValues() throws {
+        doubleConversionMatches(input: 0.0, lower: 0.0, higher: 0.0)
+        doubleConversionMatches(input: -1.0, lower: -1.0, higher: -1.0)
+        doubleConversionMatches(input: -1.1, lower: -1.0, higher: -2.0)
+        doubleConversionMatches(input: -1.6, lower: -2.0, higher: -2.0)
+        doubleConversionMatches(input: -3.0, lower: -2.0, higher: -5.0)
+        doubleConversionMatches(input: -4.0, lower: -5.0, higher: -5.0)
+        doubleConversionMatches(input: -6.0, lower: -5.0, higher: -10.0)
+        doubleConversionMatches(input: -11.0, lower: -10.0, higher: -20.0)
+        doubleConversionMatches(input: -101.0, lower: -100, higher: -200)
+        doubleConversionMatches(input: -1010.0, lower: -1000, higher: -2000)
+        doubleConversionMatches(input: -1110.0, lower: -1000, higher: -2000)
+    }
 
     func testNiceValuesOfDoubleSequence() throws {
         doubleConversionMatches(input: 0.0, lower: 0.0, higher: 0.0)
@@ -103,7 +117,14 @@ class NiceValueTests: XCTestCase {
         intConversionMatches(input: 111, lower: 100, higher: 200)
         intConversionMatches(input: 1010, lower: 1000, higher: 2000)
         intConversionMatches(input: 1110, lower: 1000, higher: 2000)
+    }
 
+    func testNiceMinimumForRangeDoubleNegativeValues() throws {
+        XCTAssertEqual(Double.niceMinimumValueForRange(min: -1, max: 10), -1)
+        XCTAssertEqual(Double.niceMinimumValueForRange(min: -2, max: 10), -2)
+        XCTAssertEqual(Double.niceMinimumValueForRange(min: -3, max: 3), -5)
+        XCTAssertEqual(Double.niceMinimumValueForRange(min: -3, max: 10), -5)
+        XCTAssertEqual(Double.niceMinimumValueForRange(min: -3, max: 100), -5)
     }
     
     func testNiceMinimumForRangeDouble() throws {
