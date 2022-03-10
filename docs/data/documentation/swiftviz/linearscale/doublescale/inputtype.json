@@ -1,15 +1,7 @@
 {
   "abstract" : [
     {
-      "text" : "Inherited from ",
-      "type" : "text"
-    },
-    {
-      "code" : "Scale.InputType",
-      "type" : "codeVoice"
-    },
-    {
-      "text" : ".",
+      "text" : "The type used for the scale’s domain.",
       "type" : "text"
     }
   ],
@@ -203,7 +195,10 @@
 },
 "doc://com.github.swiftviz.SwiftViz/documentation/SwiftViz/LinearScale/DoubleScale/InputType": {
   "abstract" : [
-
+    {
+      "text" : "The type used for the scale’s domain.",
+      "type" : "text"
+    }
   ],
   "fragments" : [
     {

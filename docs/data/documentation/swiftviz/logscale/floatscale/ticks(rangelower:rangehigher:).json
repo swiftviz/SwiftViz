@@ -11,7 +11,7 @@
         "doc:\/\/com.github.swiftviz.SwiftViz\/documentation\/SwiftViz",
         "doc:\/\/com.github.swiftviz.SwiftViz\/documentation\/SwiftViz\/LogScale",
         "doc:\/\/com.github.swiftviz.SwiftViz\/documentation\/SwiftViz\/LogScale\/FloatScale",
-        "doc:\/\/com.github.swiftviz.SwiftViz\/documentation\/SwiftViz\/LogScale\/FloatScale\/Scale-Implementations"
+        "doc:\/\/com.github.swiftviz.SwiftViz\/documentation\/SwiftViz\/LogScale\/FloatScale\/TickScale-Implementations"
       ]
     ]
   },
@@ -70,7 +70,7 @@
       ]
     },
     "extendedModule" : "SwiftViz",
-    "externalID" : "s:8SwiftViz5ScalePAASf9InputTypeRtz10RealModule0F006OutputE0RpzrlE5ticks10rangeLower0J6HigherSayAA4TickVySfAIGGAI_AItF::SYNTHESIZED::s:8SwiftViz8LogScaleO05FloatD0V",
+    "externalID" : "s:8SwiftViz9TickScalePAASf9InputTypeRtz10RealModule0G006OutputF0RpzrlE5ticks10rangeLower0K6HigherSayAA0C0VySfAIGGAI_AItF::SYNTHESIZED::s:8SwiftViz8LogScaleO05FloatD0V",
     "fragments" : [
       {
         "kind" : "keyword",
@@ -337,7 +337,7 @@
 "doc://com.github.swiftviz.SwiftViz/documentation/SwiftViz/LogScale": {
   "abstract" : [
     {
-      "text" : "A collection of logrithmic scales.",
+      "text" : "A collection of logarithmic scales.",
       "type" : "text"
     }
   ],
@@ -399,16 +399,16 @@
   "type" : "topic",
   "url" : "\/documentation\/swiftviz\/logscale\/floatscale"
 },
-"doc://com.github.swiftviz.SwiftViz/documentation/SwiftViz/LogScale/FloatScale/Scale-Implementations": {
+"doc://com.github.swiftviz.SwiftViz/documentation/SwiftViz/LogScale/FloatScale/TickScale-Implementations": {
   "abstract" : [
 
   ],
-  "identifier" : "doc:\/\/com.github.swiftviz.SwiftViz\/documentation\/SwiftViz\/LogScale\/FloatScale\/Scale-Implementations",
+  "identifier" : "doc:\/\/com.github.swiftviz.SwiftViz\/documentation\/SwiftViz\/LogScale\/FloatScale\/TickScale-Implementations",
   "kind" : "article",
   "role" : "collectionGroup",
-  "title" : "Scale Implementations",
+  "title" : "TickScale Implementations",
   "type" : "topic",
-  "url" : "\/documentation\/swiftviz\/logscale\/floatscale\/scale-implementations"
+  "url" : "\/documentation\/swiftviz\/logscale\/floatscale\/tickscale-implementations"
 },
 "doc://com.github.swiftviz.SwiftViz/documentation/SwiftViz/LogScale/FloatScale/ticks(rangeLower:rangeHigher:)": {
   "abstract" : [

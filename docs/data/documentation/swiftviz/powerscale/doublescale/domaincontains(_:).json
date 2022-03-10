@@ -9,55 +9,20 @@
     "paths" : [
       [
         "doc:\/\/com.github.swiftviz.SwiftViz\/documentation\/SwiftViz",
-        "doc:\/\/com.github.swiftviz.SwiftViz\/documentation\/SwiftViz\/Scale"
-      ],
-      [
-        "doc:\/\/com.github.swiftviz.SwiftViz\/documentation\/SwiftViz",
-        "doc:\/\/com.github.swiftviz.SwiftViz\/documentation\/SwiftViz\/Scale",
-        "doc:\/\/com.github.swiftviz.SwiftViz\/documentation\/SwiftViz\/Scale\/domainContains(_:)-2i0wq"
+        "doc:\/\/com.github.swiftviz.SwiftViz\/documentation\/SwiftViz\/PowerScale",
+        "doc:\/\/com.github.swiftviz.SwiftViz\/documentation\/SwiftViz\/PowerScale\/DoubleScale",
+        "doc:\/\/com.github.swiftviz.SwiftViz\/documentation\/SwiftViz\/PowerScale\/DoubleScale\/Scale-Implementations"
       ]
     ]
   },
   "identifier" : {
     "interfaceLanguage" : "swift",
-    "url" : "doc:\/\/com.github.swiftviz.SwiftViz\/documentation\/SwiftViz\/Scale\/domainContains(_:)-6e065"
+    "url" : "doc:\/\/com.github.swiftviz.SwiftViz\/documentation\/SwiftViz\/PowerScale\/DoubleScale\/domainContains(_:)"
   },
   "kind" : "symbol",
   "metadata" : {
-    "conformance" : {
-      "availabilityPrefix" : [
-        {
-          "text" : "Available when",
-          "type" : "text"
-        }
-      ],
-      "conformancePrefix" : [
-        {
-          "text" : "Conforms when",
-          "type" : "text"
-        }
-      ],
-      "constraints" : [
-        {
-          "code" : "OutputType",
-          "type" : "codeVoice"
-        },
-        {
-          "text" : " conforms to ",
-          "type" : "text"
-        },
-        {
-          "code" : "Real",
-          "type" : "codeVoice"
-        },
-        {
-          "text" : ".",
-          "type" : "text"
-        }
-      ]
-    },
     "extendedModule" : "SwiftViz",
-    "externalID" : "s:8SwiftViz5ScalePAA10RealModule0D010OutputTypeRpzrlE14domainContainsySb05InputG0QzF",
+    "externalID" : "s:8SwiftViz5ScalePAAE14domainContainsySb9InputTypeQzF::SYNTHESIZED::s:8SwiftViz10PowerScaleO06DoubleD0V",
     "fragments" : [
       {
         "kind" : "keyword",
@@ -219,20 +184,10 @@
   "sections" : [
 
   ],
-  "seeAlsoSections" : [
-    {
-      "generated" : true,
-      "identifiers" : [
-        "doc:\/\/com.github.swiftviz.SwiftViz\/documentation\/SwiftViz\/Scale\/domainContains(_:)-2i0wq",
-        "doc:\/\/com.github.swiftviz.SwiftViz\/documentation\/SwiftViz\/Scale\/transformAgainstDomain(_:)"
-      ],
-      "title" : "Comparing Values"
-    }
-  ],
   "variants" : [
     {
       "paths" : [
-        "\/documentation\/swiftviz\/scale\/domaincontains(_:)-6e065"
+        "\/documentation\/swiftviz\/powerscale\/doublescale\/domaincontains(_:)"
       ],
       "traits" : [
         {
@@ -257,43 +212,17 @@
   "type" : "topic",
   "url" : "\/documentation\/swiftviz"
 },
-"doc://com.github.swiftviz.SwiftViz/documentation/SwiftViz/Scale": {
+"doc://com.github.swiftviz.SwiftViz/documentation/SwiftViz/PowerScale": {
   "abstract" : [
     {
-      "text" : "A type that maps values from an input ",
-      "type" : "text"
-    },
-    {
-      "inlineContent" : [
-        {
-          "text" : "domain",
-          "type" : "text"
-        }
-      ],
-      "type" : "emphasis"
-    },
-    {
-      "text" : " to an output ",
-      "type" : "text"
-    },
-    {
-      "inlineContent" : [
-        {
-          "text" : "range",
-          "type" : "text"
-        }
-      ],
-      "type" : "emphasis"
-    },
-    {
-      "text" : " and provides generation and validation methods for values within those ranges.",
+      "text" : "A collection of power scales.",
       "type" : "text"
     }
   ],
   "fragments" : [
     {
       "kind" : "keyword",
-      "text" : "protocol"
+      "text" : "enum"
     },
     {
       "kind" : "text",
@@ -301,21 +230,112 @@
     },
     {
       "kind" : "identifier",
-      "text" : "Scale"
+      "text" : "PowerScale"
     }
   ],
-  "identifier" : "doc:\/\/com.github.swiftviz.SwiftViz\/documentation\/SwiftViz\/Scale",
+  "identifier" : "doc:\/\/com.github.swiftviz.SwiftViz\/documentation\/SwiftViz\/PowerScale",
   "kind" : "symbol",
   "navigatorTitle" : [
     {
       "kind" : "identifier",
-      "text" : "Scale"
+      "text" : "PowerScale"
     }
   ],
   "role" : "symbol",
-  "title" : "Scale",
+  "title" : "PowerScale",
   "type" : "topic",
-  "url" : "\/documentation\/swiftviz\/scale"
+  "url" : "\/documentation\/swiftviz\/powerscale"
+},
+"doc://com.github.swiftviz.SwiftViz/documentation/SwiftViz/PowerScale/DoubleScale": {
+  "abstract" : [
+    {
+      "text" : "A power scale created with a continuous input domain that provides methods to convert values within that domain to an output range.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "struct"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "DoubleScale"
+    }
+  ],
+  "identifier" : "doc:\/\/com.github.swiftviz.SwiftViz\/documentation\/SwiftViz\/PowerScale\/DoubleScale",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "DoubleScale"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "PowerScale.DoubleScale",
+  "type" : "topic",
+  "url" : "\/documentation\/swiftviz\/powerscale\/doublescale"
+},
+"doc://com.github.swiftviz.SwiftViz/documentation/SwiftViz/PowerScale/DoubleScale/Scale-Implementations": {
+  "abstract" : [
+
+  ],
+  "identifier" : "doc:\/\/com.github.swiftviz.SwiftViz\/documentation\/SwiftViz\/PowerScale\/DoubleScale\/Scale-Implementations",
+  "kind" : "article",
+  "role" : "collectionGroup",
+  "title" : "Scale Implementations",
+  "type" : "topic",
+  "url" : "\/documentation\/swiftviz\/powerscale\/doublescale\/scale-implementations"
+},
+"doc://com.github.swiftviz.SwiftViz/documentation/SwiftViz/PowerScale/DoubleScale/domainContains(_:)": {
+  "abstract" : [
+    {
+      "text" : "Returns a Boolean value that indicates whether the value you provided is within the scale’s domain.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "func"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "domainContains"
+    },
+    {
+      "kind" : "text",
+      "text" : "("
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:8SwiftViz5ScaleP9InputTypeQa",
+      "text" : "InputType"
+    },
+    {
+      "kind" : "text",
+      "text" : ") -> "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:Sb",
+      "text" : "Bool"
+    }
+  ],
+  "identifier" : "doc:\/\/com.github.swiftviz.SwiftViz\/documentation\/SwiftViz\/PowerScale\/DoubleScale\/domainContains(_:)",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "domainContains(_:)",
+  "type" : "topic",
+  "url" : "\/documentation\/swiftviz\/powerscale\/doublescale\/domaincontains(_:)"
 },
 "doc://com.github.swiftviz.SwiftViz/documentation/SwiftViz/Scale/InputType": {
   "abstract" : [
@@ -369,182 +389,6 @@
   "title" : "InputType",
   "type" : "topic",
   "url" : "\/documentation\/swiftviz\/scale\/inputtype"
-},
-"doc://com.github.swiftviz.SwiftViz/documentation/SwiftViz/Scale/domainContains(_:)-2i0wq": {
-  "abstract" : [
-    {
-      "text" : "Returns a Boolean value that indicates whether the value you provided is within the scale’s domain.",
-      "type" : "text"
-    }
-  ],
-  "defaultImplementations" : 1,
-  "fragments" : [
-    {
-      "kind" : "keyword",
-      "text" : "func"
-    },
-    {
-      "kind" : "text",
-      "text" : " "
-    },
-    {
-      "kind" : "identifier",
-      "text" : "domainContains"
-    },
-    {
-      "kind" : "text",
-      "text" : "("
-    },
-    {
-      "kind" : "typeIdentifier",
-      "preciseIdentifier" : "s:8SwiftViz5ScaleP9InputTypeQa",
-      "text" : "InputType"
-    },
-    {
-      "kind" : "text",
-      "text" : ") -> "
-    },
-    {
-      "kind" : "typeIdentifier",
-      "preciseIdentifier" : "s:Sb",
-      "text" : "Bool"
-    }
-  ],
-  "identifier" : "doc:\/\/com.github.swiftviz.SwiftViz\/documentation\/SwiftViz\/Scale\/domainContains(_:)-2i0wq",
-  "kind" : "symbol",
-  "required" : true,
-  "role" : "symbol",
-  "title" : "domainContains(_:)",
-  "type" : "topic",
-  "url" : "\/documentation\/swiftviz\/scale\/domaincontains(_:)-2i0wq"
-},
-"doc://com.github.swiftviz.SwiftViz/documentation/SwiftViz/Scale/domainContains(_:)-6e065": {
-  "abstract" : [
-    {
-      "text" : "Returns a Boolean value that indicates whether the value you provided is within the scale’s domain.",
-      "type" : "text"
-    }
-  ],
-  "conformance" : {
-    "availabilityPrefix" : [
-      {
-        "text" : "Available when",
-        "type" : "text"
-      }
-    ],
-    "conformancePrefix" : [
-      {
-        "text" : "Conforms when",
-        "type" : "text"
-      }
-    ],
-    "constraints" : [
-      {
-        "code" : "OutputType",
-        "type" : "codeVoice"
-      },
-      {
-        "text" : " conforms to ",
-        "type" : "text"
-      },
-      {
-        "code" : "Real",
-        "type" : "codeVoice"
-      },
-      {
-        "text" : ".",
-        "type" : "text"
-      }
-    ]
-  },
-  "fragments" : [
-    {
-      "kind" : "keyword",
-      "text" : "func"
-    },
-    {
-      "kind" : "text",
-      "text" : " "
-    },
-    {
-      "kind" : "identifier",
-      "text" : "domainContains"
-    },
-    {
-      "kind" : "text",
-      "text" : "("
-    },
-    {
-      "kind" : "typeIdentifier",
-      "preciseIdentifier" : "s:8SwiftViz5ScaleP9InputTypeQa",
-      "text" : "InputType"
-    },
-    {
-      "kind" : "text",
-      "text" : ") -> "
-    },
-    {
-      "kind" : "typeIdentifier",
-      "preciseIdentifier" : "s:Sb",
-      "text" : "Bool"
-    }
-  ],
-  "identifier" : "doc:\/\/com.github.swiftviz.SwiftViz\/documentation\/SwiftViz\/Scale\/domainContains(_:)-6e065",
-  "kind" : "symbol",
-  "role" : "symbol",
-  "title" : "domainContains(_:)",
-  "type" : "topic",
-  "url" : "\/documentation\/swiftviz\/scale\/domaincontains(_:)-6e065"
-},
-"doc://com.github.swiftviz.SwiftViz/documentation/SwiftViz/Scale/transformAgainstDomain(_:)": {
-  "abstract" : [
-    {
-      "text" : "Processes a value against the scale, potentially constraining or dropping the value.",
-      "type" : "text"
-    }
-  ],
-  "fragments" : [
-    {
-      "kind" : "keyword",
-      "text" : "func"
-    },
-    {
-      "kind" : "text",
-      "text" : " "
-    },
-    {
-      "kind" : "identifier",
-      "text" : "transformAgainstDomain"
-    },
-    {
-      "kind" : "text",
-      "text" : "("
-    },
-    {
-      "kind" : "typeIdentifier",
-      "preciseIdentifier" : "s:8SwiftViz5ScaleP9InputTypeQa",
-      "text" : "InputType"
-    },
-    {
-      "kind" : "text",
-      "text" : ") -> "
-    },
-    {
-      "kind" : "typeIdentifier",
-      "preciseIdentifier" : "s:8SwiftViz5ScaleP9InputTypeQa",
-      "text" : "InputType"
-    },
-    {
-      "kind" : "text",
-      "text" : "?"
-    }
-  ],
-  "identifier" : "doc:\/\/com.github.swiftviz.SwiftViz\/documentation\/SwiftViz\/Scale\/transformAgainstDomain(_:)",
-  "kind" : "symbol",
-  "role" : "symbol",
-  "title" : "transformAgainstDomain(_:)",
-  "type" : "topic",
-  "url" : "\/documentation\/swiftviz\/scale\/transformagainstdomain(_:)"
 }
 }
 }

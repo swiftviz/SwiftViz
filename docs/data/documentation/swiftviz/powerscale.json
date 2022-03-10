@@ -1,0 +1,669 @@
+{
+  "abstract" : [
+    {
+      "text" : "A collection of power scales.",
+      "type" : "text"
+    }
+  ],
+  "hierarchy" : {
+    "paths" : [
+      [
+        "doc:\/\/com.github.swiftviz.SwiftViz\/documentation\/SwiftViz"
+      ]
+    ]
+  },
+  "identifier" : {
+    "interfaceLanguage" : "swift",
+    "url" : "doc:\/\/com.github.swiftviz.SwiftViz\/documentation\/SwiftViz\/PowerScale"
+  },
+  "kind" : "symbol",
+  "metadata" : {
+    "externalID" : "s:8SwiftViz10PowerScaleO",
+    "fragments" : [
+      {
+        "kind" : "keyword",
+        "text" : "enum"
+      },
+      {
+        "kind" : "text",
+        "text" : " "
+      },
+      {
+        "kind" : "identifier",
+        "text" : "PowerScale"
+      }
+    ],
+    "modules" : [
+      {
+        "name" : "SwiftViz"
+      }
+    ],
+    "navigatorTitle" : [
+      {
+        "kind" : "identifier",
+        "text" : "PowerScale"
+      }
+    ],
+    "role" : "symbol",
+    "roleHeading" : "Enumeration",
+    "symbolKind" : "enum",
+    "title" : "PowerScale"
+  },
+  "primaryContentSections" : [
+    {
+      "declarations" : [
+        {
+          "languages" : [
+            "swift"
+          ],
+          "platforms" : [
+            "macOS"
+          ],
+          "tokens" : [
+            {
+              "kind" : "keyword",
+              "text" : "enum"
+            },
+            {
+              "kind" : "text",
+              "text" : " "
+            },
+            {
+              "kind" : "identifier",
+              "text" : "PowerScale"
+            }
+          ]
+        }
+      ],
+      "kind" : "declarations"
+    }
+  ],
+  "schemaVersion" : {
+    "major" : 0,
+    "minor" : 2,
+    "patch" : 0
+  },
+  "sections" : [
+
+  ],
+  "seeAlsoSections" : [
+    {
+      "generated" : true,
+      "identifiers" : [
+        "doc:\/\/com.github.swiftviz.SwiftViz\/documentation\/SwiftViz\/Scale",
+        "doc:\/\/com.github.swiftviz.SwiftViz\/documentation\/SwiftViz\/TickScale",
+        "doc:\/\/com.github.swiftviz.SwiftViz\/documentation\/SwiftViz\/NiceValue",
+        "doc:\/\/com.github.swiftviz.SwiftViz\/documentation\/SwiftViz\/LinearScale",
+        "doc:\/\/com.github.swiftviz.SwiftViz\/documentation\/SwiftViz\/LogScale"
+      ],
+      "title" : "Scales"
+    }
+  ],
+  "topicSections" : [
+    {
+      "identifiers" : [
+        "doc:\/\/com.github.swiftviz.SwiftViz\/documentation\/SwiftViz\/PowerScale\/create(_:_:exponent:)",
+        "doc:\/\/com.github.swiftviz.SwiftViz\/documentation\/SwiftViz\/PowerScale\/create(_:exponent:)-3wlyt",
+        "doc:\/\/com.github.swiftviz.SwiftViz\/documentation\/SwiftViz\/PowerScale\/create(_:exponent:)-8clnb"
+      ],
+      "title" : "Creating Power Scales"
+    },
+    {
+      "identifiers" : [
+        "doc:\/\/com.github.swiftviz.SwiftViz\/documentation\/SwiftViz\/PowerScale\/DoubleScale"
+      ],
+      "title" : "Types of Power Scales"
+    }
+  ],
+  "variants" : [
+    {
+      "paths" : [
+        "\/documentation\/swiftviz\/powerscale"
+      ],
+      "traits" : [
+        {
+          "interfaceLanguage" : "swift"
+        }
+      ]
+    }
+  ]
+, 
+"references": {
+"doc://com.github.swiftviz.SwiftViz/documentation/SwiftViz": {
+  "abstract" : [
+    {
+      "text" : "A collection of components to provide structures that support data visualization.",
+      "type" : "text"
+    }
+  ],
+  "identifier" : "doc:\/\/com.github.swiftviz.SwiftViz\/documentation\/SwiftViz",
+  "kind" : "symbol",
+  "role" : "collection",
+  "title" : "SwiftViz",
+  "type" : "topic",
+  "url" : "\/documentation\/swiftviz"
+},
+"doc://com.github.swiftviz.SwiftViz/documentation/SwiftViz/LinearScale": {
+  "abstract" : [
+    {
+      "text" : "A collection of linear scales.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "enum"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "LinearScale"
+    }
+  ],
+  "identifier" : "doc:\/\/com.github.swiftviz.SwiftViz\/documentation\/SwiftViz\/LinearScale",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "LinearScale"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "LinearScale",
+  "type" : "topic",
+  "url" : "\/documentation\/swiftviz\/linearscale"
+},
+"doc://com.github.swiftviz.SwiftViz/documentation/SwiftViz/LogScale": {
+  "abstract" : [
+    {
+      "text" : "A collection of logarithmic scales.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "enum"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "LogScale"
+    }
+  ],
+  "identifier" : "doc:\/\/com.github.swiftviz.SwiftViz\/documentation\/SwiftViz\/LogScale",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "LogScale"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "LogScale",
+  "type" : "topic",
+  "url" : "\/documentation\/swiftviz\/logscale"
+},
+"doc://com.github.swiftviz.SwiftViz/documentation/SwiftViz/NiceValue": {
+  "abstract" : [
+    {
+      "text" : "A type that can be converted into an approximate value that is easier to understand.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "protocol"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "NiceValue"
+    }
+  ],
+  "identifier" : "doc:\/\/com.github.swiftviz.SwiftViz\/documentation\/SwiftViz\/NiceValue",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "NiceValue"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "NiceValue",
+  "type" : "topic",
+  "url" : "\/documentation\/swiftviz\/nicevalue"
+},
+"doc://com.github.swiftviz.SwiftViz/documentation/SwiftViz/PowerScale": {
+  "abstract" : [
+    {
+      "text" : "A collection of power scales.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "enum"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "PowerScale"
+    }
+  ],
+  "identifier" : "doc:\/\/com.github.swiftviz.SwiftViz\/documentation\/SwiftViz\/PowerScale",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "PowerScale"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "PowerScale",
+  "type" : "topic",
+  "url" : "\/documentation\/swiftviz\/powerscale"
+},
+"doc://com.github.swiftviz.SwiftViz/documentation/SwiftViz/PowerScale/DoubleScale": {
+  "abstract" : [
+    {
+      "text" : "A power scale created with a continuous input domain that provides methods to convert values within that domain to an output range.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "struct"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "DoubleScale"
+    }
+  ],
+  "identifier" : "doc:\/\/com.github.swiftviz.SwiftViz\/documentation\/SwiftViz\/PowerScale\/DoubleScale",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "DoubleScale"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "PowerScale.DoubleScale",
+  "type" : "topic",
+  "url" : "\/documentation\/swiftviz\/powerscale\/doublescale"
+},
+"doc://com.github.swiftviz.SwiftViz/documentation/SwiftViz/PowerScale/create(_:_:exponent:)": {
+  "abstract" : [
+    {
+      "text" : "Creates a power scale that maps values between the lower and upper bounds you provide.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "static"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "keyword",
+      "text" : "func"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "create"
+    },
+    {
+      "kind" : "text",
+      "text" : "("
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:Sd",
+      "text" : "Double"
+    },
+    {
+      "kind" : "text",
+      "text" : ", "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:Sd",
+      "text" : "Double"
+    },
+    {
+      "kind" : "text",
+      "text" : ", "
+    },
+    {
+      "kind" : "externalParam",
+      "text" : "exponent"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:Sd",
+      "text" : "Double"
+    },
+    {
+      "kind" : "text",
+      "text" : ") -> "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:8SwiftViz10PowerScaleO",
+      "text" : "PowerScale"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:8SwiftViz10PowerScaleO06DoubleD0V",
+      "text" : "DoubleScale"
+    }
+  ],
+  "identifier" : "doc:\/\/com.github.swiftviz.SwiftViz\/documentation\/SwiftViz\/PowerScale\/create(_:_:exponent:)",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "create(_:_:exponent:)",
+  "type" : "topic",
+  "url" : "\/documentation\/swiftviz\/powerscale\/create(_:_:exponent:)"
+},
+"doc://com.github.swiftviz.SwiftViz/documentation/SwiftViz/PowerScale/create(_:exponent:)-3wlyt": {
+  "abstract" : [
+    {
+      "text" : "Creates a power scale that maps values from 0 to the upper bound you provide.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "static"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "keyword",
+      "text" : "func"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "create"
+    },
+    {
+      "kind" : "text",
+      "text" : "("
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:Sd",
+      "text" : "Double"
+    },
+    {
+      "kind" : "text",
+      "text" : ", "
+    },
+    {
+      "kind" : "externalParam",
+      "text" : "exponent"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:Sd",
+      "text" : "Double"
+    },
+    {
+      "kind" : "text",
+      "text" : ") -> "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:8SwiftViz10PowerScaleO",
+      "text" : "PowerScale"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:8SwiftViz10PowerScaleO06DoubleD0V",
+      "text" : "DoubleScale"
+    }
+  ],
+  "identifier" : "doc:\/\/com.github.swiftviz.SwiftViz\/documentation\/SwiftViz\/PowerScale\/create(_:exponent:)-3wlyt",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "create(_:exponent:)",
+  "type" : "topic",
+  "url" : "\/documentation\/swiftviz\/powerscale\/create(_:exponent:)-3wlyt"
+},
+"doc://com.github.swiftviz.SwiftViz/documentation/SwiftViz/PowerScale/create(_:exponent:)-8clnb": {
+  "abstract" : [
+    {
+      "text" : "Creates a power scale that maps values within the range you provide.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "static"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "keyword",
+      "text" : "func"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "create"
+    },
+    {
+      "kind" : "text",
+      "text" : "("
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:SN",
+      "text" : "ClosedRange"
+    },
+    {
+      "kind" : "text",
+      "text" : "<"
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:Sd",
+      "text" : "Double"
+    },
+    {
+      "kind" : "text",
+      "text" : ">, "
+    },
+    {
+      "kind" : "externalParam",
+      "text" : "exponent"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:Sd",
+      "text" : "Double"
+    },
+    {
+      "kind" : "text",
+      "text" : ") -> "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:8SwiftViz10PowerScaleO",
+      "text" : "PowerScale"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:8SwiftViz10PowerScaleO06DoubleD0V",
+      "text" : "DoubleScale"
+    }
+  ],
+  "identifier" : "doc:\/\/com.github.swiftviz.SwiftViz\/documentation\/SwiftViz\/PowerScale\/create(_:exponent:)-8clnb",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "create(_:exponent:)",
+  "type" : "topic",
+  "url" : "\/documentation\/swiftviz\/powerscale\/create(_:exponent:)-8clnb"
+},
+"doc://com.github.swiftviz.SwiftViz/documentation/SwiftViz/Scale": {
+  "abstract" : [
+    {
+      "text" : "A type that maps values from an input ",
+      "type" : "text"
+    },
+    {
+      "inlineContent" : [
+        {
+          "text" : "domain",
+          "type" : "text"
+        }
+      ],
+      "type" : "emphasis"
+    },
+    {
+      "text" : " to an output ",
+      "type" : "text"
+    },
+    {
+      "inlineContent" : [
+        {
+          "text" : "range",
+          "type" : "text"
+        }
+      ],
+      "type" : "emphasis"
+    },
+    {
+      "text" : ".",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "protocol"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "Scale"
+    }
+  ],
+  "identifier" : "doc:\/\/com.github.swiftviz.SwiftViz\/documentation\/SwiftViz\/Scale",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "Scale"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Scale",
+  "type" : "topic",
+  "url" : "\/documentation\/swiftviz\/scale"
+},
+"doc://com.github.swiftviz.SwiftViz/documentation/SwiftViz/TickScale": {
+  "abstract" : [
+    {
+      "text" : "A type of scale that provides tick values from the domain it represents.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "protocol"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "TickScale"
+    }
+  ],
+  "identifier" : "doc:\/\/com.github.swiftviz.SwiftViz\/documentation\/SwiftViz\/TickScale",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "TickScale"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "TickScale",
+  "type" : "topic",
+  "url" : "\/documentation\/swiftviz\/tickscale"
+}
+}
+}

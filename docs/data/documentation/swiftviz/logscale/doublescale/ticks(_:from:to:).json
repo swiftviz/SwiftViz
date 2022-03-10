@@ -11,7 +11,7 @@
         "doc:\/\/com.github.swiftviz.SwiftViz\/documentation\/SwiftViz",
         "doc:\/\/com.github.swiftviz.SwiftViz\/documentation\/SwiftViz\/LogScale",
         "doc:\/\/com.github.swiftviz.SwiftViz\/documentation\/SwiftViz\/LogScale\/DoubleScale",
-        "doc:\/\/com.github.swiftviz.SwiftViz\/documentation\/SwiftViz\/LogScale\/DoubleScale\/Scale-Implementations"
+        "doc:\/\/com.github.swiftviz.SwiftViz\/documentation\/SwiftViz\/LogScale\/DoubleScale\/TickScale-Implementations"
       ]
     ]
   },
@@ -54,7 +54,7 @@
       ]
     },
     "extendedModule" : "SwiftViz",
-    "externalID" : "s:8SwiftViz5ScalePAA10RealModule0D010OutputTypeRpzrlE5ticks_4from2toSayAA4TickVy05InputG0QzAGGGSayANG_A2GtF::SYNTHESIZED::s:8SwiftViz8LogScaleO06DoubleD0V",
+    "externalID" : "s:8SwiftViz9TickScalePAA10RealModule0E010OutputTypeRpzrlE5ticks_4from2toSayAA0C0Vy05InputH0QzAGGGSayANG_A2GtF::SYNTHESIZED::s:8SwiftViz8LogScaleO06DoubleD0V",
     "fragments" : [
       {
         "kind" : "keyword",
@@ -464,7 +464,7 @@
 "doc://com.github.swiftviz.SwiftViz/documentation/SwiftViz/LogScale": {
   "abstract" : [
     {
-      "text" : "A collection of logrithmic scales.",
+      "text" : "A collection of logarithmic scales.",
       "type" : "text"
     }
   ],
@@ -498,7 +498,7 @@
 "doc://com.github.swiftviz.SwiftViz/documentation/SwiftViz/LogScale/DoubleScale": {
   "abstract" : [
     {
-      "text" : "A logrithmic scale created with a continuous input domain that provides methods to convert values within that domain to an output range.",
+      "text" : "A logarithmic scale created with a continuous input domain that provides methods to convert values within that domain to an output range.",
       "type" : "text"
     }
   ],
@@ -529,16 +529,16 @@
   "type" : "topic",
   "url" : "\/documentation\/swiftviz\/logscale\/doublescale"
 },
-"doc://com.github.swiftviz.SwiftViz/documentation/SwiftViz/LogScale/DoubleScale/Scale-Implementations": {
+"doc://com.github.swiftviz.SwiftViz/documentation/SwiftViz/LogScale/DoubleScale/TickScale-Implementations": {
   "abstract" : [
 
   ],
-  "identifier" : "doc:\/\/com.github.swiftviz.SwiftViz\/documentation\/SwiftViz\/LogScale\/DoubleScale\/Scale-Implementations",
+  "identifier" : "doc:\/\/com.github.swiftviz.SwiftViz\/documentation\/SwiftViz\/LogScale\/DoubleScale\/TickScale-Implementations",
   "kind" : "article",
   "role" : "collectionGroup",
-  "title" : "Scale Implementations",
+  "title" : "TickScale Implementations",
   "type" : "topic",
-  "url" : "\/documentation\/swiftviz\/logscale\/doublescale\/scale-implementations"
+  "url" : "\/documentation\/swiftviz\/logscale\/doublescale\/tickscale-implementations"
 },
 "doc://com.github.swiftviz.SwiftViz/documentation/SwiftViz/LogScale/DoubleScale/ticks(_:from:to:)": {
   "abstract" : [

@@ -21,40 +21,8 @@
   },
   "kind" : "symbol",
   "metadata" : {
-    "conformance" : {
-      "availabilityPrefix" : [
-        {
-          "text" : "Available when",
-          "type" : "text"
-        }
-      ],
-      "conformancePrefix" : [
-        {
-          "text" : "Conforms when",
-          "type" : "text"
-        }
-      ],
-      "constraints" : [
-        {
-          "code" : "OutputType",
-          "type" : "codeVoice"
-        },
-        {
-          "text" : " conforms to ",
-          "type" : "text"
-        },
-        {
-          "code" : "Real",
-          "type" : "codeVoice"
-        },
-        {
-          "text" : ".",
-          "type" : "text"
-        }
-      ]
-    },
     "extendedModule" : "SwiftViz",
-    "externalID" : "s:8SwiftViz5ScalePAA10RealModule0D010OutputTypeRpzrlE14domainContainsySb05InputG0QzF::SYNTHESIZED::s:8SwiftViz8LogScaleO06DoubleD0V",
+    "externalID" : "s:8SwiftViz5ScalePAAE14domainContainsySb9InputTypeQzF::SYNTHESIZED::s:8SwiftViz8LogScaleO06DoubleD0V",
     "fragments" : [
       {
         "kind" : "keyword",
@@ -247,7 +215,7 @@
 "doc://com.github.swiftviz.SwiftViz/documentation/SwiftViz/LogScale": {
   "abstract" : [
     {
-      "text" : "A collection of logrithmic scales.",
+      "text" : "A collection of logarithmic scales.",
       "type" : "text"
     }
   ],
@@ -281,7 +249,7 @@
 "doc://com.github.swiftviz.SwiftViz/documentation/SwiftViz/LogScale/DoubleScale": {
   "abstract" : [
     {
-      "text" : "A logrithmic scale created with a continuous input domain that provides methods to convert values within that domain to an output range.",
+      "text" : "A logarithmic scale created with a continuous input domain that provides methods to convert values within that domain to an output range.",
       "type" : "text"
     }
   ],
@@ -330,38 +298,6 @@
       "type" : "text"
     }
   ],
-  "conformance" : {
-    "availabilityPrefix" : [
-      {
-        "text" : "Available when",
-        "type" : "text"
-      }
-    ],
-    "conformancePrefix" : [
-      {
-        "text" : "Conforms when",
-        "type" : "text"
-      }
-    ],
-    "constraints" : [
-      {
-        "code" : "OutputType",
-        "type" : "codeVoice"
-      },
-      {
-        "text" : " conforms to ",
-        "type" : "text"
-      },
-      {
-        "code" : "Real",
-        "type" : "codeVoice"
-      },
-      {
-        "text" : ".",
-        "type" : "text"
-      }
-    ]
-  },
   "fragments" : [
     {
       "kind" : "keyword",

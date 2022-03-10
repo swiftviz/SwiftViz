@@ -21,40 +21,8 @@
   },
   "kind" : "symbol",
   "metadata" : {
-    "conformance" : {
-      "availabilityPrefix" : [
-        {
-          "text" : "Available when",
-          "type" : "text"
-        }
-      ],
-      "conformancePrefix" : [
-        {
-          "text" : "Conforms when",
-          "type" : "text"
-        }
-      ],
-      "constraints" : [
-        {
-          "code" : "OutputType",
-          "type" : "codeVoice"
-        },
-        {
-          "text" : " conforms to ",
-          "type" : "text"
-        },
-        {
-          "code" : "Real",
-          "type" : "codeVoice"
-        },
-        {
-          "text" : ".",
-          "type" : "text"
-        }
-      ]
-    },
     "extendedModule" : "SwiftViz",
-    "externalID" : "s:8SwiftViz5ScalePAA10RealModule0D010OutputTypeRpzrlE14domainContainsySb05InputG0QzF::SYNTHESIZED::s:8SwiftViz8LogScaleO03IntD0V",
+    "externalID" : "s:8SwiftViz5ScalePAAE14domainContainsySb9InputTypeQzF::SYNTHESIZED::s:8SwiftViz8LogScaleO03IntD0V",
     "fragments" : [
       {
         "kind" : "keyword",
@@ -247,7 +215,7 @@
 "doc://com.github.swiftviz.SwiftViz/documentation/SwiftViz/LogScale": {
   "abstract" : [
     {
-      "text" : "A collection of logrithmic scales.",
+      "text" : "A collection of logarithmic scales.",
       "type" : "text"
     }
   ],
@@ -327,38 +295,6 @@
       "type" : "text"
     }
   ],
-  "conformance" : {
-    "availabilityPrefix" : [
-      {
-        "text" : "Available when",
-        "type" : "text"
-      }
-    ],
-    "conformancePrefix" : [
-      {
-        "text" : "Conforms when",
-        "type" : "text"
-      }
-    ],
-    "constraints" : [
-      {
-        "code" : "OutputType",
-        "type" : "codeVoice"
-      },
-      {
-        "text" : " conforms to ",
-        "type" : "text"
-      },
-      {
-        "code" : "Real",
-        "type" : "codeVoice"
-      },
-      {
-        "text" : ".",
-        "type" : "text"
-      }
-    ]
-  },
   "fragments" : [
     {
       "kind" : "keyword",

@@ -11,7 +11,7 @@
         "doc:\/\/com.github.swiftviz.SwiftViz\/documentation\/SwiftViz",
         "doc:\/\/com.github.swiftviz.SwiftViz\/documentation\/SwiftViz\/LinearScale",
         "doc:\/\/com.github.swiftviz.SwiftViz\/documentation\/SwiftViz\/LinearScale\/DoubleScale",
-        "doc:\/\/com.github.swiftviz.SwiftViz\/documentation\/SwiftViz\/LinearScale\/DoubleScale\/Scale-Implementations"
+        "doc:\/\/com.github.swiftviz.SwiftViz\/documentation\/SwiftViz\/LinearScale\/DoubleScale\/TickScale-Implementations"
       ]
     ]
   },
@@ -70,7 +70,7 @@
       ]
     },
     "extendedModule" : "SwiftViz",
-    "externalID" : "s:8SwiftViz5ScalePAASd9InputTypeRtz10RealModule0F006OutputE0RpzrlE5ticks10rangeLower0J6HigherSayAA4TickVySdAIGGAI_AItF::SYNTHESIZED::s:8SwiftViz11LinearScaleO06DoubleD0V",
+    "externalID" : "s:8SwiftViz9TickScalePAASd9InputTypeRtz10RealModule0G006OutputF0RpzrlE5ticks10rangeLower0K6HigherSayAA0C0VySdAIGGAI_AItF::SYNTHESIZED::s:8SwiftViz11LinearScaleO06DoubleD0V",
     "fragments" : [
       {
         "kind" : "keyword",
@@ -402,16 +402,16 @@
   "type" : "topic",
   "url" : "\/documentation\/swiftviz\/linearscale\/doublescale"
 },
-"doc://com.github.swiftviz.SwiftViz/documentation/SwiftViz/LinearScale/DoubleScale/Scale-Implementations": {
+"doc://com.github.swiftviz.SwiftViz/documentation/SwiftViz/LinearScale/DoubleScale/TickScale-Implementations": {
   "abstract" : [
 
   ],
-  "identifier" : "doc:\/\/com.github.swiftviz.SwiftViz\/documentation\/SwiftViz\/LinearScale\/DoubleScale\/Scale-Implementations",
+  "identifier" : "doc:\/\/com.github.swiftviz.SwiftViz\/documentation\/SwiftViz\/LinearScale\/DoubleScale\/TickScale-Implementations",
   "kind" : "article",
   "role" : "collectionGroup",
-  "title" : "Scale Implementations",
+  "title" : "TickScale Implementations",
   "type" : "topic",
-  "url" : "\/documentation\/swiftviz\/linearscale\/doublescale\/scale-implementations"
+  "url" : "\/documentation\/swiftviz\/linearscale\/doublescale\/tickscale-implementations"
 },
 "doc://com.github.swiftviz.SwiftViz/documentation/SwiftViz/LinearScale/DoubleScale/ticks(rangeLower:rangeHigher:)": {
   "abstract" : [

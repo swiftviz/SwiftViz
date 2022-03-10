@@ -24,7 +24,7 @@
     "fragments" : [
       {
         "kind" : "keyword",
-        "text" : "let"
+        "text" : "var"
       },
       {
         "kind" : "text",
@@ -67,7 +67,7 @@
           "tokens" : [
             {
               "kind" : "keyword",
-              "text" : "let"
+              "text" : "var"
             },
             {
               "kind" : "text",
@@ -202,7 +202,7 @@
 "doc://com.github.swiftviz.SwiftViz/documentation/SwiftViz/LogScale": {
   "abstract" : [
     {
-      "text" : "A collection of logrithmic scales.",
+      "text" : "A collection of logarithmic scales.",
       "type" : "text"
     }
   ],
@@ -274,7 +274,7 @@
   "fragments" : [
     {
       "kind" : "keyword",
-      "text" : "let"
+      "text" : "var"
     },
     {
       "kind" : "text",

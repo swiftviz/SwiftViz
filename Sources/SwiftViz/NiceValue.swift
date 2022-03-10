@@ -56,7 +56,7 @@ public protocol NiceValue {
 
 extension Double: NiceValue {
     public typealias NumberType = Double
-    
+
     public static func niceVersion(for number: NumberType, min: Bool) -> NumberType {
         let negativeInput: Bool = number < 0
         let positiveNumber = abs(number)
@@ -300,7 +300,7 @@ extension Int: NiceValue {
         }
         return (niceMin, niceStep, niceMax)
     }
-    
+
     public static func rangeOfNiceValues(min: NumberType, max: NumberType, ofSize size: Int) -> [NumberType] {
         let (niceMin, niceStep, _) = niceMinStepMax(min: min, max: max, ofSize: size)
         var result: [NumberType] = []
