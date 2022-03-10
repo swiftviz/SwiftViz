@@ -1,3 +1,86 @@
 [
+  {
+    "notes" : [
 
+    ],
+    "severity" : 2,
+    "source" : "..\/LogScale.swift",
+    "start" : {
+      "column" : 67,
+      "line" : 78
+    },
+    "summary" : "Topic reference 'Scale\/ticks(_:range:)' couldn't be resolved. No local documentation matches this reference."
+  },
+  {
+    "notes" : [
+
+    ],
+    "severity" : 2,
+    "source" : "..\/LogScale.swift",
+    "start" : {
+      "column" : 67,
+      "line" : 78
+    },
+    "summary" : "Topic reference 'Scale\/ticks(_:range:)' couldn't be resolved. No local documentation matches this reference."
+  },
+  {
+    "notes" : [
+
+    ],
+    "severity" : 2,
+    "source" : "..\/LinearScale.swift",
+    "start" : {
+      "column" : 67,
+      "line" : 78
+    },
+    "summary" : "Topic reference 'Scale\/ticks(_:range:)' couldn't be resolved. No local documentation matches this reference."
+  },
+  {
+    "notes" : [
+
+    ],
+    "severity" : 2,
+    "source" : "..\/LogScale.swift",
+    "start" : {
+      "column" : 67,
+      "line" : 78
+    },
+    "summary" : "Topic reference 'Scale\/ticks(_:range:)' couldn't be resolved. No local documentation matches this reference."
+  },
+  {
+    "notes" : [
+
+    ],
+    "severity" : 2,
+    "source" : "..\/LinearScale.swift",
+    "start" : {
+      "column" : 67,
+      "line" : 78
+    },
+    "summary" : "Topic reference 'Scale\/ticks(_:range:)' couldn't be resolved. No local documentation matches this reference."
+  },
+  {
+    "notes" : [
+
+    ],
+    "severity" : 2,
+    "source" : "..\/Scale.swift",
+    "start" : {
+      "column" : 67,
+      "line" : 78
+    },
+    "summary" : "Topic reference 'Scale\/ticks(_:range:)' couldn't be resolved. No local documentation matches this reference."
+  },
+  {
+    "notes" : [
+
+    ],
+    "severity" : 2,
+    "source" : "..\/LinearScale.swift",
+    "start" : {
+      "column" : 67,
+      "line" : 78
+    },
+    "summary" : "Topic reference 'Scale\/ticks(_:range:)' couldn't be resolved. No local documentation matches this reference."
+  }
 ]

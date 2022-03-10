@@ -1,7 +1,7 @@
 {
   "abstract" : [
     {
-      "text" : "No overview available.",
+      "text" : "The location where the tick should be placed within a chart’s range.",
       "type" : "text"
     }
   ],
@@ -19,11 +19,11 @@
   },
   "kind" : "symbol",
   "metadata" : {
-    "externalID" : "s:8SwiftViz4TickP13rangeLocation12CoreGraphics7CGFloatVvp",
+    "externalID" : "s:8SwiftViz4TickV13rangeLocationq_vp",
     "fragments" : [
       {
         "kind" : "keyword",
-        "text" : "var"
+        "text" : "let"
       },
       {
         "kind" : "text",
@@ -39,8 +39,8 @@
       },
       {
         "kind" : "typeIdentifier",
-        "preciseIdentifier" : "s:12CoreGraphics7CGFloatV",
-        "text" : "CGFloat"
+        "preciseIdentifier" : "s:8SwiftViz4TickV10OutputTypeq_mfp",
+        "text" : "OutputType"
       }
     ],
     "modules" : [
@@ -48,7 +48,6 @@
         "name" : "SwiftViz"
       }
     ],
-    "required" : true,
     "role" : "symbol",
     "roleHeading" : "Instance Property",
     "symbolKind" : "property",
@@ -67,7 +66,7 @@
           "tokens" : [
             {
               "kind" : "keyword",
-              "text" : "var"
+              "text" : "let"
             },
             {
               "kind" : "text",
@@ -83,20 +82,8 @@
             },
             {
               "kind" : "typeIdentifier",
-              "preciseIdentifier" : "s:12CoreGraphics7CGFloatV",
-              "text" : "CGFloat"
-            },
-            {
-              "kind" : "text",
-              "text" : " { "
-            },
-            {
-              "kind" : "keyword",
-              "text" : "get"
-            },
-            {
-              "kind" : "text",
-              "text" : " }"
+              "preciseIdentifier" : "s:8SwiftViz4TickV10OutputTypeq_mfp",
+              "text" : "OutputType"
             }
           ]
         }
@@ -143,14 +130,14 @@
 "doc://com.github.swiftviz.SwiftViz/documentation/SwiftViz/Tick": {
   "abstract" : [
     {
-      "text" : "A Tick is a visual representation of a point along an axis.",
+      "text" : "A  visual representation of a point along an axis.",
       "type" : "text"
     }
   ],
   "fragments" : [
     {
       "kind" : "keyword",
-      "text" : "protocol"
+      "text" : "struct"
     },
     {
       "kind" : "text",
@@ -176,12 +163,15 @@
 },
 "doc://com.github.swiftviz.SwiftViz/documentation/SwiftViz/Tick/rangeLocation": {
   "abstract" : [
-
+    {
+      "text" : "The location where the tick should be placed within a chart’s range.",
+      "type" : "text"
+    }
   ],
   "fragments" : [
     {
       "kind" : "keyword",
-      "text" : "var"
+      "text" : "let"
     },
     {
       "kind" : "text",
@@ -197,13 +187,12 @@
     },
     {
       "kind" : "typeIdentifier",
-      "preciseIdentifier" : "s:12CoreGraphics7CGFloatV",
-      "text" : "CGFloat"
+      "preciseIdentifier" : "s:8SwiftViz4TickV10OutputTypeq_mfp",
+      "text" : "OutputType"
     }
   ],
   "identifier" : "doc:\/\/com.github.swiftviz.SwiftViz\/documentation\/SwiftViz\/Tick\/rangeLocation",
   "kind" : "symbol",
-  "required" : true,
   "role" : "symbol",
   "title" : "rangeLocation",
   "type" : "topic",

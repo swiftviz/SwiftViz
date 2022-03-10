@@ -68,22 +68,26 @@
     {
       "identifiers" : [
         "doc:\/\/com.github.swiftviz.SwiftViz\/documentation\/SwiftViz\/Scale",
-        "doc:\/\/com.github.swiftviz.SwiftViz\/documentation\/SwiftViz\/TimeScale",
-        "doc:\/\/com.github.swiftviz.SwiftViz\/documentation\/SwiftViz\/LogScale",
-        "doc:\/\/com.github.swiftviz.SwiftViz\/documentation\/SwiftViz\/LinearScale"
+        "doc:\/\/com.github.swiftviz.SwiftViz\/documentation\/SwiftViz\/NiceValue",
+        "doc:\/\/com.github.swiftviz.SwiftViz\/documentation\/SwiftViz\/LinearScale",
+        "doc:\/\/com.github.swiftviz.SwiftViz\/documentation\/SwiftViz\/LogScale"
       ],
       "title" : "Scales"
     },
     {
       "identifiers" : [
+        "doc:\/\/com.github.swiftviz.SwiftViz\/documentation\/SwiftViz\/AxisDimension",
+        "doc:\/\/com.github.swiftviz.SwiftViz\/documentation\/SwiftViz\/ChartOrientation",
         "doc:\/\/com.github.swiftviz.SwiftViz\/documentation\/SwiftViz\/Tick",
-        "doc:\/\/com.github.swiftviz.SwiftViz\/documentation\/SwiftViz\/DateTick",
-        "doc:\/\/com.github.swiftviz.SwiftViz\/documentation\/SwiftViz\/DoubleTick",
-        "doc:\/\/com.github.swiftviz.SwiftViz\/documentation\/SwiftViz\/CGFloatTick",
-        "doc:\/\/com.github.swiftviz.SwiftViz\/documentation\/SwiftViz\/IntegerTick",
         "doc:\/\/com.github.swiftviz.SwiftViz\/documentation\/SwiftViz\/TickLabel"
       ],
       "title" : "Axis"
+    },
+    {
+      "identifiers" : [
+        "doc:\/\/com.github.swiftviz.SwiftViz\/documentation\/SwiftViz\/DomainDataTransform"
+      ],
+      "title" : "Enumerations"
     }
   ],
   "variants" : [
@@ -114,14 +118,17 @@
   "type" : "topic",
   "url" : "\/documentation\/swiftviz"
 },
-"doc://com.github.swiftviz.SwiftViz/documentation/SwiftViz/CGFloatTick": {
+"doc://com.github.swiftviz.SwiftViz/documentation/SwiftViz/AxisDimension": {
   "abstract" : [
-
+    {
+      "text" : "The identifier for a dimension the chart visualizes.",
+      "type" : "text"
+    }
   ],
   "fragments" : [
     {
       "kind" : "keyword",
-      "text" : "struct"
+      "text" : "enum"
     },
     {
       "kind" : "text",
@@ -129,30 +136,33 @@
     },
     {
       "kind" : "identifier",
-      "text" : "CGFloatTick"
+      "text" : "AxisDimension"
     }
   ],
-  "identifier" : "doc:\/\/com.github.swiftviz.SwiftViz\/documentation\/SwiftViz\/CGFloatTick",
+  "identifier" : "doc:\/\/com.github.swiftviz.SwiftViz\/documentation\/SwiftViz\/AxisDimension",
   "kind" : "symbol",
   "navigatorTitle" : [
     {
       "kind" : "identifier",
-      "text" : "CGFloatTick"
+      "text" : "AxisDimension"
     }
   ],
   "role" : "symbol",
-  "title" : "CGFloatTick",
+  "title" : "AxisDimension",
   "type" : "topic",
-  "url" : "\/documentation\/swiftviz\/cgfloattick"
+  "url" : "\/documentation\/swiftviz\/axisdimension"
 },
-"doc://com.github.swiftviz.SwiftViz/documentation/SwiftViz/DateTick": {
+"doc://com.github.swiftviz.SwiftViz/documentation/SwiftViz/ChartOrientation": {
   "abstract" : [
-
+    {
+      "text" : "The face or edge a chart visualization.",
+      "type" : "text"
+    }
   ],
   "fragments" : [
     {
       "kind" : "keyword",
-      "text" : "struct"
+      "text" : "enum"
     },
     {
       "kind" : "text",
@@ -160,30 +170,33 @@
     },
     {
       "kind" : "identifier",
-      "text" : "DateTick"
+      "text" : "ChartOrientation"
     }
   ],
-  "identifier" : "doc:\/\/com.github.swiftviz.SwiftViz\/documentation\/SwiftViz\/DateTick",
+  "identifier" : "doc:\/\/com.github.swiftviz.SwiftViz\/documentation\/SwiftViz\/ChartOrientation",
   "kind" : "symbol",
   "navigatorTitle" : [
     {
       "kind" : "identifier",
-      "text" : "DateTick"
+      "text" : "ChartOrientation"
     }
   ],
   "role" : "symbol",
-  "title" : "DateTick",
+  "title" : "ChartOrientation",
   "type" : "topic",
-  "url" : "\/documentation\/swiftviz\/datetick"
+  "url" : "\/documentation\/swiftviz\/chartorientation"
 },
-"doc://com.github.swiftviz.SwiftViz/documentation/SwiftViz/DoubleTick": {
+"doc://com.github.swiftviz.SwiftViz/documentation/SwiftViz/DomainDataTransform": {
   "abstract" : [
-
+    {
+      "text" : "A collection of methods for dealing with data transformation when displaying against a scale.",
+      "type" : "text"
+    }
   ],
   "fragments" : [
     {
       "kind" : "keyword",
-      "text" : "struct"
+      "text" : "enum"
     },
     {
       "kind" : "text",
@@ -191,72 +204,33 @@
     },
     {
       "kind" : "identifier",
-      "text" : "DoubleTick"
+      "text" : "DomainDataTransform"
     }
   ],
-  "identifier" : "doc:\/\/com.github.swiftviz.SwiftViz\/documentation\/SwiftViz\/DoubleTick",
+  "identifier" : "doc:\/\/com.github.swiftviz.SwiftViz\/documentation\/SwiftViz\/DomainDataTransform",
   "kind" : "symbol",
   "navigatorTitle" : [
     {
       "kind" : "identifier",
-      "text" : "DoubleTick"
+      "text" : "DomainDataTransform"
     }
   ],
   "role" : "symbol",
-  "title" : "DoubleTick",
+  "title" : "DomainDataTransform",
   "type" : "topic",
-  "url" : "\/documentation\/swiftviz\/doubletick"
-},
-"doc://com.github.swiftviz.SwiftViz/documentation/SwiftViz/IntegerTick": {
-  "abstract" : [
-
-  ],
-  "fragments" : [
-    {
-      "kind" : "keyword",
-      "text" : "struct"
-    },
-    {
-      "kind" : "text",
-      "text" : " "
-    },
-    {
-      "kind" : "identifier",
-      "text" : "IntegerTick"
-    }
-  ],
-  "identifier" : "doc:\/\/com.github.swiftviz.SwiftViz\/documentation\/SwiftViz\/IntegerTick",
-  "kind" : "symbol",
-  "navigatorTitle" : [
-    {
-      "kind" : "identifier",
-      "text" : "IntegerTick"
-    }
-  ],
-  "role" : "symbol",
-  "title" : "IntegerTick",
-  "type" : "topic",
-  "url" : "\/documentation\/swiftviz\/integertick"
+  "url" : "\/documentation\/swiftviz\/domaindatatransform"
 },
 "doc://com.github.swiftviz.SwiftViz/documentation/SwiftViz/LinearScale": {
   "abstract" : [
     {
-      "text" : "A linear scale is created using a continuous input domain and provides methods to",
-      "type" : "text"
-    },
-    {
-      "text" : " ",
-      "type" : "text"
-    },
-    {
-      "text" : "convert values within that domain to an output range.",
+      "text" : "A collection of linear scales.",
       "type" : "text"
     }
   ],
   "fragments" : [
     {
       "kind" : "keyword",
-      "text" : "struct"
+      "text" : "enum"
     },
     {
       "kind" : "text",
@@ -283,22 +257,14 @@
 "doc://com.github.swiftviz.SwiftViz/documentation/SwiftViz/LogScale": {
   "abstract" : [
     {
-      "text" : "A linear scale is created using a continuous input domain and provides methods to",
-      "type" : "text"
-    },
-    {
-      "text" : " ",
-      "type" : "text"
-    },
-    {
-      "text" : "convert values within that domain to an output range.",
+      "text" : "A collection of logrithmic scales.",
       "type" : "text"
     }
   ],
   "fragments" : [
     {
       "kind" : "keyword",
-      "text" : "struct"
+      "text" : "enum"
     },
     {
       "kind" : "text",
@@ -322,10 +288,44 @@
   "type" : "topic",
   "url" : "\/documentation\/swiftviz\/logscale"
 },
+"doc://com.github.swiftviz.SwiftViz/documentation/SwiftViz/NiceValue": {
+  "abstract" : [
+    {
+      "text" : "A type that can be converted into an approximate value that is easier to understand.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "protocol"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "NiceValue"
+    }
+  ],
+  "identifier" : "doc:\/\/com.github.swiftviz.SwiftViz\/documentation\/SwiftViz\/NiceValue",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "NiceValue"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "NiceValue",
+  "type" : "topic",
+  "url" : "\/documentation\/swiftviz\/nicevalue"
+},
 "doc://com.github.swiftviz.SwiftViz/documentation/SwiftViz/Scale": {
   "abstract" : [
     {
-      "text" : "A scale maps values from an input ",
+      "text" : "A type that maps values from an input ",
       "type" : "text"
     },
     {
@@ -351,7 +351,7 @@
       "type" : "emphasis"
     },
     {
-      "text" : ".",
+      "text" : " and provides generation and validation methods for values within those ranges.",
       "type" : "text"
     }
   ],
@@ -385,14 +385,14 @@
 "doc://com.github.swiftviz.SwiftViz/documentation/SwiftViz/Tick": {
   "abstract" : [
     {
-      "text" : "A Tick is a visual representation of a point along an axis.",
+      "text" : "A  visual representation of a point along an axis.",
       "type" : "text"
     }
   ],
   "fragments" : [
     {
       "kind" : "keyword",
-      "text" : "protocol"
+      "text" : "struct"
     },
     {
       "kind" : "text",
@@ -419,31 +419,7 @@
 "doc://com.github.swiftviz.SwiftViz/documentation/SwiftViz/TickLabel": {
   "abstract" : [
     {
-      "text" : "A TickLabel is more specific to the visualization and",
-      "type" : "text"
-    },
-    {
-      "text" : " ",
-      "type" : "text"
-    },
-    {
-      "text" : "is generally created with the benefit of a formatter,",
-      "type" : "text"
-    },
-    {
-      "text" : " ",
-      "type" : "text"
-    },
-    {
-      "text" : "the type that we use being dependent on the type that’s",
-      "type" : "text"
-    },
-    {
-      "text" : " ",
-      "type" : "text"
-    },
-    {
-      "text" : "used for the domain of the Scale.",
+      "text" : "A struct that provides string representation of a value with an accompanying location that represents a tick on an axis of a chart.",
       "type" : "text"
     }
   ],
@@ -473,37 +449,6 @@
   "title" : "TickLabel",
   "type" : "topic",
   "url" : "\/documentation\/swiftviz\/ticklabel"
-},
-"doc://com.github.swiftviz.SwiftViz/documentation/SwiftViz/TimeScale": {
-  "abstract" : [
-
-  ],
-  "fragments" : [
-    {
-      "kind" : "keyword",
-      "text" : "struct"
-    },
-    {
-      "kind" : "text",
-      "text" : " "
-    },
-    {
-      "kind" : "identifier",
-      "text" : "TimeScale"
-    }
-  ],
-  "identifier" : "doc:\/\/com.github.swiftviz.SwiftViz\/documentation\/SwiftViz\/TimeScale",
-  "kind" : "symbol",
-  "navigatorTitle" : [
-    {
-      "kind" : "identifier",
-      "text" : "TimeScale"
-    }
-  ],
-  "role" : "symbol",
-  "title" : "TimeScale",
-  "type" : "topic",
-  "url" : "\/documentation\/swiftviz\/timescale"
 },
 "https://d3js.org": {
   "identifier" : "https:\/\/d3js.org",

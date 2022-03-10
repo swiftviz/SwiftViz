@@ -10,11 +10,14 @@ Loosely based on the APIs and the visualization constructs created by Mike Bosto
 
 ### Scales
 
-- ``Scale``
-- ``LogScale``
-- ``LinearScale``
+- ``SwiftViz/Scale``
+- ``SwiftViz/NiceValue``
+- ``SwiftViz/LinearScale``
+- ``SwiftViz/LogScale``
 
 ### Axis
 
+- ``SwiftViz/AxisDimension``
+- ``SwiftViz/ChartOrientation``
 - ``Tick``
 - ``TickLabel``
