@@ -361,6 +361,15 @@
   "sections" : [
 
   ],
+  "seeAlsoSections" : [
+    {
+      "generated" : true,
+      "identifiers" : [
+        "doc:\/\/com.github.swiftviz.SwiftViz\/documentation\/SwiftViz\/Scale\/scale(_:from:to:)"
+      ],
+      "title" : "Converting Values"
+    }
+  ],
   "variants" : [
     {
       "paths" : [

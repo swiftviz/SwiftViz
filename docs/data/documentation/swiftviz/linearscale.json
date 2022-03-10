@@ -100,14 +100,6 @@
   "topicSections" : [
     {
       "identifiers" : [
-        "doc:\/\/com.github.swiftviz.SwiftViz\/documentation\/SwiftViz\/LinearScale\/DoubleScale",
-        "doc:\/\/com.github.swiftviz.SwiftViz\/documentation\/SwiftViz\/LinearScale\/FloatScale",
-        "doc:\/\/com.github.swiftviz.SwiftViz\/documentation\/SwiftViz\/LinearScale\/IntScale"
-      ],
-      "title" : "Structures"
-    },
-    {
-      "identifiers" : [
         "doc:\/\/com.github.swiftviz.SwiftViz\/documentation\/SwiftViz\/LinearScale\/create(_:)-1w8dl",
         "doc:\/\/com.github.swiftviz.SwiftViz\/documentation\/SwiftViz\/LinearScale\/create(_:)-1zkgi",
         "doc:\/\/com.github.swiftviz.SwiftViz\/documentation\/SwiftViz\/LinearScale\/create(_:)-6el22",
@@ -120,7 +112,15 @@
         "doc:\/\/com.github.swiftviz.SwiftViz\/documentation\/SwiftViz\/LinearScale\/create(_:_:)-3g58s",
         "doc:\/\/com.github.swiftviz.SwiftViz\/documentation\/SwiftViz\/LinearScale\/create(_:_:)-5h8y8"
       ],
-      "title" : "Type Methods"
+      "title" : "Creating Linear Scales"
+    },
+    {
+      "identifiers" : [
+        "doc:\/\/com.github.swiftviz.SwiftViz\/documentation\/SwiftViz\/LinearScale\/DoubleScale",
+        "doc:\/\/com.github.swiftviz.SwiftViz\/documentation\/SwiftViz\/LinearScale\/FloatScale",
+        "doc:\/\/com.github.swiftviz.SwiftViz\/documentation\/SwiftViz\/LinearScale\/IntScale"
+      ],
+      "title" : "Types of Linear Scales"
     }
   ],
   "variants" : [
@@ -289,7 +289,10 @@
 },
 "doc://com.github.swiftviz.SwiftViz/documentation/SwiftViz/LinearScale/create(_:)-1w8dl": {
   "abstract" : [
-
+    {
+      "text" : "Creates a linear scale that maps values within the range you provide.",
+      "type" : "text"
+    }
   ],
   "fragments" : [
     {
@@ -358,7 +361,10 @@
 },
 "doc://com.github.swiftviz.SwiftViz/documentation/SwiftViz/LinearScale/create(_:)-1zkgi": {
   "abstract" : [
-
+    {
+      "text" : "Creates a linear scale that maps values from 0 to the upper bound you provide.",
+      "type" : "text"
+    }
   ],
   "fragments" : [
     {
@@ -418,7 +424,10 @@
 },
 "doc://com.github.swiftviz.SwiftViz/documentation/SwiftViz/LinearScale/create(_:)-6el22": {
   "abstract" : [
-
+    {
+      "text" : "Creates a linear scale that maps values from 0 to the upper bound you provide.",
+      "type" : "text"
+    }
   ],
   "fragments" : [
     {
@@ -478,7 +487,10 @@
 },
 "doc://com.github.swiftviz.SwiftViz/documentation/SwiftViz/LinearScale/create(_:)-6u15q": {
   "abstract" : [
-
+    {
+      "text" : "Creates a linear scale that maps values within the range you provide.",
+      "type" : "text"
+    }
   ],
   "fragments" : [
     {
@@ -547,7 +559,10 @@
 },
 "doc://com.github.swiftviz.SwiftViz/documentation/SwiftViz/LinearScale/create(_:)-7iet9": {
   "abstract" : [
-
+    {
+      "text" : "Creates a linear scale that maps values within the range you provide.",
+      "type" : "text"
+    }
   ],
   "fragments" : [
     {
@@ -616,7 +631,10 @@
 },
 "doc://com.github.swiftviz.SwiftViz/documentation/SwiftViz/LinearScale/create(_:)-7ombg": {
   "abstract" : [
-
+    {
+      "text" : "Creates a linear scale for dates that maps values within the range you provide.",
+      "type" : "text"
+    }
   ],
   "fragments" : [
     {
@@ -685,7 +703,10 @@
 },
 "doc://com.github.swiftviz.SwiftViz/documentation/SwiftViz/LinearScale/create(_:)-9xers": {
   "abstract" : [
-
+    {
+      "text" : "Creates a linear scale that maps values from 0 to the upper bound you provide.",
+      "type" : "text"
+    }
   ],
   "fragments" : [
     {
@@ -745,7 +766,10 @@
 },
 "doc://com.github.swiftviz.SwiftViz/documentation/SwiftViz/LinearScale/create(_:_:)-1bvlf": {
   "abstract" : [
-
+    {
+      "text" : "Creates a linear scale that maps values between the lower and upper bounds you provide.",
+      "type" : "text"
+    }
   ],
   "fragments" : [
     {
@@ -814,7 +838,10 @@
 },
 "doc://com.github.swiftviz.SwiftViz/documentation/SwiftViz/LinearScale/create(_:_:)-2k33g": {
   "abstract" : [
-
+    {
+      "text" : "Creates a linear scale for dates that maps values between the lower and upper bounds you provide.",
+      "type" : "text"
+    }
   ],
   "fragments" : [
     {
@@ -883,7 +910,10 @@
 },
 "doc://com.github.swiftviz.SwiftViz/documentation/SwiftViz/LinearScale/create(_:_:)-3g58s": {
   "abstract" : [
-
+    {
+      "text" : "Creates a linear scale that maps values between the lower and upper bounds you provide.",
+      "type" : "text"
+    }
   ],
   "fragments" : [
     {
@@ -952,7 +982,10 @@
 },
 "doc://com.github.swiftviz.SwiftViz/documentation/SwiftViz/LinearScale/create(_:_:)-5h8y8": {
   "abstract" : [
-
+    {
+      "text" : "Creates a linear scale that maps values between the lower and upper bounds you provide.",
+      "type" : "text"
+    }
   ],
   "fragments" : [
     {

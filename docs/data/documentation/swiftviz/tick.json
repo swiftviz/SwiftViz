@@ -204,11 +204,19 @@
   "topicSections" : [
     {
       "identifiers" : [
+        "doc:\/\/com.github.swiftviz.SwiftViz\/documentation\/SwiftViz\/Tick\/init(value:location:)-8f3kt",
+        "doc:\/\/com.github.swiftviz.SwiftViz\/documentation\/SwiftViz\/Tick\/init(value:location:)-99fw1"
+      ],
+      "title" : "Creating Ticks"
+    },
+    {
+      "identifiers" : [
+        "doc:\/\/com.github.swiftviz.SwiftViz\/documentation\/SwiftViz\/Tick\/id-7vmvo",
         "doc:\/\/com.github.swiftviz.SwiftViz\/documentation\/SwiftViz\/Tick\/id-e61y",
         "doc:\/\/com.github.swiftviz.SwiftViz\/documentation\/SwiftViz\/Tick\/rangeLocation",
         "doc:\/\/com.github.swiftviz.SwiftViz\/documentation\/SwiftViz\/Tick\/value"
       ],
-      "title" : "Instance Properties"
+      "title" : "Inspecting Ticks"
     },
     {
       "generated" : true,
@@ -359,6 +367,40 @@
   "type" : "topic",
   "url" : "\/documentation\/swiftviz\/tick\/identifiable-implementations"
 },
+"doc://com.github.swiftviz.SwiftViz/documentation/SwiftViz/Tick/id-7vmvo": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "var"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "id"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:SO",
+      "text" : "ObjectIdentifier"
+    }
+  ],
+  "identifier" : "doc:\/\/com.github.swiftviz.SwiftViz\/documentation\/SwiftViz\/Tick\/id-7vmvo",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "id",
+  "type" : "topic",
+  "url" : "\/documentation\/swiftviz\/tick\/id-7vmvo"
+},
 "doc://com.github.swiftviz.SwiftViz/documentation/SwiftViz/Tick/id-e61y": {
   "abstract" : [
     {
@@ -395,6 +437,122 @@
   "title" : "id",
   "type" : "topic",
   "url" : "\/documentation\/swiftviz\/tick\/id-e61y"
+},
+"doc://com.github.swiftviz.SwiftViz/documentation/SwiftViz/Tick/init(value:location:)-8f3kt": {
+  "abstract" : [
+    {
+      "text" : "Creates a new tick",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "identifier",
+      "text" : "init"
+    },
+    {
+      "kind" : "text",
+      "text" : "("
+    },
+    {
+      "kind" : "externalParam",
+      "text" : "value"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:8SwiftViz4TickV9InputTypexmfp",
+      "text" : "InputType"
+    },
+    {
+      "kind" : "text",
+      "text" : ", "
+    },
+    {
+      "kind" : "externalParam",
+      "text" : "location"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:8SwiftViz4TickV10OutputTypeq_mfp",
+      "text" : "OutputType"
+    },
+    {
+      "kind" : "text",
+      "text" : ")"
+    }
+  ],
+  "identifier" : "doc:\/\/com.github.swiftviz.SwiftViz\/documentation\/SwiftViz\/Tick\/init(value:location:)-8f3kt",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "init(value:location:)",
+  "type" : "topic",
+  "url" : "\/documentation\/swiftviz\/tick\/init(value:location:)-8f3kt"
+},
+"doc://com.github.swiftviz.SwiftViz/documentation/SwiftViz/Tick/init(value:location:)-99fw1": {
+  "abstract" : [
+    {
+      "text" : "Creates a new tick.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "identifier",
+      "text" : "init"
+    },
+    {
+      "kind" : "text",
+      "text" : "?("
+    },
+    {
+      "kind" : "externalParam",
+      "text" : "value"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:8SwiftViz4TickV9InputTypexmfp",
+      "text" : "InputType"
+    },
+    {
+      "kind" : "text",
+      "text" : ", "
+    },
+    {
+      "kind" : "externalParam",
+      "text" : "location"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:8SwiftViz4TickV10OutputTypeq_mfp",
+      "text" : "OutputType"
+    },
+    {
+      "kind" : "text",
+      "text" : ")"
+    }
+  ],
+  "identifier" : "doc:\/\/com.github.swiftviz.SwiftViz\/documentation\/SwiftViz\/Tick\/init(value:location:)-99fw1",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "init(value:location:)",
+  "type" : "topic",
+  "url" : "\/documentation\/swiftviz\/tick\/init(value:location:)-99fw1"
 },
 "doc://com.github.swiftviz.SwiftViz/documentation/SwiftViz/Tick/rangeLocation": {
   "abstract" : [

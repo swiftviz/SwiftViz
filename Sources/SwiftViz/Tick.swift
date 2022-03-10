@@ -28,7 +28,7 @@ public struct Tick<InputType, OutputType: Numeric>: Identifiable where OutputTyp
     /// - Parameters:
     ///   - value: The value at the tick's location.
     ///   - location: The location of the tick within the range for a scale.
-    init(value: InputType, location: OutputType) {
+    public init(value: InputType, location: OutputType) {
         self.value = value
         rangeLocation = location
     }
@@ -39,7 +39,7 @@ public struct Tick<InputType, OutputType: Numeric>: Identifiable where OutputTyp
     /// - Parameters:
     ///   - value: The value at the tick's location.
     ///   - location: The location of the tick within the range for a scale.
-    init?(value: InputType, location: OutputType) where OutputType: Real {
+    public init?(value: InputType, location: OutputType) where OutputType: Real {
         self.value = value
         if location.isNaN {
             return nil

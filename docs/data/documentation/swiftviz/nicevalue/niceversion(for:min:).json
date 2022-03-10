@@ -281,6 +281,15 @@
   "sections" : [
 
   ],
+  "seeAlsoSections" : [
+    {
+      "generated" : true,
+      "identifiers" : [
+        "doc:\/\/com.github.swiftviz.SwiftViz\/documentation\/SwiftViz\/NiceValue\/NumberType"
+      ],
+      "title" : "Generating Nice Numbers"
+    }
+  ],
   "variants" : [
     {
       "paths" : [
