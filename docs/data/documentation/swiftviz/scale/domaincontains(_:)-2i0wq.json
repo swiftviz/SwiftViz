@@ -190,6 +190,16 @@
   "sections" : [
 
   ],
+  "seeAlsoSections" : [
+    {
+      "generated" : true,
+      "identifiers" : [
+        "doc:\/\/com.github.swiftviz.SwiftViz\/documentation\/SwiftViz\/Scale\/domainContains(_:)-6e065",
+        "doc:\/\/com.github.swiftviz.SwiftViz\/documentation\/SwiftViz\/Scale\/transformAgainstDomain(_:)"
+      ],
+      "title" : "Comparing Values"
+    }
+  ],
   "variants" : [
     {
       "paths" : [
@@ -456,6 +466,56 @@
   "title" : "domainContains(_:)",
   "type" : "topic",
   "url" : "\/documentation\/swiftviz\/scale\/domaincontains(_:)-6e065"
+},
+"doc://com.github.swiftviz.SwiftViz/documentation/SwiftViz/Scale/transformAgainstDomain(_:)": {
+  "abstract" : [
+    {
+      "text" : "Processes a value against the scale, potentially constraining or dropping the value.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "func"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "transformAgainstDomain"
+    },
+    {
+      "kind" : "text",
+      "text" : "("
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:8SwiftViz5ScaleP9InputTypeQa",
+      "text" : "InputType"
+    },
+    {
+      "kind" : "text",
+      "text" : ") -> "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:8SwiftViz5ScaleP9InputTypeQa",
+      "text" : "InputType"
+    },
+    {
+      "kind" : "text",
+      "text" : "?"
+    }
+  ],
+  "identifier" : "doc:\/\/com.github.swiftviz.SwiftViz\/documentation\/SwiftViz\/Scale\/transformAgainstDomain(_:)",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "transformAgainstDomain(_:)",
+  "type" : "topic",
+  "url" : "\/documentation\/swiftviz\/scale\/transformagainstdomain(_:)"
 }
 }
 }

@@ -326,6 +326,16 @@
   "sections" : [
 
   ],
+  "seeAlsoSections" : [
+    {
+      "generated" : true,
+      "identifiers" : [
+        "doc:\/\/com.github.swiftviz.SwiftViz\/documentation\/SwiftViz\/Scale\/domainContains(_:)-2i0wq",
+        "doc:\/\/com.github.swiftviz.SwiftViz\/documentation\/SwiftViz\/Scale\/domainContains(_:)-6e065"
+      ],
+      "title" : "Comparing Values"
+    }
+  ],
   "variants" : [
     {
       "paths" : [
@@ -550,6 +560,132 @@
   "title" : "InputType",
   "type" : "topic",
   "url" : "\/documentation\/swiftviz\/scale\/inputtype"
+},
+"doc://com.github.swiftviz.SwiftViz/documentation/SwiftViz/Scale/domainContains(_:)-2i0wq": {
+  "abstract" : [
+    {
+      "text" : "Returns a Boolean value that indicates whether the value you provided is within the scale’s domain.",
+      "type" : "text"
+    }
+  ],
+  "defaultImplementations" : 1,
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "func"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "domainContains"
+    },
+    {
+      "kind" : "text",
+      "text" : "("
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:8SwiftViz5ScaleP9InputTypeQa",
+      "text" : "InputType"
+    },
+    {
+      "kind" : "text",
+      "text" : ") -> "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:Sb",
+      "text" : "Bool"
+    }
+  ],
+  "identifier" : "doc:\/\/com.github.swiftviz.SwiftViz\/documentation\/SwiftViz\/Scale\/domainContains(_:)-2i0wq",
+  "kind" : "symbol",
+  "required" : true,
+  "role" : "symbol",
+  "title" : "domainContains(_:)",
+  "type" : "topic",
+  "url" : "\/documentation\/swiftviz\/scale\/domaincontains(_:)-2i0wq"
+},
+"doc://com.github.swiftviz.SwiftViz/documentation/SwiftViz/Scale/domainContains(_:)-6e065": {
+  "abstract" : [
+    {
+      "text" : "Returns a Boolean value that indicates whether the value you provided is within the scale’s domain.",
+      "type" : "text"
+    }
+  ],
+  "conformance" : {
+    "availabilityPrefix" : [
+      {
+        "text" : "Available when",
+        "type" : "text"
+      }
+    ],
+    "conformancePrefix" : [
+      {
+        "text" : "Conforms when",
+        "type" : "text"
+      }
+    ],
+    "constraints" : [
+      {
+        "code" : "OutputType",
+        "type" : "codeVoice"
+      },
+      {
+        "text" : " conforms to ",
+        "type" : "text"
+      },
+      {
+        "code" : "Real",
+        "type" : "codeVoice"
+      },
+      {
+        "text" : ".",
+        "type" : "text"
+      }
+    ]
+  },
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "func"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "domainContains"
+    },
+    {
+      "kind" : "text",
+      "text" : "("
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:8SwiftViz5ScaleP9InputTypeQa",
+      "text" : "InputType"
+    },
+    {
+      "kind" : "text",
+      "text" : ") -> "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:Sb",
+      "text" : "Bool"
+    }
+  ],
+  "identifier" : "doc:\/\/com.github.swiftviz.SwiftViz\/documentation\/SwiftViz\/Scale\/domainContains(_:)-6e065",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "domainContains(_:)",
+  "type" : "topic",
+  "url" : "\/documentation\/swiftviz\/scale\/domaincontains(_:)-6e065"
 },
 "doc://com.github.swiftviz.SwiftViz/documentation/SwiftViz/Scale/transformAgainstDomain(_:)": {
   "abstract" : [

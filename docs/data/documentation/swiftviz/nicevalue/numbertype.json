@@ -118,6 +118,15 @@
   "sections" : [
 
   ],
+  "seeAlsoSections" : [
+    {
+      "generated" : true,
+      "identifiers" : [
+        "doc:\/\/com.github.swiftviz.SwiftViz\/documentation\/SwiftViz\/NiceValue\/niceVersion(for:min:)"
+      ],
+      "title" : "Generating Nice Numbers"
+    }
+  ],
   "variants" : [
     {
       "paths" : [
@@ -223,6 +232,86 @@
   "title" : "NumberType",
   "type" : "topic",
   "url" : "\/documentation\/swiftviz\/nicevalue\/numbertype"
+},
+"doc://com.github.swiftviz.SwiftViz/documentation/SwiftViz/NiceValue/niceVersion(for:min:)": {
+  "abstract" : [
+    {
+      "text" : "Returns a nice version of the number that’s visually appealing for chart axis values.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "static"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "keyword",
+      "text" : "func"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "niceVersion"
+    },
+    {
+      "kind" : "text",
+      "text" : "("
+    },
+    {
+      "kind" : "externalParam",
+      "text" : "for"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:8SwiftViz9NiceValueP10NumberTypeQa",
+      "text" : "NumberType"
+    },
+    {
+      "kind" : "text",
+      "text" : ", "
+    },
+    {
+      "kind" : "externalParam",
+      "text" : "min"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:Sb",
+      "text" : "Bool"
+    },
+    {
+      "kind" : "text",
+      "text" : ") -> "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:8SwiftViz9NiceValueP10NumberTypeQa",
+      "text" : "NumberType"
+    }
+  ],
+  "identifier" : "doc:\/\/com.github.swiftviz.SwiftViz\/documentation\/SwiftViz\/NiceValue\/niceVersion(for:min:)",
+  "kind" : "symbol",
+  "required" : true,
+  "role" : "symbol",
+  "title" : "niceVersion(for:min:)",
+  "type" : "topic",
+  "url" : "\/documentation\/swiftviz\/nicevalue\/niceversion(for:min:)"
 }
 }
 }

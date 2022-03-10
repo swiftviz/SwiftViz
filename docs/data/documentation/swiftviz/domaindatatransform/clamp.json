@@ -9,6 +9,7 @@
     "paths" : [
       [
         "doc:\/\/com.github.swiftviz.SwiftViz\/documentation\/SwiftViz",
+        "doc:\/\/com.github.swiftviz.SwiftViz\/documentation\/SwiftViz\/Scale",
         "doc:\/\/com.github.swiftviz.SwiftViz\/documentation\/SwiftViz\/DomainDataTransform"
       ]
     ]
@@ -80,6 +81,16 @@
   },
   "sections" : [
 
+  ],
+  "seeAlsoSections" : [
+    {
+      "generated" : true,
+      "identifiers" : [
+        "doc:\/\/com.github.swiftviz.SwiftViz\/documentation\/SwiftViz\/DomainDataTransform\/none",
+        "doc:\/\/com.github.swiftviz.SwiftViz\/documentation\/SwiftViz\/DomainDataTransform\/drop"
+      ],
+      "title" : "Domain Transform Values"
+    }
   ],
   "variants" : [
     {
@@ -170,6 +181,122 @@
   "title" : "DomainDataTransform.clamp",
   "type" : "topic",
   "url" : "\/documentation\/swiftviz\/domaindatatransform\/clamp"
+},
+"doc://com.github.swiftviz.SwiftViz/documentation/SwiftViz/DomainDataTransform/drop": {
+  "abstract" : [
+    {
+      "text" : "Data processed against a scale is dropped if the value is outside of the scale’s domain.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "case"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "drop"
+    }
+  ],
+  "identifier" : "doc:\/\/com.github.swiftviz.SwiftViz\/documentation\/SwiftViz\/DomainDataTransform\/drop",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "DomainDataTransform.drop",
+  "type" : "topic",
+  "url" : "\/documentation\/swiftviz\/domaindatatransform\/drop"
+},
+"doc://com.github.swiftviz.SwiftViz/documentation/SwiftViz/DomainDataTransform/none": {
+  "abstract" : [
+    {
+      "text" : "Data processed against a scale isn’t influenced by the scale’s domain.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "case"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "none"
+    }
+  ],
+  "identifier" : "doc:\/\/com.github.swiftviz.SwiftViz\/documentation\/SwiftViz\/DomainDataTransform\/none",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "DomainDataTransform.none",
+  "type" : "topic",
+  "url" : "\/documentation\/swiftviz\/domaindatatransform\/none"
+},
+"doc://com.github.swiftviz.SwiftViz/documentation/SwiftViz/Scale": {
+  "abstract" : [
+    {
+      "text" : "A type that maps values from an input ",
+      "type" : "text"
+    },
+    {
+      "inlineContent" : [
+        {
+          "text" : "domain",
+          "type" : "text"
+        }
+      ],
+      "type" : "emphasis"
+    },
+    {
+      "text" : " to an output ",
+      "type" : "text"
+    },
+    {
+      "inlineContent" : [
+        {
+          "text" : "range",
+          "type" : "text"
+        }
+      ],
+      "type" : "emphasis"
+    },
+    {
+      "text" : " and provides generation and validation methods for values within those ranges.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "protocol"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "Scale"
+    }
+  ],
+  "identifier" : "doc:\/\/com.github.swiftviz.SwiftViz\/documentation\/SwiftViz\/Scale",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "Scale"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Scale",
+  "type" : "topic",
+  "url" : "\/documentation\/swiftviz\/scale"
 }
 }
 }

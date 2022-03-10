@@ -272,6 +272,16 @@
   "sections" : [
 
   ],
+  "seeAlsoSections" : [
+    {
+      "generated" : true,
+      "identifiers" : [
+        "doc:\/\/com.github.swiftviz.SwiftViz\/documentation\/SwiftViz\/NiceValue\/rangeOfNiceValues(min:max:ofSize:)",
+        "doc:\/\/com.github.swiftviz.SwiftViz\/documentation\/SwiftViz\/NiceValue\/niceMinStepMax(min:max:ofSize:)"
+      ],
+      "title" : "Creating Ranges of Nice Numbers"
+    }
+  ],
   "variants" : [
     {
       "paths" : [
@@ -378,6 +388,125 @@
   "type" : "topic",
   "url" : "\/documentation\/swiftviz\/nicevalue\/numbertype"
 },
+"doc://com.github.swiftviz.SwiftViz/documentation/SwiftViz/NiceValue/niceMinStepMax(min:max:ofSize:)": {
+  "abstract" : [
+    {
+      "text" : "Returns a tuple that provide nice conversions of the minimum, step value, maximum for a range with a desired number of steps.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "static"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "keyword",
+      "text" : "func"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "niceMinStepMax"
+    },
+    {
+      "kind" : "text",
+      "text" : "("
+    },
+    {
+      "kind" : "externalParam",
+      "text" : "min"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:8SwiftViz9NiceValueP10NumberTypeQa",
+      "text" : "NumberType"
+    },
+    {
+      "kind" : "text",
+      "text" : ", "
+    },
+    {
+      "kind" : "externalParam",
+      "text" : "max"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:8SwiftViz9NiceValueP10NumberTypeQa",
+      "text" : "NumberType"
+    },
+    {
+      "kind" : "text",
+      "text" : ", "
+    },
+    {
+      "kind" : "externalParam",
+      "text" : "ofSize"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:Si",
+      "text" : "Int"
+    },
+    {
+      "kind" : "text",
+      "text" : ") -> ("
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:8SwiftViz9NiceValueP10NumberTypeQa",
+      "text" : "NumberType"
+    },
+    {
+      "kind" : "text",
+      "text" : ", "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:8SwiftViz9NiceValueP10NumberTypeQa",
+      "text" : "NumberType"
+    },
+    {
+      "kind" : "text",
+      "text" : ", "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:8SwiftViz9NiceValueP10NumberTypeQa",
+      "text" : "NumberType"
+    },
+    {
+      "kind" : "text",
+      "text" : ")"
+    }
+  ],
+  "identifier" : "doc:\/\/com.github.swiftviz.SwiftViz\/documentation\/SwiftViz\/NiceValue\/niceMinStepMax(min:max:ofSize:)",
+  "kind" : "symbol",
+  "required" : true,
+  "role" : "symbol",
+  "title" : "niceMinStepMax(min:max:ofSize:)",
+  "type" : "topic",
+  "url" : "\/documentation\/swiftviz\/nicevalue\/niceminstepmax(min:max:ofsize:)"
+},
 "doc://com.github.swiftviz.SwiftViz/documentation/SwiftViz/NiceValue/niceMinimumValueForRange(min:max:)": {
   "abstract" : [
     {
@@ -457,6 +586,107 @@
   "title" : "niceMinimumValueForRange(min:max:)",
   "type" : "topic",
   "url" : "\/documentation\/swiftviz\/nicevalue\/niceminimumvalueforrange(min:max:)"
+},
+"doc://com.github.swiftviz.SwiftViz/documentation/SwiftViz/NiceValue/rangeOfNiceValues(min:max:ofSize:)": {
+  "abstract" : [
+    {
+      "text" : "Generates a range of numbers with a minimum, maximum, and step interval that’s visually pleasing.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "static"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "keyword",
+      "text" : "func"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "rangeOfNiceValues"
+    },
+    {
+      "kind" : "text",
+      "text" : "("
+    },
+    {
+      "kind" : "externalParam",
+      "text" : "min"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:8SwiftViz9NiceValueP10NumberTypeQa",
+      "text" : "NumberType"
+    },
+    {
+      "kind" : "text",
+      "text" : ", "
+    },
+    {
+      "kind" : "externalParam",
+      "text" : "max"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:8SwiftViz9NiceValueP10NumberTypeQa",
+      "text" : "NumberType"
+    },
+    {
+      "kind" : "text",
+      "text" : ", "
+    },
+    {
+      "kind" : "externalParam",
+      "text" : "ofSize"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:Si",
+      "text" : "Int"
+    },
+    {
+      "kind" : "text",
+      "text" : ") -> ["
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:8SwiftViz9NiceValueP10NumberTypeQa",
+      "text" : "NumberType"
+    },
+    {
+      "kind" : "text",
+      "text" : "]"
+    }
+  ],
+  "identifier" : "doc:\/\/com.github.swiftviz.SwiftViz\/documentation\/SwiftViz\/NiceValue\/rangeOfNiceValues(min:max:ofSize:)",
+  "kind" : "symbol",
+  "required" : true,
+  "role" : "symbol",
+  "title" : "rangeOfNiceValues(min:max:ofSize:)",
+  "type" : "topic",
+  "url" : "\/documentation\/swiftviz\/nicevalue\/rangeofnicevalues(min:max:ofsize:)"
 }
 }
 }

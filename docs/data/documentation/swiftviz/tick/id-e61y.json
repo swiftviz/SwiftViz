@@ -99,6 +99,17 @@
   "sections" : [
 
   ],
+  "seeAlsoSections" : [
+    {
+      "generated" : true,
+      "identifiers" : [
+        "doc:\/\/com.github.swiftviz.SwiftViz\/documentation\/SwiftViz\/Tick\/id-7vmvo",
+        "doc:\/\/com.github.swiftviz.SwiftViz\/documentation\/SwiftViz\/Tick\/rangeLocation",
+        "doc:\/\/com.github.swiftviz.SwiftViz\/documentation\/SwiftViz\/Tick\/value"
+      ],
+      "title" : "Inspecting Ticks"
+    }
+  ],
   "variants" : [
     {
       "paths" : [
@@ -161,6 +172,40 @@
   "type" : "topic",
   "url" : "\/documentation\/swiftviz\/tick"
 },
+"doc://com.github.swiftviz.SwiftViz/documentation/SwiftViz/Tick/id-7vmvo": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "var"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "id"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:SO",
+      "text" : "ObjectIdentifier"
+    }
+  ],
+  "identifier" : "doc:\/\/com.github.swiftviz.SwiftViz\/documentation\/SwiftViz\/Tick\/id-7vmvo",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "id",
+  "type" : "topic",
+  "url" : "\/documentation\/swiftviz\/tick\/id-7vmvo"
+},
 "doc://com.github.swiftviz.SwiftViz/documentation/SwiftViz/Tick/id-e61y": {
   "abstract" : [
     {
@@ -197,6 +242,80 @@
   "title" : "id",
   "type" : "topic",
   "url" : "\/documentation\/swiftviz\/tick\/id-e61y"
+},
+"doc://com.github.swiftviz.SwiftViz/documentation/SwiftViz/Tick/rangeLocation": {
+  "abstract" : [
+    {
+      "text" : "The location where the tick should be placed within a chart’s range.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "let"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "rangeLocation"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:8SwiftViz4TickV10OutputTypeq_mfp",
+      "text" : "OutputType"
+    }
+  ],
+  "identifier" : "doc:\/\/com.github.swiftviz.SwiftViz\/documentation\/SwiftViz\/Tick\/rangeLocation",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "rangeLocation",
+  "type" : "topic",
+  "url" : "\/documentation\/swiftviz\/tick\/rangelocation"
+},
+"doc://com.github.swiftviz.SwiftViz/documentation/SwiftViz/Tick/value": {
+  "abstract" : [
+    {
+      "text" : "The value of the tick.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "let"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "value"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:8SwiftViz4TickV9InputTypexmfp",
+      "text" : "InputType"
+    }
+  ],
+  "identifier" : "doc:\/\/com.github.swiftviz.SwiftViz\/documentation\/SwiftViz\/Tick\/value",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "value",
+  "type" : "topic",
+  "url" : "\/documentation\/swiftviz\/tick\/value"
 }
 }
 }

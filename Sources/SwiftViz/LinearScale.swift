@@ -131,50 +131,80 @@ public enum LinearScale {
     
     // Double
     
+    /// Creates a linear scale that maps values between the lower and upper bounds you provide.
+    /// - Parameters:
+    ///   - low: The lower bounds of the domain.
+    ///   - high: The upper bounds of the domain.
     public static func create(_ low: Double, _ high: Double) -> LinearScale.DoubleScale {
         LinearScale.DoubleScale(from: low, to: high)
     }
 
+    /// Creates a linear scale that maps values within the range you provide.
+    /// - Parameter range: The range of the domain.
     public static func create(_ range: ClosedRange<Double>) -> LinearScale.DoubleScale {
         LinearScale.DoubleScale(from: range.lowerBound, to: range.upperBound)
     }
-
+    
+    /// Creates a linear scale that maps values from 0 to the upper bound you provide.
+    /// - Parameter high: The upper bounds of the domain.
     public static func create(_ high: Double) -> LinearScale.DoubleScale {
         LinearScale.DoubleScale(from: 0, to: high)
     }
-
+    
+    /// Creates a linear scale for dates that maps values between the lower and upper bounds you provide.
+    /// - Parameters:
+    ///   - low: The lower bounds of the domain.
+    ///   - high: The upper bounds of the domain.
     public static func create(_ low: Date, _ high: Date) -> LinearScale.DoubleScale {
         LinearScale.DoubleScale(from: low.timeIntervalSince1970, to: high.timeIntervalSince1970)
     }
-
+    
+    /// Creates a linear scale for dates that maps values within the range you provide.
+    /// - Parameter range: The range of the domain.
     public static func create(_ range: ClosedRange<Date>) -> LinearScale.DoubleScale {
         LinearScale.DoubleScale(from: range.lowerBound.timeIntervalSince1970, to: range.upperBound.timeIntervalSince1970)
     }
 
     // Float
 
+    /// Creates a linear scale that maps values between the lower and upper bounds you provide.
+    /// - Parameters:
+    ///   - low: The lower bounds of the domain.
+    ///   - high: The upper bounds of the domain.
     public static func create(_ low: Float, _ high: Float) -> LinearScale.FloatScale {
         LinearScale.FloatScale(from: low, to: high)
     }
 
+    /// Creates a linear scale that maps values within the range you provide.
+    /// - Parameter range: The range of the domain.
     public static func create(_ range: ClosedRange<Float>) -> LinearScale.FloatScale {
         LinearScale.FloatScale(from: range.lowerBound, to: range.upperBound)
     }
 
+    /// Creates a linear scale that maps values from 0 to the upper bound you provide.
+    /// - Parameter high: The upper bounds of the domain.
     public static func create(_ high: Float) -> LinearScale.FloatScale {
         LinearScale.FloatScale(from: 0, to: high)
     }
 
     // Int
 
+    /// Creates a linear scale that maps values between the lower and upper bounds you provide.
+    /// - Parameters:
+    ///   - low: The lower bounds of the domain.
+    ///   - high: The upper bounds of the domain.
     public static func create(_ low: Int, _ high: Int) -> LinearScale.IntScale {
         LinearScale.IntScale(from: low, to: high)
     }
 
+    /// Creates a linear scale that maps values from 0 to the upper bound you provide.
+    /// - Parameter high: The upper bounds of the domain.
     public static func create(_ high: Int) -> LinearScale.IntScale {
         LinearScale.IntScale(from: 0, to: high)
     }
 
+    /// Creates a linear scale that maps values within the range you provide.
+    /// - Parameter range: The range of the domain.
     public static func create(_ range: ClosedRange<Int>) -> LinearScale.IntScale {
         LinearScale.IntScale(from: range.lowerBound, to: range.upperBound)
     }

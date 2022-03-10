@@ -100,18 +100,18 @@
   "topicSections" : [
     {
       "identifiers" : [
+        "doc:\/\/com.github.swiftviz.SwiftViz\/documentation\/SwiftViz\/NiceValue\/niceVersion(for:min:)",
         "doc:\/\/com.github.swiftviz.SwiftViz\/documentation\/SwiftViz\/NiceValue\/NumberType"
       ],
-      "title" : "Associated Types"
+      "title" : "Generating Nice Numbers"
     },
     {
       "identifiers" : [
+        "doc:\/\/com.github.swiftviz.SwiftViz\/documentation\/SwiftViz\/NiceValue\/rangeOfNiceValues(min:max:ofSize:)",
         "doc:\/\/com.github.swiftviz.SwiftViz\/documentation\/SwiftViz\/NiceValue\/niceMinStepMax(min:max:ofSize:)",
-        "doc:\/\/com.github.swiftviz.SwiftViz\/documentation\/SwiftViz\/NiceValue\/niceMinimumValueForRange(min:max:)",
-        "doc:\/\/com.github.swiftviz.SwiftViz\/documentation\/SwiftViz\/NiceValue\/niceVersion(for:min:)",
-        "doc:\/\/com.github.swiftviz.SwiftViz\/documentation\/SwiftViz\/NiceValue\/rangeOfNiceValues(min:max:ofSize:)"
+        "doc:\/\/com.github.swiftviz.SwiftViz\/documentation\/SwiftViz\/NiceValue\/niceMinimumValueForRange(min:max:)"
       ],
-      "title" : "Type Methods"
+      "title" : "Creating Ranges of Nice Numbers"
     }
   ],
   "variants" : [
