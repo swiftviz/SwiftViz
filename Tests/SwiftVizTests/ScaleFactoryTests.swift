@@ -50,11 +50,9 @@ class ScaleFactoryTests: XCTestCase {
         XCTAssertEqual(scale1.domainLower, 6)
         XCTAssertEqual(scale3.domainLower, 0)
     }
-
     
-    @available(macOS 12, *)
     func testDateScaleFactoryMethods() throws {
-        let low: Date = Date.now
+        let low: Date = Date(timeIntervalSince1970: 123456789)
         let high: Date = low.addingTimeInterval(5 * 60)
 
         let scale1 = LinearScale.create(low, high)
