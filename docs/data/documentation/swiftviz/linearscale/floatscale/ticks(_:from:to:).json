@@ -11,7 +11,7 @@
         "doc:\/\/com.github.swiftviz.SwiftViz\/documentation\/SwiftViz",
         "doc:\/\/com.github.swiftviz.SwiftViz\/documentation\/SwiftViz\/LinearScale",
         "doc:\/\/com.github.swiftviz.SwiftViz\/documentation\/SwiftViz\/LinearScale\/FloatScale",
-        "doc:\/\/com.github.swiftviz.SwiftViz\/documentation\/SwiftViz\/LinearScale\/FloatScale\/Scale-Implementations"
+        "doc:\/\/com.github.swiftviz.SwiftViz\/documentation\/SwiftViz\/LinearScale\/FloatScale\/TickScale-Implementations"
       ]
     ]
   },
@@ -54,7 +54,7 @@
       ]
     },
     "extendedModule" : "SwiftViz",
-    "externalID" : "s:8SwiftViz5ScalePAA10RealModule0D010OutputTypeRpzrlE5ticks_4from2toSayAA4TickVy05InputG0QzAGGGSayANG_A2GtF::SYNTHESIZED::s:8SwiftViz11LinearScaleO05FloatD0V",
+    "externalID" : "s:8SwiftViz9TickScalePAA10RealModule0E010OutputTypeRpzrlE5ticks_4from2toSayAA0C0Vy05InputH0QzAGGGSayANG_A2GtF::SYNTHESIZED::s:8SwiftViz11LinearScaleO05FloatD0V",
     "fragments" : [
       {
         "kind" : "keyword",
@@ -529,16 +529,16 @@
   "type" : "topic",
   "url" : "\/documentation\/swiftviz\/linearscale\/floatscale"
 },
-"doc://com.github.swiftviz.SwiftViz/documentation/SwiftViz/LinearScale/FloatScale/Scale-Implementations": {
+"doc://com.github.swiftviz.SwiftViz/documentation/SwiftViz/LinearScale/FloatScale/TickScale-Implementations": {
   "abstract" : [
 
   ],
-  "identifier" : "doc:\/\/com.github.swiftviz.SwiftViz\/documentation\/SwiftViz\/LinearScale\/FloatScale\/Scale-Implementations",
+  "identifier" : "doc:\/\/com.github.swiftviz.SwiftViz\/documentation\/SwiftViz\/LinearScale\/FloatScale\/TickScale-Implementations",
   "kind" : "article",
   "role" : "collectionGroup",
-  "title" : "Scale Implementations",
+  "title" : "TickScale Implementations",
   "type" : "topic",
-  "url" : "\/documentation\/swiftviz\/linearscale\/floatscale\/scale-implementations"
+  "url" : "\/documentation\/swiftviz\/linearscale\/floatscale\/tickscale-implementations"
 },
 "doc://com.github.swiftviz.SwiftViz/documentation/SwiftViz/LinearScale/FloatScale/ticks(_:from:to:)": {
   "abstract" : [

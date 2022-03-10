@@ -1,15 +1,7 @@
 {
   "abstract" : [
     {
-      "text" : "Inherited from ",
-      "type" : "text"
-    },
-    {
-      "code" : "Scale.domainHigher",
-      "type" : "codeVoice"
-    },
-    {
-      "text" : ".",
+      "text" : "The upper bound of the input domain.",
       "type" : "text"
     }
   ],
@@ -140,7 +132,7 @@
 "doc://com.github.swiftviz.SwiftViz/documentation/SwiftViz/LogScale": {
   "abstract" : [
     {
-      "text" : "A collection of logrithmic scales.",
+      "text" : "A collection of logarithmic scales.",
       "type" : "text"
     }
   ],
@@ -174,7 +166,7 @@
 "doc://com.github.swiftviz.SwiftViz/documentation/SwiftViz/LogScale/DoubleScale": {
   "abstract" : [
     {
-      "text" : "A logrithmic scale created with a continuous input domain that provides methods to convert values within that domain to an output range.",
+      "text" : "A logarithmic scale created with a continuous input domain that provides methods to convert values within that domain to an output range.",
       "type" : "text"
     }
   ],
@@ -207,7 +199,10 @@
 },
 "doc://com.github.swiftviz.SwiftViz/documentation/SwiftViz/LogScale/DoubleScale/InputType": {
   "abstract" : [
-
+    {
+      "text" : "The type used for the scale’s domain.",
+      "type" : "text"
+    }
   ],
   "fragments" : [
     {
@@ -238,7 +233,10 @@
 },
 "doc://com.github.swiftviz.SwiftViz/documentation/SwiftViz/LogScale/DoubleScale/domainHigher": {
   "abstract" : [
-
+    {
+      "text" : "The upper bound of the input domain.",
+      "type" : "text"
+    }
   ],
   "fragments" : [
     {

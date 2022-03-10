@@ -1,15 +1,7 @@
 {
   "abstract" : [
     {
-      "text" : "Inherited from ",
-      "type" : "text"
-    },
-    {
-      "code" : "Scale.domainHigher",
-      "type" : "codeVoice"
-    },
-    {
-      "text" : ".",
+      "text" : "The upper bound of the input domain.",
       "type" : "text"
     }
   ],
@@ -48,8 +40,8 @@
       },
       {
         "kind" : "typeIdentifier",
-        "preciseIdentifier" : "s:Si",
-        "text" : "Int"
+        "preciseIdentifier" : "s:8SwiftViz11LinearScaleO03IntD0V9InputTypea",
+        "text" : "InputType"
       }
     ],
     "modules" : [
@@ -90,9 +82,10 @@
               "text" : ": "
             },
             {
+              "identifier" : "doc:\/\/com.github.swiftviz.SwiftViz\/documentation\/SwiftViz\/LinearScale\/IntScale\/InputType",
               "kind" : "typeIdentifier",
-              "preciseIdentifier" : "s:Si",
-              "text" : "Int"
+              "preciseIdentifier" : "s:8SwiftViz11LinearScaleO03IntD0V9InputTypea",
+              "text" : "InputType"
             }
           ]
         }
@@ -204,9 +197,46 @@
   "type" : "topic",
   "url" : "\/documentation\/swiftviz\/linearscale\/intscale"
 },
+"doc://com.github.swiftviz.SwiftViz/documentation/SwiftViz/LinearScale/IntScale/InputType": {
+  "abstract" : [
+    {
+      "text" : "The type used for the scale’s domain.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "typealias"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "InputType"
+    }
+  ],
+  "identifier" : "doc:\/\/com.github.swiftviz.SwiftViz\/documentation\/SwiftViz\/LinearScale\/IntScale\/InputType",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "InputType"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "LinearScale.IntScale.InputType",
+  "type" : "topic",
+  "url" : "\/documentation\/swiftviz\/linearscale\/intscale\/inputtype"
+},
 "doc://com.github.swiftviz.SwiftViz/documentation/SwiftViz/LinearScale/IntScale/domainHigher": {
   "abstract" : [
-
+    {
+      "text" : "The upper bound of the input domain.",
+      "type" : "text"
+    }
   ],
   "fragments" : [
     {
@@ -227,8 +257,8 @@
     },
     {
       "kind" : "typeIdentifier",
-      "preciseIdentifier" : "s:Si",
-      "text" : "Int"
+      "preciseIdentifier" : "s:8SwiftViz11LinearScaleO03IntD0V9InputTypea",
+      "text" : "InputType"
     }
   ],
   "identifier" : "doc:\/\/com.github.swiftviz.SwiftViz\/documentation\/SwiftViz\/LinearScale\/IntScale\/domainHigher",

@@ -6,20 +6,39 @@
 import Foundation
 import Numerics
 
-/// A collection of logrithmic scales.
+/// A collection of logarithmic scales.
 public enum LogScale {
-    /// A logrithmic scale created with a continuous input domain that provides methods to convert values within that domain to an output range.
-    public struct DoubleScale: Scale {
+    /// A logarithmic scale created with a continuous input domain that provides methods to convert values within that domain to an output range.
+    public struct DoubleScale: TickScale {
+        /// The type used for the scale's domain.
         public typealias InputType = Double
+        /// The type used for the scale's range.
         public typealias OutputType = Float
 
+        /// The lower bound of the input domain.
         public let domainLower: InputType
+        /// The upper bound of the input domain.
         public let domainHigher: InputType
+        /// The distance or length between the upper and lower bounds of the input domain.
         public let domainExtent: InputType
 
-        public let transformType: DomainDataTransform
+        /// A boolean value that indicates whether the output vales are constrained to the min and max of the output range.
+        ///
+        /// If `true`, values processed by the scale are constrained to the output range, and values processed backwards through the scale
+        /// are constrained to the input domain.
+        public var transformType: DomainDataTransform
+
+        /// The number of ticks desired when creating the scale.
+        ///
+        /// This number may not match the number of ticks returned by ``TickScale/ticks(_:from:to:)``
         public let desiredTicks: Int
 
+        /// Creates a new logarithmic scale for the upper and lower bounds of the domain you provide.
+        /// - Parameters:
+        ///   - lower: The lower bound of the scale's domain.
+        ///   - higher: The upper bound of the scale's domain.
+        ///   - transform: The transform constraint to apply when values fall outside the domain of the scale.
+        ///   - desiredTicks: The desired number of ticks when visually representing the scale.
         public init(from lower: InputType, to higher: InputType, transform: DomainDataTransform = .none, desiredTicks: Int = 10) {
             precondition(lower < higher)
             precondition(lower > 0.0)
@@ -30,11 +49,12 @@ public enum LogScale {
             self.desiredTicks = desiredTicks
         }
 
-        /// scales the input value (within domain) per the scale
-        /// to the relevant output (using range)
+        /// Transforms the input value using a linear function to the resulting value into the range you provide.
         ///
-        /// - Parameter x: value within the domain
-        /// - Returns: scaled value
+        /// - Parameter domainValue: A value in the domain of the scale.
+        /// - Parameter lower: The lower bound to the range to map to.
+        /// - Parameter higher: The upper bound of the range to map to.
+        /// - Returns: A value mapped to the range you provide.
         public func scale(_ domainValue: InputType, from lower: Float, to higher: Float) -> Float? {
             if let domainValue = transformAgainstDomain(domainValue) {
                 let logDomainValue = log10(domainValue)
@@ -47,7 +67,12 @@ public enum LogScale {
             return nil
         }
 
-        /// inverts the scale, taking a value in the output range and returning the relevant value from the input domain
+        /// Transforms a value within the range into the associated domain value.
+        /// - Parameters:
+        ///   - rangeValue: A value in the range of the scale.
+        ///   - lower: The lower bound to the range to map from.
+        ///   - higher: The upper bound to the range to map from.
+        /// - Returns: A value linearly mapped from the range back into the domain.
         public func invert(_ rangeValue: Float, from lower: Float, to higher: Float) -> InputType? {
             let normalizedRangeValue = normalize(rangeValue, lower: lower, higher: higher)
             let logDomainLower = log10(domainLower)
@@ -57,18 +82,37 @@ public enum LogScale {
             return transformAgainstDomain(domainValue)
         }
     }
-    
-    public struct FloatScale: Scale {
+
+    public struct FloatScale: TickScale {
+        /// The type used for the scale's domain.
         public typealias InputType = Float
+        /// The type used for the scale's range.
         public typealias OutputType = Float
 
+        /// The lower bound of the input domain.
         public let domainLower: InputType
+        /// The upper bound of the input domain.
         public let domainHigher: InputType
+        /// The distance or length between the upper and lower bounds of the input domain.
         public let domainExtent: InputType
 
-        public let transformType: DomainDataTransform
+        /// A boolean value that indicates whether the output vales are constrained to the min and max of the output range.
+        ///
+        /// If `true`, values processed by the scale are constrained to the output range, and values processed backwards through the scale
+        /// are constrained to the input domain.
+        public var transformType: DomainDataTransform
+
+        /// The number of ticks desired when creating the scale.
+        ///
+        /// This number may not match the number of ticks returned by ``TickScale/ticks(_:from:to:)``
         public let desiredTicks: Int
 
+        /// Creates a new logarithmic scale for the upper and lower bounds of the domain you provide.
+        /// - Parameters:
+        ///   - lower: The lower bound of the scale's domain.
+        ///   - higher: The upper bound of the scale's domain.
+        ///   - transform: The transform constraint to apply when values fall outside the domain of the scale.
+        ///   - desiredTicks: The desired number of ticks when visually representing the scale.
         public init(from lower: InputType, to higher: InputType, transform: DomainDataTransform = .none, desiredTicks: Int = 10) {
             precondition(lower < higher)
             precondition(lower > 0.0)
@@ -79,11 +123,12 @@ public enum LogScale {
             self.desiredTicks = desiredTicks
         }
 
-        /// scales the input value (within domain) per the scale
-        /// to the relevant output (using range)
+        /// Transforms the input value using a linear function to the resulting value into the range you provide.
         ///
-        /// - Parameter x: value within the domain
-        /// - Returns: scaled value
+        /// - Parameter domainValue: A value in the domain of the scale.
+        /// - Parameter lower: The lower bound to the range to map to.
+        /// - Parameter higher: The upper bound of the range to map to.
+        /// - Returns: A value mapped to the range you provide.
         public func scale(_ domainValue: InputType, from lower: Float, to higher: Float) -> Float? {
             if let domainValue = transformAgainstDomain(domainValue) {
                 let logDomainValue = log10(domainValue)
@@ -96,7 +141,12 @@ public enum LogScale {
             return nil
         }
 
-        /// inverts the scale, taking a value in the output range and returning the relevant value from the input domain
+        /// Transforms a value within the range into the associated domain value.
+        /// - Parameters:
+        ///   - rangeValue: A value in the range of the scale.
+        ///   - lower: The lower bound to the range to map from.
+        ///   - higher: The upper bound to the range to map from.
+        /// - Returns: A value linearly mapped from the range back into the domain.
         public func invert(_ rangeValue: Float, from lower: Float, to higher: Float) -> InputType? {
             let normalizedRangeValue = normalize(rangeValue, lower: lower, higher: higher)
             let logDomainLower = log10(domainLower)
@@ -106,18 +156,37 @@ public enum LogScale {
             return transformAgainstDomain(domainValue)
         }
     }
-    
-    public struct IntScale: Scale {
+
+    public struct IntScale: TickScale {
+        /// The type used for the scale's domain.
         public typealias InputType = Int
+        /// The type used for the scale's range.
         public typealias OutputType = Float
 
+        /// The lower bound of the input domain.
         public let domainLower: InputType
+        /// The upper bound of the input domain.
         public let domainHigher: InputType
+        /// The distance or length between the upper and lower bounds of the input domain.
         public let domainExtent: InputType
 
-        public let transformType: DomainDataTransform
+        /// A boolean value that indicates whether the output vales are constrained to the min and max of the output range.
+        ///
+        /// If `true`, values processed by the scale are constrained to the output range, and values processed backwards through the scale
+        /// are constrained to the input domain.
+        public var transformType: DomainDataTransform
+
+        /// The number of ticks desired when creating the scale.
+        ///
+        /// This number may not match the number of ticks returned by ``TickScale/ticks(_:from:to:)``
         public let desiredTicks: Int
 
+        /// Creates a new logarithmic scale for the upper and lower bounds of the domain you provide.
+        /// - Parameters:
+        ///   - lower: The lower bound of the scale's domain.
+        ///   - higher: The upper bound of the scale's domain.
+        ///   - transform: The transform constraint to apply when values fall outside the domain of the scale.
+        ///   - desiredTicks: The desired number of ticks when visually representing the scale.
         public init(from lower: InputType, to higher: InputType, transform: DomainDataTransform = .none, desiredTicks: Int = 10) {
             precondition(lower < higher)
             precondition(lower > 0)
@@ -128,11 +197,12 @@ public enum LogScale {
             self.desiredTicks = desiredTicks
         }
 
-        /// scales the input value (within domain) per the scale
-        /// to the relevant output (using range)
+        /// Transforms the input value using a linear function to the resulting value into the range you provide.
         ///
-        /// - Parameter x: value within the domain
-        /// - Returns: scaled value
+        /// - Parameter domainValue: A value in the domain of the scale.
+        /// - Parameter lower: The lower bound to the range to map to.
+        /// - Parameter higher: The upper bound of the range to map to.
+        /// - Returns: A value mapped to the range you provide.
         public func scale(_ domainValue: InputType, from lower: Float, to higher: Float) -> Float? {
             if let domainValue = transformAgainstDomain(domainValue) {
                 let logDomainValue = log10(Double(domainValue))
@@ -145,7 +215,12 @@ public enum LogScale {
             return nil
         }
 
-        /// inverts the scale, taking a value in the output range and returning the relevant value from the input domain
+        /// Transforms a value within the range into the associated domain value.
+        /// - Parameters:
+        ///   - rangeValue: A value in the range of the scale.
+        ///   - lower: The lower bound to the range to map from.
+        ///   - higher: The upper bound to the range to map from.
+        /// - Returns: A value linearly mapped from the range back into the domain.
         public func invert(_ rangeValue: Float, from lower: Float, to higher: Float) -> InputType? {
             let normalizedRangeValue = normalize(rangeValue, lower: lower, higher: higher)
             let logDomainLower = log10(Double(domainLower))

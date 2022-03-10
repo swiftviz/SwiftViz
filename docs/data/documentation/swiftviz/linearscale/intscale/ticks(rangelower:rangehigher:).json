@@ -11,7 +11,7 @@
         "doc:\/\/com.github.swiftviz.SwiftViz\/documentation\/SwiftViz",
         "doc:\/\/com.github.swiftviz.SwiftViz\/documentation\/SwiftViz\/LinearScale",
         "doc:\/\/com.github.swiftviz.SwiftViz\/documentation\/SwiftViz\/LinearScale\/IntScale",
-        "doc:\/\/com.github.swiftviz.SwiftViz\/documentation\/SwiftViz\/LinearScale\/IntScale\/Scale-Implementations"
+        "doc:\/\/com.github.swiftviz.SwiftViz\/documentation\/SwiftViz\/LinearScale\/IntScale\/TickScale-Implementations"
       ]
     ]
   },
@@ -70,7 +70,7 @@
       ]
     },
     "extendedModule" : "SwiftViz",
-    "externalID" : "s:8SwiftViz5ScalePAASi9InputTypeRtz10RealModule0F006OutputE0RpzrlE5ticks10rangeLower0J6HigherSayAA4TickVySiAIGGAI_AItF::SYNTHESIZED::s:8SwiftViz11LinearScaleO03IntD0V",
+    "externalID" : "s:8SwiftViz9TickScalePAASi9InputTypeRtz10RealModule0G006OutputF0RpzrlE5ticks10rangeLower0K6HigherSayAA0C0VySiAIGGAI_AItF::SYNTHESIZED::s:8SwiftViz11LinearScaleO03IntD0V",
     "fragments" : [
       {
         "kind" : "keyword",
@@ -402,16 +402,16 @@
   "type" : "topic",
   "url" : "\/documentation\/swiftviz\/linearscale\/intscale"
 },
-"doc://com.github.swiftviz.SwiftViz/documentation/SwiftViz/LinearScale/IntScale/Scale-Implementations": {
+"doc://com.github.swiftviz.SwiftViz/documentation/SwiftViz/LinearScale/IntScale/TickScale-Implementations": {
   "abstract" : [
 
   ],
-  "identifier" : "doc:\/\/com.github.swiftviz.SwiftViz\/documentation\/SwiftViz\/LinearScale\/IntScale\/Scale-Implementations",
+  "identifier" : "doc:\/\/com.github.swiftviz.SwiftViz\/documentation\/SwiftViz\/LinearScale\/IntScale\/TickScale-Implementations",
   "kind" : "article",
   "role" : "collectionGroup",
-  "title" : "Scale Implementations",
+  "title" : "TickScale Implementations",
   "type" : "topic",
-  "url" : "\/documentation\/swiftviz\/linearscale\/intscale\/scale-implementations"
+  "url" : "\/documentation\/swiftviz\/linearscale\/intscale\/tickscale-implementations"
 },
 "doc://com.github.swiftviz.SwiftViz/documentation/SwiftViz/LinearScale/IntScale/ticks(rangeLower:rangeHigher:)": {
   "abstract" : [

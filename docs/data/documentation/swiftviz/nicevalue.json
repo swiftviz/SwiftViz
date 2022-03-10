@@ -91,8 +91,10 @@
       "generated" : true,
       "identifiers" : [
         "doc:\/\/com.github.swiftviz.SwiftViz\/documentation\/SwiftViz\/Scale",
+        "doc:\/\/com.github.swiftviz.SwiftViz\/documentation\/SwiftViz\/TickScale",
         "doc:\/\/com.github.swiftviz.SwiftViz\/documentation\/SwiftViz\/LinearScale",
-        "doc:\/\/com.github.swiftviz.SwiftViz\/documentation\/SwiftViz\/LogScale"
+        "doc:\/\/com.github.swiftviz.SwiftViz\/documentation\/SwiftViz\/LogScale",
+        "doc:\/\/com.github.swiftviz.SwiftViz\/documentation\/SwiftViz\/PowerScale"
       ],
       "title" : "Scales"
     }
@@ -179,7 +181,7 @@
 "doc://com.github.swiftviz.SwiftViz/documentation/SwiftViz/LogScale": {
   "abstract" : [
     {
-      "text" : "A collection of logrithmic scales.",
+      "text" : "A collection of logarithmic scales.",
       "type" : "text"
     }
   ],
@@ -668,6 +670,40 @@
   "type" : "topic",
   "url" : "\/documentation\/swiftviz\/nicevalue\/rangeofnicevalues(min:max:ofsize:)"
 },
+"doc://com.github.swiftviz.SwiftViz/documentation/SwiftViz/PowerScale": {
+  "abstract" : [
+    {
+      "text" : "A collection of power scales.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "enum"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "PowerScale"
+    }
+  ],
+  "identifier" : "doc:\/\/com.github.swiftviz.SwiftViz\/documentation\/SwiftViz\/PowerScale",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "PowerScale"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "PowerScale",
+  "type" : "topic",
+  "url" : "\/documentation\/swiftviz\/powerscale"
+},
 "doc://com.github.swiftviz.SwiftViz/documentation/SwiftViz/Scale": {
   "abstract" : [
     {
@@ -697,7 +733,7 @@
       "type" : "emphasis"
     },
     {
-      "text" : " and provides generation and validation methods for values within those ranges.",
+      "text" : ".",
       "type" : "text"
     }
   ],
@@ -727,6 +763,40 @@
   "title" : "Scale",
   "type" : "topic",
   "url" : "\/documentation\/swiftviz\/scale"
+},
+"doc://com.github.swiftviz.SwiftViz/documentation/SwiftViz/TickScale": {
+  "abstract" : [
+    {
+      "text" : "A type of scale that provides tick values from the domain it represents.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "protocol"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "TickScale"
+    }
+  ],
+  "identifier" : "doc:\/\/com.github.swiftviz.SwiftViz\/documentation\/SwiftViz\/TickScale",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "TickScale"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "TickScale",
+  "type" : "topic",
+  "url" : "\/documentation\/swiftviz\/tickscale"
 }
 }
 }

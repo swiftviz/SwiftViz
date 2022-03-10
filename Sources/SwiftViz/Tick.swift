@@ -18,12 +18,12 @@ public struct Tick<InputType, OutputType: Numeric>: Identifiable where OutputTyp
     // protocol conformance in coordination with a generic type
     /// A unique identifier for the tick instance.
     public var id: UUID = .init()
-    
+
     /// The value of the tick.
     public let value: InputType
     /// The location where the tick should be placed within a chart's range.
     public let rangeLocation: OutputType
-    
+
     /// Creates a new tick
     /// - Parameters:
     ///   - value: The value at the tick's location.
@@ -32,7 +32,7 @@ public struct Tick<InputType, OutputType: Numeric>: Identifiable where OutputTyp
         self.value = value
         rangeLocation = location
     }
-    
+
     /// Creates a new tick.
     ///
     /// If the location value you provide is NaN, the initializer returns nil.
@@ -44,7 +44,7 @@ public struct Tick<InputType, OutputType: Numeric>: Identifiable where OutputTyp
         if location.isNaN {
             return nil
         } else {
-            self.rangeLocation = location
+            rangeLocation = location
         }
     }
 }

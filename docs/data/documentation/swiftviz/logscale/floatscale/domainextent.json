@@ -1,15 +1,7 @@
 {
   "abstract" : [
     {
-      "text" : "Inherited from ",
-      "type" : "text"
-    },
-    {
-      "code" : "Scale.domainExtent",
-      "type" : "codeVoice"
-    },
-    {
-      "text" : ".",
+      "text" : "The distance or length between the upper and lower bounds of the input domain.",
       "type" : "text"
     }
   ],
@@ -140,7 +132,7 @@
 "doc://com.github.swiftviz.SwiftViz/documentation/SwiftViz/LogScale": {
   "abstract" : [
     {
-      "text" : "A collection of logrithmic scales.",
+      "text" : "A collection of logarithmic scales.",
       "type" : "text"
     }
   ],
@@ -204,7 +196,10 @@
 },
 "doc://com.github.swiftviz.SwiftViz/documentation/SwiftViz/LogScale/FloatScale/InputType": {
   "abstract" : [
-
+    {
+      "text" : "The type used for the scale’s domain.",
+      "type" : "text"
+    }
   ],
   "fragments" : [
     {
@@ -235,7 +230,10 @@
 },
 "doc://com.github.swiftviz.SwiftViz/documentation/SwiftViz/LogScale/FloatScale/domainExtent": {
   "abstract" : [
-
+    {
+      "text" : "The distance or length between the upper and lower bounds of the input domain.",
+      "type" : "text"
+    }
   ],
   "fragments" : [
     {

@@ -1,7 +1,7 @@
 {
   "abstract" : [
     {
-      "text" : "No overview available.",
+      "text" : "Creates a new logarithmic scale for the upper and lower bounds of the domain you provide.",
       "type" : "text"
     }
   ],
@@ -219,6 +219,67 @@
         }
       ],
       "kind" : "declarations"
+    },
+    {
+      "kind" : "parameters",
+      "parameters" : [
+        {
+          "content" : [
+            {
+              "inlineContent" : [
+                {
+                  "text" : "The lower bound of the scale’s domain.",
+                  "type" : "text"
+                }
+              ],
+              "type" : "paragraph"
+            }
+          ],
+          "name" : "lower"
+        },
+        {
+          "content" : [
+            {
+              "inlineContent" : [
+                {
+                  "text" : "The upper bound of the scale’s domain.",
+                  "type" : "text"
+                }
+              ],
+              "type" : "paragraph"
+            }
+          ],
+          "name" : "higher"
+        },
+        {
+          "content" : [
+            {
+              "inlineContent" : [
+                {
+                  "text" : "The transform constraint to apply when values fall outside the domain of the scale.",
+                  "type" : "text"
+                }
+              ],
+              "type" : "paragraph"
+            }
+          ],
+          "name" : "transform"
+        },
+        {
+          "content" : [
+            {
+              "inlineContent" : [
+                {
+                  "text" : "The desired number of ticks when visually representing the scale.",
+                  "type" : "text"
+                }
+              ],
+              "type" : "paragraph"
+            }
+          ],
+          "name" : "desiredTicks"
+        }
+      ]
     }
   ],
   "schemaVersion" : {
@@ -294,7 +355,7 @@
 "doc://com.github.swiftviz.SwiftViz/documentation/SwiftViz/LogScale": {
   "abstract" : [
     {
-      "text" : "A collection of logrithmic scales.",
+      "text" : "A collection of logarithmic scales.",
       "type" : "text"
     }
   ],
@@ -328,7 +389,7 @@
 "doc://com.github.swiftviz.SwiftViz/documentation/SwiftViz/LogScale/DoubleScale": {
   "abstract" : [
     {
-      "text" : "A logrithmic scale created with a continuous input domain that provides methods to convert values within that domain to an output range.",
+      "text" : "A logarithmic scale created with a continuous input domain that provides methods to convert values within that domain to an output range.",
       "type" : "text"
     }
   ],
@@ -361,7 +422,10 @@
 },
 "doc://com.github.swiftviz.SwiftViz/documentation/SwiftViz/LogScale/DoubleScale/InputType": {
   "abstract" : [
-
+    {
+      "text" : "The type used for the scale’s domain.",
+      "type" : "text"
+    }
   ],
   "fragments" : [
     {
@@ -392,7 +456,10 @@
 },
 "doc://com.github.swiftviz.SwiftViz/documentation/SwiftViz/LogScale/DoubleScale/init(from:to:transform:desiredTicks:)": {
   "abstract" : [
-
+    {
+      "text" : "Creates a new logarithmic scale for the upper and lower bounds of the domain you provide.",
+      "type" : "text"
+    }
   ],
   "fragments" : [
     {

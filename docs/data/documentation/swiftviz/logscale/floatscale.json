@@ -82,7 +82,8 @@
   "relationshipsSections" : [
     {
       "identifiers" : [
-        "doc:\/\/com.github.swiftviz.SwiftViz\/documentation\/SwiftViz\/Scale"
+        "doc:\/\/com.github.swiftviz.SwiftViz\/documentation\/SwiftViz\/Scale",
+        "doc:\/\/com.github.swiftviz.SwiftViz\/documentation\/SwiftViz\/TickScale"
       ],
       "kind" : "relationships",
       "title" : "Conforms To",
@@ -141,7 +142,8 @@
     {
       "generated" : true,
       "identifiers" : [
-        "doc:\/\/com.github.swiftviz.SwiftViz\/documentation\/SwiftViz\/LogScale\/FloatScale\/Scale-Implementations"
+        "doc:\/\/com.github.swiftviz.SwiftViz\/documentation\/SwiftViz\/LogScale\/FloatScale\/Scale-Implementations",
+        "doc:\/\/com.github.swiftviz.SwiftViz\/documentation\/SwiftViz\/LogScale\/FloatScale\/TickScale-Implementations"
       ],
       "title" : "Default Implementations"
     }
@@ -177,7 +179,7 @@
 "doc://com.github.swiftviz.SwiftViz/documentation/SwiftViz/LogScale": {
   "abstract" : [
     {
-      "text" : "A collection of logrithmic scales.",
+      "text" : "A collection of logarithmic scales.",
       "type" : "text"
     }
   ],
@@ -211,7 +213,7 @@
 "doc://com.github.swiftviz.SwiftViz/documentation/SwiftViz/LogScale/DoubleScale": {
   "abstract" : [
     {
-      "text" : "A logrithmic scale created with a continuous input domain that provides methods to convert values within that domain to an output range.",
+      "text" : "A logarithmic scale created with a continuous input domain that provides methods to convert values within that domain to an output range.",
       "type" : "text"
     }
   ],
@@ -275,7 +277,10 @@
 },
 "doc://com.github.swiftviz.SwiftViz/documentation/SwiftViz/LogScale/FloatScale/InputType": {
   "abstract" : [
-
+    {
+      "text" : "The type used for the scale’s domain.",
+      "type" : "text"
+    }
   ],
   "fragments" : [
     {
@@ -306,7 +311,10 @@
 },
 "doc://com.github.swiftviz.SwiftViz/documentation/SwiftViz/LogScale/FloatScale/OutputType": {
   "abstract" : [
-
+    {
+      "text" : "The type used for the scale’s range.",
+      "type" : "text"
+    }
   ],
   "fragments" : [
     {
@@ -345,6 +353,17 @@
   "title" : "Scale Implementations",
   "type" : "topic",
   "url" : "\/documentation\/swiftviz\/logscale\/floatscale\/scale-implementations"
+},
+"doc://com.github.swiftviz.SwiftViz/documentation/SwiftViz/LogScale/FloatScale/TickScale-Implementations": {
+  "abstract" : [
+
+  ],
+  "identifier" : "doc:\/\/com.github.swiftviz.SwiftViz\/documentation\/SwiftViz\/LogScale\/FloatScale\/TickScale-Implementations",
+  "kind" : "article",
+  "role" : "collectionGroup",
+  "title" : "TickScale Implementations",
+  "type" : "topic",
+  "url" : "\/documentation\/swiftviz\/logscale\/floatscale\/tickscale-implementations"
 },
 "doc://com.github.swiftviz.SwiftViz/documentation/SwiftViz/LogScale/FloatScale/desiredTicks": {
   "abstract" : [
@@ -385,7 +404,10 @@
 },
 "doc://com.github.swiftviz.SwiftViz/documentation/SwiftViz/LogScale/FloatScale/domainExtent": {
   "abstract" : [
-
+    {
+      "text" : "The distance or length between the upper and lower bounds of the input domain.",
+      "type" : "text"
+    }
   ],
   "fragments" : [
     {
@@ -419,7 +441,10 @@
 },
 "doc://com.github.swiftviz.SwiftViz/documentation/SwiftViz/LogScale/FloatScale/domainHigher": {
   "abstract" : [
-
+    {
+      "text" : "The upper bound of the input domain.",
+      "type" : "text"
+    }
   ],
   "fragments" : [
     {
@@ -454,7 +479,7 @@
 "doc://com.github.swiftviz.SwiftViz/documentation/SwiftViz/LogScale/FloatScale/domainLower": {
   "abstract" : [
     {
-      "text" : "The range of input values",
+      "text" : "The lower bound of the input domain.",
       "type" : "text"
     }
   ],
@@ -490,7 +515,10 @@
 },
 "doc://com.github.swiftviz.SwiftViz/documentation/SwiftViz/LogScale/FloatScale/init(from:to:transform:desiredTicks:)": {
   "abstract" : [
-
+    {
+      "text" : "Creates a new logarithmic scale for the upper and lower bounds of the domain you provide.",
+      "type" : "text"
+    }
   ],
   "fragments" : [
     {
@@ -580,7 +608,7 @@
 "doc://com.github.swiftviz.SwiftViz/documentation/SwiftViz/LogScale/FloatScale/invert(_:from:to:)": {
   "abstract" : [
     {
-      "text" : "inverts the scale, taking a value in the output range and returning the relevant value from the input domain",
+      "text" : "Transforms a value within the range into the associated domain value.",
       "type" : "text"
     }
   ],
@@ -664,15 +692,7 @@
 "doc://com.github.swiftviz.SwiftViz/documentation/SwiftViz/LogScale/FloatScale/scale(_:from:to:)": {
   "abstract" : [
     {
-      "text" : "scales the input value (within domain) per the scale",
-      "type" : "text"
-    },
-    {
-      "text" : " ",
-      "type" : "text"
-    },
-    {
-      "text" : "to the relevant output (using range)",
+      "text" : "Transforms the input value using a linear function to the resulting value into the range you provide.",
       "type" : "text"
     }
   ],
@@ -763,7 +783,7 @@
   "fragments" : [
     {
       "kind" : "keyword",
-      "text" : "let"
+      "text" : "var"
     },
     {
       "kind" : "text",
@@ -850,7 +870,7 @@
       "type" : "emphasis"
     },
     {
-      "text" : " and provides generation and validation methods for values within those ranges.",
+      "text" : ".",
       "type" : "text"
     }
   ],
@@ -880,6 +900,40 @@
   "title" : "Scale",
   "type" : "topic",
   "url" : "\/documentation\/swiftviz\/scale"
+},
+"doc://com.github.swiftviz.SwiftViz/documentation/SwiftViz/TickScale": {
+  "abstract" : [
+    {
+      "text" : "A type of scale that provides tick values from the domain it represents.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "protocol"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "TickScale"
+    }
+  ],
+  "identifier" : "doc:\/\/com.github.swiftviz.SwiftViz\/documentation\/SwiftViz\/TickScale",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "TickScale"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "TickScale",
+  "type" : "topic",
+  "url" : "\/documentation\/swiftviz\/tickscale"
 }
 }
 }

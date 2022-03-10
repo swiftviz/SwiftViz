@@ -144,7 +144,6 @@
         "doc:\/\/com.github.swiftviz.SwiftViz\/documentation\/SwiftViz\/Scale\/domainLower",
         "doc:\/\/com.github.swiftviz.SwiftViz\/documentation\/SwiftViz\/Scale\/domainHigher",
         "doc:\/\/com.github.swiftviz.SwiftViz\/documentation\/SwiftViz\/Scale\/domainExtent",
-        "doc:\/\/com.github.swiftviz.SwiftViz\/documentation\/SwiftViz\/Scale\/desiredTicks",
         "doc:\/\/com.github.swiftviz.SwiftViz\/documentation\/SwiftViz\/Scale\/OutputType",
         "doc:\/\/com.github.swiftviz.SwiftViz\/documentation\/SwiftViz\/Scale\/transformType",
         "doc:\/\/com.github.swiftviz.SwiftViz\/documentation\/SwiftViz\/DomainDataTransform"
@@ -277,7 +276,7 @@
       "type" : "emphasis"
     },
     {
-      "text" : " and provides generation and validation methods for values within those ranges.",
+      "text" : ".",
       "type" : "text"
     }
   ],
@@ -414,47 +413,12 @@
   "type" : "topic",
   "url" : "\/documentation\/swiftviz\/scale\/outputtype"
 },
-"doc://com.github.swiftviz.SwiftViz/documentation/SwiftViz/Scale/desiredTicks": {
-  "abstract" : [
-    {
-      "text" : "The number of ticks desired when creating the scale.",
-      "type" : "text"
-    }
-  ],
-  "fragments" : [
-    {
-      "kind" : "keyword",
-      "text" : "var"
-    },
-    {
-      "kind" : "text",
-      "text" : " "
-    },
-    {
-      "kind" : "identifier",
-      "text" : "desiredTicks"
-    },
-    {
-      "kind" : "text",
-      "text" : ": "
-    },
-    {
-      "kind" : "typeIdentifier",
-      "preciseIdentifier" : "s:Si",
-      "text" : "Int"
-    }
-  ],
-  "identifier" : "doc:\/\/com.github.swiftviz.SwiftViz\/documentation\/SwiftViz\/Scale\/desiredTicks",
-  "kind" : "symbol",
-  "required" : true,
-  "role" : "symbol",
-  "title" : "desiredTicks",
-  "type" : "topic",
-  "url" : "\/documentation\/swiftviz\/scale\/desiredticks"
-},
 "doc://com.github.swiftviz.SwiftViz/documentation/SwiftViz/Scale/domainExtent": {
   "abstract" : [
-
+    {
+      "text" : "The distance or length between the upper and lower bounds of the input domain.",
+      "type" : "text"
+    }
   ],
   "fragments" : [
     {
@@ -489,7 +453,10 @@
 },
 "doc://com.github.swiftviz.SwiftViz/documentation/SwiftViz/Scale/domainHigher": {
   "abstract" : [
-
+    {
+      "text" : "The upper bound of the input domain.",
+      "type" : "text"
+    }
   ],
   "fragments" : [
     {
@@ -525,7 +492,7 @@
 "doc://com.github.swiftviz.SwiftViz/documentation/SwiftViz/Scale/domainLower": {
   "abstract" : [
     {
-      "text" : "The range of input values",
+      "text" : "The lower bound of the input domain.",
       "type" : "text"
     }
   ],

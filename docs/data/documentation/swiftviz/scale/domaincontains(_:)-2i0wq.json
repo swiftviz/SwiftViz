@@ -8,7 +8,7 @@
   "defaultImplementationsSections" : [
     {
       "identifiers" : [
-        "doc:\/\/com.github.swiftviz.SwiftViz\/documentation\/SwiftViz\/Scale\/domainContains(_:)-6e065"
+        "doc:\/\/com.github.swiftviz.SwiftViz\/documentation\/SwiftViz\/Scale\/domainContains(_:)-o6mq"
       ],
       "title" : "Scale Implementations"
     }
@@ -194,7 +194,6 @@
     {
       "generated" : true,
       "identifiers" : [
-        "doc:\/\/com.github.swiftviz.SwiftViz\/documentation\/SwiftViz\/Scale\/domainContains(_:)-6e065",
         "doc:\/\/com.github.swiftviz.SwiftViz\/documentation\/SwiftViz\/Scale\/transformAgainstDomain(_:)"
       ],
       "title" : "Comparing Values"
@@ -257,7 +256,7 @@
       "type" : "emphasis"
     },
     {
-      "text" : " and provides generation and validation methods for values within those ranges.",
+      "text" : ".",
       "type" : "text"
     }
   ],
@@ -389,45 +388,13 @@
   "type" : "topic",
   "url" : "\/documentation\/swiftviz\/scale\/domaincontains(_:)-2i0wq"
 },
-"doc://com.github.swiftviz.SwiftViz/documentation/SwiftViz/Scale/domainContains(_:)-6e065": {
+"doc://com.github.swiftviz.SwiftViz/documentation/SwiftViz/Scale/domainContains(_:)-o6mq": {
   "abstract" : [
     {
       "text" : "Returns a Boolean value that indicates whether the value you provided is within the scale’s domain.",
       "type" : "text"
     }
   ],
-  "conformance" : {
-    "availabilityPrefix" : [
-      {
-        "text" : "Available when",
-        "type" : "text"
-      }
-    ],
-    "conformancePrefix" : [
-      {
-        "text" : "Conforms when",
-        "type" : "text"
-      }
-    ],
-    "constraints" : [
-      {
-        "code" : "OutputType",
-        "type" : "codeVoice"
-      },
-      {
-        "text" : " conforms to ",
-        "type" : "text"
-      },
-      {
-        "code" : "Real",
-        "type" : "codeVoice"
-      },
-      {
-        "text" : ".",
-        "type" : "text"
-      }
-    ]
-  },
   "fragments" : [
     {
       "kind" : "keyword",
@@ -460,12 +427,12 @@
       "text" : "Bool"
     }
   ],
-  "identifier" : "doc:\/\/com.github.swiftviz.SwiftViz\/documentation\/SwiftViz\/Scale\/domainContains(_:)-6e065",
+  "identifier" : "doc:\/\/com.github.swiftviz.SwiftViz\/documentation\/SwiftViz\/Scale\/domainContains(_:)-o6mq",
   "kind" : "symbol",
   "role" : "symbol",
   "title" : "domainContains(_:)",
   "type" : "topic",
-  "url" : "\/documentation\/swiftviz\/scale\/domaincontains(_:)-6e065"
+  "url" : "\/documentation\/swiftviz\/scale\/domaincontains(_:)-o6mq"
 },
 "doc://com.github.swiftviz.SwiftViz/documentation/SwiftViz/Scale/transformAgainstDomain(_:)": {
   "abstract" : [
