@@ -15,6 +15,19 @@ import Numerics
 // D3's scale also has a .nice() function that does some pleasant rounding of the domain,
 // extending it slightly so that it's nicer to view
 
+// import { scaleTime } from 'd3-scale';
+// const time = scaleTime()
+//    .domain([new Date('1910-1-1'), (new Date('1920-1-1'))]);
+//
+/// / for UTC
+// const utc = d3.scaleUtc();
+// https://github.com/d3/d3-scale#scaleUtc
+// https://github.com/d3/d3-3.x-api-reference/blob/master/Time-Scales.md
+// Time Scale
+// - https://github.com/d3/d3-scale/blob/master/src/time.js
+// - D3 has a time format (https://github.com/d3/d3-time-format), but we can probably use
+//   IOS/MacOS NSTime, NSDate formatters and calendrical mechanisms
+
 /* Idea for structuring this from Tekl - inverting the generics on this and making the LinearScalable a protocol, and conform the types I'm interested in to those protocos:
 
  protocol LinearScalable {

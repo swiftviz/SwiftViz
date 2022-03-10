@@ -10,9 +10,12 @@ import Foundation
 import Numerics
 
 /// A struct that provides string representation of a value with an accompanying location that represents a tick on an axis of a chart.
-public struct TickLabel<OutputType>: Identifiable {
+public struct TickLabel<OutputType>: Identifiable where OutputType: Numeric, OutputType: Comparable {
+    /// A unique identifier for the tick instance.
     public let id: UUID
+    /// The location where the tick should be placed within a chart's range.
     public let rangeLocation: OutputType
+    /// The value of the tick in a string representation.
     public let value: String
 
     /// Full initializer for a TickLabel

@@ -17,6 +17,36 @@ import Foundation
 //   optional second argument with the tick formatting
 // there should be a scale.ticks() that can be used as a default/proxy for ticks
 
+/// The face or edge a chart visualization.
+public enum ChartOrientation {
+    /// The leading edge or face of a chart based on the locale's RTL setting.
+    ///
+    /// This translates to the left edge or face for locales that read right-to-left.
+    case leading
+    /// The trailing edge or face of a chart based on the locale's RTL setting.
+    ///
+    /// This translates to the right edge or face for locales that read right-to-left.
+    case trailing
+    /// The upper edgeor face of a chart.
+    case upper
+    /// The lower edge or face of a chart.
+    case lower
+    /// The face of a chart closest to the viewer.
+    case foreground
+    /// The face of the chart farthest from the view.
+    case background
+}
+
+/// The identifier for a dimension the chart visualizes.
+public enum AxisDimension {
+    /// The `x` axis, typically - but uniformly - horizontal.
+    case x
+    /// The `y` axis, typically - but uniformly - vertical.
+    case y
+    /// The `z` axis, typically - but uniformly - depth.
+    case z
+}
+
 /*
  Axis - a visual representation
  built on a scale

@@ -1,7 +1,7 @@
 {
   "abstract" : [
     {
-      "text" : "A Tick is a visual representation of a point along an axis.",
+      "text" : "A  visual representation of a point along an axis.",
       "type" : "text"
     }
   ],
@@ -18,11 +18,11 @@
   },
   "kind" : "symbol",
   "metadata" : {
-    "externalID" : "s:8SwiftViz4TickP",
+    "externalID" : "s:8SwiftViz4TickV",
     "fragments" : [
       {
         "kind" : "keyword",
-        "text" : "protocol"
+        "text" : "struct"
       },
       {
         "kind" : "text",
@@ -45,8 +45,8 @@
       }
     ],
     "role" : "symbol",
-    "roleHeading" : "Protocol",
-    "symbolKind" : "protocol",
+    "roleHeading" : "Structure",
+    "symbolKind" : "struct",
     "title" : "Tick"
   },
   "primaryContentSections" : [
@@ -62,7 +62,7 @@
           "tokens" : [
             {
               "kind" : "keyword",
-              "text" : "protocol"
+              "text" : "struct"
             },
             {
               "kind" : "text",
@@ -74,12 +74,61 @@
             },
             {
               "kind" : "text",
+              "text" : "<"
+            },
+            {
+              "kind" : "genericParameter",
+              "text" : "InputType"
+            },
+            {
+              "kind" : "text",
+              "text" : ", "
+            },
+            {
+              "kind" : "genericParameter",
+              "text" : "OutputType"
+            },
+            {
+              "kind" : "text",
+              "text" : "> "
+            },
+            {
+              "kind" : "keyword",
+              "text" : "where"
+            },
+            {
+              "kind" : "text",
+              "text" : " "
+            },
+            {
+              "kind" : "typeIdentifier",
+              "text" : "OutputType"
+            },
+            {
+              "kind" : "text",
               "text" : " : "
             },
             {
               "kind" : "typeIdentifier",
-              "preciseIdentifier" : "s:s12IdentifiableP",
-              "text" : "Identifiable"
+              "preciseIdentifier" : "s:SL",
+              "text" : "Comparable"
+            },
+            {
+              "kind" : "text",
+              "text" : ", "
+            },
+            {
+              "kind" : "typeIdentifier",
+              "text" : "OutputType"
+            },
+            {
+              "kind" : "text",
+              "text" : " : "
+            },
+            {
+              "kind" : "typeIdentifier",
+              "preciseIdentifier" : "s:Sj",
+              "text" : "Numeric"
             }
           ]
         }
@@ -129,19 +178,8 @@
         "doc:\/\/com.github.swiftviz.SwiftViz\/s12IdentifiableP"
       ],
       "kind" : "relationships",
-      "title" : "Inherits From",
-      "type" : "inheritsFrom"
-    },
-    {
-      "identifiers" : [
-        "doc:\/\/com.github.swiftviz.SwiftViz\/documentation\/SwiftViz\/CGFloatTick",
-        "doc:\/\/com.github.swiftviz.SwiftViz\/documentation\/SwiftViz\/DateTick",
-        "doc:\/\/com.github.swiftviz.SwiftViz\/documentation\/SwiftViz\/DoubleTick",
-        "doc:\/\/com.github.swiftviz.SwiftViz\/documentation\/SwiftViz\/IntegerTick"
-      ],
-      "kind" : "relationships",
-      "title" : "Conforming Types",
-      "type" : "conformingTypes"
+      "title" : "Conforms To",
+      "type" : "conformsTo"
     }
   ],
   "schemaVersion" : {
@@ -156,10 +194,8 @@
     {
       "generated" : true,
       "identifiers" : [
-        "doc:\/\/com.github.swiftviz.SwiftViz\/documentation\/SwiftViz\/DateTick",
-        "doc:\/\/com.github.swiftviz.SwiftViz\/documentation\/SwiftViz\/DoubleTick",
-        "doc:\/\/com.github.swiftviz.SwiftViz\/documentation\/SwiftViz\/CGFloatTick",
-        "doc:\/\/com.github.swiftviz.SwiftViz\/documentation\/SwiftViz\/IntegerTick",
+        "doc:\/\/com.github.swiftviz.SwiftViz\/documentation\/SwiftViz\/AxisDimension",
+        "doc:\/\/com.github.swiftviz.SwiftViz\/documentation\/SwiftViz\/ChartOrientation",
         "doc:\/\/com.github.swiftviz.SwiftViz\/documentation\/SwiftViz\/TickLabel"
       ],
       "title" : "Axis"
@@ -168,23 +204,18 @@
   "topicSections" : [
     {
       "identifiers" : [
-        "doc:\/\/com.github.swiftviz.SwiftViz\/documentation\/SwiftViz\/Tick\/InputType"
-      ],
-      "title" : "Associated Types"
-    },
-    {
-      "identifiers" : [
-        "doc:\/\/com.github.swiftviz.SwiftViz\/documentation\/SwiftViz\/Tick\/init(value:location:)"
-      ],
-      "title" : "Initializers"
-    },
-    {
-      "identifiers" : [
-        "doc:\/\/com.github.swiftviz.SwiftViz\/documentation\/SwiftViz\/Tick\/id",
+        "doc:\/\/com.github.swiftviz.SwiftViz\/documentation\/SwiftViz\/Tick\/id-e61y",
         "doc:\/\/com.github.swiftviz.SwiftViz\/documentation\/SwiftViz\/Tick\/rangeLocation",
         "doc:\/\/com.github.swiftviz.SwiftViz\/documentation\/SwiftViz\/Tick\/value"
       ],
       "title" : "Instance Properties"
+    },
+    {
+      "generated" : true,
+      "identifiers" : [
+        "doc:\/\/com.github.swiftviz.SwiftViz\/documentation\/SwiftViz\/Tick\/Identifiable-Implementations"
+      ],
+      "title" : "Default Implementations"
     }
   ],
   "variants" : [
@@ -215,141 +246,85 @@
   "type" : "topic",
   "url" : "\/documentation\/swiftviz"
 },
-"doc://com.github.swiftviz.SwiftViz/documentation/SwiftViz/CGFloatTick": {
-  "abstract" : [
-
-  ],
-  "fragments" : [
-    {
-      "kind" : "keyword",
-      "text" : "struct"
-    },
-    {
-      "kind" : "text",
-      "text" : " "
-    },
-    {
-      "kind" : "identifier",
-      "text" : "CGFloatTick"
-    }
-  ],
-  "identifier" : "doc:\/\/com.github.swiftviz.SwiftViz\/documentation\/SwiftViz\/CGFloatTick",
-  "kind" : "symbol",
-  "navigatorTitle" : [
-    {
-      "kind" : "identifier",
-      "text" : "CGFloatTick"
-    }
-  ],
-  "role" : "symbol",
-  "title" : "CGFloatTick",
-  "type" : "topic",
-  "url" : "\/documentation\/swiftviz\/cgfloattick"
-},
-"doc://com.github.swiftviz.SwiftViz/documentation/SwiftViz/DateTick": {
-  "abstract" : [
-
-  ],
-  "fragments" : [
-    {
-      "kind" : "keyword",
-      "text" : "struct"
-    },
-    {
-      "kind" : "text",
-      "text" : " "
-    },
-    {
-      "kind" : "identifier",
-      "text" : "DateTick"
-    }
-  ],
-  "identifier" : "doc:\/\/com.github.swiftviz.SwiftViz\/documentation\/SwiftViz\/DateTick",
-  "kind" : "symbol",
-  "navigatorTitle" : [
-    {
-      "kind" : "identifier",
-      "text" : "DateTick"
-    }
-  ],
-  "role" : "symbol",
-  "title" : "DateTick",
-  "type" : "topic",
-  "url" : "\/documentation\/swiftviz\/datetick"
-},
-"doc://com.github.swiftviz.SwiftViz/documentation/SwiftViz/DoubleTick": {
-  "abstract" : [
-
-  ],
-  "fragments" : [
-    {
-      "kind" : "keyword",
-      "text" : "struct"
-    },
-    {
-      "kind" : "text",
-      "text" : " "
-    },
-    {
-      "kind" : "identifier",
-      "text" : "DoubleTick"
-    }
-  ],
-  "identifier" : "doc:\/\/com.github.swiftviz.SwiftViz\/documentation\/SwiftViz\/DoubleTick",
-  "kind" : "symbol",
-  "navigatorTitle" : [
-    {
-      "kind" : "identifier",
-      "text" : "DoubleTick"
-    }
-  ],
-  "role" : "symbol",
-  "title" : "DoubleTick",
-  "type" : "topic",
-  "url" : "\/documentation\/swiftviz\/doubletick"
-},
-"doc://com.github.swiftviz.SwiftViz/documentation/SwiftViz/IntegerTick": {
-  "abstract" : [
-
-  ],
-  "fragments" : [
-    {
-      "kind" : "keyword",
-      "text" : "struct"
-    },
-    {
-      "kind" : "text",
-      "text" : " "
-    },
-    {
-      "kind" : "identifier",
-      "text" : "IntegerTick"
-    }
-  ],
-  "identifier" : "doc:\/\/com.github.swiftviz.SwiftViz\/documentation\/SwiftViz\/IntegerTick",
-  "kind" : "symbol",
-  "navigatorTitle" : [
-    {
-      "kind" : "identifier",
-      "text" : "IntegerTick"
-    }
-  ],
-  "role" : "symbol",
-  "title" : "IntegerTick",
-  "type" : "topic",
-  "url" : "\/documentation\/swiftviz\/integertick"
-},
-"doc://com.github.swiftviz.SwiftViz/documentation/SwiftViz/Tick": {
+"doc://com.github.swiftviz.SwiftViz/documentation/SwiftViz/AxisDimension": {
   "abstract" : [
     {
-      "text" : "A Tick is a visual representation of a point along an axis.",
+      "text" : "The identifier for a dimension the chart visualizes.",
       "type" : "text"
     }
   ],
   "fragments" : [
     {
       "kind" : "keyword",
-      "text" : "protocol"
+      "text" : "enum"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "AxisDimension"
+    }
+  ],
+  "identifier" : "doc:\/\/com.github.swiftviz.SwiftViz\/documentation\/SwiftViz\/AxisDimension",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "AxisDimension"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "AxisDimension",
+  "type" : "topic",
+  "url" : "\/documentation\/swiftviz\/axisdimension"
+},
+"doc://com.github.swiftviz.SwiftViz/documentation/SwiftViz/ChartOrientation": {
+  "abstract" : [
+    {
+      "text" : "The face or edge a chart visualization.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "enum"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "ChartOrientation"
+    }
+  ],
+  "identifier" : "doc:\/\/com.github.swiftviz.SwiftViz\/documentation\/SwiftViz\/ChartOrientation",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "ChartOrientation"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "ChartOrientation",
+  "type" : "topic",
+  "url" : "\/documentation\/swiftviz\/chartorientation"
+},
+"doc://com.github.swiftviz.SwiftViz/documentation/SwiftViz/Tick": {
+  "abstract" : [
+    {
+      "text" : "A  visual representation of a point along an axis.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "struct"
     },
     {
       "kind" : "text",
@@ -373,44 +348,23 @@
   "type" : "topic",
   "url" : "\/documentation\/swiftviz\/tick"
 },
-"doc://com.github.swiftviz.SwiftViz/documentation/SwiftViz/Tick/InputType": {
+"doc://com.github.swiftviz.SwiftViz/documentation/SwiftViz/Tick/Identifiable-Implementations": {
   "abstract" : [
 
   ],
-  "fragments" : [
-    {
-      "kind" : "keyword",
-      "text" : "associatedtype"
-    },
-    {
-      "kind" : "text",
-      "text" : " "
-    },
-    {
-      "kind" : "identifier",
-      "text" : "InputType"
-    },
-    {
-      "kind" : "text",
-      "text" : " : "
-    },
-    {
-      "kind" : "typeIdentifier",
-      "preciseIdentifier" : "s:SL",
-      "text" : "Comparable"
-    }
-  ],
-  "identifier" : "doc:\/\/com.github.swiftviz.SwiftViz\/documentation\/SwiftViz\/Tick\/InputType",
-  "kind" : "symbol",
-  "required" : true,
-  "role" : "symbol",
-  "title" : "InputType",
+  "identifier" : "doc:\/\/com.github.swiftviz.SwiftViz\/documentation\/SwiftViz\/Tick\/Identifiable-Implementations",
+  "kind" : "article",
+  "role" : "collectionGroup",
+  "title" : "Identifiable Implementations",
   "type" : "topic",
-  "url" : "\/documentation\/swiftviz\/tick\/inputtype"
+  "url" : "\/documentation\/swiftviz\/tick\/identifiable-implementations"
 },
-"doc://com.github.swiftviz.SwiftViz/documentation/SwiftViz/Tick/id": {
+"doc://com.github.swiftviz.SwiftViz/documentation/SwiftViz/Tick/id-e61y": {
   "abstract" : [
-
+    {
+      "text" : "A unique identifier for the tick instance.",
+      "type" : "text"
+    }
   ],
   "fragments" : [
     {
@@ -435,78 +389,24 @@
       "text" : "UUID"
     }
   ],
-  "identifier" : "doc:\/\/com.github.swiftviz.SwiftViz\/documentation\/SwiftViz\/Tick\/id",
+  "identifier" : "doc:\/\/com.github.swiftviz.SwiftViz\/documentation\/SwiftViz\/Tick\/id-e61y",
   "kind" : "symbol",
-  "required" : true,
   "role" : "symbol",
   "title" : "id",
   "type" : "topic",
-  "url" : "\/documentation\/swiftviz\/tick\/id"
-},
-"doc://com.github.swiftviz.SwiftViz/documentation/SwiftViz/Tick/init(value:location:)": {
-  "abstract" : [
-
-  ],
-  "fragments" : [
-    {
-      "kind" : "identifier",
-      "text" : "init"
-    },
-    {
-      "kind" : "text",
-      "text" : "("
-    },
-    {
-      "kind" : "externalParam",
-      "text" : "value"
-    },
-    {
-      "kind" : "text",
-      "text" : ": "
-    },
-    {
-      "kind" : "typeIdentifier",
-      "preciseIdentifier" : "s:8SwiftViz4TickP9InputTypeQa",
-      "text" : "InputType"
-    },
-    {
-      "kind" : "text",
-      "text" : ", "
-    },
-    {
-      "kind" : "externalParam",
-      "text" : "location"
-    },
-    {
-      "kind" : "text",
-      "text" : ": "
-    },
-    {
-      "kind" : "typeIdentifier",
-      "preciseIdentifier" : "s:12CoreGraphics7CGFloatV",
-      "text" : "CGFloat"
-    },
-    {
-      "kind" : "text",
-      "text" : ")"
-    }
-  ],
-  "identifier" : "doc:\/\/com.github.swiftviz.SwiftViz\/documentation\/SwiftViz\/Tick\/init(value:location:)",
-  "kind" : "symbol",
-  "required" : true,
-  "role" : "symbol",
-  "title" : "init(value:location:)",
-  "type" : "topic",
-  "url" : "\/documentation\/swiftviz\/tick\/init(value:location:)"
+  "url" : "\/documentation\/swiftviz\/tick\/id-e61y"
 },
 "doc://com.github.swiftviz.SwiftViz/documentation/SwiftViz/Tick/rangeLocation": {
   "abstract" : [
-
+    {
+      "text" : "The location where the tick should be placed within a chart’s range.",
+      "type" : "text"
+    }
   ],
   "fragments" : [
     {
       "kind" : "keyword",
-      "text" : "var"
+      "text" : "let"
     },
     {
       "kind" : "text",
@@ -522,13 +422,12 @@
     },
     {
       "kind" : "typeIdentifier",
-      "preciseIdentifier" : "s:12CoreGraphics7CGFloatV",
-      "text" : "CGFloat"
+      "preciseIdentifier" : "s:8SwiftViz4TickV10OutputTypeq_mfp",
+      "text" : "OutputType"
     }
   ],
   "identifier" : "doc:\/\/com.github.swiftviz.SwiftViz\/documentation\/SwiftViz\/Tick\/rangeLocation",
   "kind" : "symbol",
-  "required" : true,
   "role" : "symbol",
   "title" : "rangeLocation",
   "type" : "topic",
@@ -536,12 +435,15 @@
 },
 "doc://com.github.swiftviz.SwiftViz/documentation/SwiftViz/Tick/value": {
   "abstract" : [
-
+    {
+      "text" : "The value of the tick.",
+      "type" : "text"
+    }
   ],
   "fragments" : [
     {
       "kind" : "keyword",
-      "text" : "var"
+      "text" : "let"
     },
     {
       "kind" : "text",
@@ -557,13 +459,12 @@
     },
     {
       "kind" : "typeIdentifier",
-      "preciseIdentifier" : "s:8SwiftViz4TickP9InputTypeQa",
+      "preciseIdentifier" : "s:8SwiftViz4TickV9InputTypexmfp",
       "text" : "InputType"
     }
   ],
   "identifier" : "doc:\/\/com.github.swiftviz.SwiftViz\/documentation\/SwiftViz\/Tick\/value",
   "kind" : "symbol",
-  "required" : true,
   "role" : "symbol",
   "title" : "value",
   "type" : "topic",
@@ -572,31 +473,7 @@
 "doc://com.github.swiftviz.SwiftViz/documentation/SwiftViz/TickLabel": {
   "abstract" : [
     {
-      "text" : "A TickLabel is more specific to the visualization and",
-      "type" : "text"
-    },
-    {
-      "text" : " ",
-      "type" : "text"
-    },
-    {
-      "text" : "is generally created with the benefit of a formatter,",
-      "type" : "text"
-    },
-    {
-      "text" : " ",
-      "type" : "text"
-    },
-    {
-      "text" : "the type that we use being dependent on the type that’s",
-      "type" : "text"
-    },
-    {
-      "text" : " ",
-      "type" : "text"
-    },
-    {
-      "text" : "used for the domain of the Scale.",
+      "text" : "A struct that provides string representation of a value with an accompanying location that represents a tick on an axis of a chart.",
       "type" : "text"
     }
   ],

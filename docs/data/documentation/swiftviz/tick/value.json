@@ -1,7 +1,7 @@
 {
   "abstract" : [
     {
-      "text" : "No overview available.",
+      "text" : "The value of the tick.",
       "type" : "text"
     }
   ],
@@ -19,11 +19,11 @@
   },
   "kind" : "symbol",
   "metadata" : {
-    "externalID" : "s:8SwiftViz4TickP5value9InputTypeQzvp",
+    "externalID" : "s:8SwiftViz4TickV5valuexvp",
     "fragments" : [
       {
         "kind" : "keyword",
-        "text" : "var"
+        "text" : "let"
       },
       {
         "kind" : "text",
@@ -39,7 +39,7 @@
       },
       {
         "kind" : "typeIdentifier",
-        "preciseIdentifier" : "s:8SwiftViz4TickP9InputTypeQa",
+        "preciseIdentifier" : "s:8SwiftViz4TickV9InputTypexmfp",
         "text" : "InputType"
       }
     ],
@@ -48,7 +48,6 @@
         "name" : "SwiftViz"
       }
     ],
-    "required" : true,
     "role" : "symbol",
     "roleHeading" : "Instance Property",
     "symbolKind" : "property",
@@ -67,7 +66,7 @@
           "tokens" : [
             {
               "kind" : "keyword",
-              "text" : "var"
+              "text" : "let"
             },
             {
               "kind" : "text",
@@ -82,22 +81,9 @@
               "text" : ": "
             },
             {
-              "identifier" : "doc:\/\/com.github.swiftviz.SwiftViz\/documentation\/SwiftViz\/Tick\/InputType",
               "kind" : "typeIdentifier",
-              "preciseIdentifier" : "s:8SwiftViz4TickP9InputTypeQa",
+              "preciseIdentifier" : "s:8SwiftViz4TickV9InputTypexmfp",
               "text" : "InputType"
-            },
-            {
-              "kind" : "text",
-              "text" : " { "
-            },
-            {
-              "kind" : "keyword",
-              "text" : "get"
-            },
-            {
-              "kind" : "text",
-              "text" : " }"
             }
           ]
         }
@@ -144,14 +130,14 @@
 "doc://com.github.swiftviz.SwiftViz/documentation/SwiftViz/Tick": {
   "abstract" : [
     {
-      "text" : "A Tick is a visual representation of a point along an axis.",
+      "text" : "A  visual representation of a point along an axis.",
       "type" : "text"
     }
   ],
   "fragments" : [
     {
       "kind" : "keyword",
-      "text" : "protocol"
+      "text" : "struct"
     },
     {
       "kind" : "text",
@@ -175,49 +161,17 @@
   "type" : "topic",
   "url" : "\/documentation\/swiftviz\/tick"
 },
-"doc://com.github.swiftviz.SwiftViz/documentation/SwiftViz/Tick/InputType": {
-  "abstract" : [
-
-  ],
-  "fragments" : [
-    {
-      "kind" : "keyword",
-      "text" : "associatedtype"
-    },
-    {
-      "kind" : "text",
-      "text" : " "
-    },
-    {
-      "kind" : "identifier",
-      "text" : "InputType"
-    },
-    {
-      "kind" : "text",
-      "text" : " : "
-    },
-    {
-      "kind" : "typeIdentifier",
-      "preciseIdentifier" : "s:SL",
-      "text" : "Comparable"
-    }
-  ],
-  "identifier" : "doc:\/\/com.github.swiftviz.SwiftViz\/documentation\/SwiftViz\/Tick\/InputType",
-  "kind" : "symbol",
-  "required" : true,
-  "role" : "symbol",
-  "title" : "InputType",
-  "type" : "topic",
-  "url" : "\/documentation\/swiftviz\/tick\/inputtype"
-},
 "doc://com.github.swiftviz.SwiftViz/documentation/SwiftViz/Tick/value": {
   "abstract" : [
-
+    {
+      "text" : "The value of the tick.",
+      "type" : "text"
+    }
   ],
   "fragments" : [
     {
       "kind" : "keyword",
-      "text" : "var"
+      "text" : "let"
     },
     {
       "kind" : "text",
@@ -233,13 +187,12 @@
     },
     {
       "kind" : "typeIdentifier",
-      "preciseIdentifier" : "s:8SwiftViz4TickP9InputTypeQa",
+      "preciseIdentifier" : "s:8SwiftViz4TickV9InputTypexmfp",
       "text" : "InputType"
     }
   ],
   "identifier" : "doc:\/\/com.github.swiftviz.SwiftViz\/documentation\/SwiftViz\/Tick\/value",
   "kind" : "symbol",
-  "required" : true,
   "role" : "symbol",
   "title" : "value",
   "type" : "topic",

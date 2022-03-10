@@ -154,31 +154,7 @@
 "doc://com.github.swiftviz.SwiftViz/documentation/SwiftViz/TickLabel": {
   "abstract" : [
     {
-      "text" : "A TickLabel is more specific to the visualization and",
-      "type" : "text"
-    },
-    {
-      "text" : " ",
-      "type" : "text"
-    },
-    {
-      "text" : "is generally created with the benefit of a formatter,",
-      "type" : "text"
-    },
-    {
-      "text" : " ",
-      "type" : "text"
-    },
-    {
-      "text" : "the type that we use being dependent on the type that’s",
-      "type" : "text"
-    },
-    {
-      "text" : " ",
-      "type" : "text"
-    },
-    {
-      "text" : "used for the domain of the Scale.",
+      "text" : "A struct that provides string representation of a value with an accompanying location that represents a tick on an axis of a chart.",
       "type" : "text"
     }
   ],

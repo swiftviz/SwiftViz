@@ -8,9 +8,16 @@
 import Foundation
 import Numerics
 
+/// A type that can be converted into an approximate value that is easier to understand.
 public protocol NiceValue {
     associatedtype NumberType: Numeric, Comparable
     /// Returns a nice version of the number that's visually appealing for chart axis values.
+    ///
+    /// The approximation rounds the number to the nearest 1, 2, 5, or 10 multiplied by the exponent of the initial value.
+    /// These values can be used to expand a range to "round numbers" that are easier to understand than raw, specific values.
+    ///
+    /// The values are based on "Nice Numbers for Graph Labels"  in the book "Graphics Gems, Volume 1" by Andrew Glassner.
+    /// Examples of this algorithm are also available on StackOverflow as [nice label algorithm for charts with minimum ticks](https://stackoverflow.com/questions/8506881/nice-label-algorithm-for-charts-with-minimum-ticks).
     /// - Parameters:
     ///   - number: The number to convert into a nice value.
     ///   - min: A Boolean value that indicates to take the lower, rather than higher, nearest nice number as a result.
@@ -18,17 +25,24 @@ public protocol NiceValue {
 
     /// Returns a nice minimum value for a given range.
     ///
-    /// The value returned will be lower than or equal to the minimum value of the range.
     /// The algorithm returns `0` if the top of the range is sufficiently larger than the bottom, and the range doesn't extend into negative values.
+    /// For minimum values below `0`, the number returned is converted into an appropriate "nice" number.
+    /// The value returned will be lower than or equal to the minimum value of the range.
     /// - Parameters:
     ///   - min: The minimum value of the range.
     ///   - max: The maximum value of the range.
     static func niceMinimumValueForRange(min: NumberType, max: NumberType) -> NumberType
 
-    /// Generates a range of numbers with a minimum, maximum, and step interval that's visually pleasing.
+    /// Returns a tuple that provide nice conversions of the minimum, step value, maximum for a range with a desired number of steps.
     ///
-    /// The values are based on "Nice Numbers for Graph Labels"  in the book "Graphics Gems, Volume 1" by Andrew Glassner.
-    /// Examples of this algorithm are also available on StackOverflow as [nice label algorithm for charts with minimum ticks](https://stackoverflow.com/questions/8506881/nice-label-algorithm-for-charts-with-minimum-ticks).
+    /// - Parameters:
+    ///   - min: The minimum value of a range of numbers.
+    ///   - max: The maximum value of a range of numbers.
+    ///   - size: The number of tick marks desired in the resulting range.
+    /// - Returns: An array of nice numbers linearly spaced through the range, with the min and max equaling or exceeding the values you provide.
+    static func niceMinStepMax(min: NumberType, max: NumberType, ofSize size: Int) -> (NumberType, NumberType, NumberType)
+
+    /// Generates a range of numbers with a minimum, maximum, and step interval that's visually pleasing.
     ///
     /// - Parameters:
     ///   - min: The minimum value of a range of numbers.
@@ -42,7 +56,7 @@ public protocol NiceValue {
 
 extension Double: NiceValue {
     public typealias NumberType = Double
-
+    
     public static func niceVersion(for number: NumberType, min: Bool) -> NumberType {
         let negativeInput: Bool = number < 0
         let positiveNumber = abs(number)
@@ -90,7 +104,7 @@ extension Double: NiceValue {
         return nice <= (max / 10) ? 0 : nice
     }
 
-    public static func rangeOfNiceValues(min: NumberType, max: NumberType, ofSize size: Int) -> [NumberType] {
+    public static func niceMinStepMax(min: NumberType, max: NumberType, ofSize size: Int) -> (NumberType, NumberType, NumberType) {
         precondition(size > 1)
         let niceMin = niceMinimumValueForRange(min: min, max: max)
         // print("niced min: \(niceMin)")
@@ -105,11 +119,15 @@ extension Double: NiceValue {
         while niceMax < max {
             niceMax += niceStep
         }
+        return (niceMin, niceStep, niceMax)
+    }
 
+    public static func rangeOfNiceValues(min: NumberType, max: NumberType, ofSize size: Int) -> [NumberType] {
+        let (niceMin, niceStep, niceMax) = niceMinStepMax(min: min, max: max, ofSize: size)
         var result: [NumberType] = []
         // incrementing the comparison point by a half step
         // prevents some slight rounding errors that could lead
-        // to a final value not getting appendded.
+        // to a final value not getting appended.
         let comparisonPoint = niceMax + (0.5 * niceStep)
         result.append(niceMin)
         for i in 1 ... size - 1 {
@@ -175,7 +193,7 @@ extension Float: NiceValue {
         return nice <= (max / 10) ? 0 : nice
     }
 
-    public static func rangeOfNiceValues(min: NumberType, max: NumberType, ofSize size: Int) -> [NumberType] {
+    public static func niceMinStepMax(min: NumberType, max: NumberType, ofSize size: Int) -> (NumberType, NumberType, NumberType) {
         precondition(size > 1)
         let niceMin = niceMinimumValueForRange(min: min, max: max)
         // print("niced min: \(niceMin)")
@@ -189,7 +207,11 @@ extension Float: NiceValue {
         while niceMax < max {
             niceMax += niceStep
         }
+        return (niceMin, niceStep, niceMax)
+    }
 
+    public static func rangeOfNiceValues(min: NumberType, max: NumberType, ofSize size: Int) -> [NumberType] {
+        let (niceMin, niceStep, niceMax) = niceMinStepMax(min: min, max: max, ofSize: size)
         var result: [NumberType] = []
         // incrementing the comparison point by a half step
         // prevents some slight rounding errors that could lead
@@ -262,7 +284,7 @@ extension Int: NiceValue {
         return nice <= (max / 10) ? 0 : nice
     }
 
-    public static func rangeOfNiceValues(min: NumberType, max: NumberType, ofSize size: Int) -> [NumberType] {
+    public static func niceMinStepMax(min: NumberType, max: NumberType, ofSize size: Int) -> (NumberType, NumberType, NumberType) {
         precondition(size > 1)
         let niceMin = niceMinimumValueForRange(min: min, max: max)
         // print("niced min: \(niceMin)")
@@ -276,7 +298,11 @@ extension Int: NiceValue {
         while niceMax < max {
             niceMax += niceStep
         }
-
+        return (niceMin, niceStep, niceMax)
+    }
+    
+    public static func rangeOfNiceValues(min: NumberType, max: NumberType, ofSize size: Int) -> [NumberType] {
+        let (niceMin, niceStep, _) = niceMinStepMax(min: min, max: max, ofSize: size)
         var result: [NumberType] = []
         result.append(niceMin)
         for i in 1 ... size - 1 {
