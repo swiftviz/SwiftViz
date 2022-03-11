@@ -1,33 +1,7 @@
 {
   "abstract" : [
     {
-      "text" : "Converts a value between the input ",
-      "type" : "text"
-    },
-    {
-      "inlineContent" : [
-        {
-          "text" : "domain",
-          "type" : "text"
-        }
-      ],
-      "type" : "emphasis"
-    },
-    {
-      "text" : " and output ",
-      "type" : "text"
-    },
-    {
-      "inlineContent" : [
-        {
-          "text" : "range",
-          "type" : "text"
-        }
-      ],
-      "type" : "emphasis"
-    },
-    {
-      "text" : ".",
+      "text" : "Converts a value comparing it to the input domain, transforming the value, and mapping it between the range values you provide.",
       "type" : "text"
     }
   ],
@@ -348,7 +322,9 @@
     {
       "generated" : true,
       "identifiers" : [
-        "doc:\/\/com.github.swiftviz.SwiftViz\/documentation\/SwiftViz\/Scale\/invert(_:from:to:)"
+        "doc:\/\/com.github.swiftviz.SwiftViz\/documentation\/SwiftViz\/Scale\/scale(_:to:)",
+        "doc:\/\/com.github.swiftviz.SwiftViz\/documentation\/SwiftViz\/Scale\/invert(_:from:to:)",
+        "doc:\/\/com.github.swiftviz.SwiftViz\/documentation\/SwiftViz\/Scale\/invert(_:to:)"
       ],
       "title" : "Converting Values"
     }
@@ -443,7 +419,10 @@
 },
 "doc://com.github.swiftviz.SwiftViz/documentation/SwiftViz/Scale/InputType": {
   "abstract" : [
-
+    {
+      "text" : "The type used for the scale’s domain.",
+      "type" : "text"
+    }
   ],
   "fragments" : [
     {
@@ -496,7 +475,10 @@
 },
 "doc://com.github.swiftviz.SwiftViz/documentation/SwiftViz/Scale/OutputType": {
   "abstract" : [
-
+    {
+      "text" : "The type used for the scale’s range.",
+      "type" : "text"
+    }
   ],
   "fragments" : [
     {
@@ -658,36 +640,77 @@
   "type" : "topic",
   "url" : "\/documentation\/swiftviz\/scale\/invert(_:from:to:)"
 },
+"doc://com.github.swiftviz.SwiftViz/documentation/SwiftViz/Scale/invert(_:to:)": {
+  "abstract" : [
+    {
+      "text" : "Converts a value comparing it to the upper value of a range, mapping it to the input domain, and inverting scale’s transform.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "func"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "invert"
+    },
+    {
+      "kind" : "text",
+      "text" : "("
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:8SwiftViz5ScaleP10OutputTypeQa",
+      "text" : "OutputType"
+    },
+    {
+      "kind" : "text",
+      "text" : ", "
+    },
+    {
+      "kind" : "externalParam",
+      "text" : "to"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:8SwiftViz5ScaleP10OutputTypeQa",
+      "text" : "OutputType"
+    },
+    {
+      "kind" : "text",
+      "text" : ") -> "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:8SwiftViz5ScaleP9InputTypeQa",
+      "text" : "InputType"
+    },
+    {
+      "kind" : "text",
+      "text" : "?"
+    }
+  ],
+  "identifier" : "doc:\/\/com.github.swiftviz.SwiftViz\/documentation\/SwiftViz\/Scale\/invert(_:to:)",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "invert(_:to:)",
+  "type" : "topic",
+  "url" : "\/documentation\/swiftviz\/scale\/invert(_:to:)"
+},
 "doc://com.github.swiftviz.SwiftViz/documentation/SwiftViz/Scale/scale(_:from:to:)": {
   "abstract" : [
     {
-      "text" : "Converts a value between the input ",
-      "type" : "text"
-    },
-    {
-      "inlineContent" : [
-        {
-          "text" : "domain",
-          "type" : "text"
-        }
-      ],
-      "type" : "emphasis"
-    },
-    {
-      "text" : " and output ",
-      "type" : "text"
-    },
-    {
-      "inlineContent" : [
-        {
-          "text" : "range",
-          "type" : "text"
-        }
-      ],
-      "type" : "emphasis"
-    },
-    {
-      "text" : ".",
+      "text" : "Converts a value comparing it to the input domain, transforming the value, and mapping it between the range values you provide.",
       "type" : "text"
     }
   ],
@@ -768,6 +791,81 @@
   "title" : "scale(_:from:to:)",
   "type" : "topic",
   "url" : "\/documentation\/swiftviz\/scale\/scale(_:from:to:)"
+},
+"doc://com.github.swiftviz.SwiftViz/documentation/SwiftViz/Scale/scale(_:to:)": {
+  "abstract" : [
+    {
+      "text" : "Converts a value comparing it to the input domain, transforming the value, and mapping it into values between ",
+      "type" : "text"
+    },
+    {
+      "code" : "0",
+      "type" : "codeVoice"
+    },
+    {
+      "text" : " and to the upper bound you provide.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "func"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "scale"
+    },
+    {
+      "kind" : "text",
+      "text" : "("
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:8SwiftViz5ScaleP9InputTypeQa",
+      "text" : "InputType"
+    },
+    {
+      "kind" : "text",
+      "text" : ", "
+    },
+    {
+      "kind" : "externalParam",
+      "text" : "to"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:8SwiftViz5ScaleP10OutputTypeQa",
+      "text" : "OutputType"
+    },
+    {
+      "kind" : "text",
+      "text" : ") -> "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:8SwiftViz5ScaleP10OutputTypeQa",
+      "text" : "OutputType"
+    },
+    {
+      "kind" : "text",
+      "text" : "?"
+    }
+  ],
+  "identifier" : "doc:\/\/com.github.swiftviz.SwiftViz\/documentation\/SwiftViz\/Scale\/scale(_:to:)",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "scale(_:to:)",
+  "type" : "topic",
+  "url" : "\/documentation\/swiftviz\/scale\/scale(_:to:)"
 },
 "doc://com.github.swiftviz.SwiftViz/documentation/SwiftViz/Scale/transformType": {
   "abstract" : [

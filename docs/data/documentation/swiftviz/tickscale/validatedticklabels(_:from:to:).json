@@ -380,7 +380,10 @@
 },
 "doc://com.github.swiftviz.SwiftViz/documentation/SwiftViz/Scale/OutputType": {
   "abstract" : [
-
+    {
+      "text" : "The type used for the scale’s range.",
+      "type" : "text"
+    }
   ],
   "fragments" : [
     {

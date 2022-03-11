@@ -10,6 +10,11 @@
       [
         "doc:\/\/com.github.swiftviz.SwiftViz\/documentation\/SwiftViz",
         "doc:\/\/com.github.swiftviz.SwiftViz\/documentation\/SwiftViz\/LinearScale",
+        "doc:\/\/com.github.swiftviz.SwiftViz\/documentation\/SwiftViz\/LinearScale\/IntScale"
+      ],
+      [
+        "doc:\/\/com.github.swiftviz.SwiftViz\/documentation\/SwiftViz",
+        "doc:\/\/com.github.swiftviz.SwiftViz\/documentation\/SwiftViz\/LinearScale",
         "doc:\/\/com.github.swiftviz.SwiftViz\/documentation\/SwiftViz\/LinearScale\/IntScale",
         "doc:\/\/com.github.swiftviz.SwiftViz\/documentation\/SwiftViz\/LinearScale\/IntScale\/Scale-Implementations"
       ]
@@ -184,6 +189,15 @@
   "sections" : [
 
   ],
+  "seeAlsoSections" : [
+    {
+      "generated" : true,
+      "identifiers" : [
+        "doc:\/\/com.github.swiftviz.SwiftViz\/documentation\/SwiftViz\/LinearScale\/IntScale\/transformAgainstDomain(_:)"
+      ],
+      "title" : "Comparing Values"
+    }
+  ],
   "variants" : [
     {
       "paths" : [
@@ -337,9 +351,62 @@
   "type" : "topic",
   "url" : "\/documentation\/swiftviz\/linearscale\/intscale\/domaincontains(_:)"
 },
+"doc://com.github.swiftviz.SwiftViz/documentation/SwiftViz/LinearScale/IntScale/transformAgainstDomain(_:)": {
+  "abstract" : [
+    {
+      "text" : "Processes a value against the scale, potentially constraining or dropping the value.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "func"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "transformAgainstDomain"
+    },
+    {
+      "kind" : "text",
+      "text" : "("
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:8SwiftViz5ScaleP9InputTypeQa",
+      "text" : "InputType"
+    },
+    {
+      "kind" : "text",
+      "text" : ") -> "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:8SwiftViz5ScaleP9InputTypeQa",
+      "text" : "InputType"
+    },
+    {
+      "kind" : "text",
+      "text" : "?"
+    }
+  ],
+  "identifier" : "doc:\/\/com.github.swiftviz.SwiftViz\/documentation\/SwiftViz\/LinearScale\/IntScale\/transformAgainstDomain(_:)",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "transformAgainstDomain(_:)",
+  "type" : "topic",
+  "url" : "\/documentation\/swiftviz\/linearscale\/intscale\/transformagainstdomain(_:)"
+},
 "doc://com.github.swiftviz.SwiftViz/documentation/SwiftViz/Scale/InputType": {
   "abstract" : [
-
+    {
+      "text" : "The type used for the scale’s domain.",
+      "type" : "text"
+    }
   ],
   "fragments" : [
     {
