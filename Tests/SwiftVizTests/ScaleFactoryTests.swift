@@ -61,4 +61,22 @@ class ScaleFactoryTests: XCTestCase {
         XCTAssertEqual(scale1.domainExtent, scale2.domainExtent)
         XCTAssertEqual(scale1.domainLower, low.timeIntervalSince1970)
     }
+    
+    func testScaleConvenienceMethod() throws {
+        let lin = LinearScale.create(0, 100.0)
+        guard let result = lin.scale(5.0, to: 10.0) else {
+            XCTFail()
+            return
+        }
+        XCTAssertEqual(result, 0.5, accuracy: 0.001)
+    }
+
+    func testInvertConvenienceMethod() throws {
+        let lin = LinearScale.create(0, 100.0)
+        guard let result = lin.invert(5.0, to: 10.0) else {
+            XCTFail()
+            return
+        }
+        XCTAssertEqual(result, 50, accuracy: 0.001)
+    }
 }
