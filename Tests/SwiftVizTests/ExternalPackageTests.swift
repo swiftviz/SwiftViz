@@ -13,52 +13,26 @@ final class PackagingTests: XCTestCase {
     func testManualTicks() {
         let scale = LinearScale.DoubleScale(from: 0.0, to: 10.0, transform: .none)
         // verifies the method is visible externally - else this won't compile
-        let ticks = scale.ticks([2.0], from: 0.0, to: 10.0)
+        let ticks = scale.tickValues([2.0], from: 0.0, to: 10.0)
         XCTAssertEqual(ticks.count, 1)
     }
 
     func testManualTicksOutsideRangeNone() {
         let scale = LinearScale.DoubleScale(from: 0.0, to: 10.0, transform: .none)
-        let ticks = scale.ticks([2.0, 4.0, 8.0, 16.0], from: 0.0, to: 10.0)
+        let ticks = scale.tickValues([2.0, 4.0, 8.0, 16.0], from: 0.0, to: 10.0)
         XCTAssertEqual(ticks.count, 3)
     }
 
     func testManualTicksOutsideRangeClamped() {
         let scale = LinearScale.DoubleScale(from: 0.0, to: 10.0, transform: .clamp)
-        let ticks = scale.ticks([2.0, 4.0, 8.0, 16.0], from: 0.0, to: 10.0)
+        let ticks = scale.tickValues([2.0, 4.0, 8.0, 16.0], from: 0.0, to: 10.0)
         XCTAssertEqual(ticks.count, 3)
     }
 
     func testManualTicksOutsideRangeDropped() {
         let scale = LinearScale.DoubleScale(from: 0.0, to: 10.0, transform: .drop)
-        let ticks = scale.ticks([2.0, 4.0, 8.0, 16.0], from: 0.0, to: 10.0)
+        let ticks = scale.tickValues([2.0, 4.0, 8.0, 16.0], from: 0.0, to: 10.0)
         XCTAssertEqual(ticks.count, 3)
-    }
-
-    func testManualTickLabelValidation() {
-        let scale = LinearScale.DoubleScale(from: 0.0, to: 10.0, transform: .none)
-        let manualLabels = [
-            TickLabel(rangeLocation: Float(-1.0), value: "-1.0"),
-            TickLabel(rangeLocation: Float(1.0), value: "1.0"),
-            TickLabel(rangeLocation: Float(10.0), value: "10.0"),
-            TickLabel(rangeLocation: Float(100.0), value: "100.0"),
-        ]
-        let validatedSet = scale.validatedTickLabels(manualLabels, from: 0.0, to: 10.0)
-        XCTAssertEqual(validatedSet.count, 2)
-    }
-
-    func testManualTickLabelsThroughScale() {
-        let scale = LinearScale.DoubleScale(from: 0.0, to: 10.0, transform: .none)
-        let labeledValues = [
-            (Double(-1.0), "-1"),
-            (Double(1.0), "1"),
-            (Double(10.0), "10"),
-            (Double(100.0), "100"),
-        ]
-        let validatedSet = scale.labeledTickValues(labeledValues, from: 0.0, to: 10.0)
-        XCTAssertEqual(validatedSet.count, 2)
-        XCTAssertEqual(validatedSet[0].value, "1")
-        XCTAssertEqual(validatedSet[1].value, "10")
     }
 
     func testScaleTransform() {

@@ -30,7 +30,5 @@
 ### Generating Ticks
 
 - ``SwiftViz/LogScale/IntScale/ticks(rangeLower:rangeHigher:)``
-- ``SwiftViz/LogScale/IntScale/ticks(_:from:to:)``
-- ``SwiftViz/LogScale/IntScale/labeledTickValues(_:from:to:)``
-- ``SwiftViz/LogScale/IntScale/validatedTickLabels(_:from:to:)``
+- ``SwiftViz/LogScale/IntScale/tickValues(_:from:to:)``
 

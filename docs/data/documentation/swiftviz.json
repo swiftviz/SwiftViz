@@ -122,8 +122,7 @@
       "identifiers" : [
         "doc:\/\/com.github.swiftviz.SwiftViz\/documentation\/SwiftViz\/AxisDimension",
         "doc:\/\/com.github.swiftviz.SwiftViz\/documentation\/SwiftViz\/ChartOrientation",
-        "doc:\/\/com.github.swiftviz.SwiftViz\/documentation\/SwiftViz\/Tick",
-        "doc:\/\/com.github.swiftviz.SwiftViz\/documentation\/SwiftViz\/TickLabel"
+        "doc:\/\/com.github.swiftviz.SwiftViz\/documentation\/SwiftViz\/Tick"
       ],
       "title" : "Axis"
     }
@@ -453,40 +452,6 @@
   "title" : "Tick",
   "type" : "topic",
   "url" : "\/documentation\/swiftviz\/tick"
-},
-"doc://com.github.swiftviz.SwiftViz/documentation/SwiftViz/TickLabel": {
-  "abstract" : [
-    {
-      "text" : "A struct that provides string representation of a value with an accompanying location that represents a tick on an axis of a chart.",
-      "type" : "text"
-    }
-  ],
-  "fragments" : [
-    {
-      "kind" : "keyword",
-      "text" : "struct"
-    },
-    {
-      "kind" : "text",
-      "text" : " "
-    },
-    {
-      "kind" : "identifier",
-      "text" : "TickLabel"
-    }
-  ],
-  "identifier" : "doc:\/\/com.github.swiftviz.SwiftViz\/documentation\/SwiftViz\/TickLabel",
-  "kind" : "symbol",
-  "navigatorTitle" : [
-    {
-      "kind" : "identifier",
-      "text" : "TickLabel"
-    }
-  ],
-  "role" : "symbol",
-  "title" : "TickLabel",
-  "type" : "topic",
-  "url" : "\/documentation\/swiftviz\/ticklabel"
 },
 "doc://com.github.swiftviz.SwiftViz/documentation/SwiftViz/TickScale": {
   "abstract" : [

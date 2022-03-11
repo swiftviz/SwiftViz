@@ -142,19 +142,12 @@
     },
     {
       "identifiers" : [
-        "doc:\/\/com.github.swiftviz.SwiftViz\/documentation\/SwiftViz\/TickScale\/ticks(_:from:to:)",
+        "doc:\/\/com.github.swiftviz.SwiftViz\/documentation\/SwiftViz\/TickScale\/tickValues(_:from:to:)",
         "doc:\/\/com.github.swiftviz.SwiftViz\/documentation\/SwiftViz\/TickScale\/ticks(rangeLower:rangeHigher:)-1vugh",
         "doc:\/\/com.github.swiftviz.SwiftViz\/documentation\/SwiftViz\/TickScale\/ticks(rangeLower:rangeHigher:)-4uxek",
         "doc:\/\/com.github.swiftviz.SwiftViz\/documentation\/SwiftViz\/TickScale\/ticks(rangeLower:rangeHigher:)-5n5j1"
       ],
       "title" : "Generating Ticks for a Scale"
-    },
-    {
-      "identifiers" : [
-        "doc:\/\/com.github.swiftviz.SwiftViz\/documentation\/SwiftViz\/TickScale\/validatedTickLabels(_:from:to:)",
-        "doc:\/\/com.github.swiftviz.SwiftViz\/documentation\/SwiftViz\/TickScale\/labeledTickValues(_:from:to:)"
-      ],
-      "title" : "Generating and Validating TickLabels"
     }
   ],
   "variants" : [
@@ -685,141 +678,7 @@
   "type" : "topic",
   "url" : "\/documentation\/swiftviz\/tickscale\/desiredticks"
 },
-"doc://com.github.swiftviz.SwiftViz/documentation/SwiftViz/TickScale/labeledTickValues(_:from:to:)": {
-  "abstract" : [
-    {
-      "text" : "Converts an array of values with matching strings, that are within the scale’s domain and returns a list of tick labels using the strings you provide.",
-      "type" : "text"
-    }
-  ],
-  "conformance" : {
-    "availabilityPrefix" : [
-      {
-        "text" : "Available when",
-        "type" : "text"
-      }
-    ],
-    "conformancePrefix" : [
-      {
-        "text" : "Conforms when",
-        "type" : "text"
-      }
-    ],
-    "constraints" : [
-      {
-        "code" : "OutputType",
-        "type" : "codeVoice"
-      },
-      {
-        "text" : " conforms to ",
-        "type" : "text"
-      },
-      {
-        "code" : "Real",
-        "type" : "codeVoice"
-      },
-      {
-        "text" : ".",
-        "type" : "text"
-      }
-    ]
-  },
-  "fragments" : [
-    {
-      "kind" : "keyword",
-      "text" : "func"
-    },
-    {
-      "kind" : "text",
-      "text" : " "
-    },
-    {
-      "kind" : "identifier",
-      "text" : "labeledTickValues"
-    },
-    {
-      "kind" : "text",
-      "text" : "([("
-    },
-    {
-      "kind" : "typeIdentifier",
-      "preciseIdentifier" : "s:8SwiftViz5ScaleP9InputTypeQa",
-      "text" : "InputType"
-    },
-    {
-      "kind" : "text",
-      "text" : ", "
-    },
-    {
-      "kind" : "typeIdentifier",
-      "preciseIdentifier" : "s:SS",
-      "text" : "String"
-    },
-    {
-      "kind" : "text",
-      "text" : ")], "
-    },
-    {
-      "kind" : "externalParam",
-      "text" : "from"
-    },
-    {
-      "kind" : "text",
-      "text" : ": "
-    },
-    {
-      "kind" : "typeIdentifier",
-      "preciseIdentifier" : "s:8SwiftViz5ScaleP10OutputTypeQa",
-      "text" : "OutputType"
-    },
-    {
-      "kind" : "text",
-      "text" : ", "
-    },
-    {
-      "kind" : "externalParam",
-      "text" : "to"
-    },
-    {
-      "kind" : "text",
-      "text" : ": "
-    },
-    {
-      "kind" : "typeIdentifier",
-      "preciseIdentifier" : "s:8SwiftViz5ScaleP10OutputTypeQa",
-      "text" : "OutputType"
-    },
-    {
-      "kind" : "text",
-      "text" : ") -> ["
-    },
-    {
-      "kind" : "typeIdentifier",
-      "preciseIdentifier" : "s:8SwiftViz9TickLabelV",
-      "text" : "TickLabel"
-    },
-    {
-      "kind" : "text",
-      "text" : "<"
-    },
-    {
-      "kind" : "typeIdentifier",
-      "preciseIdentifier" : "s:8SwiftViz5ScaleP10OutputTypeQa",
-      "text" : "OutputType"
-    },
-    {
-      "kind" : "text",
-      "text" : ">]"
-    }
-  ],
-  "identifier" : "doc:\/\/com.github.swiftviz.SwiftViz\/documentation\/SwiftViz\/TickScale\/labeledTickValues(_:from:to:)",
-  "kind" : "symbol",
-  "role" : "symbol",
-  "title" : "labeledTickValues(_:from:to:)",
-  "type" : "topic",
-  "url" : "\/documentation\/swiftviz\/tickscale\/labeledtickvalues(_:from:to:)"
-},
-"doc://com.github.swiftviz.SwiftViz/documentation/SwiftViz/TickScale/ticks(_:from:to:)": {
+"doc://com.github.swiftviz.SwiftViz/documentation/SwiftViz/TickScale/tickValues(_:from:to:)": {
   "abstract" : [
     {
       "text" : "Converts an array of values that matches the scale’s input type to a list of ticks that are within the scale’s domain.",
@@ -869,7 +728,7 @@
     },
     {
       "kind" : "identifier",
-      "text" : "ticks"
+      "text" : "tickValues"
     },
     {
       "kind" : "text",
@@ -946,12 +805,12 @@
       "text" : ">]"
     }
   ],
-  "identifier" : "doc:\/\/com.github.swiftviz.SwiftViz\/documentation\/SwiftViz\/TickScale\/ticks(_:from:to:)",
+  "identifier" : "doc:\/\/com.github.swiftviz.SwiftViz\/documentation\/SwiftViz\/TickScale\/tickValues(_:from:to:)",
   "kind" : "symbol",
   "role" : "symbol",
-  "title" : "ticks(_:from:to:)",
+  "title" : "tickValues(_:from:to:)",
   "type" : "topic",
-  "url" : "\/documentation\/swiftviz\/tickscale\/ticks(_:from:to:)"
+  "url" : "\/documentation\/swiftviz\/tickscale\/tickvalues(_:from:to:)"
 },
 "doc://com.github.swiftviz.SwiftViz/documentation/SwiftViz/TickScale/ticks(rangeLower:rangeHigher:)-1vugh": {
   "abstract" : [
@@ -1375,140 +1234,6 @@
   "title" : "ticks(rangeLower:rangeHigher:)",
   "type" : "topic",
   "url" : "\/documentation\/swiftviz\/tickscale\/ticks(rangelower:rangehigher:)-5n5j1"
-},
-"doc://com.github.swiftviz.SwiftViz/documentation/SwiftViz/TickScale/validatedTickLabels(_:from:to:)": {
-  "abstract" : [
-    {
-      "text" : "Validates a set of TickLabels against a given scale, removing any that don’t match the scale’s domain.",
-      "type" : "text"
-    }
-  ],
-  "conformance" : {
-    "availabilityPrefix" : [
-      {
-        "text" : "Available when",
-        "type" : "text"
-      }
-    ],
-    "conformancePrefix" : [
-      {
-        "text" : "Conforms when",
-        "type" : "text"
-      }
-    ],
-    "constraints" : [
-      {
-        "code" : "OutputType",
-        "type" : "codeVoice"
-      },
-      {
-        "text" : " conforms to ",
-        "type" : "text"
-      },
-      {
-        "code" : "Real",
-        "type" : "codeVoice"
-      },
-      {
-        "text" : ".",
-        "type" : "text"
-      }
-    ]
-  },
-  "fragments" : [
-    {
-      "kind" : "keyword",
-      "text" : "func"
-    },
-    {
-      "kind" : "text",
-      "text" : " "
-    },
-    {
-      "kind" : "identifier",
-      "text" : "validatedTickLabels"
-    },
-    {
-      "kind" : "text",
-      "text" : "(["
-    },
-    {
-      "kind" : "typeIdentifier",
-      "preciseIdentifier" : "s:8SwiftViz9TickLabelV",
-      "text" : "TickLabel"
-    },
-    {
-      "kind" : "text",
-      "text" : "<"
-    },
-    {
-      "kind" : "typeIdentifier",
-      "preciseIdentifier" : "s:8SwiftViz5ScaleP10OutputTypeQa",
-      "text" : "OutputType"
-    },
-    {
-      "kind" : "text",
-      "text" : ">], "
-    },
-    {
-      "kind" : "externalParam",
-      "text" : "from"
-    },
-    {
-      "kind" : "text",
-      "text" : ": "
-    },
-    {
-      "kind" : "typeIdentifier",
-      "preciseIdentifier" : "s:8SwiftViz5ScaleP10OutputTypeQa",
-      "text" : "OutputType"
-    },
-    {
-      "kind" : "text",
-      "text" : ", "
-    },
-    {
-      "kind" : "externalParam",
-      "text" : "to"
-    },
-    {
-      "kind" : "text",
-      "text" : ": "
-    },
-    {
-      "kind" : "typeIdentifier",
-      "preciseIdentifier" : "s:8SwiftViz5ScaleP10OutputTypeQa",
-      "text" : "OutputType"
-    },
-    {
-      "kind" : "text",
-      "text" : ") -> ["
-    },
-    {
-      "kind" : "typeIdentifier",
-      "preciseIdentifier" : "s:8SwiftViz9TickLabelV",
-      "text" : "TickLabel"
-    },
-    {
-      "kind" : "text",
-      "text" : "<"
-    },
-    {
-      "kind" : "typeIdentifier",
-      "preciseIdentifier" : "s:8SwiftViz5ScaleP10OutputTypeQa",
-      "text" : "OutputType"
-    },
-    {
-      "kind" : "text",
-      "text" : ">]"
-    }
-  ],
-  "identifier" : "doc:\/\/com.github.swiftviz.SwiftViz\/documentation\/SwiftViz\/TickScale\/validatedTickLabels(_:from:to:)",
-  "kind" : "symbol",
-  "role" : "symbol",
-  "title" : "validatedTickLabels(_:from:to:)",
-  "type" : "topic",
-  "url" : "\/documentation\/swiftviz\/tickscale\/validatedticklabels(_:from:to:)"
 }
 }
 }

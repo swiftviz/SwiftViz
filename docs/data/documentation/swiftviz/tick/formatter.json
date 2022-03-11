@@ -1,15 +1,7 @@
 {
   "abstract" : [
     {
-      "text" : "The ",
-      "type" : "text"
-    },
-    {
-      "code" : "x",
-      "type" : "codeVoice"
-    },
-    {
-      "text" : " axis, often displayed horizontally.",
+      "text" : "No overview available.",
       "type" : "text"
     }
   ],
@@ -17,21 +9,21 @@
     "paths" : [
       [
         "doc:\/\/com.github.swiftviz.SwiftViz\/documentation\/SwiftViz",
-        "doc:\/\/com.github.swiftviz.SwiftViz\/documentation\/SwiftViz\/AxisDimension"
+        "doc:\/\/com.github.swiftviz.SwiftViz\/documentation\/SwiftViz\/Tick"
       ]
     ]
   },
   "identifier" : {
     "interfaceLanguage" : "swift",
-    "url" : "doc:\/\/com.github.swiftviz.SwiftViz\/documentation\/SwiftViz\/AxisDimension\/x"
+    "url" : "doc:\/\/com.github.swiftviz.SwiftViz\/documentation\/SwiftViz\/Tick\/formatter"
   },
   "kind" : "symbol",
   "metadata" : {
-    "externalID" : "s:8SwiftViz13AxisDimensionO1xyA2CmF",
+    "externalID" : "s:8SwiftViz4TickV9formatterSo11NSFormatterCSgvp",
     "fragments" : [
       {
         "kind" : "keyword",
-        "text" : "case"
+        "text" : "let"
       },
       {
         "kind" : "text",
@@ -39,7 +31,20 @@
       },
       {
         "kind" : "identifier",
-        "text" : "x"
+        "text" : "formatter"
+      },
+      {
+        "kind" : "text",
+        "text" : ": "
+      },
+      {
+        "kind" : "typeIdentifier",
+        "preciseIdentifier" : "c:objc(cs)NSFormatter",
+        "text" : "Formatter"
+      },
+      {
+        "kind" : "text",
+        "text" : "?"
       }
     ],
     "modules" : [
@@ -48,9 +53,9 @@
       }
     ],
     "role" : "symbol",
-    "roleHeading" : "Case",
-    "symbolKind" : "case",
-    "title" : "AxisDimension.x"
+    "roleHeading" : "Instance Property",
+    "symbolKind" : "property",
+    "title" : "formatter"
   },
   "primaryContentSections" : [
     {
@@ -65,7 +70,7 @@
           "tokens" : [
             {
               "kind" : "keyword",
-              "text" : "case"
+              "text" : "let"
             },
             {
               "kind" : "text",
@@ -73,7 +78,20 @@
             },
             {
               "kind" : "identifier",
-              "text" : "x"
+              "text" : "formatter"
+            },
+            {
+              "kind" : "text",
+              "text" : ": "
+            },
+            {
+              "kind" : "typeIdentifier",
+              "preciseIdentifier" : "c:objc(cs)NSFormatter",
+              "text" : "Formatter"
+            },
+            {
+              "kind" : "text",
+              "text" : "?"
             }
           ]
         }
@@ -92,7 +110,7 @@
   "variants" : [
     {
       "paths" : [
-        "\/documentation\/swiftviz\/axisdimension\/x"
+        "\/documentation\/swiftviz\/tick\/formatter"
       ],
       "traits" : [
         {
@@ -117,17 +135,17 @@
   "type" : "topic",
   "url" : "\/documentation\/swiftviz"
 },
-"doc://com.github.swiftviz.SwiftViz/documentation/SwiftViz/AxisDimension": {
+"doc://com.github.swiftviz.SwiftViz/documentation/SwiftViz/Tick": {
   "abstract" : [
     {
-      "text" : "The identifier for a dimension the chart visualizes.",
+      "text" : "A  visual representation of a point along an axis.",
       "type" : "text"
     }
   ],
   "fragments" : [
     {
       "kind" : "keyword",
-      "text" : "enum"
+      "text" : "struct"
     },
     {
       "kind" : "text",
@@ -135,41 +153,30 @@
     },
     {
       "kind" : "identifier",
-      "text" : "AxisDimension"
+      "text" : "Tick"
     }
   ],
-  "identifier" : "doc:\/\/com.github.swiftviz.SwiftViz\/documentation\/SwiftViz\/AxisDimension",
+  "identifier" : "doc:\/\/com.github.swiftviz.SwiftViz\/documentation\/SwiftViz\/Tick",
   "kind" : "symbol",
   "navigatorTitle" : [
     {
       "kind" : "identifier",
-      "text" : "AxisDimension"
+      "text" : "Tick"
     }
   ],
   "role" : "symbol",
-  "title" : "AxisDimension",
+  "title" : "Tick",
   "type" : "topic",
-  "url" : "\/documentation\/swiftviz\/axisdimension"
+  "url" : "\/documentation\/swiftviz\/tick"
 },
-"doc://com.github.swiftviz.SwiftViz/documentation/SwiftViz/AxisDimension/x": {
+"doc://com.github.swiftviz.SwiftViz/documentation/SwiftViz/Tick/formatter": {
   "abstract" : [
-    {
-      "text" : "The ",
-      "type" : "text"
-    },
-    {
-      "code" : "x",
-      "type" : "codeVoice"
-    },
-    {
-      "text" : " axis, often displayed horizontally.",
-      "type" : "text"
-    }
+
   ],
   "fragments" : [
     {
       "kind" : "keyword",
-      "text" : "case"
+      "text" : "let"
     },
     {
       "kind" : "text",
@@ -177,15 +184,28 @@
     },
     {
       "kind" : "identifier",
-      "text" : "x"
+      "text" : "formatter"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "c:objc(cs)NSFormatter",
+      "text" : "Formatter"
+    },
+    {
+      "kind" : "text",
+      "text" : "?"
     }
   ],
-  "identifier" : "doc:\/\/com.github.swiftviz.SwiftViz\/documentation\/SwiftViz\/AxisDimension\/x",
+  "identifier" : "doc:\/\/com.github.swiftviz.SwiftViz\/documentation\/SwiftViz\/Tick\/formatter",
   "kind" : "symbol",
   "role" : "symbol",
-  "title" : "AxisDimension.x",
+  "title" : "formatter",
   "type" : "topic",
-  "url" : "\/documentation\/swiftviz\/axisdimension\/x"
+  "url" : "\/documentation\/swiftviz\/tick\/formatter"
 }
 }
 }

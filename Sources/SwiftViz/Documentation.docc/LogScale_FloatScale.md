@@ -30,7 +30,5 @@
 ### Generating Ticks
 
 - ``SwiftViz/LogScale/FloatScale/ticks(rangeLower:rangeHigher:)``
-- ``SwiftViz/LogScale/FloatScale/ticks(_:from:to:)``
-- ``SwiftViz/LogScale/FloatScale/labeledTickValues(_:from:to:)``
-- ``SwiftViz/LogScale/FloatScale/validatedTickLabels(_:from:to:)``
+- ``SwiftViz/LogScale/FloatScale/tickValues(_:from:to:)``
 
