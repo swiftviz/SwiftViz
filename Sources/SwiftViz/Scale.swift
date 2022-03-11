@@ -61,7 +61,7 @@ public protocol Scale {
     /// - Returns: `true` if the value is between the lower and upper domain values.
     func domainContains(_ value: InputType) -> Bool
 
-    /// Converts a value between the input _domain_ and output _range_.
+    /// Converts a value comparing it to the input domain, transforming the value, and mapping it between the range values you provide.
     ///
     /// Before scaling the value, the scale may transform or drop the value based on the setting of ``Scale/transformType``.
     ///
@@ -121,6 +121,32 @@ public extension Scale {
     func domainContains(_ value: InputType) -> Bool {
         value >= domainLower && value <= domainHigher
     }
+    
+    /// Converts a value comparing it to the input domain, transforming the value, and mapping it into values between `0` and to the upper bound you provide.
+    ///
+    /// This method is a convenience method that sets the lower value of the range is `0`.
+    /// Before scaling the value, the scale may transform or drop the value based on the setting of ``Scale/transformType``.
+    ///
+    /// - Parameter inputValue: The value to be scaled.
+    /// - Parameter to: The higher bounding value of the range to transform from.
+    /// - Returns: a value within the bounds of the range values you provide, or `nil` if the value was dropped.
+    func scale(_ domainValue: InputType, to upper: OutputType) -> OutputType? {
+        self.scale(domainValue, from: 0, to: upper)
+    }
+
+    /// Converts a value comparing it to the upper value of a range, mapping it to the input domain, and inverting scale's transform.
+    ///
+    /// This method is a convenience method that sets the lower value of the range is `0`.
+    /// The inverse of ``Scale/scale(_:to:)``.
+    /// After converting the data back to the domain range, the scale may transform or drop the value based on the setting of ``Scale/transformType``.
+    ///
+    /// - Parameter rangeValue: The value to be scaled back from the range values to the domain.
+    /// - Parameter to: The higher bounding value of the range to transform from.
+    /// - Returns: a value within the bounds of the range values you provide, or `nil` if the value was dropped.
+    func invert(_ rangeValue: OutputType, to upper: OutputType) -> InputType? {
+        self.invert(rangeValue, from: 0, to: upper)
+    }
+
 }
 
 // NOTE(heckj): OTHER SCALES: make a PowScale (& maybe Sqrt, Log, Ln)
