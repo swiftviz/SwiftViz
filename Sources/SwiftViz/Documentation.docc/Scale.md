@@ -14,8 +14,10 @@
 
 ### Converting Values 
 
-- ``SwiftViz/Scale/invert(_:from:to:)``
 - ``SwiftViz/Scale/scale(_:from:to:)``
+- ``SwiftViz/Scale/scale(_:to:)``
+- ``SwiftViz/Scale/invert(_:from:to:)``
+- ``SwiftViz/Scale/invert(_:to:)``
 
 ### Comparing Values
 
