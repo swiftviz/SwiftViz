@@ -10,6 +10,7 @@ import Numerics
 
 /// A type that can be converted into an approximate value that is easier to understand.
 public protocol NiceValue {
+    /// A type that can be converted into a nice number.
     associatedtype NumberType: Numeric, Comparable
     /// Returns a nice version of the number that's visually appealing for chart axis values.
     ///

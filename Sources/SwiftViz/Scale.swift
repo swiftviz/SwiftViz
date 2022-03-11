@@ -40,7 +40,9 @@ public enum DomainDataTransform {
 
 /// A type that maps values from an input _domain_ to an output _range_.
 public protocol Scale {
+    /// The type used for the scale's domain.
     associatedtype InputType: Numeric, Comparable, NiceValue
+    /// The type used for the scale's range.
     associatedtype OutputType: Numeric, Comparable, NiceValue
 
     /// A boolean value that indicates whether the output vales are constrained to the min and max of the output range.
