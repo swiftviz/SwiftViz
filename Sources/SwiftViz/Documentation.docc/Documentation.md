@@ -27,4 +27,3 @@ Loosely based on the APIs and the visualization constructs created by Mike Bosto
 - ``SwiftViz/AxisDimension``
 - ``SwiftViz/ChartOrientation``
 - ``Tick``
-- ``TickLabel``

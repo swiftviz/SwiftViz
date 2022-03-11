@@ -195,8 +195,7 @@
       "generated" : true,
       "identifiers" : [
         "doc:\/\/com.github.swiftviz.SwiftViz\/documentation\/SwiftViz\/AxisDimension",
-        "doc:\/\/com.github.swiftviz.SwiftViz\/documentation\/SwiftViz\/ChartOrientation",
-        "doc:\/\/com.github.swiftviz.SwiftViz\/documentation\/SwiftViz\/TickLabel"
+        "doc:\/\/com.github.swiftviz.SwiftViz\/documentation\/SwiftViz\/ChartOrientation"
       ],
       "title" : "Axis"
     }
@@ -204,8 +203,8 @@
   "topicSections" : [
     {
       "identifiers" : [
-        "doc:\/\/com.github.swiftviz.SwiftViz\/documentation\/SwiftViz\/Tick\/init(value:location:)-8f3kt",
-        "doc:\/\/com.github.swiftviz.SwiftViz\/documentation\/SwiftViz\/Tick\/init(value:location:)-99fw1"
+        "doc:\/\/com.github.swiftviz.SwiftViz\/documentation\/SwiftViz\/Tick\/init(value:location:formatter:)-9r04p",
+        "doc:\/\/com.github.swiftviz.SwiftViz\/documentation\/SwiftViz\/Tick\/init(value:location:formatter:)-ceri"
       ],
       "title" : "Creating Ticks"
     },
@@ -217,6 +216,13 @@
         "doc:\/\/com.github.swiftviz.SwiftViz\/documentation\/SwiftViz\/Tick\/value"
       ],
       "title" : "Inspecting Ticks"
+    },
+    {
+      "identifiers" : [
+        "doc:\/\/com.github.swiftviz.SwiftViz\/documentation\/SwiftViz\/Tick\/formatter",
+        "doc:\/\/com.github.swiftviz.SwiftViz\/documentation\/SwiftViz\/Tick\/label"
+      ],
+      "title" : "Instance Properties"
     },
     {
       "generated" : true,
@@ -367,6 +373,44 @@
   "type" : "topic",
   "url" : "\/documentation\/swiftviz\/tick\/identifiable-implementations"
 },
+"doc://com.github.swiftviz.SwiftViz/documentation/SwiftViz/Tick/formatter": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "let"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "formatter"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "c:objc(cs)NSFormatter",
+      "text" : "Formatter"
+    },
+    {
+      "kind" : "text",
+      "text" : "?"
+    }
+  ],
+  "identifier" : "doc:\/\/com.github.swiftviz.SwiftViz\/documentation\/SwiftViz\/Tick\/formatter",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "formatter",
+  "type" : "topic",
+  "url" : "\/documentation\/swiftviz\/tick\/formatter"
+},
 "doc://com.github.swiftviz.SwiftViz/documentation/SwiftViz/Tick/id-7vmvo": {
   "abstract" : [
 
@@ -438,7 +482,7 @@
   "type" : "topic",
   "url" : "\/documentation\/swiftviz\/tick\/id-e61y"
 },
-"doc://com.github.swiftviz.SwiftViz/documentation/SwiftViz/Tick/init(value:location:)-8f3kt": {
+"doc://com.github.swiftviz.SwiftViz/documentation/SwiftViz/Tick/init(value:location:formatter:)-9r04p": {
   "abstract" : [
     {
       "text" : "Creates a new tick",
@@ -486,17 +530,34 @@
     },
     {
       "kind" : "text",
-      "text" : ")"
+      "text" : ", "
+    },
+    {
+      "kind" : "externalParam",
+      "text" : "formatter"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "c:objc(cs)NSFormatter",
+      "text" : "Formatter"
+    },
+    {
+      "kind" : "text",
+      "text" : "?)"
     }
   ],
-  "identifier" : "doc:\/\/com.github.swiftviz.SwiftViz\/documentation\/SwiftViz\/Tick\/init(value:location:)-8f3kt",
+  "identifier" : "doc:\/\/com.github.swiftviz.SwiftViz\/documentation\/SwiftViz\/Tick\/init(value:location:formatter:)-9r04p",
   "kind" : "symbol",
   "role" : "symbol",
-  "title" : "init(value:location:)",
+  "title" : "init(value:location:formatter:)",
   "type" : "topic",
-  "url" : "\/documentation\/swiftviz\/tick\/init(value:location:)-8f3kt"
+  "url" : "\/documentation\/swiftviz\/tick\/init(value:location:formatter:)-9r04p"
 },
-"doc://com.github.swiftviz.SwiftViz/documentation/SwiftViz/Tick/init(value:location:)-99fw1": {
+"doc://com.github.swiftviz.SwiftViz/documentation/SwiftViz/Tick/init(value:location:formatter:)-ceri": {
   "abstract" : [
     {
       "text" : "Creates a new tick.",
@@ -544,15 +605,66 @@
     },
     {
       "kind" : "text",
-      "text" : ")"
+      "text" : ", "
+    },
+    {
+      "kind" : "externalParam",
+      "text" : "formatter"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "c:objc(cs)NSFormatter",
+      "text" : "Formatter"
+    },
+    {
+      "kind" : "text",
+      "text" : "?)"
     }
   ],
-  "identifier" : "doc:\/\/com.github.swiftviz.SwiftViz\/documentation\/SwiftViz\/Tick\/init(value:location:)-99fw1",
+  "identifier" : "doc:\/\/com.github.swiftviz.SwiftViz\/documentation\/SwiftViz\/Tick\/init(value:location:formatter:)-ceri",
   "kind" : "symbol",
   "role" : "symbol",
-  "title" : "init(value:location:)",
+  "title" : "init(value:location:formatter:)",
   "type" : "topic",
-  "url" : "\/documentation\/swiftviz\/tick\/init(value:location:)-99fw1"
+  "url" : "\/documentation\/swiftviz\/tick\/init(value:location:formatter:)-ceri"
+},
+"doc://com.github.swiftviz.SwiftViz/documentation/SwiftViz/Tick/label": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "var"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "label"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:SS",
+      "text" : "String"
+    }
+  ],
+  "identifier" : "doc:\/\/com.github.swiftviz.SwiftViz\/documentation\/SwiftViz\/Tick\/label",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "label",
+  "type" : "topic",
+  "url" : "\/documentation\/swiftviz\/tick\/label"
 },
 "doc://com.github.swiftviz.SwiftViz/documentation/SwiftViz/Tick/rangeLocation": {
   "abstract" : [
@@ -627,40 +739,6 @@
   "title" : "value",
   "type" : "topic",
   "url" : "\/documentation\/swiftviz\/tick\/value"
-},
-"doc://com.github.swiftviz.SwiftViz/documentation/SwiftViz/TickLabel": {
-  "abstract" : [
-    {
-      "text" : "A struct that provides string representation of a value with an accompanying location that represents a tick on an axis of a chart.",
-      "type" : "text"
-    }
-  ],
-  "fragments" : [
-    {
-      "kind" : "keyword",
-      "text" : "struct"
-    },
-    {
-      "kind" : "text",
-      "text" : " "
-    },
-    {
-      "kind" : "identifier",
-      "text" : "TickLabel"
-    }
-  ],
-  "identifier" : "doc:\/\/com.github.swiftviz.SwiftViz\/documentation\/SwiftViz\/TickLabel",
-  "kind" : "symbol",
-  "navigatorTitle" : [
-    {
-      "kind" : "identifier",
-      "text" : "TickLabel"
-    }
-  ],
-  "role" : "symbol",
-  "title" : "TickLabel",
-  "type" : "topic",
-  "url" : "\/documentation\/swiftviz\/ticklabel"
 },
 "doc://com.github.swiftviz.SwiftViz/s12IdentifiableP": {
   "identifier" : "doc:\/\/com.github.swiftviz.SwiftViz\/s12IdentifiableP",

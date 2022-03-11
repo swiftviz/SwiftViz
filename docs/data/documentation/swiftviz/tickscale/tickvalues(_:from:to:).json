@@ -1,7 +1,7 @@
 {
   "abstract" : [
     {
-      "text" : "Returns an array of the locations within the output range to locate ticks for the scale.",
+      "text" : "Converts an array of values that matches the scale’s input type to a list of ticks that are within the scale’s domain.",
       "type" : "text"
     }
   ],
@@ -15,7 +15,7 @@
   },
   "identifier" : {
     "interfaceLanguage" : "swift",
-    "url" : "doc:\/\/com.github.swiftviz.SwiftViz\/documentation\/SwiftViz\/TickScale\/ticks(rangeLower:rangeHigher:)-4uxek"
+    "url" : "doc:\/\/com.github.swiftviz.SwiftViz\/documentation\/SwiftViz\/TickScale\/tickValues(_:from:to:)"
   },
   "kind" : "symbol",
   "metadata" : {
@@ -33,22 +33,6 @@
         }
       ],
       "constraints" : [
-        {
-          "code" : "InputType",
-          "type" : "codeVoice"
-        },
-        {
-          "text" : " is ",
-          "type" : "text"
-        },
-        {
-          "code" : "Double",
-          "type" : "codeVoice"
-        },
-        {
-          "text" : " and ",
-          "type" : "text"
-        },
         {
           "code" : "OutputType",
           "type" : "codeVoice"
@@ -68,7 +52,7 @@
       ]
     },
     "extendedModule" : "SwiftViz",
-    "externalID" : "s:8SwiftViz9TickScalePAASd9InputTypeRtz10RealModule0G006OutputF0RpzrlE5ticks10rangeLower0K6HigherSayAA0C0VySdAIGGAI_AItF",
+    "externalID" : "s:8SwiftViz9TickScalePAA10RealModule0E010OutputTypeRpzrlE10tickValues_4from2toSayAA0C0Vy05InputH0QzAGGGSayANG_A2GtF",
     "fragments" : [
       {
         "kind" : "keyword",
@@ -80,15 +64,24 @@
       },
       {
         "kind" : "identifier",
-        "text" : "ticks"
+        "text" : "tickValues"
       },
       {
         "kind" : "text",
-        "text" : "("
+        "text" : "(["
+      },
+      {
+        "kind" : "typeIdentifier",
+        "preciseIdentifier" : "s:8SwiftViz5ScaleP9InputTypeQa",
+        "text" : "InputType"
+      },
+      {
+        "kind" : "text",
+        "text" : "], "
       },
       {
         "kind" : "externalParam",
-        "text" : "rangeLower"
+        "text" : "from"
       },
       {
         "kind" : "text",
@@ -105,7 +98,7 @@
       },
       {
         "kind" : "externalParam",
-        "text" : "rangeHigher"
+        "text" : "to"
       },
       {
         "kind" : "text",
@@ -156,7 +149,7 @@
     "role" : "symbol",
     "roleHeading" : "Instance Method",
     "symbolKind" : "method",
-    "title" : "ticks(rangeLower:rangeHigher:)"
+    "title" : "tickValues(_:from:to:)"
   },
   "primaryContentSections" : [
     {
@@ -179,7 +172,7 @@
             },
             {
               "kind" : "identifier",
-              "text" : "ticks"
+              "text" : "tickValues"
             },
             {
               "kind" : "text",
@@ -187,7 +180,41 @@
             },
             {
               "kind" : "externalParam",
-              "text" : "rangeLower"
+              "text" : "_"
+            },
+            {
+              "kind" : "text",
+              "text" : " "
+            },
+            {
+              "kind" : "internalParam",
+              "text" : "inputValues"
+            },
+            {
+              "kind" : "text",
+              "text" : ": ["
+            },
+            {
+              "identifier" : "doc:\/\/com.github.swiftviz.SwiftViz\/documentation\/SwiftViz\/Scale\/InputType",
+              "kind" : "typeIdentifier",
+              "preciseIdentifier" : "s:8SwiftViz5ScaleP9InputTypeQa",
+              "text" : "InputType"
+            },
+            {
+              "kind" : "text",
+              "text" : "], "
+            },
+            {
+              "kind" : "externalParam",
+              "text" : "from"
+            },
+            {
+              "kind" : "text",
+              "text" : " "
+            },
+            {
+              "kind" : "internalParam",
+              "text" : "lower"
             },
             {
               "kind" : "text",
@@ -205,7 +232,15 @@
             },
             {
               "kind" : "externalParam",
-              "text" : "rangeHigher"
+              "text" : "to"
+            },
+            {
+              "kind" : "text",
+              "text" : " "
+            },
+            {
+              "kind" : "internalParam",
+              "text" : "higher"
             },
             {
               "kind" : "text",
@@ -267,8 +302,13 @@
         {
           "inlineContent" : [
             {
-              "text" : "an Array of the values within the ClosedRange of range",
+              "text" : "A list of tick values validated against the domain, and range based on the setting of ",
               "type" : "text"
+            },
+            {
+              "identifier" : "doc:\/\/com.github.swiftviz.SwiftViz\/documentation\/SwiftViz\/Scale\/transformType",
+              "isActive" : true,
+              "type" : "reference"
             }
           ],
           "type" : "paragraph"
@@ -284,16 +324,103 @@
             {
               "inlineContent" : [
                 {
-                  "text" : "a ClosedRange representing the representing the range we are mapping the values into with the scale",
+                  "text" : "an array of values of the Scale’s InputType",
                   "type" : "text"
                 }
               ],
               "type" : "paragraph"
             }
           ],
-          "name" : "range"
+          "name" : "inputValues"
+        },
+        {
+          "content" : [
+            {
+              "inlineContent" : [
+                {
+                  "text" : "The lower value of the range the scale maps to.",
+                  "type" : "text"
+                }
+              ],
+              "type" : "paragraph"
+            }
+          ],
+          "name" : "lower"
+        },
+        {
+          "content" : [
+            {
+              "inlineContent" : [
+                {
+                  "text" : "The higher value of the range the scale maps to.",
+                  "type" : "text"
+                }
+              ],
+              "type" : "paragraph"
+            }
+          ],
+          "name" : "higher"
         }
       ]
+    },
+    {
+      "content" : [
+        {
+          "anchor" : "discussion",
+          "level" : 2,
+          "text" : "Discussion",
+          "type" : "heading"
+        },
+        {
+          "inlineContent" : [
+            {
+              "text" : "Used for manually specifying a series of ticks that you want to have displayed.",
+              "type" : "text"
+            }
+          ],
+          "type" : "paragraph"
+        },
+        {
+          "inlineContent" : [
+            {
+              "text" : "Values presented for display that are ",
+              "type" : "text"
+            },
+            {
+              "inlineContent" : [
+                {
+                  "text" : "not",
+                  "type" : "text"
+                }
+              ],
+              "type" : "emphasis"
+            },
+            {
+              "text" : " within the domain of the scale are dropped.",
+              "type" : "text"
+            },
+            {
+              "text" : " ",
+              "type" : "text"
+            },
+            {
+              "text" : "Values that scale outside of the range you provide are adjusted based on the setting of ",
+              "type" : "text"
+            },
+            {
+              "identifier" : "doc:\/\/com.github.swiftviz.SwiftViz\/documentation\/SwiftViz\/Scale\/transformType",
+              "isActive" : true,
+              "type" : "reference"
+            },
+            {
+              "text" : ".",
+              "type" : "text"
+            }
+          ],
+          "type" : "paragraph"
+        }
+      ],
+      "kind" : "content"
     }
   ],
   "schemaVersion" : {
@@ -308,8 +435,8 @@
     {
       "generated" : true,
       "identifiers" : [
-        "doc:\/\/com.github.swiftviz.SwiftViz\/documentation\/SwiftViz\/TickScale\/tickValues(_:from:to:)",
         "doc:\/\/com.github.swiftviz.SwiftViz\/documentation\/SwiftViz\/TickScale\/ticks(rangeLower:rangeHigher:)-1vugh",
+        "doc:\/\/com.github.swiftviz.SwiftViz\/documentation\/SwiftViz\/TickScale\/ticks(rangeLower:rangeHigher:)-4uxek",
         "doc:\/\/com.github.swiftviz.SwiftViz\/documentation\/SwiftViz\/TickScale\/ticks(rangeLower:rangeHigher:)-5n5j1"
       ],
       "title" : "Generating Ticks for a Scale"
@@ -318,7 +445,7 @@
   "variants" : [
     {
       "paths" : [
-        "\/documentation\/swiftviz\/tickscale\/ticks(rangelower:rangehigher:)-4uxek"
+        "\/documentation\/swiftviz\/tickscale\/tickvalues(_:from:to:)"
       ],
       "traits" : [
         {
@@ -454,6 +581,44 @@
   "title" : "OutputType",
   "type" : "topic",
   "url" : "\/documentation\/swiftviz\/scale\/outputtype"
+},
+"doc://com.github.swiftviz.SwiftViz/documentation/SwiftViz/Scale/transformType": {
+  "abstract" : [
+    {
+      "text" : "A boolean value that indicates whether the output vales are constrained to the min and max of the output range.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "var"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "transformType"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:8SwiftViz19DomainDataTransformO",
+      "text" : "DomainDataTransform"
+    }
+  ],
+  "identifier" : "doc:\/\/com.github.swiftviz.SwiftViz\/documentation\/SwiftViz\/Scale\/transformType",
+  "kind" : "symbol",
+  "required" : true,
+  "role" : "symbol",
+  "title" : "transformType",
+  "type" : "topic",
+  "url" : "\/documentation\/swiftviz\/scale\/transformtype"
 },
 "doc://com.github.swiftviz.SwiftViz/documentation/SwiftViz/Tick": {
   "abstract" : [

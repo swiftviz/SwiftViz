@@ -106,7 +106,7 @@
               "type" : "text"
             },
             {
-              "identifier" : "doc:\/\/com.github.swiftviz.SwiftViz\/documentation\/SwiftViz\/TickScale\/ticks(_:from:to:)",
+              "identifier" : "doc:\/\/com.github.swiftviz.SwiftViz\/documentation\/SwiftViz\/TickScale\/tickValues(_:from:to:)",
               "isActive" : true,
               "type" : "reference"
             }
@@ -523,7 +523,7 @@
   "type" : "topic",
   "url" : "\/documentation\/swiftviz\/logscale\/doublescale\/transformtype"
 },
-"doc://com.github.swiftviz.SwiftViz/documentation/SwiftViz/TickScale/ticks(_:from:to:)": {
+"doc://com.github.swiftviz.SwiftViz/documentation/SwiftViz/TickScale/tickValues(_:from:to:)": {
   "abstract" : [
     {
       "text" : "Converts an array of values that matches the scale’s input type to a list of ticks that are within the scale’s domain.",
@@ -573,7 +573,7 @@
     },
     {
       "kind" : "identifier",
-      "text" : "ticks"
+      "text" : "tickValues"
     },
     {
       "kind" : "text",
@@ -650,12 +650,12 @@
       "text" : ">]"
     }
   ],
-  "identifier" : "doc:\/\/com.github.swiftviz.SwiftViz\/documentation\/SwiftViz\/TickScale\/ticks(_:from:to:)",
+  "identifier" : "doc:\/\/com.github.swiftviz.SwiftViz\/documentation\/SwiftViz\/TickScale\/tickValues(_:from:to:)",
   "kind" : "symbol",
   "role" : "symbol",
-  "title" : "ticks(_:from:to:)",
+  "title" : "tickValues(_:from:to:)",
   "type" : "topic",
-  "url" : "\/documentation\/swiftviz\/tickscale\/ticks(_:from:to:)"
+  "url" : "\/documentation\/swiftviz\/tickscale\/tickvalues(_:from:to:)"
 }
 }
 }

@@ -315,9 +315,7 @@
     {
       "generated" : true,
       "identifiers" : [
-        "doc:\/\/com.github.swiftviz.SwiftViz\/documentation\/SwiftViz\/LinearScale\/DoubleScale\/ticks(_:from:to:)",
-        "doc:\/\/com.github.swiftviz.SwiftViz\/documentation\/SwiftViz\/LinearScale\/DoubleScale\/labeledTickValues(_:from:to:)",
-        "doc:\/\/com.github.swiftviz.SwiftViz\/documentation\/SwiftViz\/LinearScale\/DoubleScale\/validatedTickLabels(_:from:to:)"
+        "doc:\/\/com.github.swiftviz.SwiftViz\/documentation\/SwiftViz\/LinearScale\/DoubleScale\/tickValues(_:from:to:)"
       ],
       "title" : "Generating Ticks"
     }
@@ -429,141 +427,7 @@
   "type" : "topic",
   "url" : "\/documentation\/swiftviz\/linearscale\/doublescale\/tickscale-implementations"
 },
-"doc://com.github.swiftviz.SwiftViz/documentation/SwiftViz/LinearScale/DoubleScale/labeledTickValues(_:from:to:)": {
-  "abstract" : [
-    {
-      "text" : "Converts an array of values with matching strings, that are within the scale’s domain and returns a list of tick labels using the strings you provide.",
-      "type" : "text"
-    }
-  ],
-  "conformance" : {
-    "availabilityPrefix" : [
-      {
-        "text" : "Available when",
-        "type" : "text"
-      }
-    ],
-    "conformancePrefix" : [
-      {
-        "text" : "Conforms when",
-        "type" : "text"
-      }
-    ],
-    "constraints" : [
-      {
-        "code" : "OutputType",
-        "type" : "codeVoice"
-      },
-      {
-        "text" : " conforms to ",
-        "type" : "text"
-      },
-      {
-        "code" : "Real",
-        "type" : "codeVoice"
-      },
-      {
-        "text" : ".",
-        "type" : "text"
-      }
-    ]
-  },
-  "fragments" : [
-    {
-      "kind" : "keyword",
-      "text" : "func"
-    },
-    {
-      "kind" : "text",
-      "text" : " "
-    },
-    {
-      "kind" : "identifier",
-      "text" : "labeledTickValues"
-    },
-    {
-      "kind" : "text",
-      "text" : "([("
-    },
-    {
-      "kind" : "typeIdentifier",
-      "preciseIdentifier" : "s:8SwiftViz5ScaleP9InputTypeQa",
-      "text" : "InputType"
-    },
-    {
-      "kind" : "text",
-      "text" : ", "
-    },
-    {
-      "kind" : "typeIdentifier",
-      "preciseIdentifier" : "s:SS",
-      "text" : "String"
-    },
-    {
-      "kind" : "text",
-      "text" : ")], "
-    },
-    {
-      "kind" : "externalParam",
-      "text" : "from"
-    },
-    {
-      "kind" : "text",
-      "text" : ": "
-    },
-    {
-      "kind" : "typeIdentifier",
-      "preciseIdentifier" : "s:8SwiftViz5ScaleP10OutputTypeQa",
-      "text" : "OutputType"
-    },
-    {
-      "kind" : "text",
-      "text" : ", "
-    },
-    {
-      "kind" : "externalParam",
-      "text" : "to"
-    },
-    {
-      "kind" : "text",
-      "text" : ": "
-    },
-    {
-      "kind" : "typeIdentifier",
-      "preciseIdentifier" : "s:8SwiftViz5ScaleP10OutputTypeQa",
-      "text" : "OutputType"
-    },
-    {
-      "kind" : "text",
-      "text" : ") -> ["
-    },
-    {
-      "kind" : "typeIdentifier",
-      "preciseIdentifier" : "s:8SwiftViz9TickLabelV",
-      "text" : "TickLabel"
-    },
-    {
-      "kind" : "text",
-      "text" : "<"
-    },
-    {
-      "kind" : "typeIdentifier",
-      "preciseIdentifier" : "s:8SwiftViz5ScaleP10OutputTypeQa",
-      "text" : "OutputType"
-    },
-    {
-      "kind" : "text",
-      "text" : ">]"
-    }
-  ],
-  "identifier" : "doc:\/\/com.github.swiftviz.SwiftViz\/documentation\/SwiftViz\/LinearScale\/DoubleScale\/labeledTickValues(_:from:to:)",
-  "kind" : "symbol",
-  "role" : "symbol",
-  "title" : "labeledTickValues(_:from:to:)",
-  "type" : "topic",
-  "url" : "\/documentation\/swiftviz\/linearscale\/doublescale\/labeledtickvalues(_:from:to:)"
-},
-"doc://com.github.swiftviz.SwiftViz/documentation/SwiftViz/LinearScale/DoubleScale/ticks(_:from:to:)": {
+"doc://com.github.swiftviz.SwiftViz/documentation/SwiftViz/LinearScale/DoubleScale/tickValues(_:from:to:)": {
   "abstract" : [
     {
       "text" : "Converts an array of values that matches the scale’s input type to a list of ticks that are within the scale’s domain.",
@@ -613,7 +477,7 @@
     },
     {
       "kind" : "identifier",
-      "text" : "ticks"
+      "text" : "tickValues"
     },
     {
       "kind" : "text",
@@ -690,12 +554,12 @@
       "text" : ">]"
     }
   ],
-  "identifier" : "doc:\/\/com.github.swiftviz.SwiftViz\/documentation\/SwiftViz\/LinearScale\/DoubleScale\/ticks(_:from:to:)",
+  "identifier" : "doc:\/\/com.github.swiftviz.SwiftViz\/documentation\/SwiftViz\/LinearScale\/DoubleScale\/tickValues(_:from:to:)",
   "kind" : "symbol",
   "role" : "symbol",
-  "title" : "ticks(_:from:to:)",
+  "title" : "tickValues(_:from:to:)",
   "type" : "topic",
-  "url" : "\/documentation\/swiftviz\/linearscale\/doublescale\/ticks(_:from:to:)"
+  "url" : "\/documentation\/swiftviz\/linearscale\/doublescale\/tickvalues(_:from:to:)"
 },
 "doc://com.github.swiftviz.SwiftViz/documentation/SwiftViz/LinearScale/DoubleScale/ticks(rangeLower:rangeHigher:)": {
   "abstract" : [
@@ -837,140 +701,6 @@
   "title" : "ticks(rangeLower:rangeHigher:)",
   "type" : "topic",
   "url" : "\/documentation\/swiftviz\/linearscale\/doublescale\/ticks(rangelower:rangehigher:)"
-},
-"doc://com.github.swiftviz.SwiftViz/documentation/SwiftViz/LinearScale/DoubleScale/validatedTickLabels(_:from:to:)": {
-  "abstract" : [
-    {
-      "text" : "Validates a set of TickLabels against a given scale, removing any that don’t match the scale’s domain.",
-      "type" : "text"
-    }
-  ],
-  "conformance" : {
-    "availabilityPrefix" : [
-      {
-        "text" : "Available when",
-        "type" : "text"
-      }
-    ],
-    "conformancePrefix" : [
-      {
-        "text" : "Conforms when",
-        "type" : "text"
-      }
-    ],
-    "constraints" : [
-      {
-        "code" : "OutputType",
-        "type" : "codeVoice"
-      },
-      {
-        "text" : " conforms to ",
-        "type" : "text"
-      },
-      {
-        "code" : "Real",
-        "type" : "codeVoice"
-      },
-      {
-        "text" : ".",
-        "type" : "text"
-      }
-    ]
-  },
-  "fragments" : [
-    {
-      "kind" : "keyword",
-      "text" : "func"
-    },
-    {
-      "kind" : "text",
-      "text" : " "
-    },
-    {
-      "kind" : "identifier",
-      "text" : "validatedTickLabels"
-    },
-    {
-      "kind" : "text",
-      "text" : "(["
-    },
-    {
-      "kind" : "typeIdentifier",
-      "preciseIdentifier" : "s:8SwiftViz9TickLabelV",
-      "text" : "TickLabel"
-    },
-    {
-      "kind" : "text",
-      "text" : "<"
-    },
-    {
-      "kind" : "typeIdentifier",
-      "preciseIdentifier" : "s:8SwiftViz5ScaleP10OutputTypeQa",
-      "text" : "OutputType"
-    },
-    {
-      "kind" : "text",
-      "text" : ">], "
-    },
-    {
-      "kind" : "externalParam",
-      "text" : "from"
-    },
-    {
-      "kind" : "text",
-      "text" : ": "
-    },
-    {
-      "kind" : "typeIdentifier",
-      "preciseIdentifier" : "s:8SwiftViz5ScaleP10OutputTypeQa",
-      "text" : "OutputType"
-    },
-    {
-      "kind" : "text",
-      "text" : ", "
-    },
-    {
-      "kind" : "externalParam",
-      "text" : "to"
-    },
-    {
-      "kind" : "text",
-      "text" : ": "
-    },
-    {
-      "kind" : "typeIdentifier",
-      "preciseIdentifier" : "s:8SwiftViz5ScaleP10OutputTypeQa",
-      "text" : "OutputType"
-    },
-    {
-      "kind" : "text",
-      "text" : ") -> ["
-    },
-    {
-      "kind" : "typeIdentifier",
-      "preciseIdentifier" : "s:8SwiftViz9TickLabelV",
-      "text" : "TickLabel"
-    },
-    {
-      "kind" : "text",
-      "text" : "<"
-    },
-    {
-      "kind" : "typeIdentifier",
-      "preciseIdentifier" : "s:8SwiftViz5ScaleP10OutputTypeQa",
-      "text" : "OutputType"
-    },
-    {
-      "kind" : "text",
-      "text" : ">]"
-    }
-  ],
-  "identifier" : "doc:\/\/com.github.swiftviz.SwiftViz\/documentation\/SwiftViz\/LinearScale\/DoubleScale\/validatedTickLabels(_:from:to:)",
-  "kind" : "symbol",
-  "role" : "symbol",
-  "title" : "validatedTickLabels(_:from:to:)",
-  "type" : "topic",
-  "url" : "\/documentation\/swiftviz\/linearscale\/doublescale\/validatedticklabels(_:from:to:)"
 },
 "doc://com.github.swiftviz.SwiftViz/documentation/SwiftViz/Scale/InputType": {
   "abstract" : [

@@ -24,13 +24,23 @@ public struct Tick<InputType, OutputType: Numeric>: Identifiable where OutputTyp
     /// The location where the tick should be placed within a chart's range.
     public let rangeLocation: OutputType
 
+    public let formatter: Formatter?
+
+    public var label: String {
+        guard let formatter = formatter else {
+            return String("\(value)")
+        }
+        return formatter.string(for: value) ?? ""
+    }
+
     /// Creates a new tick
     /// - Parameters:
     ///   - value: The value at the tick's location.
     ///   - location: The location of the tick within the range for a scale.
-    public init(value: InputType, location: OutputType) {
+    public init(value: InputType, location: OutputType, formatter: Formatter? = nil) {
         self.value = value
         rangeLocation = location
+        self.formatter = formatter
     }
 
     /// Creates a new tick.
@@ -39,8 +49,9 @@ public struct Tick<InputType, OutputType: Numeric>: Identifiable where OutputTyp
     /// - Parameters:
     ///   - value: The value at the tick's location.
     ///   - location: The location of the tick within the range for a scale.
-    public init?(value: InputType, location: OutputType) where OutputType: Real {
+    public init?(value: InputType, location: OutputType, formatter: Formatter? = nil) where OutputType: Real {
         self.value = value
+        self.formatter = formatter
         if location.isNaN {
             return nil
         } else {

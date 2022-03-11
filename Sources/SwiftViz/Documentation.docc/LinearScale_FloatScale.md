@@ -30,7 +30,5 @@
 ### Generating Ticks
 
 - ``SwiftViz/LinearScale/FloatScale/ticks(rangeLower:rangeHigher:)``
-- ``SwiftViz/LinearScale/FloatScale/ticks(_:from:to:)``
-- ``SwiftViz/LinearScale/FloatScale/labeledTickValues(_:from:to:)``
-- ``SwiftViz/LinearScale/FloatScale/validatedTickLabels(_:from:to:)``
+- ``SwiftViz/LinearScale/FloatScale/tickValues(_:from:to:)``
 

@@ -31,7 +31,5 @@
 ### Generating Ticks
 
 - ``SwiftViz/PowerScale/DoubleScale/ticks(rangeLower:rangeHigher:)``
-- ``SwiftViz/PowerScale/DoubleScale/ticks(_:from:to:)``
-- ``SwiftViz/PowerScale/DoubleScale/labeledTickValues(_:from:to:)``
-- ``SwiftViz/PowerScale/DoubleScale/validatedTickLabels(_:from:to:)``
+- ``SwiftViz/PowerScale/DoubleScale/tickValues(_:from:to:)``
 

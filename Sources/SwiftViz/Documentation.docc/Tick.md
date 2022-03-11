@@ -4,8 +4,8 @@
 
 ### Creating Ticks
 
-- ``SwiftViz/Tick/init(value:location:)-8f3kt``
-- ``SwiftViz/Tick/init(value:location:)-99fw1``
+- ``SwiftViz/Tick/init(value:location:formatter:)-9r04p``
+- ``SwiftViz/Tick/init(value:location:formatter:)-ceri``
 
 ### Inspecting Ticks
 

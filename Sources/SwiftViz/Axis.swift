@@ -39,11 +39,11 @@ public enum ChartOrientation {
 
 /// The identifier for a dimension the chart visualizes.
 public enum AxisDimension {
-    /// The `x` axis, typically - but uniformly - horizontal.
+    /// The `x` axis, often displayed horizontally.
     case x
-    /// The `y` axis, typically - but uniformly - vertical.
+    /// The `y` axis, often displayed vertically.
     case y
-    /// The `z` axis, typically - but uniformly - depth.
+    /// The `z` axis, often displayed foreground to background.
     case z
 }
 
