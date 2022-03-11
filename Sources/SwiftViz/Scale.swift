@@ -123,7 +123,7 @@ public extension Scale {
     func domainContains(_ value: InputType) -> Bool {
         value >= domainLower && value <= domainHigher
     }
-    
+
     /// Converts a value comparing it to the input domain, transforming the value, and mapping it into values between `0` and to the upper bound you provide.
     ///
     /// This method is a convenience method that sets the lower value of the range is `0`.
@@ -133,7 +133,7 @@ public extension Scale {
     /// - Parameter to: The higher bounding value of the range to transform from.
     /// - Returns: a value within the bounds of the range values you provide, or `nil` if the value was dropped.
     func scale(_ domainValue: InputType, to upper: OutputType) -> OutputType? {
-        self.scale(domainValue, from: 0, to: upper)
+        scale(domainValue, from: 0, to: upper)
     }
 
     /// Converts a value comparing it to the upper value of a range, mapping it to the input domain, and inverting scale's transform.
@@ -146,9 +146,8 @@ public extension Scale {
     /// - Parameter to: The higher bounding value of the range to transform from.
     /// - Returns: a value within the bounds of the range values you provide, or `nil` if the value was dropped.
     func invert(_ rangeValue: OutputType, to upper: OutputType) -> InputType? {
-        self.invert(rangeValue, from: 0, to: upper)
+        invert(rangeValue, from: 0, to: upper)
     }
-
 }
 
 // NOTE(heckj): OTHER SCALES: make a PowScale (& maybe Sqrt, Log, Ln)

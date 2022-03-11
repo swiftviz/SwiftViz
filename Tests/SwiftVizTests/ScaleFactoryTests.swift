@@ -61,7 +61,7 @@ class ScaleFactoryTests: XCTestCase {
         XCTAssertEqual(scale1.domainExtent, scale2.domainExtent)
         XCTAssertEqual(scale1.domainLower, low.timeIntervalSince1970)
     }
-    
+
     func testScaleConvenienceMethod() throws {
         let lin = LinearScale.create(0, 100.0)
         guard let result = lin.scale(5.0, to: 10.0) else {

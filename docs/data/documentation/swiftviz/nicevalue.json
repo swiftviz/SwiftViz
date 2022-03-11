@@ -248,7 +248,10 @@
 },
 "doc://com.github.swiftviz.SwiftViz/documentation/SwiftViz/NiceValue/NumberType": {
   "abstract" : [
-
+    {
+      "text" : "A type that can be converted into a nice number.",
+      "type" : "text"
+    }
   ],
   "fragments" : [
     {
