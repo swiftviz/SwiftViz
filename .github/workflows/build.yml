@@ -27,6 +27,9 @@ jobs:
     - name: build and test
       run: swift test --enable-code-coverage -v
 
+    - name: check against API breaking changes
+      run: swift package diagnose-api-breaking-changes 0.5.0
+
     - name: env review
       run: env
 
